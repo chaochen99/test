@@ -1,0 +1,4 @@
+nohup: ignoring input
+script/finetune_itm.sh: line 32: t: command not found
+script/finetune_itm.sh: line 33: syntax error near unexpected token `done'
+script/finetune_itm.sh: line 33: `done'

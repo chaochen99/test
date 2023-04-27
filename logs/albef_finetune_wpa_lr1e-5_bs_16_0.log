@@ -1,0 +1,866 @@
+nohup: ignoring input
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Namespace(batch_size=16, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_albef_wpa/', learning_rate=1e-05, max_epochs=40, model_name='microsoft/layoutlmv3-base-chinese', model_params=None, output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/albef_finetune_wpa_lr1e-5_bs_16/', pretrained='/nlp_group/wuxing/ALBEF/output/Pretrain_zh/succ_model/checkpoint_29.pth', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)Namespace(batch_size=16, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_albef_wpa/', learning_rate=1e-05, max_epochs=40, model_name='microsoft/layoutlmv3-base-chinese', model_params=None, output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/albef_finetune_wpa_lr1e-5_bs_16/', pretrained='/nlp_group/wuxing/ALBEF/output/Pretrain_zh/succ_model/checkpoint_29.pth', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)Namespace(batch_size=16, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_albef_wpa/', learning_rate=1e-05, max_epochs=40, model_name='microsoft/layoutlmv3-base-chinese', model_params=None, output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/albef_finetune_wpa_lr1e-5_bs_16/', pretrained='/nlp_group/wuxing/ALBEF/output/Pretrain_zh/succ_model/checkpoint_29.pth', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)
+
+
+Namespace(batch_size=16, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_albef_wpa/', learning_rate=1e-05, max_epochs=40, model_name='microsoft/layoutlmv3-base-chinese', model_params=None, output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/albef_finetune_wpa_lr1e-5_bs_16/', pretrained='/nlp_group/wuxing/ALBEF/output/Pretrain_zh/succ_model/checkpoint_29.pth', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)
+| distributed init (rank 2, word 4): env://
+| distributed init (rank 3, word 4): env://
+| distributed init (rank 1, word 4): env://
+| distributed init (rank 0, word 4): env://
+ai-platform-wlf1-ge10-1:74552:74552 [0] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:74552:74552 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:74552:74552 [0] NCCL INFO cudaDriverVersion 11040
+NCCL version 2.14.3+cuda11.7
+ai-platform-wlf1-ge10-1:74554:74554 [2] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:74555:74555 [3] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:74554:74554 [2] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:74555:74555 [3] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:74554:74554 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:74555:74555 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:74553:74553 [1] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:74553:74553 [1] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:74553:74553 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] -1/-1/-1->3->2
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Channel 00/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Channel 01/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Channel 02/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Channel 03/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Channel 00 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Channel 00 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Channel 01 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Channel 00 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Channel 01 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Channel 02 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Channel 00 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Channel 01 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Channel 02 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Channel 03 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Channel 01 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Channel 02 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Channel 03 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Channel 02 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Channel 03 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Channel 03 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Channel 00 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Channel 01 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Channel 02 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Channel 03 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Channel 00 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Channel 01 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Channel 02 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Channel 03 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Channel 00 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Channel 01 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Channel 02 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Channel 03 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:74552:74589 [0] NCCL INFO comm 0x43bc2320 rank 0 nranks 4 cudaDev 0 busId 1000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:74554:74590 [2] NCCL INFO comm 0x43ce2420 rank 2 nranks 4 cudaDev 2 busId 81000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:74553:74592 [1] NCCL INFO comm 0x44b777b0 rank 1 nranks 4 cudaDev 1 busId 24000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:74555:74591 [3] NCCL INFO comm 0x446dc110 rank 3 nranks 4 cudaDev 3 busId e1000 - Init COMPLETE
+reshape position embedding from 256 to 196
+load checkpoint from /nlp_group/wuxing/ALBEF/output/Pretrain_zh/succ_model/checkpoint_29.pth
+_IncompatibleKeys(missing_keys=['visual_encoder.mask_token', 'wpa_head.weight', 'wpa_head.bias'], unexpected_keys=['image_queue', 'text_queue', 'queue_ptr', 'vision_proj.weight', 'vision_proj.bias', 'text_proj.weight', 'text_proj.bias', 'itm_head.weight', 'itm_head.bias', 'visual_encoder_m.cls_token', 'visual_encoder_m.pos_embed', 'visual_encoder_m.patch_embed.proj.weight', 'visual_encoder_m.patch_embed.proj.bias', 'visual_encoder_m.blocks.0.norm1.weight', 'visual_encoder_m.blocks.0.norm1.bias', 'visual_encoder_m.blocks.0.attn.qkv.weight', 'visual_encoder_m.blocks.0.attn.qkv.bias', 'visual_encoder_m.blocks.0.attn.proj.weight', 'visual_encoder_m.blocks.0.attn.proj.bias', 'visual_encoder_m.blocks.0.norm2.weight', 'visual_encoder_m.blocks.0.norm2.bias', 'visual_encoder_m.blocks.0.mlp.fc1.weight', 'visual_encoder_m.blocks.0.mlp.fc1.bias', 'visual_encoder_m.blocks.0.mlp.fc2.weight', 'visual_encoder_m.blocks.0.mlp.fc2.bias', 'visual_encoder_m.blocks.1.norm1.weight', 'visual_encoder_m.blocks.1.norm1.bias', 'visual_encoder_m.blocks.1.attn.qkv.weight', 'visual_encoder_m.blocks.1.attn.qkv.bias', 'visual_encoder_m.blocks.1.attn.proj.weight', 'visual_encoder_m.blocks.1.attn.proj.bias', 'visual_encoder_m.blocks.1.norm2.weight', 'visual_encoder_m.blocks.1.norm2.bias', 'visual_encoder_m.blocks.1.mlp.fc1.weight', 'visual_encoder_m.blocks.1.mlp.fc1.bias', 'visual_encoder_m.blocks.1.mlp.fc2.weight', 'visual_encoder_m.blocks.1.mlp.fc2.bias', 'visual_encoder_m.blocks.2.norm1.weight', 'visual_encoder_m.blocks.2.norm1.bias', 'visual_encoder_m.blocks.2.attn.qkv.weight', 'visual_encoder_m.blocks.2.attn.qkv.bias', 'visual_encoder_m.blocks.2.attn.proj.weight', 'visual_encoder_m.blocks.2.attn.proj.bias', 'visual_encoder_m.blocks.2.norm2.weight', 'visual_encoder_m.blocks.2.norm2.bias', 'visual_encoder_m.blocks.2.mlp.fc1.weight', 'visual_encoder_m.blocks.2.mlp.fc1.bias', 'visual_encoder_m.blocks.2.mlp.fc2.weight', 'visual_encoder_m.blocks.2.mlp.fc2.bias', 'visual_encoder_m.blocks.3.norm1.weight', 'visual_encoder_m.blocks.3.norm1.bias', 'visual_encoder_m.blocks.3.attn.qkv.weight', 'visual_encoder_m.blocks.3.attn.qkv.bias', 'visual_encoder_m.blocks.3.attn.proj.weight', 'visual_encoder_m.blocks.3.attn.proj.bias', 'visual_encoder_m.blocks.3.norm2.weight', 'visual_encoder_m.blocks.3.norm2.bias', 'visual_encoder_m.blocks.3.mlp.fc1.weight', 'visual_encoder_m.blocks.3.mlp.fc1.bias', 'visual_encoder_m.blocks.3.mlp.fc2.weight', 'visual_encoder_m.blocks.3.mlp.fc2.bias', 'visual_encoder_m.blocks.4.norm1.weight', 'visual_encoder_m.blocks.4.norm1.bias', 'visual_encoder_m.blocks.4.attn.qkv.weight', 'visual_encoder_m.blocks.4.attn.qkv.bias', 'visual_encoder_m.blocks.4.attn.proj.weight', 'visual_encoder_m.blocks.4.attn.proj.bias', 'visual_encoder_m.blocks.4.norm2.weight', 'visual_encoder_m.blocks.4.norm2.bias', 'visual_encoder_m.blocks.4.mlp.fc1.weight', 'visual_encoder_m.blocks.4.mlp.fc1.bias', 'visual_encoder_m.blocks.4.mlp.fc2.weight', 'visual_encoder_m.blocks.4.mlp.fc2.bias', 'visual_encoder_m.blocks.5.norm1.weight', 'visual_encoder_m.blocks.5.norm1.bias', 'visual_encoder_m.blocks.5.attn.qkv.weight', 'visual_encoder_m.blocks.5.attn.qkv.bias', 'visual_encoder_m.blocks.5.attn.proj.weight', 'visual_encoder_m.blocks.5.attn.proj.bias', 'visual_encoder_m.blocks.5.norm2.weight', 'visual_encoder_m.blocks.5.norm2.bias', 'visual_encoder_m.blocks.5.mlp.fc1.weight', 'visual_encoder_m.blocks.5.mlp.fc1.bias', 'visual_encoder_m.blocks.5.mlp.fc2.weight', 'visual_encoder_m.blocks.5.mlp.fc2.bias', 'visual_encoder_m.blocks.6.norm1.weight', 'visual_encoder_m.blocks.6.norm1.bias', 'visual_encoder_m.blocks.6.attn.qkv.weight', 'visual_encoder_m.blocks.6.attn.qkv.bias', 'visual_encoder_m.blocks.6.attn.proj.weight', 'visual_encoder_m.blocks.6.attn.proj.bias', 'visual_encoder_m.blocks.6.norm2.weight', 'visual_encoder_m.blocks.6.norm2.bias', 'visual_encoder_m.blocks.6.mlp.fc1.weight', 'visual_encoder_m.blocks.6.mlp.fc1.bias', 'visual_encoder_m.blocks.6.mlp.fc2.weight', 'visual_encoder_m.blocks.6.mlp.fc2.bias', 'visual_encoder_m.blocks.7.norm1.weight', 'visual_encoder_m.blocks.7.norm1.bias', 'visual_encoder_m.blocks.7.attn.qkv.weight', 'visual_encoder_m.blocks.7.attn.qkv.bias', 'visual_encoder_m.blocks.7.attn.proj.weight', 'visual_encoder_m.blocks.7.attn.proj.bias', 'visual_encoder_m.blocks.7.norm2.weight', 'visual_encoder_m.blocks.7.norm2.bias', 'visual_encoder_m.blocks.7.mlp.fc1.weight', 'visual_encoder_m.blocks.7.mlp.fc1.bias', 'visual_encoder_m.blocks.7.mlp.fc2.weight', 'visual_encoder_m.blocks.7.mlp.fc2.bias', 'visual_encoder_m.blocks.8.norm1.weight', 'visual_encoder_m.blocks.8.norm1.bias', 'visual_encoder_m.blocks.8.attn.qkv.weight', 'visual_encoder_m.blocks.8.attn.qkv.bias', 'visual_encoder_m.blocks.8.attn.proj.weight', 'visual_encoder_m.blocks.8.attn.proj.bias', 'visual_encoder_m.blocks.8.norm2.weight', 'visual_encoder_m.blocks.8.norm2.bias', 'visual_encoder_m.blocks.8.mlp.fc1.weight', 'visual_encoder_m.blocks.8.mlp.fc1.bias', 'visual_encoder_m.blocks.8.mlp.fc2.weight', 'visual_encoder_m.blocks.8.mlp.fc2.bias', 'visual_encoder_m.blocks.9.norm1.weight', 'visual_encoder_m.blocks.9.norm1.bias', 'visual_encoder_m.blocks.9.attn.qkv.weight', 'visual_encoder_m.blocks.9.attn.qkv.bias', 'visual_encoder_m.blocks.9.attn.proj.weight', 'visual_encoder_m.blocks.9.attn.proj.bias', 'visual_encoder_m.blocks.9.norm2.weight', 'visual_encoder_m.blocks.9.norm2.bias', 'visual_encoder_m.blocks.9.mlp.fc1.weight', 'visual_encoder_m.blocks.9.mlp.fc1.bias', 'visual_encoder_m.blocks.9.mlp.fc2.weight', 'visual_encoder_m.blocks.9.mlp.fc2.bias', 'visual_encoder_m.blocks.10.norm1.weight', 'visual_encoder_m.blocks.10.norm1.bias', 'visual_encoder_m.blocks.10.attn.qkv.weight', 'visual_encoder_m.blocks.10.attn.qkv.bias', 'visual_encoder_m.blocks.10.attn.proj.weight', 'visual_encoder_m.blocks.10.attn.proj.bias', 'visual_encoder_m.blocks.10.norm2.weight', 'visual_encoder_m.blocks.10.norm2.bias', 'visual_encoder_m.blocks.10.mlp.fc1.weight', 'visual_encoder_m.blocks.10.mlp.fc1.bias', 'visual_encoder_m.blocks.10.mlp.fc2.weight', 'visual_encoder_m.blocks.10.mlp.fc2.bias', 'visual_encoder_m.blocks.11.norm1.weight', 'visual_encoder_m.blocks.11.norm1.bias', 'visual_encoder_m.blocks.11.attn.qkv.weight', 'visual_encoder_m.blocks.11.attn.qkv.bias', 'visual_encoder_m.blocks.11.attn.proj.weight', 'visual_encoder_m.blocks.11.attn.proj.bias', 'visual_encoder_m.blocks.11.norm2.weight', 'visual_encoder_m.blocks.11.norm2.bias', 'visual_encoder_m.blocks.11.mlp.fc1.weight', 'visual_encoder_m.blocks.11.mlp.fc1.bias', 'visual_encoder_m.blocks.11.mlp.fc2.weight', 'visual_encoder_m.blocks.11.mlp.fc2.bias', 'visual_encoder_m.norm.weight', 'visual_encoder_m.norm.bias', 'vision_proj_m.weight', 'vision_proj_m.bias', 'text_encoder_m.cls.predictions.bias', 'text_encoder_m.cls.predictions.transform.dense.weight', 'text_encoder_m.cls.predictions.transform.dense.bias', 'text_encoder_m.cls.predictions.transform.LayerNorm.weight', 'text_encoder_m.cls.predictions.transform.LayerNorm.bias', 'text_encoder_m.cls.predictions.decoder.weight', 'text_encoder_m.cls.predictions.decoder.bias', 'text_proj_m.weight', 'text_proj_m.bias', 'text_encoder_m.embeddings.position_ids', 'text_encoder_m.embeddings.word_embeddings.weight', 'text_encoder_m.embeddings.position_embeddings.weight', 'text_encoder_m.embeddings.token_type_embeddings.weight', 'text_encoder_m.embeddings.LayerNorm.weight', 'text_encoder_m.embeddings.LayerNorm.bias', 'text_encoder_m.encoder.layer.0.attention.self.query.weight', 'text_encoder_m.encoder.layer.0.attention.self.query.bias', 'text_encoder_m.encoder.layer.0.attention.self.key.weight', 'text_encoder_m.encoder.layer.0.attention.self.key.bias', 'text_encoder_m.encoder.layer.0.attention.self.value.weight', 'text_encoder_m.encoder.layer.0.attention.self.value.bias', 'text_encoder_m.encoder.layer.0.attention.output.dense.weight', 'text_encoder_m.encoder.layer.0.attention.output.dense.bias', 'text_encoder_m.encoder.layer.0.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.0.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.0.intermediate.dense.weight', 'text_encoder_m.encoder.layer.0.intermediate.dense.bias', 'text_encoder_m.encoder.layer.0.output.dense.weight', 'text_encoder_m.encoder.layer.0.output.dense.bias', 'text_encoder_m.encoder.layer.0.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.0.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.1.attention.self.query.weight', 'text_encoder_m.encoder.layer.1.attention.self.query.bias', 'text_encoder_m.encoder.layer.1.attention.self.key.weight', 'text_encoder_m.encoder.layer.1.attention.self.key.bias', 'text_encoder_m.encoder.layer.1.attention.self.value.weight', 'text_encoder_m.encoder.layer.1.attention.self.value.bias', 'text_encoder_m.encoder.layer.1.attention.output.dense.weight', 'text_encoder_m.encoder.layer.1.attention.output.dense.bias', 'text_encoder_m.encoder.layer.1.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.1.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.1.intermediate.dense.weight', 'text_encoder_m.encoder.layer.1.intermediate.dense.bias', 'text_encoder_m.encoder.layer.1.output.dense.weight', 'text_encoder_m.encoder.layer.1.output.dense.bias', 'text_encoder_m.encoder.layer.1.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.1.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.2.attention.self.query.weight', 'text_encoder_m.encoder.layer.2.attention.self.query.bias', 'text_encoder_m.encoder.layer.2.attention.self.key.weight', 'text_encoder_m.encoder.layer.2.attention.self.key.bias', 'text_encoder_m.encoder.layer.2.attention.self.value.weight', 'text_encoder_m.encoder.layer.2.attention.self.value.bias', 'text_encoder_m.encoder.layer.2.attention.output.dense.weight', 'text_encoder_m.encoder.layer.2.attention.output.dense.bias', 'text_encoder_m.encoder.layer.2.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.2.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.2.intermediate.dense.weight', 'text_encoder_m.encoder.layer.2.intermediate.dense.bias', 'text_encoder_m.encoder.layer.2.output.dense.weight', 'text_encoder_m.encoder.layer.2.output.dense.bias', 'text_encoder_m.encoder.layer.2.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.2.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.3.attention.self.query.weight', 'text_encoder_m.encoder.layer.3.attention.self.query.bias', 'text_encoder_m.encoder.layer.3.attention.self.key.weight', 'text_encoder_m.encoder.layer.3.attention.self.key.bias', 'text_encoder_m.encoder.layer.3.attention.self.value.weight', 'text_encoder_m.encoder.layer.3.attention.self.value.bias', 'text_encoder_m.encoder.layer.3.attention.output.dense.weight', 'text_encoder_m.encoder.layer.3.attention.output.dense.bias', 'text_encoder_m.encoder.layer.3.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.3.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.3.intermediate.dense.weight', 'text_encoder_m.encoder.layer.3.intermediate.dense.bias', 'text_encoder_m.encoder.layer.3.output.dense.weight', 'text_encoder_m.encoder.layer.3.output.dense.bias', 'text_encoder_m.encoder.layer.3.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.3.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.4.attention.self.query.weight', 'text_encoder_m.encoder.layer.4.attention.self.query.bias', 'text_encoder_m.encoder.layer.4.attention.self.key.weight', 'text_encoder_m.encoder.layer.4.attention.self.key.bias', 'text_encoder_m.encoder.layer.4.attention.self.value.weight', 'text_encoder_m.encoder.layer.4.attention.self.value.bias', 'text_encoder_m.encoder.layer.4.attention.output.dense.weight', 'text_encoder_m.encoder.layer.4.attention.output.dense.bias', 'text_encoder_m.encoder.layer.4.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.4.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.4.intermediate.dense.weight', 'text_encoder_m.encoder.layer.4.intermediate.dense.bias', 'text_encoder_m.encoder.layer.4.output.dense.weight', 'text_encoder_m.encoder.layer.4.output.dense.bias', 'text_encoder_m.encoder.layer.4.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.4.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.5.attention.self.query.weight', 'text_encoder_m.encoder.layer.5.attention.self.query.bias', 'text_encoder_m.encoder.layer.5.attention.self.key.weight', 'text_encoder_m.encoder.layer.5.attention.self.key.bias', 'text_encoder_m.encoder.layer.5.attention.self.value.weight', 'text_encoder_m.encoder.layer.5.attention.self.value.bias', 'text_encoder_m.encoder.layer.5.attention.output.dense.weight', 'text_encoder_m.encoder.layer.5.attention.output.dense.bias', 'text_encoder_m.encoder.layer.5.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.5.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.5.intermediate.dense.weight', 'text_encoder_m.encoder.layer.5.intermediate.dense.bias', 'text_encoder_m.encoder.layer.5.output.dense.weight', 'text_encoder_m.encoder.layer.5.output.dense.bias', 'text_encoder_m.encoder.layer.5.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.5.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.6.attention.self.query.weight', 'text_encoder_m.encoder.layer.6.attention.self.query.bias', 'text_encoder_m.encoder.layer.6.attention.self.key.weight', 'text_encoder_m.encoder.layer.6.attention.self.key.bias', 'text_encoder_m.encoder.layer.6.attention.self.value.weight', 'text_encoder_m.encoder.layer.6.attention.self.value.bias', 'text_encoder_m.encoder.layer.6.attention.output.dense.weight', 'text_encoder_m.encoder.layer.6.attention.output.dense.bias', 'text_encoder_m.encoder.layer.6.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.6.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.6.crossattention.self.query.weight', 'text_encoder_m.encoder.layer.6.crossattention.self.query.bias', 'text_encoder_m.encoder.layer.6.crossattention.self.key.weight', 'text_encoder_m.encoder.layer.6.crossattention.self.key.bias', 'text_encoder_m.encoder.layer.6.crossattention.self.value.weight', 'text_encoder_m.encoder.layer.6.crossattention.self.value.bias', 'text_encoder_m.encoder.layer.6.crossattention.output.dense.weight', 'text_encoder_m.encoder.layer.6.crossattention.output.dense.bias', 'text_encoder_m.encoder.layer.6.crossattention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.6.crossattention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.6.intermediate.dense.weight', 'text_encoder_m.encoder.layer.6.intermediate.dense.bias', 'text_encoder_m.encoder.layer.6.output.dense.weight', 'text_encoder_m.encoder.layer.6.output.dense.bias', 'text_encoder_m.encoder.layer.6.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.6.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.7.attention.self.query.weight', 'text_encoder_m.encoder.layer.7.attention.self.query.bias', 'text_encoder_m.encoder.layer.7.attention.self.key.weight', 'text_encoder_m.encoder.layer.7.attention.self.key.bias', 'text_encoder_m.encoder.layer.7.attention.self.value.weight', 'text_encoder_m.encoder.layer.7.attention.self.value.bias', 'text_encoder_m.encoder.layer.7.attention.output.dense.weight', 'text_encoder_m.encoder.layer.7.attention.output.dense.bias', 'text_encoder_m.encoder.layer.7.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.7.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.7.crossattention.self.query.weight', 'text_encoder_m.encoder.layer.7.crossattention.self.query.bias', 'text_encoder_m.encoder.layer.7.crossattention.self.key.weight', 'text_encoder_m.encoder.layer.7.crossattention.self.key.bias', 'text_encoder_m.encoder.layer.7.crossattention.self.value.weight', 'text_encoder_m.encoder.layer.7.crossattention.self.value.bias', 'text_encoder_m.encoder.layer.7.crossattention.output.dense.weight', 'text_encoder_m.encoder.layer.7.crossattention.output.dense.bias', 'text_encoder_m.encoder.layer.7.crossattention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.7.crossattention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.7.intermediate.dense.weight', 'text_encoder_m.encoder.layer.7.intermediate.dense.bias', 'text_encoder_m.encoder.layer.7.output.dense.weight', 'text_encoder_m.encoder.layer.7.output.dense.bias', 'text_encoder_m.encoder.layer.7.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.7.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.8.attention.self.query.weight', 'text_encoder_m.encoder.layer.8.attention.self.query.bias', 'text_encoder_m.encoder.layer.8.attention.self.key.weight', 'text_encoder_m.encoder.layer.8.attention.self.key.bias', 'text_encoder_m.encoder.layer.8.attention.self.value.weight', 'text_encoder_m.encoder.layer.8.attention.self.value.bias', 'text_encoder_m.encoder.layer.8.attention.output.dense.weight', 'text_encoder_m.encoder.layer.8.attention.output.dense.bias', 'text_encoder_m.encoder.layer.8.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.8.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.8.crossattention.self.query.weight', 'text_encoder_m.encoder.layer.8.crossattention.self.query.bias', 'text_encoder_m.encoder.layer.8.crossattention.self.key.weight', 'text_encoder_m.encoder.layer.8.crossattention.self.key.bias', 'text_encoder_m.encoder.layer.8.crossattention.self.value.weight', 'text_encoder_m.encoder.layer.8.crossattention.self.value.bias', 'text_encoder_m.encoder.layer.8.crossattention.output.dense.weight', 'text_encoder_m.encoder.layer.8.crossattention.output.dense.bias', 'text_encoder_m.encoder.layer.8.crossattention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.8.crossattention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.8.intermediate.dense.weight', 'text_encoder_m.encoder.layer.8.intermediate.dense.bias', 'text_encoder_m.encoder.layer.8.output.dense.weight', 'text_encoder_m.encoder.layer.8.output.dense.bias', 'text_encoder_m.encoder.layer.8.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.8.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.9.attention.self.query.weight', 'text_encoder_m.encoder.layer.9.attention.self.query.bias', 'text_encoder_m.encoder.layer.9.attention.self.key.weight', 'text_encoder_m.encoder.layer.9.attention.self.key.bias', 'text_encoder_m.encoder.layer.9.attention.self.value.weight', 'text_encoder_m.encoder.layer.9.attention.self.value.bias', 'text_encoder_m.encoder.layer.9.attention.output.dense.weight', 'text_encoder_m.encoder.layer.9.attention.output.dense.bias', 'text_encoder_m.encoder.layer.9.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.9.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.9.crossattention.self.query.weight', 'text_encoder_m.encoder.layer.9.crossattention.self.query.bias', 'text_encoder_m.encoder.layer.9.crossattention.self.key.weight', 'text_encoder_m.encoder.layer.9.crossattention.self.key.bias', 'text_encoder_m.encoder.layer.9.crossattention.self.value.weight', 'text_encoder_m.encoder.layer.9.crossattention.self.value.bias', 'text_encoder_m.encoder.layer.9.crossattention.output.dense.weight', 'text_encoder_m.encoder.layer.9.crossattention.output.dense.bias', 'text_encoder_m.encoder.layer.9.crossattention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.9.crossattention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.9.intermediate.dense.weight', 'text_encoder_m.encoder.layer.9.intermediate.dense.bias', 'text_encoder_m.encoder.layer.9.output.dense.weight', 'text_encoder_m.encoder.layer.9.output.dense.bias', 'text_encoder_m.encoder.layer.9.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.9.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.10.attention.self.query.weight', 'text_encoder_m.encoder.layer.10.attention.self.query.bias', 'text_encoder_m.encoder.layer.10.attention.self.key.weight', 'text_encoder_m.encoder.layer.10.attention.self.key.bias', 'text_encoder_m.encoder.layer.10.attention.self.value.weight', 'text_encoder_m.encoder.layer.10.attention.self.value.bias', 'text_encoder_m.encoder.layer.10.attention.output.dense.weight', 'text_encoder_m.encoder.layer.10.attention.output.dense.bias', 'text_encoder_m.encoder.layer.10.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.10.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.10.crossattention.self.query.weight', 'text_encoder_m.encoder.layer.10.crossattention.self.query.bias', 'text_encoder_m.encoder.layer.10.crossattention.self.key.weight', 'text_encoder_m.encoder.layer.10.crossattention.self.key.bias', 'text_encoder_m.encoder.layer.10.crossattention.self.value.weight', 'text_encoder_m.encoder.layer.10.crossattention.self.value.bias', 'text_encoder_m.encoder.layer.10.crossattention.output.dense.weight', 'text_encoder_m.encoder.layer.10.crossattention.output.dense.bias', 'text_encoder_m.encoder.layer.10.crossattention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.10.crossattention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.10.intermediate.dense.weight', 'text_encoder_m.encoder.layer.10.intermediate.dense.bias', 'text_encoder_m.encoder.layer.10.output.dense.weight', 'text_encoder_m.encoder.layer.10.output.dense.bias', 'text_encoder_m.encoder.layer.10.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.10.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.11.attention.self.query.weight', 'text_encoder_m.encoder.layer.11.attention.self.query.bias', 'text_encoder_m.encoder.layer.11.attention.self.key.weight', 'text_encoder_m.encoder.layer.11.attention.self.key.bias', 'text_encoder_m.encoder.layer.11.attention.self.value.weight', 'text_encoder_m.encoder.layer.11.attention.self.value.bias', 'text_encoder_m.encoder.layer.11.attention.output.dense.weight', 'text_encoder_m.encoder.layer.11.attention.output.dense.bias', 'text_encoder_m.encoder.layer.11.attention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.11.attention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.11.crossattention.self.query.weight', 'text_encoder_m.encoder.layer.11.crossattention.self.query.bias', 'text_encoder_m.encoder.layer.11.crossattention.self.key.weight', 'text_encoder_m.encoder.layer.11.crossattention.self.key.bias', 'text_encoder_m.encoder.layer.11.crossattention.self.value.weight', 'text_encoder_m.encoder.layer.11.crossattention.self.value.bias', 'text_encoder_m.encoder.layer.11.crossattention.output.dense.weight', 'text_encoder_m.encoder.layer.11.crossattention.output.dense.bias', 'text_encoder_m.encoder.layer.11.crossattention.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.11.crossattention.output.LayerNorm.bias', 'text_encoder_m.encoder.layer.11.intermediate.dense.weight', 'text_encoder_m.encoder.layer.11.intermediate.dense.bias', 'text_encoder_m.encoder.layer.11.output.dense.weight', 'text_encoder_m.encoder.layer.11.output.dense.bias', 'text_encoder_m.encoder.layer.11.output.LayerNorm.weight', 'text_encoder_m.encoder.layer.11.output.LayerNorm.bias', 'text_encoder.cls.predictions.bias', 'text_encoder.cls.predictions.transform.dense.weight', 'text_encoder.cls.predictions.transform.dense.bias', 'text_encoder.cls.predictions.transform.LayerNorm.weight', 'text_encoder.cls.predictions.transform.LayerNorm.bias', 'text_encoder.cls.predictions.decoder.weight', 'text_encoder.cls.predictions.decoder.bias'])
+iter:  0
+Start training
+Train Epoch: [0]  [  0/150]  eta: 0:07:38  lr: 0.000000  wpa_loss: 0.7638  train_loss: 0.7638  time: 3.0583  data: 0.0178  max mem: 12057
+Train Epoch: [0]  [ 50/150]  eta: 0:02:07  lr: 0.000002  wpa_loss: 0.7092  train_loss: 0.7092  time: 1.2391  data: 0.0083  max mem: 14431
+Train Epoch: [0]  [100/150]  eta: 0:01:02  lr: 0.000003  wpa_loss: 0.6909  train_loss: 0.6909  time: 1.2379  data: 0.0085  max mem: 14431
+Train Epoch: [0]  [149/150]  eta: 0:00:01  lr: 0.000005  wpa_loss: 0.5740  train_loss: 0.5740  time: 1.2242  data: 0.0086  max mem: 14431
+Train Epoch: [0] Total time: 0:03:07 (1.2489 s / it)
+Val Epoch: [0]  [ 0/17]  eta: 0:00:04  wpa_loss: 0.6114  val_loss: 0.6114  acc: 0.6197  time: 0.2793  data: 0.0081  max mem: 14431
+Val Epoch: [0]  [16/17]  eta: 0:00:00  wpa_loss: 0.6477  val_loss: 0.6477  acc: 0.6270  time: 0.1922  data: 0.0083  max mem: 14431
+Val Epoch: [0] Total time: 0:00:03 (0.1923 s / it)
+{'MulticlassF1Score': tensor(0.6104, device='cuda:0'), 'MulticlassAccuracy': tensor(0.6220, device='cuda:0'), 'MulticlassRecall': tensor(0.6098, device='cuda:0'), 'MulticlassPrecision': tensor(0.6129, device='cuda:0'), 'MulticlassSpecificity': tensor(0.6098, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[131637,  56176],
+        [ 69042,  74419]], device='cuda:0')}
+epoch:0, iter:149, 149,  train_loss: 0.5739593505859375, valid_loss: 0.638672972426695, acc:0.6307527422904968
+Averaged stats: lr: 0.0000  wpa_loss: 0.6810  train_loss: 0.6810
+epoch 0 0.5739593505859375
+Train Epoch: [1]  [  0/150]  eta: 0:03:05  lr: 0.000005  wpa_loss: 0.5823  train_loss: 0.5823  time: 1.2370  data: 0.0104  max mem: 14431
+Train Epoch: [1]  [ 50/150]  eta: 0:02:01  lr: 0.000007  wpa_loss: 0.6481  train_loss: 0.6481  time: 1.2146  data: 0.0085  max mem: 14431
+Train Epoch: [1]  [100/150]  eta: 0:01:01  lr: 0.000009  wpa_loss: 0.5967  train_loss: 0.5967  time: 1.2398  data: 0.0085  max mem: 14431
+Train Epoch: [1]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.6378  train_loss: 0.6378  time: 1.2446  data: 0.0087  max mem: 14431
+Train Epoch: [1] Total time: 0:03:04 (1.2327 s / it)
+Val Epoch: [1]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5881  val_loss: 0.5881  acc: 0.6880  time: 0.1902  data: 0.0086  max mem: 14431
+Val Epoch: [1]  [16/17]  eta: 0:00:00  wpa_loss: 0.6573  val_loss: 0.6573  acc: 0.6370  time: 0.1860  data: 0.0081  max mem: 14431
+Val Epoch: [1] Total time: 0:00:03 (0.1861 s / it)
+{'MulticlassF1Score': tensor(0.5810, device='cuda:0'), 'MulticlassAccuracy': tensor(0.6330, device='cuda:0'), 'MulticlassRecall': tensor(0.5966, device='cuda:0'), 'MulticlassPrecision': tensor(0.6407, device='cuda:0'), 'MulticlassSpecificity': tensor(0.5966, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[163217,  24596],
+        [ 96970,  46491]], device='cuda:0')}
+epoch:1, iter:299, 149,  train_loss: 0.6377910375595093, valid_loss: 0.6270401442752165, acc:0.6448878190096687
+Averaged stats: lr: 0.0000  wpa_loss: 0.6449  train_loss: 0.6449
+Train Epoch: [2]  [  0/150]  eta: 0:03:14  lr: 0.000010  wpa_loss: 0.6391  train_loss: 0.6391  time: 1.2940  data: 0.0113  max mem: 14431
+Train Epoch: [2]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.6309  train_loss: 0.6309  time: 1.2395  data: 0.0082  max mem: 14431
+Train Epoch: [2]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.5897  train_loss: 0.5897  time: 1.2367  data: 0.0079  max mem: 14431
+Train Epoch: [2]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.6487  train_loss: 0.6487  time: 1.2442  data: 0.0081  max mem: 14431
+Train Epoch: [2] Total time: 0:03:06 (1.2435 s / it)
+Val Epoch: [2]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5863  val_loss: 0.5863  acc: 0.6695  time: 0.1911  data: 0.0077  max mem: 14431
+Val Epoch: [2]  [16/17]  eta: 0:00:00  wpa_loss: 0.6548  val_loss: 0.6548  acc: 0.6404  time: 0.1858  data: 0.0078  max mem: 14431
+Val Epoch: [2] Total time: 0:00:03 (0.1859 s / it)
+{'MulticlassF1Score': tensor(0.6175, device='cuda:0'), 'MulticlassAccuracy': tensor(0.6486, device='cuda:0'), 'MulticlassRecall': tensor(0.6216, device='cuda:0'), 'MulticlassPrecision': tensor(0.6475, device='cuda:0'), 'MulticlassSpecificity': tensor(0.6216, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[154697,  33116],
+        [ 83284,  60177]], device='cuda:0')}
+epoch:2, iter:449, 149,  train_loss: 0.6487440466880798, valid_loss: 0.6191071657573476, acc:0.6649323316181407
+Averaged stats: lr: 0.0000  wpa_loss: 0.6309  train_loss: 0.6309
+epoch 2 0.6487440466880798
+Train Epoch: [3]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.7056  train_loss: 0.7056  time: 1.2886  data: 0.0112  max mem: 14431
+Train Epoch: [3]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.6084  train_loss: 0.6084  time: 1.2423  data: 0.0085  max mem: 14431
+Train Epoch: [3]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.6044  train_loss: 0.6044  time: 1.2410  data: 0.0082  max mem: 14431
+Train Epoch: [3]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.6243  train_loss: 0.6243  time: 1.2400  data: 0.0082  max mem: 14431
+Train Epoch: [3] Total time: 0:03:05 (1.2399 s / it)
+Val Epoch: [3]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5800  val_loss: 0.5800  acc: 0.6800  time: 0.1910  data: 0.0079  max mem: 14431
+Val Epoch: [3]  [16/17]  eta: 0:00:00  wpa_loss: 0.6376  val_loss: 0.6376  acc: 0.6304  time: 0.1860  data: 0.0078  max mem: 14431
+Val Epoch: [3] Total time: 0:00:03 (0.1861 s / it)
+{'MulticlassF1Score': tensor(0.6356, device='cuda:0'), 'MulticlassAccuracy': tensor(0.6499, device='cuda:0'), 'MulticlassRecall': tensor(0.6347, device='cuda:0'), 'MulticlassPrecision': tensor(0.6422, device='cuda:0'), 'MulticlassSpecificity': tensor(0.6347, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[140564,  47249],
+        [ 68716,  74745]], device='cuda:0')}
+epoch:3, iter:599, 149,  train_loss: 0.6243361234664917, valid_loss: 0.6148360301466549, acc:0.6591454569031211
+Averaged stats: lr: 0.0000  wpa_loss: 0.6185  train_loss: 0.6185
+epoch 3 0.6243361234664917
+Train Epoch: [4]  [  0/150]  eta: 0:03:11  lr: 0.000010  wpa_loss: 0.5559  train_loss: 0.5559  time: 1.2777  data: 0.0090  max mem: 14431
+Train Epoch: [4]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.6323  train_loss: 0.6323  time: 1.2455  data: 0.0082  max mem: 14431
+Train Epoch: [4]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.5530  train_loss: 0.5530  time: 1.2437  data: 0.0084  max mem: 14431
+Train Epoch: [4]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.5622  train_loss: 0.5622  time: 1.1930  data: 0.0084  max mem: 14431
+Train Epoch: [4] Total time: 0:03:04 (1.2271 s / it)
+Val Epoch: [4]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5702  val_loss: 0.5702  acc: 0.6888  time: 0.1888  data: 0.0078  max mem: 14431
+Val Epoch: [4]  [16/17]  eta: 0:00:00  wpa_loss: 0.6085  val_loss: 0.6085  acc: 0.6464  time: 0.1856  data: 0.0077  max mem: 14431
+Val Epoch: [4] Total time: 0:00:03 (0.1857 s / it)
+{'MulticlassF1Score': tensor(0.6498, device='cuda:0'), 'MulticlassAccuracy': tensor(0.6627, device='cuda:0'), 'MulticlassRecall': tensor(0.6486, device='cuda:0'), 'MulticlassPrecision': tensor(0.6556, device='cuda:0'), 'MulticlassSpecificity': tensor(0.6486, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[141532,  46281],
+        [ 65472,  77989]], device='cuda:0')}
+epoch:4, iter:749, 149,  train_loss: 0.562151312828064, valid_loss: 0.5905709932832157, acc:0.674774127848008
+Averaged stats: lr: 0.0000  wpa_loss: 0.6058  train_loss: 0.6058
+epoch 4 0.562151312828064
+Train Epoch: [5]  [  0/150]  eta: 0:02:59  lr: 0.000010  wpa_loss: 0.6877  train_loss: 0.6877  time: 1.1990  data: 0.0077  max mem: 14431
+Train Epoch: [5]  [ 50/150]  eta: 0:01:57  lr: 0.000010  wpa_loss: 0.5436  train_loss: 0.5436  time: 1.1879  data: 0.0082  max mem: 14431
+Train Epoch: [5]  [100/150]  eta: 0:01:00  lr: 0.000010  wpa_loss: 0.5437  train_loss: 0.5437  time: 1.2385  data: 0.0080  max mem: 14431
+Train Epoch: [5]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.5605  train_loss: 0.5605  time: 1.2400  data: 0.0082  max mem: 14431
+Train Epoch: [5] Total time: 0:03:01 (1.2128 s / it)
+Val Epoch: [5]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5424  val_loss: 0.5424  acc: 0.7016  time: 0.1885  data: 0.0077  max mem: 14431
+Val Epoch: [5]  [16/17]  eta: 0:00:00  wpa_loss: 0.6005  val_loss: 0.6005  acc: 0.6981  time: 0.1858  data: 0.0079  max mem: 14431
+Val Epoch: [5] Total time: 0:00:03 (0.1859 s / it)
+{'MulticlassF1Score': tensor(0.7006, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7066, device='cuda:0'), 'MulticlassRecall': tensor(0.7001, device='cuda:0'), 'MulticlassPrecision': tensor(0.7011, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7001, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[140623,  47190],
+        [ 49993,  93468]], device='cuda:0')}
+epoch:5, iter:899, 149,  train_loss: 0.560532808303833, valid_loss: 0.5451527465792263, acc:0.7215630412101746
+Averaged stats: lr: 0.0000  wpa_loss: 0.5783  train_loss: 0.5783
+epoch 5 0.560532808303833
+Train Epoch: [6]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.5450  train_loss: 0.5450  time: 1.2912  data: 0.0084  max mem: 14431
+Train Epoch: [6]  [ 50/150]  eta: 0:02:03  lr: 0.000010  wpa_loss: 0.5028  train_loss: 0.5028  time: 1.2397  data: 0.0082  max mem: 14431
+Train Epoch: [6]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.5777  train_loss: 0.5777  time: 1.2386  data: 0.0081  max mem: 14431
+Train Epoch: [6]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.5964  train_loss: 0.5964  time: 1.2410  data: 0.0081  max mem: 14431
+Train Epoch: [6] Total time: 0:03:05 (1.2392 s / it)
+Val Epoch: [6]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4718  val_loss: 0.4718  acc: 0.7509  time: 0.1896  data: 0.0077  max mem: 14431
+Val Epoch: [6]  [16/17]  eta: 0:00:00  wpa_loss: 0.5766  val_loss: 0.5766  acc: 0.7002  time: 0.1859  data: 0.0078  max mem: 14431
+Val Epoch: [6] Total time: 0:00:03 (0.1860 s / it)
+{'MulticlassF1Score': tensor(0.7250, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7337, device='cuda:0'), 'MulticlassRecall': tensor(0.7228, device='cuda:0'), 'MulticlassPrecision': tensor(0.7303, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7228, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[151088,  36725],
+        [ 51477,  91984]], device='cuda:0')}
+epoch:6, iter:1049, 149,  train_loss: 0.5963654518127441, valid_loss: 0.49900419396512646, acc:0.7606132310979506
+Averaged stats: lr: 0.0000  wpa_loss: 0.5287  train_loss: 0.5287
+epoch 6 0.5963654518127441
+Train Epoch: [7]  [  0/150]  eta: 0:03:07  lr: 0.000010  wpa_loss: 0.5109  train_loss: 0.5109  time: 1.2506  data: 0.0086  max mem: 14431
+Train Epoch: [7]  [ 50/150]  eta: 0:02:03  lr: 0.000010  wpa_loss: 0.5319  train_loss: 0.5319  time: 1.2357  data: 0.0083  max mem: 14431
+Train Epoch: [7]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.4935  train_loss: 0.4935  time: 1.2381  data: 0.0082  max mem: 14431
+Train Epoch: [7]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.4734  train_loss: 0.4734  time: 1.2400  data: 0.0083  max mem: 14431
+Train Epoch: [7] Total time: 0:03:05 (1.2364 s / it)
+Val Epoch: [7]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4611  val_loss: 0.4611  acc: 0.7597  time: 0.1916  data: 0.0076  max mem: 14431
+Val Epoch: [7]  [16/17]  eta: 0:00:00  wpa_loss: 0.5286  val_loss: 0.5286  acc: 0.7541  time: 0.1857  data: 0.0077  max mem: 14431
+Val Epoch: [7] Total time: 0:00:03 (0.1858 s / it)
+{'MulticlassF1Score': tensor(0.7425, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7468, device='cuda:0'), 'MulticlassRecall': tensor(0.7429, device='cuda:0'), 'MulticlassPrecision': tensor(0.7422, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7429, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[145011,  42802],
+        [ 41087, 102374]], device='cuda:0')}
+epoch:7, iter:1199, 149,  train_loss: 0.4733981788158417, valid_loss: 0.4777299621525933, acc:0.7731087733717525
+Averaged stats: lr: 0.0000  wpa_loss: 0.4880  train_loss: 0.4880
+epoch 7 0.4733981788158417
+Train Epoch: [8]  [  0/150]  eta: 0:03:03  lr: 0.000010  wpa_loss: 0.5368  train_loss: 0.5368  time: 1.2223  data: 0.0087  max mem: 14431
+Train Epoch: [8]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.4464  train_loss: 0.4464  time: 1.2460  data: 0.0082  max mem: 14431
+Train Epoch: [8]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.4577  train_loss: 0.4577  time: 1.2419  data: 0.0085  max mem: 14431
+Train Epoch: [8]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.3562  train_loss: 0.3562  time: 1.1977  data: 0.0082  max mem: 14431
+Train Epoch: [8] Total time: 0:03:05 (1.2377 s / it)
+Val Epoch: [8]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4132  val_loss: 0.4132  acc: 0.7868  time: 0.1884  data: 0.0077  max mem: 14431
+Val Epoch: [8]  [16/17]  eta: 0:00:00  wpa_loss: 0.5798  val_loss: 0.5798  acc: 0.7205  time: 0.1862  data: 0.0078  max mem: 14431
+Val Epoch: [8] Total time: 0:00:03 (0.1863 s / it)
+{'MulticlassF1Score': tensor(0.7493, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7576, device='cuda:0'), 'MulticlassRecall': tensor(0.7466, device='cuda:0'), 'MulticlassPrecision': tensor(0.7557, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7466, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[155572,  32241],
+        [ 48066,  95395]], device='cuda:0')}
+epoch:8, iter:1349, 149,  train_loss: 0.35615023970603943, valid_loss: 0.4797920602209428, acc:0.7807179198545569
+Averaged stats: lr: 0.0000  wpa_loss: 0.4604  train_loss: 0.4604
+epoch 8 0.35615023970603943
+Train Epoch: [9]  [  0/150]  eta: 0:03:03  lr: 0.000010  wpa_loss: 0.3847  train_loss: 0.3847  time: 1.2234  data: 0.0104  max mem: 14431
+Train Epoch: [9]  [ 50/150]  eta: 0:01:58  lr: 0.000010  wpa_loss: 0.4084  train_loss: 0.4084  time: 1.2073  data: 0.0083  max mem: 14431
+Train Epoch: [9]  [100/150]  eta: 0:01:00  lr: 0.000010  wpa_loss: 0.4926  train_loss: 0.4926  time: 1.2118  data: 0.0081  max mem: 14431
+Train Epoch: [9]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.3715  train_loss: 0.3715  time: 1.2443  data: 0.0082  max mem: 14431
+Train Epoch: [9] Total time: 0:03:02 (1.2149 s / it)
+Val Epoch: [9]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4382  val_loss: 0.4382  acc: 0.7884  time: 0.1886  data: 0.0077  max mem: 14431
+Val Epoch: [9]  [16/17]  eta: 0:00:00  wpa_loss: 0.5018  val_loss: 0.5018  acc: 0.7619  time: 0.1857  data: 0.0078  max mem: 14431
+Val Epoch: [9] Total time: 0:00:03 (0.1858 s / it)
+{'MulticlassF1Score': tensor(0.7599, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7625, device='cuda:0'), 'MulticlassRecall': tensor(0.7622, device='cuda:0'), 'MulticlassPrecision': tensor(0.7590, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7622, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[143610,  44203],
+        [ 34465, 108996]], device='cuda:0')}
+epoch:9, iter:1499, 149,  train_loss: 0.3715311884880066, valid_loss: 0.4634726608500761, acc:0.7856348998406354
+Averaged stats: lr: 0.0000  wpa_loss: 0.4331  train_loss: 0.4331
+epoch 9 0.3715311884880066
+Train Epoch: [10]  [  0/150]  eta: 0:03:12  lr: 0.000010  wpa_loss: 0.3992  train_loss: 0.3992  time: 1.2823  data: 0.0093  max mem: 14431
+Train Epoch: [10]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.4380  train_loss: 0.4380  time: 1.2436  data: 0.0082  max mem: 14431
+Train Epoch: [10]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.3601  train_loss: 0.3601  time: 1.2423  data: 0.0080  max mem: 14431
+Train Epoch: [10]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.3711  train_loss: 0.3711  time: 1.2411  data: 0.0080  max mem: 14431
+Train Epoch: [10] Total time: 0:03:06 (1.2428 s / it)
+Val Epoch: [10]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4140  val_loss: 0.4140  acc: 0.7945  time: 0.1906  data: 0.0077  max mem: 14431
+Val Epoch: [10]  [16/17]  eta: 0:00:00  wpa_loss: 0.4709  val_loss: 0.4709  acc: 0.7695  time: 0.1859  data: 0.0078  max mem: 14431
+Val Epoch: [10] Total time: 0:00:03 (0.1860 s / it)
+{'MulticlassF1Score': tensor(0.7571, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7587, device='cuda:0'), 'MulticlassRecall': tensor(0.7616, device='cuda:0'), 'MulticlassPrecision': tensor(0.7571, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7616, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[138893,  48920],
+        [ 31022, 112439]], device='cuda:0')}
+epoch:10, iter:1649, 149,  train_loss: 0.371058851480484, valid_loss: 0.46568214016802173, acc:0.7805433308376986
+Averaged stats: lr: 0.0000  wpa_loss: 0.4074  train_loss: 0.4074
+Train Epoch: [11]  [  0/150]  eta: 0:03:14  lr: 0.000010  wpa_loss: 0.4649  train_loss: 0.4649  time: 1.2967  data: 0.0103  max mem: 14431
+Train Epoch: [11]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.4035  train_loss: 0.4035  time: 1.2437  data: 0.0079  max mem: 14431
+Train Epoch: [11]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.3146  train_loss: 0.3146  time: 1.2465  data: 0.0080  max mem: 14431
+Train Epoch: [11]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.4590  train_loss: 0.4590  time: 1.2435  data: 0.0087  max mem: 14431
+Train Epoch: [11] Total time: 0:04:26 (1.7735 s / it)
+Val Epoch: [11]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4025  val_loss: 0.4025  acc: 0.7992  time: 0.1877  data: 0.0083  max mem: 14431
+Val Epoch: [11]  [16/17]  eta: 0:00:00  wpa_loss: 0.4835  val_loss: 0.4835  acc: 0.7359  time: 0.1840  data: 0.0077  max mem: 14431
+Val Epoch: [11] Total time: 0:00:03 (0.1841 s / it)
+{'MulticlassF1Score': tensor(0.7593, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7622, device='cuda:0'), 'MulticlassRecall': tensor(0.7613, device='cuda:0'), 'MulticlassPrecision': tensor(0.7584, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7613, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[144223,  43590],
+        [ 35197, 108264]], device='cuda:0')}
+epoch:11, iter:1799, 149,  train_loss: 0.45900237560272217, valid_loss: 0.4697243886835435, acc:0.7793604380944196
+Averaged stats: lr: 0.0000  wpa_loss: 0.3873  train_loss: 0.3873
+Train Epoch: [12]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.3429  train_loss: 0.3429  time: 1.2909  data: 0.0112  max mem: 14431
+Train Epoch: [12]  [ 50/150]  eta: 0:02:03  lr: 0.000010  wpa_loss: 0.4048  train_loss: 0.4048  time: 1.2388  data: 0.0083  max mem: 14431
+Train Epoch: [12]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.4176  train_loss: 0.4176  time: 1.2407  data: 0.0084  max mem: 14431
+Train Epoch: [12]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2993  train_loss: 0.2993  time: 1.2194  data: 0.0081  max mem: 14431
+Train Epoch: [12] Total time: 0:03:04 (1.2323 s / it)
+Val Epoch: [12]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3807  val_loss: 0.3807  acc: 0.8210  time: 0.1889  data: 0.0077  max mem: 14431
+Val Epoch: [12]  [16/17]  eta: 0:00:00  wpa_loss: 0.4415  val_loss: 0.4415  acc: 0.7734  time: 0.1855  data: 0.0077  max mem: 14431
+Val Epoch: [12] Total time: 0:00:03 (0.1856 s / it)
+{'MulticlassF1Score': tensor(0.7682, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7720, device='cuda:0'), 'MulticlassRecall': tensor(0.7685, device='cuda:0'), 'MulticlassPrecision': tensor(0.7679, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7685, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[149237,  38576],
+        [ 36942, 106519]], device='cuda:0')}
+epoch:12, iter:1949, 149,  train_loss: 0.2993415296077728, valid_loss: 0.46455996352083545, acc:0.7937577647321364
+Averaged stats: lr: 0.0000  wpa_loss: 0.3665  train_loss: 0.3665
+epoch 12 0.2993415296077728
+Train Epoch: [13]  [  0/150]  eta: 0:03:05  lr: 0.000010  wpa_loss: 0.4832  train_loss: 0.4832  time: 1.2371  data: 0.0164  max mem: 14431
+Train Epoch: [13]  [ 50/150]  eta: 0:02:03  lr: 0.000010  wpa_loss: 0.3138  train_loss: 0.3138  time: 1.2411  data: 0.0080  max mem: 14431
+Train Epoch: [13]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.4399  train_loss: 0.4399  time: 1.2382  data: 0.0083  max mem: 14431
+Train Epoch: [13]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.3252  train_loss: 0.3252  time: 1.2381  data: 0.0081  max mem: 14431
+Train Epoch: [13] Total time: 0:03:05 (1.2397 s / it)
+Val Epoch: [13]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3884  val_loss: 0.3884  acc: 0.8161  time: 0.1887  data: 0.0078  max mem: 14431
+Val Epoch: [13]  [16/17]  eta: 0:00:00  wpa_loss: 0.4729  val_loss: 0.4729  acc: 0.7722  time: 0.1862  data: 0.0080  max mem: 14431
+Val Epoch: [13] Total time: 0:00:03 (0.1863 s / it)
+{'MulticlassF1Score': tensor(0.7681, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7731, device='cuda:0'), 'MulticlassRecall': tensor(0.7671, device='cuda:0'), 'MulticlassPrecision': tensor(0.7693, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7671, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[152441,  35372],
+        [ 39794, 103667]], device='cuda:0')}
+epoch:13, iter:2099, 149,  train_loss: 0.32521283626556396, valid_loss: 0.4546220758382012, acc:0.795223989907433
+Averaged stats: lr: 0.0000  wpa_loss: 0.3495  train_loss: 0.3495
+Train Epoch: [14]  [  0/150]  eta: 0:03:12  lr: 0.000010  wpa_loss: 0.3268  train_loss: 0.3268  time: 1.2856  data: 0.0091  max mem: 14431
+Train Epoch: [14]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2669  train_loss: 0.2669  time: 1.2411  data: 0.0086  max mem: 14431
+Train Epoch: [14]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.3567  train_loss: 0.3567  time: 1.2402  data: 0.0083  max mem: 14431
+Train Epoch: [14]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2464  train_loss: 0.2464  time: 1.2444  data: 0.0081  max mem: 14431
+Train Epoch: [14] Total time: 0:03:37 (1.4481 s / it)
+Val Epoch: [14]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3971  val_loss: 0.3971  acc: 0.8214  time: 0.1897  data: 0.0082  max mem: 14431
+Val Epoch: [14]  [16/17]  eta: 0:00:00  wpa_loss: 0.4640  val_loss: 0.4640  acc: 0.7925  time: 0.1844  data: 0.0078  max mem: 14431
+Val Epoch: [14] Total time: 0:00:03 (0.1845 s / it)
+{'MulticlassF1Score': tensor(0.7712, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7740, device='cuda:0'), 'MulticlassRecall': tensor(0.7730, device='cuda:0'), 'MulticlassPrecision': tensor(0.7702, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7730, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[146505,  41308],
+        [ 33568, 109893]], device='cuda:0')}
+epoch:14, iter:2249, 149,  train_loss: 0.24642226099967957, valid_loss: 0.4736271553179797, acc:0.7900942739318398
+Averaged stats: lr: 0.0000  wpa_loss: 0.3358  train_loss: 0.3358
+epoch 14 0.24642226099967957
+Train Epoch: [15]  [  0/150]  eta: 0:03:12  lr: 0.000010  wpa_loss: 0.2333  train_loss: 0.2333  time: 1.2866  data: 0.0083  max mem: 14431
+Train Epoch: [15]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.3843  train_loss: 0.3843  time: 1.2443  data: 0.0083  max mem: 14431
+Train Epoch: [15]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.4178  train_loss: 0.4178  time: 1.2413  data: 0.0083  max mem: 14431
+Train Epoch: [15]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.3899  train_loss: 0.3899  time: 1.2104  data: 0.0082  max mem: 14431
+Train Epoch: [15] Total time: 0:03:05 (1.2376 s / it)
+Val Epoch: [15]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3533  val_loss: 0.3533  acc: 0.8531  time: 0.1921  data: 0.0079  max mem: 14431
+Val Epoch: [15]  [16/17]  eta: 0:00:00  wpa_loss: 0.4667  val_loss: 0.4667  acc: 0.7623  time: 0.1858  data: 0.0077  max mem: 14431
+Val Epoch: [15] Total time: 0:00:03 (0.1859 s / it)
+{'MulticlassF1Score': tensor(0.7686, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7740, device='cuda:0'), 'MulticlassRecall': tensor(0.7674, device='cuda:0'), 'MulticlassPrecision': tensor(0.7704, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7674, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[153323,  34490],
+        [ 40389, 103072]], device='cuda:0')}
+epoch:15, iter:2399, 149,  train_loss: 0.38990700244903564, valid_loss: 0.46951310073628144, acc:0.793171226978302
+Averaged stats: lr: 0.0000  wpa_loss: 0.3200  train_loss: 0.3200
+Train Epoch: [16]  [  0/150]  eta: 0:03:07  lr: 0.000010  wpa_loss: 0.3501  train_loss: 0.3501  time: 1.2515  data: 0.0084  max mem: 14431
+Train Epoch: [16]  [ 50/150]  eta: 0:01:59  lr: 0.000010  wpa_loss: 0.2609  train_loss: 0.2609  time: 1.2051  data: 0.0083  max mem: 14431
+Train Epoch: [16]  [100/150]  eta: 0:01:00  lr: 0.000010  wpa_loss: 0.2547  train_loss: 0.2547  time: 1.2442  data: 0.0081  max mem: 14431
+Train Epoch: [16]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.3418  train_loss: 0.3418  time: 1.2468  data: 0.0082  max mem: 14431
+Train Epoch: [16] Total time: 0:03:04 (1.2277 s / it)
+Val Epoch: [16]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3772  val_loss: 0.3772  acc: 0.8377  time: 0.1906  data: 0.0079  max mem: 14431
+Val Epoch: [16]  [16/17]  eta: 0:00:00  wpa_loss: 0.4628  val_loss: 0.4628  acc: 0.7874  time: 0.1864  data: 0.0077  max mem: 14431
+Val Epoch: [16] Total time: 0:00:03 (0.1865 s / it)
+{'MulticlassF1Score': tensor(0.7724, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7792, device='cuda:0'), 'MulticlassRecall': tensor(0.7699, device='cuda:0'), 'MulticlassPrecision': tensor(0.7775, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7699, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[157717,  30096],
+        [ 43043, 100418]], device='cuda:0')}
+epoch:16, iter:2549, 149,  train_loss: 0.3418155610561371, valid_loss: 0.4688216044622309, acc:0.8033784873345319
+Averaged stats: lr: 0.0000  wpa_loss: 0.3087  train_loss: 0.3087
+epoch 16 0.3418155610561371
+Train Epoch: [17]  [  0/150]  eta: 0:03:07  lr: 0.000010  wpa_loss: 0.3400  train_loss: 0.3400  time: 1.2532  data: 0.0101  max mem: 14431
+Train Epoch: [17]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2707  train_loss: 0.2707  time: 1.2396  data: 0.0085  max mem: 14431
+Train Epoch: [17]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.2970  train_loss: 0.2970  time: 1.2427  data: 0.0082  max mem: 14431
+Train Epoch: [17]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2417  train_loss: 0.2417  time: 1.2429  data: 0.0084  max mem: 14431
+Train Epoch: [17] Total time: 0:03:06 (1.2416 s / it)
+Val Epoch: [17]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3961  val_loss: 0.3961  acc: 0.8324  time: 0.1924  data: 0.0079  max mem: 14431
+Val Epoch: [17]  [16/17]  eta: 0:00:00  wpa_loss: 0.4475  val_loss: 0.4475  acc: 0.7901  time: 0.1863  data: 0.0080  max mem: 14431
+Val Epoch: [17] Total time: 0:00:03 (0.1864 s / it)
+{'MulticlassF1Score': tensor(0.7736, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7785, device='cuda:0'), 'MulticlassRecall': tensor(0.7728, device='cuda:0'), 'MulticlassPrecision': tensor(0.7747, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7728, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[153115,  34698],
+        [ 38691, 104770]], device='cuda:0')}
+epoch:17, iter:2699, 149,  train_loss: 0.24169906973838806, valid_loss: 0.4892153336721308, acc:0.7965843397028306
+Averaged stats: lr: 0.0000  wpa_loss: 0.2986  train_loss: 0.2986
+epoch 17 0.24169906973838806
+Train Epoch: [18]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.3471  train_loss: 0.3471  time: 1.2899  data: 0.0086  max mem: 14431
+Train Epoch: [18]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2659  train_loss: 0.2659  time: 1.2443  data: 0.0084  max mem: 14431
+Train Epoch: [18]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.2575  train_loss: 0.2575  time: 1.2421  data: 0.0083  max mem: 14431
+Train Epoch: [18]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2546  train_loss: 0.2546  time: 1.2462  data: 0.0083  max mem: 14431
+Train Epoch: [18] Total time: 0:03:06 (1.2438 s / it)
+Val Epoch: [18]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3828  val_loss: 0.3828  acc: 0.8518  time: 0.1907  data: 0.0077  max mem: 14431
+Val Epoch: [18]  [16/17]  eta: 0:00:00  wpa_loss: 0.4748  val_loss: 0.4748  acc: 0.7916  time: 0.1865  data: 0.0078  max mem: 14431
+Val Epoch: [18] Total time: 0:00:03 (0.1866 s / it)
+{'MulticlassF1Score': tensor(0.7702, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7768, device='cuda:0'), 'MulticlassRecall': tensor(0.7679, device='cuda:0'), 'MulticlassPrecision': tensor(0.7746, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7679, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[156684,  31129],
+        [ 42806, 100655]], device='cuda:0')}
+epoch:18, iter:2849, 149,  train_loss: 0.2545529007911682, valid_loss: 0.4738001262440401, acc:0.8029913481544045
+Averaged stats: lr: 0.0000  wpa_loss: 0.2856  train_loss: 0.2856
+Train Epoch: [19]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.3216  train_loss: 0.3216  time: 1.2887  data: 0.0081  max mem: 14431
+Train Epoch: [19]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2249  train_loss: 0.2249  time: 1.2380  data: 0.0082  max mem: 14431
+Train Epoch: [19]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.2280  train_loss: 0.2280  time: 1.1665  data: 0.0081  max mem: 14431
+Train Epoch: [19]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.3192  train_loss: 0.3192  time: 1.2404  data: 0.0084  max mem: 14431
+Train Epoch: [19] Total time: 0:03:04 (1.2269 s / it)
+Val Epoch: [19]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3831  val_loss: 0.3831  acc: 0.8419  time: 0.1925  data: 0.0078  max mem: 14431
+Val Epoch: [19]  [16/17]  eta: 0:00:00  wpa_loss: 0.4662  val_loss: 0.4662  acc: 0.7964  time: 0.1859  data: 0.0077  max mem: 14431
+Val Epoch: [19] Total time: 0:00:03 (0.1860 s / it)
+{'MulticlassF1Score': tensor(0.7704, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7761, device='cuda:0'), 'MulticlassRecall': tensor(0.7688, device='cuda:0'), 'MulticlassPrecision': tensor(0.7730, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7688, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[154731,  33082],
+        [ 41076, 102385]], device='cuda:0')}
+epoch:19, iter:2999, 149,  train_loss: 0.31916868686676025, valid_loss: 0.487611546235926, acc:0.7938560387667488
+Averaged stats: lr: 0.0000  wpa_loss: 0.2752  train_loss: 0.2752
+Train Epoch: [20]  [  0/150]  eta: 0:03:12  lr: 0.000010  wpa_loss: 0.2802  train_loss: 0.2802  time: 1.2865  data: 0.0080  max mem: 14431
+Train Epoch: [20]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2881  train_loss: 0.2881  time: 1.2448  data: 0.0082  max mem: 14431
+Train Epoch: [20]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.2532  train_loss: 0.2532  time: 1.2450  data: 0.0084  max mem: 14431
+Train Epoch: [20]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1844  train_loss: 0.1844  time: 1.2450  data: 0.0083  max mem: 14431
+Train Epoch: [20] Total time: 0:03:06 (1.2441 s / it)
+Val Epoch: [20]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4103  val_loss: 0.4103  acc: 0.8318  time: 0.1918  data: 0.0082  max mem: 14431
+Val Epoch: [20]  [16/17]  eta: 0:00:00  wpa_loss: 0.5200  val_loss: 0.5200  acc: 0.7483  time: 0.1862  data: 0.0081  max mem: 14431
+Val Epoch: [20] Total time: 0:00:03 (0.1863 s / it)
+{'MulticlassF1Score': tensor(0.7693, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7748, device='cuda:0'), 'MulticlassRecall': tensor(0.7680, device='cuda:0'), 'MulticlassPrecision': tensor(0.7714, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7680, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[153839,  33974],
+        [ 40625, 102836]], device='cuda:0')}
+epoch:20, iter:3149, 149,  train_loss: 0.18435810506343842, valid_loss: 0.5003700238816878, acc:0.7913922387010911
+Averaged stats: lr: 0.0000  wpa_loss: 0.2669  train_loss: 0.2669
+Train Epoch: [21]  [  0/150]  eta: 0:03:14  lr: 0.000010  wpa_loss: 0.2461  train_loss: 0.2461  time: 1.2947  data: 0.0085  max mem: 14431
+Train Epoch: [21]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2891  train_loss: 0.2891  time: 1.2386  data: 0.0083  max mem: 14431
+Train Epoch: [21]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.3379  train_loss: 0.3379  time: 1.2066  data: 0.0082  max mem: 14431
+Train Epoch: [21]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2128  train_loss: 0.2128  time: 1.2000  data: 0.0083  max mem: 14431
+Train Epoch: [21] Total time: 0:03:02 (1.2162 s / it)
+Val Epoch: [21]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4516  val_loss: 0.4516  acc: 0.8300  time: 0.1913  data: 0.0077  max mem: 14431
+Val Epoch: [21]  [16/17]  eta: 0:00:00  wpa_loss: 0.5049  val_loss: 0.5049  acc: 0.7801  time: 0.1861  data: 0.0078  max mem: 14431
+Val Epoch: [21] Total time: 0:00:03 (0.1862 s / it)
+{'MulticlassF1Score': tensor(0.7722, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7769, device='cuda:0'), 'MulticlassRecall': tensor(0.7715, device='cuda:0'), 'MulticlassPrecision': tensor(0.7731, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7715, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[152515,  35298],
+        [ 38609, 104852]], device='cuda:0')}
+epoch:21, iter:3299, 149,  train_loss: 0.2127661406993866, valid_loss: 0.5175371222636279, acc:0.7983607895234052
+Averaged stats: lr: 0.0000  wpa_loss: 0.2596  train_loss: 0.2596
+Train Epoch: [22]  [  0/150]  eta: 0:03:11  lr: 0.000010  wpa_loss: 0.2505  train_loss: 0.2505  time: 1.2745  data: 0.0087  max mem: 14431
+Train Epoch: [22]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2114  train_loss: 0.2114  time: 1.2432  data: 0.0083  max mem: 14431
+Train Epoch: [22]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.2223  train_loss: 0.2223  time: 1.2457  data: 0.0084  max mem: 14431
+Train Epoch: [22]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2407  train_loss: 0.2407  time: 1.2432  data: 0.0081  max mem: 14431
+Train Epoch: [22] Total time: 0:03:06 (1.2443 s / it)
+Val Epoch: [22]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.3850  val_loss: 0.3850  acc: 0.8461  time: 0.1917  data: 0.0080  max mem: 14431
+Val Epoch: [22]  [16/17]  eta: 0:00:00  wpa_loss: 0.5298  val_loss: 0.5298  acc: 0.7641  time: 0.1865  data: 0.0081  max mem: 14431
+Val Epoch: [22] Total time: 0:00:03 (0.1866 s / it)
+{'MulticlassF1Score': tensor(0.7702, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7760, device='cuda:0'), 'MulticlassRecall': tensor(0.7686, device='cuda:0'), 'MulticlassPrecision': tensor(0.7729, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7686, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[154779,  33034],
+        [ 41174, 102287]], device='cuda:0')}
+epoch:22, iter:3449, 149,  train_loss: 0.24068453907966614, valid_loss: 0.5203495411311879, acc:0.7958521352094763
+Averaged stats: lr: 0.0000  wpa_loss: 0.2519  train_loss: 0.2519
+Train Epoch: [23]  [  0/150]  eta: 0:03:12  lr: 0.000010  wpa_loss: 0.2375  train_loss: 0.2375  time: 1.2834  data: 0.0082  max mem: 14431
+Train Epoch: [23]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2168  train_loss: 0.2168  time: 1.2406  data: 0.0083  max mem: 14431
+Train Epoch: [23]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.2060  train_loss: 0.2060  time: 1.2388  data: 0.0083  max mem: 14431
+Train Epoch: [23]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2679  train_loss: 0.2679  time: 1.2438  data: 0.0082  max mem: 14431
+Train Epoch: [23] Total time: 0:03:06 (1.2420 s / it)
+Val Epoch: [23]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4418  val_loss: 0.4418  acc: 0.8313  time: 0.1917  data: 0.0078  max mem: 14431
+Val Epoch: [23]  [16/17]  eta: 0:00:00  wpa_loss: 0.5165  val_loss: 0.5165  acc: 0.7698  time: 0.1863  data: 0.0080  max mem: 14431
+Val Epoch: [23] Total time: 0:00:03 (0.1863 s / it)
+{'MulticlassF1Score': tensor(0.7708, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7763, device='cuda:0'), 'MulticlassRecall': tensor(0.7693, device='cuda:0'), 'MulticlassPrecision': tensor(0.7730, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7693, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[154257,  33556],
+        [ 40547, 102914]], device='cuda:0')}
+epoch:23, iter:3599, 149,  train_loss: 0.2678580582141876, valid_loss: 0.5238090175039628, acc:0.7933900777031394
+Averaged stats: lr: 0.0000  wpa_loss: 0.2440  train_loss: 0.2440
+Train Epoch: [24]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.3022  train_loss: 0.3022  time: 1.2908  data: 0.0084  max mem: 14431
+Train Epoch: [24]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2536  train_loss: 0.2536  time: 1.2389  data: 0.0082  max mem: 14431
+Train Epoch: [24]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.2046  train_loss: 0.2046  time: 1.2410  data: 0.0084  max mem: 14431
+Train Epoch: [24]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2143  train_loss: 0.2143  time: 1.2385  data: 0.0082  max mem: 14431
+Train Epoch: [24] Total time: 0:03:06 (1.2414 s / it)
+Val Epoch: [24]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4523  val_loss: 0.4523  acc: 0.8340  time: 0.1889  data: 0.0080  max mem: 14431
+Val Epoch: [24]  [16/17]  eta: 0:00:00  wpa_loss: 0.5208  val_loss: 0.5208  acc: 0.7789  time: 0.1857  data: 0.0077  max mem: 14431
+Val Epoch: [24] Total time: 0:00:03 (0.1858 s / it)
+{'MulticlassF1Score': tensor(0.7697, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7734, device='cuda:0'), 'MulticlassRecall': tensor(0.7702, device='cuda:0'), 'MulticlassPrecision': tensor(0.7693, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7702, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[149167,  38646],
+        [ 36413, 107048]], device='cuda:0')}
+epoch:24, iter:3749, 149,  train_loss: 0.21426038444042206, valid_loss: 0.5328347157029545, acc:0.7969649083474103
+Averaged stats: lr: 0.0000  wpa_loss: 0.2376  train_loss: 0.2376
+Train Epoch: [25]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.1650  train_loss: 0.1650  time: 1.2898  data: 0.0082  max mem: 14431
+Train Epoch: [25]  [ 50/150]  eta: 0:02:03  lr: 0.000010  wpa_loss: 0.2490  train_loss: 0.2490  time: 1.2300  data: 0.0084  max mem: 14431
+Train Epoch: [25]  [100/150]  eta: 0:01:00  lr: 0.000010  wpa_loss: 0.2931  train_loss: 0.2931  time: 1.1604  data: 0.0083  max mem: 14431
+Train Epoch: [25]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1919  train_loss: 0.1919  time: 1.1813  data: 0.0081  max mem: 14431
+Train Epoch: [25] Total time: 0:03:00 (1.2004 s / it)
+Val Epoch: [25]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5278  val_loss: 0.5278  acc: 0.8183  time: 0.1917  data: 0.0078  max mem: 14431
+Val Epoch: [25]  [16/17]  eta: 0:00:00  wpa_loss: 0.5562  val_loss: 0.5562  acc: 0.7880  time: 0.1862  data: 0.0077  max mem: 14431
+Val Epoch: [25] Total time: 0:00:03 (0.1863 s / it)
+{'MulticlassF1Score': tensor(0.7681, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7747, device='cuda:0'), 'MulticlassRecall': tensor(0.7658, device='cuda:0'), 'MulticlassPrecision': tensor(0.7724, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7658, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[156293,  31520],
+        [ 43115, 100346]], device='cuda:0')}
+epoch:25, iter:3899, 149,  train_loss: 0.19188646972179413, valid_loss: 0.5544348587008083, acc:0.7988640841315774
+Averaged stats: lr: 0.0000  wpa_loss: 0.2298  train_loss: 0.2298
+Train Epoch: [26]  [  0/150]  eta: 0:03:04  lr: 0.000010  wpa_loss: 0.2037  train_loss: 0.2037  time: 1.2290  data: 0.0083  max mem: 14431
+Train Epoch: [26]  [ 50/150]  eta: 0:01:59  lr: 0.000010  wpa_loss: 0.2083  train_loss: 0.2083  time: 1.2123  data: 0.0081  max mem: 14431
+Train Epoch: [26]  [100/150]  eta: 0:01:00  lr: 0.000010  wpa_loss: 0.2289  train_loss: 0.2289  time: 1.2417  data: 0.0082  max mem: 14431
+Train Epoch: [26]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1981  train_loss: 0.1981  time: 1.2434  data: 0.0081  max mem: 14431
+Train Epoch: [26] Total time: 0:03:04 (1.2280 s / it)
+Val Epoch: [26]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5004  val_loss: 0.5004  acc: 0.8262  time: 0.1887  data: 0.0077  max mem: 14431
+Val Epoch: [26]  [16/17]  eta: 0:00:00  wpa_loss: 0.5493  val_loss: 0.5493  acc: 0.7638  time: 0.1861  data: 0.0078  max mem: 14431
+Val Epoch: [26] Total time: 0:00:03 (0.1862 s / it)
+{'MulticlassF1Score': tensor(0.7722, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7768, device='cuda:0'), 'MulticlassRecall': tensor(0.7717, device='cuda:0'), 'MulticlassPrecision': tensor(0.7728, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7717, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[152031,  35782],
+        [ 38173, 105288]], device='cuda:0')}
+epoch:26, iter:4049, 149,  train_loss: 0.19807232916355133, valid_loss: 0.5505075454711914, acc:0.7972273581168231
+Averaged stats: lr: 0.0000  wpa_loss: 0.2249  train_loss: 0.2249
+Train Epoch: [27]  [  0/150]  eta: 0:03:10  lr: 0.000010  wpa_loss: 0.2351  train_loss: 0.2351  time: 1.2707  data: 0.0082  max mem: 14431
+Train Epoch: [27]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2382  train_loss: 0.2382  time: 1.2410  data: 0.0080  max mem: 14431
+Train Epoch: [27]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.1382  train_loss: 0.1382  time: 1.2391  data: 0.0080  max mem: 14431
+Train Epoch: [27]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2304  train_loss: 0.2304  time: 1.2440  data: 0.0083  max mem: 14431
+Train Epoch: [27] Total time: 0:03:06 (1.2429 s / it)
+Val Epoch: [27]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5085  val_loss: 0.5085  acc: 0.8353  time: 0.1901  data: 0.0077  max mem: 14431
+Val Epoch: [27]  [16/17]  eta: 0:00:00  wpa_loss: 0.5177  val_loss: 0.5177  acc: 0.8034  time: 0.1862  data: 0.0078  max mem: 14431
+Val Epoch: [27] Total time: 0:00:03 (0.1862 s / it)
+{'MulticlassF1Score': tensor(0.7661, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7727, device='cuda:0'), 'MulticlassRecall': tensor(0.7639, device='cuda:0'), 'MulticlassPrecision': tensor(0.7703, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7639, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[155879,  31934],
+        [ 43353, 100108]], device='cuda:0')}
+epoch:27, iter:4199, 149,  train_loss: 0.2304481863975525, valid_loss: 0.5548169367453631, acc:0.7960022056803984
+Averaged stats: lr: 0.0000  wpa_loss: 0.2176  train_loss: 0.2176
+Train Epoch: [28]  [  0/150]  eta: 0:03:14  lr: 0.000010  wpa_loss: 0.2524  train_loss: 0.2524  time: 1.2941  data: 0.0078  max mem: 14431
+Train Epoch: [28]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2316  train_loss: 0.2316  time: 1.2456  data: 0.0081  max mem: 14431
+Train Epoch: [28]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.2641  train_loss: 0.2641  time: 1.2456  data: 0.0081  max mem: 14431
+Train Epoch: [28]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2234  train_loss: 0.2234  time: 1.2436  data: 0.0082  max mem: 14431
+Train Epoch: [28] Total time: 0:03:06 (1.2427 s / it)
+Val Epoch: [28]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5422  val_loss: 0.5422  acc: 0.8172  time: 0.1914  data: 0.0076  max mem: 14431
+Val Epoch: [28]  [16/17]  eta: 0:00:00  wpa_loss: 0.4898  val_loss: 0.4898  acc: 0.7928  time: 0.1859  data: 0.0078  max mem: 14431
+Val Epoch: [28] Total time: 0:00:03 (0.1859 s / it)
+{'MulticlassF1Score': tensor(0.7694, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7742, device='cuda:0'), 'MulticlassRecall': tensor(0.7688, device='cuda:0'), 'MulticlassPrecision': tensor(0.7702, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7688, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[151957,  35856],
+        [ 38956, 104505]], device='cuda:0')}
+epoch:28, iter:4349, 149,  train_loss: 0.22338153421878815, valid_loss: 0.5759437575059778, acc:0.7982440064935123
+Averaged stats: lr: 0.0000  wpa_loss: 0.2124  train_loss: 0.2124
+Train Epoch: [29]  [  0/150]  eta: 0:03:14  lr: 0.000010  wpa_loss: 0.1935  train_loss: 0.1935  time: 1.2985  data: 0.0085  max mem: 14431
+Train Epoch: [29]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2326  train_loss: 0.2326  time: 1.2410  data: 0.0079  max mem: 14431
+Train Epoch: [29]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.2822  train_loss: 0.2822  time: 1.2286  data: 0.0080  max mem: 14431
+Train Epoch: [29]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2794  train_loss: 0.2794  time: 1.1622  data: 0.0080  max mem: 14431
+Train Epoch: [29] Total time: 0:03:03 (1.2241 s / it)
+Val Epoch: [29]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5506  val_loss: 0.5506  acc: 0.8227  time: 0.1890  data: 0.0078  max mem: 14431
+Val Epoch: [29]  [16/17]  eta: 0:00:00  wpa_loss: 0.5722  val_loss: 0.5722  acc: 0.7517  time: 0.1858  data: 0.0077  max mem: 14431
+Val Epoch: [29] Total time: 0:00:03 (0.1859 s / it)
+{'MulticlassF1Score': tensor(0.7646, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7691, device='cuda:0'), 'MulticlassRecall': tensor(0.7642, device='cuda:0'), 'MulticlassPrecision': tensor(0.7650, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7642, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[150467,  37346],
+        [ 39130, 104331]], device='cuda:0')}
+epoch:29, iter:4499, 149,  train_loss: 0.27940288186073303, valid_loss: 0.5836747551665586, acc:0.7886936138657963
+Averaged stats: lr: 0.0000  wpa_loss: 0.2083  train_loss: 0.2083
+Train Epoch: [30]  [  0/150]  eta: 0:02:59  lr: 0.000010  wpa_loss: 0.1566  train_loss: 0.1566  time: 1.1995  data: 0.0081  max mem: 14431
+Train Epoch: [30]  [ 50/150]  eta: 0:01:58  lr: 0.000010  wpa_loss: 0.1578  train_loss: 0.1578  time: 1.2040  data: 0.0082  max mem: 14431
+Train Epoch: [30]  [100/150]  eta: 0:01:00  lr: 0.000010  wpa_loss: 0.1458  train_loss: 0.1458  time: 1.2425  data: 0.0085  max mem: 14431
+Train Epoch: [30]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1410  train_loss: 0.1410  time: 1.2442  data: 0.0083  max mem: 14431
+Train Epoch: [30] Total time: 0:03:02 (1.2187 s / it)
+Val Epoch: [30]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.4820  val_loss: 0.4820  acc: 0.8353  time: 0.1905  data: 0.0078  max mem: 14431
+Val Epoch: [30]  [16/17]  eta: 0:00:00  wpa_loss: 0.5551  val_loss: 0.5551  acc: 0.8007  time: 0.1858  data: 0.0077  max mem: 14431
+Val Epoch: [30] Total time: 0:00:03 (0.1859 s / it)
+{'MulticlassF1Score': tensor(0.7728, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7778, device='cuda:0'), 'MulticlassRecall': tensor(0.7717, device='cuda:0'), 'MulticlassPrecision': tensor(0.7742, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7717, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[153477,  34336],
+        [ 39279, 104182]], device='cuda:0')}
+epoch:30, iter:4649, 149,  train_loss: 0.14101961255073547, valid_loss: 0.5700006449923796, acc:0.8056450451121611
+Averaged stats: lr: 0.0000  wpa_loss: 0.2014  train_loss: 0.2014
+Train Epoch: [31]  [  0/150]  eta: 0:03:11  lr: 0.000010  wpa_loss: 0.2066  train_loss: 0.2066  time: 1.2746  data: 0.0089  max mem: 14431
+Train Epoch: [31]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2159  train_loss: 0.2159  time: 1.2398  data: 0.0083  max mem: 14431
+Train Epoch: [31]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.1730  train_loss: 0.1730  time: 1.2420  data: 0.0084  max mem: 14431
+Train Epoch: [31]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1778  train_loss: 0.1778  time: 1.2466  data: 0.0082  max mem: 14431
+Train Epoch: [31] Total time: 0:03:06 (1.2438 s / it)
+Val Epoch: [31]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5384  val_loss: 0.5384  acc: 0.8337  time: 0.1927  data: 0.0076  max mem: 14431
+Val Epoch: [31]  [16/17]  eta: 0:00:00  wpa_loss: 0.5549  val_loss: 0.5549  acc: 0.7892  time: 0.1863  data: 0.0079  max mem: 14431
+Val Epoch: [31] Total time: 0:00:03 (0.1864 s / it)
+{'MulticlassF1Score': tensor(0.7672, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7719, device='cuda:0'), 'MulticlassRecall': tensor(0.7666, device='cuda:0'), 'MulticlassPrecision': tensor(0.7679, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7666, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[151485,  36328],
+        [ 39230, 104231]], device='cuda:0')}
+epoch:31, iter:4799, 149,  train_loss: 0.17783823609352112, valid_loss: 0.5937815396224752, acc:0.794285865391002
+Averaged stats: lr: 0.0000  wpa_loss: 0.1956  train_loss: 0.1956
+Train Epoch: [32]  [  0/150]  eta: 0:03:15  lr: 0.000010  wpa_loss: 0.1633  train_loss: 0.1633  time: 1.3035  data: 0.0082  max mem: 14431
+Train Epoch: [32]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.2442  train_loss: 0.2442  time: 1.2417  data: 0.0084  max mem: 14431
+Train Epoch: [32]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.1949  train_loss: 0.1949  time: 1.2428  data: 0.0081  max mem: 14431
+Train Epoch: [32]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1861  train_loss: 0.1861  time: 1.2422  data: 0.0083  max mem: 14431
+Train Epoch: [32] Total time: 0:03:06 (1.2425 s / it)
+Val Epoch: [32]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5586  val_loss: 0.5586  acc: 0.8311  time: 0.1915  data: 0.0077  max mem: 14431
+Val Epoch: [32]  [16/17]  eta: 0:00:00  wpa_loss: 0.5914  val_loss: 0.5914  acc: 0.7647  time: 0.1858  data: 0.0078  max mem: 14431
+Val Epoch: [32] Total time: 0:00:03 (0.1859 s / it)
+{'MulticlassF1Score': tensor(0.7649, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7714, device='cuda:0'), 'MulticlassRecall': tensor(0.7628, device='cuda:0'), 'MulticlassPrecision': tensor(0.7686, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7628, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[155241,  32572],
+        [ 43165, 100296]], device='cuda:0')}
+epoch:32, iter:4949, 149,  train_loss: 0.18610228598117828, valid_loss: 0.6064512554336997, acc:0.7955270199214711
+Averaged stats: lr: 0.0000  wpa_loss: 0.1911  train_loss: 0.1911
+Train Epoch: [33]  [  0/150]  eta: 0:03:10  lr: 0.000010  wpa_loss: 0.1930  train_loss: 0.1930  time: 1.2723  data: 0.0083  max mem: 14431
+Train Epoch: [33]  [ 50/150]  eta: 0:02:03  lr: 0.000010  wpa_loss: 0.1220  train_loss: 0.1220  time: 1.2407  data: 0.0082  max mem: 14431
+Train Epoch: [33]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.1479  train_loss: 0.1479  time: 1.2408  data: 0.0085  max mem: 14431
+Train Epoch: [33]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2193  train_loss: 0.2193  time: 1.2300  data: 0.0083  max mem: 14431
+Train Epoch: [33] Total time: 0:03:05 (1.2396 s / it)
+Val Epoch: [33]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5704  val_loss: 0.5704  acc: 0.8302  time: 0.1891  data: 0.0078  max mem: 14431
+Val Epoch: [33]  [16/17]  eta: 0:00:00  wpa_loss: 0.5771  val_loss: 0.5771  acc: 0.7659  time: 0.1860  data: 0.0078  max mem: 14431
+Val Epoch: [33] Total time: 0:00:03 (0.1861 s / it)
+{'MulticlassF1Score': tensor(0.7672, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7732, device='cuda:0'), 'MulticlassRecall': tensor(0.7654, device='cuda:0'), 'MulticlassPrecision': tensor(0.7702, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7654, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[154687,  33126],
+        [ 41999, 101462]], device='cuda:0')}
+epoch:33, iter:5099, 149,  train_loss: 0.2193078249692917, valid_loss: 0.6026021575226503, acc:0.7953468105372261
+Averaged stats: lr: 0.0000  wpa_loss: 0.1847  train_loss: 0.1847
+Train Epoch: [34]  [  0/150]  eta: 0:03:08  lr: 0.000010  wpa_loss: 0.1735  train_loss: 0.1735  time: 1.2539  data: 0.0084  max mem: 14431
+Train Epoch: [34]  [ 50/150]  eta: 0:01:56  lr: 0.000010  wpa_loss: 0.2058  train_loss: 0.2058  time: 1.1695  data: 0.0082  max mem: 14431
+Train Epoch: [34]  [100/150]  eta: 0:00:58  lr: 0.000010  wpa_loss: 0.1825  train_loss: 0.1825  time: 1.1829  data: 0.0081  max mem: 14431
+Train Epoch: [34]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2033  train_loss: 0.2033  time: 1.2455  data: 0.0081  max mem: 14431
+Train Epoch: [34] Total time: 0:02:59 (1.1946 s / it)
+Val Epoch: [34]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.6028  val_loss: 0.6028  acc: 0.8212  time: 0.1929  data: 0.0080  max mem: 14431
+Val Epoch: [34]  [16/17]  eta: 0:00:00  wpa_loss: 0.5781  val_loss: 0.5781  acc: 0.7771  time: 0.1867  data: 0.0079  max mem: 14431
+Val Epoch: [34] Total time: 0:00:03 (0.1868 s / it)
+{'MulticlassF1Score': tensor(0.7681, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7731, device='cuda:0'), 'MulticlassRecall': tensor(0.7671, device='cuda:0'), 'MulticlassPrecision': tensor(0.7694, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7671, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[152602,  35211],
+        [ 39941, 103520]], device='cuda:0')}
+epoch:34, iter:5249, 149,  train_loss: 0.20334945619106293, valid_loss: 0.6072457730770111, acc:0.7967405880198759
+Averaged stats: lr: 0.0000  wpa_loss: 0.1811  train_loss: 0.1811
+Train Epoch: [35]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.1814  train_loss: 0.1814  time: 1.2867  data: 0.0088  max mem: 14431
+Train Epoch: [35]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.1542  train_loss: 0.1542  time: 1.2414  data: 0.0081  max mem: 14431
+Train Epoch: [35]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.2385  train_loss: 0.2385  time: 1.2423  data: 0.0083  max mem: 14431
+Train Epoch: [35]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.2161  train_loss: 0.2161  time: 1.2399  data: 0.0082  max mem: 14431
+Train Epoch: [35] Total time: 0:03:06 (1.2432 s / it)
+Val Epoch: [35]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5979  val_loss: 0.5979  acc: 0.8287  time: 0.1918  data: 0.0078  max mem: 14431
+Val Epoch: [35]  [16/17]  eta: 0:00:00  wpa_loss: 0.6033  val_loss: 0.6033  acc: 0.7520  time: 0.1858  data: 0.0078  max mem: 14431
+Val Epoch: [35] Total time: 0:00:03 (0.1859 s / it)
+{'MulticlassF1Score': tensor(0.7700, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7741, device='cuda:0'), 'MulticlassRecall': tensor(0.7700, device='cuda:0'), 'MulticlassPrecision': tensor(0.7700, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7700, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[150287,  37526],
+        [ 37315, 106146]], device='cuda:0')}
+epoch:35, iter:5399, 149,  train_loss: 0.21610337495803833, valid_loss: 0.6391177405329311, acc:0.7923135021153618
+Averaged stats: lr: 0.0000  wpa_loss: 0.1757  train_loss: 0.1757
+Train Epoch: [36]  [  0/150]  eta: 0:03:14  lr: 0.000010  wpa_loss: 0.1351  train_loss: 0.1351  time: 1.2986  data: 0.0086  max mem: 14431
+Train Epoch: [36]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.1849  train_loss: 0.1849  time: 1.2424  data: 0.0081  max mem: 14431
+Train Epoch: [36]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.1063  train_loss: 0.1063  time: 1.2443  data: 0.0082  max mem: 14431
+Train Epoch: [36]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1841  train_loss: 0.1841  time: 1.2428  data: 0.0082  max mem: 14431
+Train Epoch: [36] Total time: 0:03:06 (1.2447 s / it)
+Val Epoch: [36]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.5955  val_loss: 0.5955  acc: 0.8300  time: 0.1909  data: 0.0088  max mem: 14431
+Val Epoch: [36]  [16/17]  eta: 0:00:00  wpa_loss: 0.6278  val_loss: 0.6278  acc: 0.7731  time: 0.1860  data: 0.0079  max mem: 14431
+Val Epoch: [36] Total time: 0:00:03 (0.1860 s / it)
+{'MulticlassF1Score': tensor(0.7706, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7756, device='cuda:0'), 'MulticlassRecall': tensor(0.7696, device='cuda:0'), 'MulticlassPrecision': tensor(0.7719, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7696, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[152940,  34873],
+        [ 39472, 103989]], device='cuda:0')}
+epoch:36, iter:5549, 149,  train_loss: 0.18405161798000336, valid_loss: 0.6353213261155521, acc:0.7958977187381071
+Averaged stats: lr: 0.0000  wpa_loss: 0.1710  train_loss: 0.1710
+Train Epoch: [37]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.1734  train_loss: 0.1734  time: 1.2898  data: 0.0083  max mem: 14431
+Train Epoch: [37]  [ 50/150]  eta: 0:02:04  lr: 0.000010  wpa_loss: 0.1911  train_loss: 0.1911  time: 1.2427  data: 0.0082  max mem: 14431
+Train Epoch: [37]  [100/150]  eta: 0:01:02  lr: 0.000010  wpa_loss: 0.1743  train_loss: 0.1743  time: 1.2430  data: 0.0080  max mem: 14431
+Train Epoch: [37]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1715  train_loss: 0.1715  time: 1.2377  data: 0.0083  max mem: 14431
+Train Epoch: [37] Total time: 0:03:06 (1.2428 s / it)
+Val Epoch: [37]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.6134  val_loss: 0.6134  acc: 0.8245  time: 0.1914  data: 0.0080  max mem: 14431
+Val Epoch: [37]  [16/17]  eta: 0:00:00  wpa_loss: 0.5923  val_loss: 0.5923  acc: 0.7843  time: 0.1860  data: 0.0079  max mem: 14431
+Val Epoch: [37] Total time: 0:00:03 (0.1861 s / it)
+{'MulticlassF1Score': tensor(0.7701, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7759, device='cuda:0'), 'MulticlassRecall': tensor(0.7684, device='cuda:0'), 'MulticlassPrecision': tensor(0.7728, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7684, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[154867,  32946],
+        [ 41299, 102162]], device='cuda:0')}
+epoch:37, iter:5699, 149,  train_loss: 0.17150384187698364, valid_loss: 0.6557135792339549, acc:0.7938761080012602
+Averaged stats: lr: 0.0000  wpa_loss: 0.1681  train_loss: 0.1681
+Train Epoch: [38]  [  0/150]  eta: 0:03:11  lr: 0.000010  wpa_loss: 0.1560  train_loss: 0.1560  time: 1.2777  data: 0.0082  max mem: 14431
+Train Epoch: [38]  [ 50/150]  eta: 0:02:02  lr: 0.000010  wpa_loss: 0.1843  train_loss: 0.1843  time: 1.2234  data: 0.0081  max mem: 14431
+Train Epoch: [38]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.2022  train_loss: 0.2022  time: 1.2451  data: 0.0082  max mem: 14431
+Train Epoch: [38]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1565  train_loss: 0.1565  time: 1.2447  data: 0.0081  max mem: 14431
+Train Epoch: [38] Total time: 0:03:05 (1.2381 s / it)
+Val Epoch: [38]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.6131  val_loss: 0.6131  acc: 0.8329  time: 0.1912  data: 0.0077  max mem: 14431
+Val Epoch: [38]  [16/17]  eta: 0:00:00  wpa_loss: 0.6515  val_loss: 0.6515  acc: 0.7822  time: 0.1892  data: 0.0078  max mem: 14431
+Val Epoch: [38] Total time: 0:00:03 (0.1893 s / it)
+{'MulticlassF1Score': tensor(0.7695, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7749, device='cuda:0'), 'MulticlassRecall': tensor(0.7681, device='cuda:0'), 'MulticlassPrecision': tensor(0.7715, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7681, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[153789,  34024],
+        [ 40536, 102925]], device='cuda:0')}
+epoch:38, iter:5849, 149,  train_loss: 0.15646305680274963, valid_loss: 0.6355402644942788, acc:0.796877054607167
+Averaged stats: lr: 0.0000  wpa_loss: 0.1645  train_loss: 0.1645
+Train Epoch: [39]  [  0/150]  eta: 0:03:13  lr: 0.000010  wpa_loss: 0.1460  train_loss: 0.1460  time: 1.2926  data: 0.0085  max mem: 14431
+Train Epoch: [39]  [ 50/150]  eta: 0:02:01  lr: 0.000010  wpa_loss: 0.1947  train_loss: 0.1947  time: 1.2150  data: 0.0082  max mem: 14431
+Train Epoch: [39]  [100/150]  eta: 0:01:01  lr: 0.000010  wpa_loss: 0.1144  train_loss: 0.1144  time: 1.2437  data: 0.0082  max mem: 14431
+Train Epoch: [39]  [149/150]  eta: 0:00:01  lr: 0.000010  wpa_loss: 0.1580  train_loss: 0.1580  time: 1.2445  data: 0.0082  max mem: 14431
+Train Epoch: [39] Total time: 0:03:04 (1.2296 s / it)
+Val Epoch: [39]  [ 0/17]  eta: 0:00:03  wpa_loss: 0.6314  val_loss: 0.6314  acc: 0.8126  time: 0.1904  data: 0.0077  max mem: 14431
+Val Epoch: [39]  [16/17]  eta: 0:00:00  wpa_loss: 0.6124  val_loss: 0.6124  acc: 0.7825  time: 0.1861  data: 0.0079  max mem: 14431
+Val Epoch: [39] Total time: 0:00:03 (0.1862 s / it)
+{'MulticlassF1Score': tensor(0.7691, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7745, device='cuda:0'), 'MulticlassRecall': tensor(0.7677, device='cuda:0'), 'MulticlassPrecision': tensor(0.7711, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7677, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[153775,  34038],
+        [ 40649, 102812]], device='cuda:0')}
+epoch:39, iter:5999, 149,  train_loss: 0.15796072781085968, valid_loss: 0.656588217791389, acc:0.795951412004583
+Averaged stats: lr: 0.0000  wpa_loss: 0.1596  train_loss: 0.1596
+Training time 2:08:25
+ai-platform-wlf1-ge10-1:74555:74594 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+ai-platform-wlf1-ge10-1:74554:74596 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+ai-platform-wlf1-ge10-1:74553:74593 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+ai-platform-wlf1-ge10-1:74555:74555 [3] NCCL INFO comm 0x446dc110 rank 3 nranks 4 cudaDev 3 busId e1000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:74552:74595 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ai-platform-wlf1-ge10-1:74554:74554 [2] NCCL INFO comm 0x43ce2420 rank 2 nranks 4 cudaDev 2 busId 81000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:74553:74553 [1] NCCL INFO comm 0x44b777b0 rank 1 nranks 4 cudaDev 1 busId 24000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:74552:74552 [0] NCCL INFO comm 0x43bc2320 rank 0 nranks 4 cudaDev 0 busId 1000 - Abort COMPLETE

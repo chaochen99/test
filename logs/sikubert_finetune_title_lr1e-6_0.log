@@ -1,0 +1,1968 @@
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+| distributed init (rank 0, word 4): env://
+| distributed init (rank 1, word 4): env://
+| distributed init (rank 2, word 4): env://
+| distributed init (rank 3, word 4): env://
+ai-platform-wlf1-ge10-1:47760:47760 [0] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:47760:47760 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:47760:47760 [0] NCCL INFO cudaDriverVersion 11040
+NCCL version 2.14.3+cuda11.7
+ai-platform-wlf1-ge10-1:47762:47762 [2] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:47763:47763 [3] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:47762:47762 [2] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:47762:47762 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:47763:47763 [3] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:47763:47763 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:47761:47761 [1] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:47761:47761 [1] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:47761:47761 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] -1/-1/-1->3->2
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Channel 00/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Channel 01/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Channel 02/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Channel 03/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Channel 00 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Channel 00 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Channel 00 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Channel 00 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Channel 01 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Channel 01 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Channel 01 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Channel 01 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Channel 02 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Channel 02 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Channel 02 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Channel 02 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Channel 03 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Channel 03 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Channel 03 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Channel 03 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Channel 00 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Channel 01 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Channel 02 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Channel 03 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Channel 00 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Channel 01 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Channel 02 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Channel 00 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Channel 03 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Channel 01 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Channel 02 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Channel 03 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:47761:47800 [1] NCCL INFO comm 0x440f99b0 rank 1 nranks 4 cudaDev 1 busId 24000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:47760:47797 [0] NCCL INFO comm 0x44185ef0 rank 0 nranks 4 cudaDev 0 busId 1000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:47763:47799 [3] NCCL INFO comm 0x45893730 rank 3 nranks 4 cudaDev 3 busId e1000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:47762:47798 [2] NCCL INFO comm 0x43fb4660 rank 2 nranks 4 cudaDev 2 busId 81000 - Init COMPLETE
+Creating retrieval dataset
+Creating model
+Some weights of the model checkpoint at SIKU-BERT/sikubert were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.dense.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at SIKU-BERT/sikubert and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at SIKU-BERT/sikubert were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at SIKU-BERT/sikubert and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at SIKU-BERT/sikubert were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at SIKU-BERT/sikubert and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at SIKU-BERT/sikubert were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.dense.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at SIKU-BERT/sikubert and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Start training
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:163: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:163: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:163: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:163: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Train Epoch: [0]  [ 0/73]  eta: 0:02:28  lr: 0.000000  loss_title: 3.2840  time: 2.0353  data: 0.0007  max mem: 16040
+Train Epoch: [0]  [50/73]  eta: 0:00:22  lr: 0.000000  loss_title: 3.2961  time: 0.9766  data: 0.0002  max mem: 17285
+Train Epoch: [0]  [72/73]  eta: 0:00:00  lr: 0.000000  loss_title: 3.1648  time: 0.9775  data: 0.0002  max mem: 17285
+Train Epoch: [0] Total time: 0:01:12 (0.9895 s / it)
+Averaged stats: lr: 0.0000  loss_title: 3.3155
+./src/bert_finetune_title.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  title_labels = torch.tensor(book_type, dtype=torch.long).to(device)
+./src/bert_finetune_title.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  title_labels = torch.tensor(book_type, dtype=torch.long).to(device)
+./src/bert_finetune_title.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  title_labels = torch.tensor(book_type, dtype=torch.long).to(device)
+./src/bert_finetune_title.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  title_labels = torch.tensor(book_type, dtype=torch.long).to(device)
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3902  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3715  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3715 s / it)
+F1-score: 0.01394744124263525
+Accuracy: 0.023017901927232742
+Specificity: 0.9587817192077637
+recall: 0.06776344776153564
+Precision: 0.017622819170355797
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torchmetrics/utilities/prints.py:36: UserWarning: The ``compute`` method of metric MulticlassConfusionMatrix was called before the ``update`` method which may lead to errors, as metric states have not yet been updated.
+  warnings.warn(*args, **kwargs)
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [1]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 3.3241  time: 1.0176  data: 0.0008  max mem: 17285
+Train Epoch: [1]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 3.0755  time: 0.9781  data: 0.0002  max mem: 17285
+Train Epoch: [1]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 3.0926  time: 0.9758  data: 0.0002  max mem: 17285
+Train Epoch: [1] Total time: 0:01:11 (0.9781 s / it)
+Averaged stats: lr: 0.0000  loss_title: 3.1539
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3911  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3723  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3723 s / it)
+F1-score: 0.021879160776734352
+Accuracy: 0.22122761607170105
+Specificity: 0.9588084816932678
+recall: 0.044714801013469696
+Precision: 0.06054459139704704
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [2]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 3.0645  time: 1.0267  data: 0.0010  max mem: 17285
+Train Epoch: [2]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 2.7058  time: 0.9744  data: 0.0002  max mem: 17285
+Train Epoch: [2]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 2.7195  time: 0.9762  data: 0.0002  max mem: 17285
+Train Epoch: [2] Total time: 0:01:11 (0.9764 s / it)
+Averaged stats: lr: 0.0000  loss_title: 2.9009
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3904  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3721  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3722 s / it)
+F1-score: 0.052334725856781006
+Accuracy: 0.2659846544265747
+Specificity: 0.9611060619354248
+recall: 0.06871479004621506
+Precision: 0.07846904546022415
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [3]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 2.6964  time: 1.0141  data: 0.0007  max mem: 17285
+Train Epoch: [3]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 2.3489  time: 0.9773  data: 0.0002  max mem: 17285
+Train Epoch: [3]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 2.6867  time: 0.9772  data: 0.0002  max mem: 17285
+Train Epoch: [3] Total time: 0:01:11 (0.9775 s / it)
+Averaged stats: lr: 0.0000  loss_title: 2.6844
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3904  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3715  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3716 s / it)
+F1-score: 0.09945297986268997
+Accuracy: 0.3708439767360687
+Specificity: 0.9674878120422363
+recall: 0.11735831201076508
+Precision: 0.13850334286689758
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [4]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 2.7324  time: 1.0260  data: 0.0007  max mem: 17285
+Train Epoch: [4]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 2.4151  time: 0.9756  data: 0.0002  max mem: 17285
+Train Epoch: [4]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 2.1415  time: 0.9755  data: 0.0002  max mem: 17285
+Train Epoch: [4] Total time: 0:01:11 (0.9761 s / it)
+Averaged stats: lr: 0.0000  loss_title: 2.4985
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3914  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3717  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3717 s / it)
+F1-score: 0.12456955015659332
+Accuracy: 0.41943734884262085
+Specificity: 0.9714006185531616
+recall: 0.15541736781597137
+Precision: 0.13661663234233856
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [5]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 2.3937  time: 1.0004  data: 0.0007  max mem: 17285
+Train Epoch: [5]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 2.2134  time: 0.9763  data: 0.0002  max mem: 17285
+Train Epoch: [5]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 2.1221  time: 0.9768  data: 0.0002  max mem: 17285
+Train Epoch: [5] Total time: 0:01:11 (0.9765 s / it)
+Averaged stats: lr: 0.0000  loss_title: 2.3240
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3904  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3716  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3717 s / it)
+F1-score: 0.16263322532176971
+Accuracy: 0.47570332884788513
+Specificity: 0.975047767162323
+recall: 0.19798916578292847
+Precision: 0.196647047996521
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [6]  [ 0/73]  eta: 0:01:12  lr: 0.000001  loss_title: 2.0883  time: 0.9897  data: 0.0008  max mem: 17285
+Train Epoch: [6]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 2.1956  time: 0.9756  data: 0.0002  max mem: 17285
+Train Epoch: [6]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 2.2780  time: 0.9754  data: 0.0002  max mem: 17285
+Train Epoch: [6] Total time: 0:01:11 (0.9759 s / it)
+Averaged stats: lr: 0.0000  loss_title: 2.1745
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3918  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3724  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3725 s / it)
+F1-score: 0.18783321976661682
+Accuracy: 0.5140665173530579
+Specificity: 0.977241575717926
+recall: 0.2297135591506958
+Precision: 0.20991834998130798
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [7]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 2.1282  time: 1.0061  data: 0.0007  max mem: 17285
+Train Epoch: [7]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.9037  time: 0.9744  data: 0.0002  max mem: 17285
+Train Epoch: [7]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.9612  time: 0.9750  data: 0.0002  max mem: 17285
+Train Epoch: [7] Total time: 0:01:11 (0.9754 s / it)
+Averaged stats: lr: 0.0000  loss_title: 2.0434
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3902  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3721  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3722 s / it)
+F1-score: 0.21029281616210938
+Accuracy: 0.5358056426048279
+Specificity: 0.9783941507339478
+recall: 0.25072845816612244
+Precision: 0.22404129803180695
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [8]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 1.6994  time: 1.0086  data: 0.0007  max mem: 17285
+Train Epoch: [8]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.9345  time: 0.9784  data: 0.0002  max mem: 17285
+Train Epoch: [8]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.8278  time: 0.9795  data: 0.0002  max mem: 17285
+Train Epoch: [8] Total time: 0:01:11 (0.9776 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.9327
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3909  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3721  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3722 s / it)
+F1-score: 0.22087045013904572
+Accuracy: 0.551150918006897
+Specificity: 0.9792748689651489
+recall: 0.26345235109329224
+Precision: 0.22924333810806274
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [9]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 2.0670  time: 1.0218  data: 0.0007  max mem: 17285
+Train Epoch: [9]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.6262  time: 0.9763  data: 0.0002  max mem: 17285
+Train Epoch: [9]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.7444  time: 0.9776  data: 0.0002  max mem: 17285
+Train Epoch: [9] Total time: 0:01:11 (0.9781 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.8336
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3927  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3734  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3734 s / it)
+F1-score: 0.23738828301429749
+Accuracy: 0.5690537095069885
+Specificity: 0.980114758014679
+recall: 0.2772277891635895
+Precision: 0.29470330476760864
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [10]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.8086  time: 1.0229  data: 0.0009  max mem: 17285
+Train Epoch: [10]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.6053  time: 0.9767  data: 0.0002  max mem: 17285
+Train Epoch: [10]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.5130  time: 0.9764  data: 0.0002  max mem: 17285
+Train Epoch: [10] Total time: 0:01:11 (0.9772 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.7500
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3907  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3722  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3723 s / it)
+F1-score: 0.24375414848327637
+Accuracy: 0.5767263174057007
+Specificity: 0.9806184768676758
+recall: 0.2850825786590576
+Precision: 0.28544437885284424
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [11]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.5225  time: 1.0222  data: 0.0008  max mem: 17285
+Train Epoch: [11]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.6232  time: 0.9765  data: 0.0002  max mem: 17285
+Train Epoch: [11]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.4826  time: 0.9775  data: 0.0002  max mem: 17285
+Train Epoch: [11] Total time: 0:01:11 (0.9770 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.6721
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3902  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3718  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3719 s / it)
+F1-score: 0.2623758912086487
+Accuracy: 0.5895140767097473
+Specificity: 0.9813054800033569
+recall: 0.2998002767562866
+Precision: 0.3030029833316803
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [12]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.7001  time: 1.0152  data: 0.0007  max mem: 17285
+Train Epoch: [12]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.6024  time: 0.9752  data: 0.0002  max mem: 17285
+Train Epoch: [12]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.4557  time: 0.9777  data: 0.0002  max mem: 17285
+Train Epoch: [12] Total time: 0:01:11 (0.9767 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.6094
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3914  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3720  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3720 s / it)
+F1-score: 0.29137399792671204
+Accuracy: 0.6176470518112183
+Specificity: 0.9825538396835327
+recall: 0.32555997371673584
+Precision: 0.3205454349517822
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [13]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.3742  time: 1.0188  data: 0.0008  max mem: 17285
+Train Epoch: [13]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 2.0401  time: 0.9765  data: 0.0002  max mem: 17285
+Train Epoch: [13]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.3777  time: 0.9765  data: 0.0002  max mem: 17285
+Train Epoch: [13] Total time: 0:01:11 (0.9769 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.5450
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3908  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3719  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3720 s / it)
+F1-score: 0.30389824509620667
+Accuracy: 0.6253197193145752
+Specificity: 0.9829267859458923
+recall: 0.33594781160354614
+Precision: 0.3300494849681854
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [14]  [ 0/73]  eta: 0:01:17  lr: 0.000001  loss_title: 1.5717  time: 1.0664  data: 0.0007  max mem: 17285
+Train Epoch: [14]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.4593  time: 0.9780  data: 0.0002  max mem: 17285
+Train Epoch: [14]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.6162  time: 0.9754  data: 0.0002  max mem: 17285
+Train Epoch: [14] Total time: 0:01:11 (0.9777 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.4895
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3916  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3719  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3720 s / it)
+F1-score: 0.3148837089538574
+Accuracy: 0.6317135691642761
+Specificity: 0.983288586139679
+recall: 0.3452598452568054
+Precision: 0.33652982115745544
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [15]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 1.6730  time: 1.0133  data: 0.0008  max mem: 17285
+Train Epoch: [15]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.5645  time: 0.9761  data: 0.0002  max mem: 17285
+Train Epoch: [15]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.5289  time: 0.9779  data: 0.0002  max mem: 17285
+Train Epoch: [15] Total time: 0:01:11 (0.9773 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.4419
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3913  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3723  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3724 s / it)
+F1-score: 0.3485414385795593
+Accuracy: 0.6547314524650574
+Specificity: 0.9843634963035583
+recall: 0.37230923771858215
+Precision: 0.39280831813812256
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [16]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.6298  time: 1.0146  data: 0.0010  max mem: 17285
+Train Epoch: [16]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.0249  time: 0.9786  data: 0.0002  max mem: 17285
+Train Epoch: [16]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.5940  time: 0.9753  data: 0.0002  max mem: 17285
+Train Epoch: [16] Total time: 0:01:11 (0.9777 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.3956
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3905  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3717  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3718 s / it)
+F1-score: 0.34735438227653503
+Accuracy: 0.6432225108146667
+Specificity: 0.9840169548988342
+recall: 0.37214282155036926
+Precision: 0.38743430376052856
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [17]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.1234  time: 1.0232  data: 0.0006  max mem: 17285
+Train Epoch: [17]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.2864  time: 0.9773  data: 0.0002  max mem: 17285
+Train Epoch: [17]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.3740  time: 0.9753  data: 0.0002  max mem: 17285
+Train Epoch: [17] Total time: 0:01:11 (0.9771 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.3464
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3922  data: 0.0004  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3722  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3723 s / it)
+F1-score: 0.37799274921417236
+Accuracy: 0.6700767278671265
+Specificity: 0.9851663112640381
+recall: 0.398542195558548
+Precision: 0.40046030282974243
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [18]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.3990  time: 1.0157  data: 0.0008  max mem: 17285
+Train Epoch: [18]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.2814  time: 0.9750  data: 0.0002  max mem: 17285
+Train Epoch: [18]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.2913  time: 0.9788  data: 0.0002  max mem: 17285
+Train Epoch: [18] Total time: 0:01:11 (0.9774 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.3108
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3912  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3719  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3720 s / it)
+F1-score: 0.38412126898765564
+Accuracy: 0.6675191521644592
+Specificity: 0.9851508736610413
+recall: 0.40574002265930176
+Precision: 0.4364285171031952
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [19]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.1453  time: 1.0159  data: 0.0008  max mem: 17285
+Train Epoch: [19]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.9896  time: 0.9771  data: 0.0002  max mem: 17285
+Train Epoch: [19]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.1629  time: 0.9742  data: 0.0002  max mem: 17285
+Train Epoch: [19] Total time: 0:01:11 (0.9766 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.2693
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3911  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3723  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3724 s / it)
+F1-score: 0.4108285903930664
+Accuracy: 0.6982097029685974
+Specificity: 0.9864462614059448
+recall: 0.4337040185928345
+Precision: 0.4588829278945923
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [20]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 1.0755  time: 1.0078  data: 0.0007  max mem: 17285
+Train Epoch: [20]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.0186  time: 0.9774  data: 0.0003  max mem: 17285
+Train Epoch: [20]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.3530  time: 0.9772  data: 0.0003  max mem: 17285
+Train Epoch: [20] Total time: 0:01:11 (0.9776 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.2327
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3917  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3738  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3739 s / it)
+F1-score: 0.42052051424980164
+Accuracy: 0.6918158531188965
+Specificity: 0.9862769842147827
+recall: 0.44012314081192017
+Precision: 0.48899996280670166
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [21]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 1.1881  time: 1.0079  data: 0.0010  max mem: 17285
+Train Epoch: [21]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.0443  time: 0.9772  data: 0.0002  max mem: 17285
+Train Epoch: [21]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.2842  time: 0.9760  data: 0.0002  max mem: 17285
+Train Epoch: [21] Total time: 0:01:11 (0.9768 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.1976
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3903  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3723  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3724 s / it)
+F1-score: 0.4402652978897095
+Accuracy: 0.7071611285209656
+Specificity: 0.9869419932365417
+recall: 0.45836174488067627
+Precision: 0.5071970224380493
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [22]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.4890  time: 1.0261  data: 0.0009  max mem: 17285
+Train Epoch: [22]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.2322  time: 0.9763  data: 0.0002  max mem: 17285
+Train Epoch: [22]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.1968  time: 0.9764  data: 0.0002  max mem: 17285
+Train Epoch: [22] Total time: 0:01:11 (0.9759 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.1651
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3920  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3722  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3722 s / it)
+F1-score: 0.45434603095054626
+Accuracy: 0.7186700701713562
+Specificity: 0.9873925447463989
+recall: 0.4647388458251953
+Precision: 0.5270688533782959
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [23]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 1.0137  time: 1.0092  data: 0.0011  max mem: 17285
+Train Epoch: [23]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.0912  time: 0.9758  data: 0.0002  max mem: 17285
+Train Epoch: [23]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.0925  time: 0.9749  data: 0.0002  max mem: 17285
+Train Epoch: [23] Total time: 0:01:11 (0.9756 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.1237
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3909  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3721  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3722 s / it)
+F1-score: 0.45365649461746216
+Accuracy: 0.7250639200210571
+Specificity: 0.9876692295074463
+recall: 0.46794354915618896
+Precision: 0.5318096280097961
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [24]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.3994  time: 1.0215  data: 0.0006  max mem: 17285
+Train Epoch: [24]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.4489  time: 0.9747  data: 0.0002  max mem: 17285
+Train Epoch: [24]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.9216  time: 0.9760  data: 0.0002  max mem: 17285
+Train Epoch: [24] Total time: 0:01:11 (0.9765 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.1092
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3907  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3728  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3728 s / it)
+F1-score: 0.46064186096191406
+Accuracy: 0.7225064039230347
+Specificity: 0.9876495599746704
+recall: 0.474564790725708
+Precision: 0.5146470665931702
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [25]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 0.9516  time: 1.0119  data: 0.0008  max mem: 17285
+Train Epoch: [25]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.4332  time: 0.9762  data: 0.0002  max mem: 17285
+Train Epoch: [25]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.5619  time: 0.9767  data: 0.0002  max mem: 17285
+Train Epoch: [25] Total time: 0:01:11 (0.9773 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.0741
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3893  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3718  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3719 s / it)
+F1-score: 0.4555264413356781
+Accuracy: 0.7135549783706665
+Specificity: 0.9872759580612183
+recall: 0.47379183769226074
+Precision: 0.5185065269470215
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [26]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 0.6234  time: 1.0247  data: 0.0007  max mem: 17285
+Train Epoch: [26]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.1397  time: 0.9792  data: 0.0002  max mem: 17285
+Train Epoch: [26]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.0562  time: 0.9755  data: 0.0002  max mem: 17285
+Train Epoch: [26] Total time: 0:01:11 (0.9774 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.0425
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3930  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3719  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3720 s / it)
+F1-score: 0.463895320892334
+Accuracy: 0.7250639200210571
+Specificity: 0.9877673387527466
+recall: 0.47952166199684143
+Precision: 0.5312382578849792
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [27]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 1.0161  time: 1.0022  data: 0.0007  max mem: 17285
+Train Epoch: [27]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.8013  time: 0.9767  data: 0.0002  max mem: 17285
+Train Epoch: [27]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.7660  time: 0.9762  data: 0.0002  max mem: 17285
+Train Epoch: [27] Total time: 0:01:11 (0.9773 s / it)
+Averaged stats: lr: 0.0000  loss_title: 1.0142
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3912  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3722  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3722 s / it)
+F1-score: 0.4695555865764618
+Accuracy: 0.7276214957237244
+Specificity: 0.9878816604614258
+recall: 0.48527073860168457
+Precision: 0.5330216884613037
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [28]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 1.0387  time: 1.0078  data: 0.0010  max mem: 17285
+Train Epoch: [28]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.7833  time: 0.9786  data: 0.0002  max mem: 17285
+Train Epoch: [28]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.9479  time: 0.9755  data: 0.0002  max mem: 17285
+Train Epoch: [28] Total time: 0:01:11 (0.9775 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.9917
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3905  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3719  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3720 s / it)
+F1-score: 0.4835345149040222
+Accuracy: 0.7404091954231262
+Specificity: 0.98843914270401
+recall: 0.5016251802444458
+Precision: 0.5346885919570923
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [29]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 0.7957  time: 1.0144  data: 0.0007  max mem: 17285
+Train Epoch: [29]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.8564  time: 0.9782  data: 0.0002  max mem: 17285
+Train Epoch: [29]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.0075  time: 0.9742  data: 0.0002  max mem: 17285
+Train Epoch: [29] Total time: 0:01:11 (0.9770 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.9637
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3908  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3718  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3719 s / it)
+F1-score: 0.48943406343460083
+Accuracy: 0.7442455291748047
+Specificity: 0.9886036515235901
+recall: 0.5055533647537231
+Precision: 0.5612598657608032
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [30]  [ 0/73]  eta: 0:01:15  lr: 0.000001  loss_title: 0.8032  time: 1.0336  data: 0.0012  max mem: 17285
+Train Epoch: [30]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.8807  time: 0.9755  data: 0.0002  max mem: 17285
+Train Epoch: [30]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.0610  time: 0.9739  data: 0.0002  max mem: 17285
+Train Epoch: [30] Total time: 0:01:11 (0.9761 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.9400
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3903  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3719  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3720 s / it)
+F1-score: 0.49978208541870117
+Accuracy: 0.7480818629264832
+Specificity: 0.9888142347335815
+recall: 0.5138522386550903
+Precision: 0.5720505118370056
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [31]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 0.8885  time: 1.0022  data: 0.0007  max mem: 17285
+Train Epoch: [31]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.7940  time: 0.9775  data: 0.0002  max mem: 17285
+Train Epoch: [31]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.8460  time: 0.9751  data: 0.0002  max mem: 17285
+Train Epoch: [31] Total time: 0:01:11 (0.9772 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.9162
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3913  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3723  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3724 s / it)
+F1-score: 0.49363839626312256
+Accuracy: 0.7442455291748047
+Specificity: 0.9886578321456909
+recall: 0.5108867287635803
+Precision: 0.5660819411277771
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [32]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.0606  time: 1.0230  data: 0.0015  max mem: 17285
+Train Epoch: [32]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 1.3328  time: 0.9762  data: 0.0002  max mem: 17285
+Train Epoch: [32]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.8977  time: 0.9759  data: 0.0002  max mem: 17285
+Train Epoch: [32] Total time: 0:01:11 (0.9772 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.8887
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3920  data: 0.0004  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3724  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3725 s / it)
+F1-score: 0.4916223883628845
+Accuracy: 0.7442455291748047
+Specificity: 0.9886875152587891
+recall: 0.5098244547843933
+Precision: 0.5341461896896362
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [33]  [ 0/73]  eta: 0:01:15  lr: 0.000001  loss_title: 0.7467  time: 1.0335  data: 0.0009  max mem: 17285
+Train Epoch: [33]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.7651  time: 0.9764  data: 0.0002  max mem: 17285
+Train Epoch: [33]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.9046  time: 0.9741  data: 0.0002  max mem: 17285
+Train Epoch: [33] Total time: 0:01:11 (0.9759 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.8718
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3991  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3730  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3730 s / it)
+F1-score: 0.5066733956336975
+Accuracy: 0.7493606209754944
+Specificity: 0.9889297485351562
+recall: 0.5201522707939148
+Precision: 0.6087394952774048
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [34]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 0.6326  time: 1.0217  data: 0.0007  max mem: 17285
+Train Epoch: [34]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.5088  time: 0.9741  data: 0.0002  max mem: 17285
+Train Epoch: [34]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.0621  time: 0.9757  data: 0.0002  max mem: 17285
+Train Epoch: [34] Total time: 0:01:11 (0.9747 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.8494
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3902  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3720  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3720 s / it)
+F1-score: 0.5067415237426758
+Accuracy: 0.7455242872238159
+Specificity: 0.9887176752090454
+recall: 0.5187344551086426
+Precision: 0.5932255387306213
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [35]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 1.0718  time: 1.0138  data: 0.0008  max mem: 17285
+Train Epoch: [35]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.6822  time: 0.9745  data: 0.0002  max mem: 17285
+Train Epoch: [35]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.2492  time: 0.9761  data: 0.0002  max mem: 17285
+Train Epoch: [35] Total time: 0:01:11 (0.9749 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.8239
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3909  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3721  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3722 s / it)
+F1-score: 0.5090011358261108
+Accuracy: 0.7506393790245056
+Specificity: 0.9889516234397888
+recall: 0.5239353179931641
+Precision: 0.5674627423286438
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [36]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 0.6454  time: 1.0171  data: 0.0009  max mem: 17285
+Train Epoch: [36]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.9038  time: 0.9768  data: 0.0002  max mem: 17285
+Train Epoch: [36]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.3980  time: 0.9751  data: 0.0002  max mem: 17285
+Train Epoch: [36] Total time: 0:01:11 (0.9751 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.8123
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3911  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3723  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3724 s / it)
+F1-score: 0.5155839323997498
+Accuracy: 0.7570332288742065
+Specificity: 0.9892427325248718
+recall: 0.5326390266418457
+Precision: 0.5714353322982788
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [37]  [ 0/73]  eta: 0:01:13  lr: 0.000001  loss_title: 1.3205  time: 1.0105  data: 0.0008  max mem: 17285
+Train Epoch: [37]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.6865  time: 0.9762  data: 0.0002  max mem: 17285
+Train Epoch: [37]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.8229  time: 0.9793  data: 0.0002  max mem: 17285
+Train Epoch: [37] Total time: 0:01:11 (0.9778 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.7889
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3906  data: 0.0003  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3714  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3714 s / it)
+F1-score: 0.5204306244850159
+Accuracy: 0.7583120465278625
+Specificity: 0.9893324971199036
+recall: 0.5339114665985107
+Precision: 0.6189294457435608
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [38]  [ 0/73]  eta: 0:01:14  lr: 0.000001  loss_title: 0.9987  time: 1.0141  data: 0.0009  max mem: 17285
+Train Epoch: [38]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.7923  time: 0.9759  data: 0.0002  max mem: 17285
+Train Epoch: [38]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 1.0471  time: 0.9749  data: 0.0002  max mem: 17285
+Train Epoch: [38] Total time: 0:01:11 (0.9756 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.7687
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3915  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3722  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3723 s / it)
+F1-score: 0.55001300573349
+Accuracy: 0.7723785042762756
+Specificity: 0.9899394512176514
+recall: 0.5568944215774536
+Precision: 0.6371176838874817
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [39]  [ 0/73]  eta: 0:01:15  lr: 0.000001  loss_title: 0.6595  time: 1.0294  data: 0.0008  max mem: 17285
+Train Epoch: [39]  [50/73]  eta: 0:00:22  lr: 0.000001  loss_title: 0.8882  time: 0.9768  data: 0.0002  max mem: 17285
+Train Epoch: [39]  [72/73]  eta: 0:00:00  lr: 0.000001  loss_title: 0.7023  time: 0.9754  data: 0.0002  max mem: 17285
+Train Epoch: [39] Total time: 0:01:11 (0.9762 s / it)
+Averaged stats: lr: 0.0000  loss_title: 0.7574
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3903  data: 0.0002  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3718  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3719 s / it)
+F1-score: 0.5591988563537598
+Accuracy: 0.7774935960769653
+Specificity: 0.9901545643806458
+recall: 0.5652326941490173
+Precision: 0.6392599940299988
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Training time 0:52:37
+ai-platform-wlf1-ge10-1:47762:47803 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+ai-platform-wlf1-ge10-1:47761:47801 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+ai-platform-wlf1-ge10-1:47760:47804 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ai-platform-wlf1-ge10-1:47763:47802 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+ai-platform-wlf1-ge10-1:47760:47760 [0] NCCL INFO comm 0x44185ef0 rank 0 nranks 4 cudaDev 0 busId 1000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:47762:47762 [2] NCCL INFO comm 0x43fb4660 rank 2 nranks 4 cudaDev 2 busId 81000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:47761:47761 [1] NCCL INFO comm 0x440f99b0 rank 1 nranks 4 cudaDev 1 busId 24000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:47763:47763 [3] NCCL INFO comm 0x45893730 rank 3 nranks 4 cudaDev 3 busId e1000 - Abort COMPLETE

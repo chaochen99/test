@@ -1,0 +1,1096 @@
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Namespace(batch_size=5, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed/', learning_rate=1e-05, max_epochs=20, model_name='microsoft/layoutlmv3-base-chinese', model_params='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_new_lr1e-5_bs_5/epoch_13/checkpoint.pth', output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_new_lr1e-5_bs_5/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/pytorch_model.bin', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer_new/', world_size=1)
+Namespace(batch_size=5, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed/', learning_rate=1e-05, max_epochs=20, model_name='microsoft/layoutlmv3-base-chinese', model_params='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_new_lr1e-5_bs_5/epoch_13/checkpoint.pth', output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_new_lr1e-5_bs_5/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/pytorch_model.bin', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer_new/', world_size=1)
+Namespace(batch_size=5, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed/', learning_rate=1e-05, max_epochs=20, model_name='microsoft/layoutlmv3-base-chinese', model_params='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_new_lr1e-5_bs_5/epoch_13/checkpoint.pth', output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_new_lr1e-5_bs_5/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/pytorch_model.bin', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer_new/', world_size=1)
+Namespace(batch_size=5, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed/', learning_rate=1e-05, max_epochs=20, model_name='microsoft/layoutlmv3-base-chinese', model_params='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_new_lr1e-5_bs_5/epoch_13/checkpoint.pth', output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_new_lr1e-5_bs_5/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/pytorch_model.bin', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer_new/', world_size=1)
+| distributed init (rank 0, word 4): env://
+| distributed init (rank 1, word 4): env://
+| distributed init (rank 3, word 4): env://
+| distributed init (rank 2, word 4): env://
+ai-platform-wlf1-ge10-1:13078:13078 [0] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:13078:13078 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:13078:13078 [0] NCCL INFO cudaDriverVersion 11040
+NCCL version 2.14.3+cuda11.7
+ai-platform-wlf1-ge10-1:13079:13079 [1] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:13082:13082 [3] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:13080:13080 [2] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:13079:13079 [1] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:13082:13082 [3] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:13079:13079 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:13082:13082 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:13080:13080 [2] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:13080:13080 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] -1/-1/-1->3->2
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Channel 00/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Channel 01/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Channel 02/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Channel 03/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Channel 00 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Channel 01 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Channel 00 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Channel 02 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Channel 00 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Channel 01 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Channel 00 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Channel 03 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Channel 01 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Channel 02 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Channel 01 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Channel 02 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Channel 03 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Channel 02 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Channel 03 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Channel 03 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Channel 00 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Channel 01 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Channel 02 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Channel 03 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Channel 00 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Channel 01 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Channel 02 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Channel 03 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Channel 00 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Channel 01 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Channel 02 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Channel 03 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:13082:13117 [3] NCCL INFO comm 0x430d4040 rank 3 nranks 4 cudaDev 3 busId e1000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:13080:13118 [2] NCCL INFO comm 0x45e948b0 rank 2 nranks 4 cudaDev 2 busId 81000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:13078:13115 [0] NCCL INFO comm 0x43b92850 rank 0 nranks 4 cudaDev 0 busId 1000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:13079:13116 [1] NCCL INFO comm 0x44fdf400 rank 1 nranks 4 cudaDev 1 busId 24000 - Init COMPLETE
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+Create Dataset
+Create Sampler
+Create Dataloader
+not scheduler
+range(14, 20)
+[11.672089576721191, 9.524032592773438, 9.599665641784668, 9.743106842041016, 10.06226921081543, 9.151341438293457, 9.623773574829102, 9.376654624938965, 9.173967361450195, 8.759346008300781, 9.249126434326172, 8.323543548583984, 6.544713497161865, 8.674009323120117]
+14 [4854, 9709, 14564, 19419, 24274, 29129, 33984, 38839, 43694, 48549, 53404, 58259, 63114, 67969]
+iter:  67970
+Start training
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+Train Epoch: [14]  [   0/4855]  eta: 13:51:08  lr: 0.000010  ml_loss: 4.8702  mi_loss: 4.1484  wpa_loss: 0.0004  train_loss: 9.0191  time: 10.2716  data: 2.6451  max mem: 18966
+Train Epoch: [14]  [  50/4855]  eta: 3:43:49  lr: 0.000010  ml_loss: 5.0301  mi_loss: 3.9893  wpa_loss: 0.0181  train_loss: 9.0374  time: 2.6501  data: 0.0001  max mem: 20934
+Train Epoch: [14]  [ 100/4855]  eta: 3:35:46  lr: 0.000010  ml_loss: 4.7664  mi_loss: 3.9138  wpa_loss: 0.0009  train_loss: 8.6811  time: 2.6511  data: 0.0001  max mem: 20934
+Train Epoch: [14]  [ 150/4855]  eta: 3:31:35  lr: 0.000010  ml_loss: 4.7684  mi_loss: 3.8363  wpa_loss: 0.0002  train_loss: 8.6049  time: 2.6491  data: 0.0001  max mem: 20934
+Train Epoch: [14]  [ 200/4855]  eta: 3:28:06  lr: 0.000010  ml_loss: 4.2511  mi_loss: 3.7450  wpa_loss: 0.0012  train_loss: 7.9973  time: 2.6451  data: 0.0001  max mem: 20934
+Train Epoch: [14]  [ 250/4855]  eta: 3:25:00  lr: 0.000010  ml_loss: 4.8611  mi_loss: 4.1339  wpa_loss: 0.0002  train_loss: 8.9951  time: 2.6247  data: 0.0001  max mem: 20935
+Train Epoch: [14]  [ 300/4855]  eta: 3:22:18  lr: 0.000010  ml_loss: 4.8602  mi_loss: 4.2024  wpa_loss: 0.0230  train_loss: 9.0856  time: 2.6325  data: 0.0001  max mem: 20935
+Train Epoch: [14]  [ 350/4855]  eta: 3:19:42  lr: 0.000010  ml_loss: 4.6454  mi_loss: 3.8627  wpa_loss: 0.0008  train_loss: 8.5089  time: 2.6275  data: 0.0001  max mem: 20935
+Train Epoch: [14]  [ 400/4855]  eta: 3:17:17  lr: 0.000010  ml_loss: 4.6816  mi_loss: 3.4483  wpa_loss: 0.0148  train_loss: 8.1446  time: 2.6314  data: 0.0001  max mem: 20935
+Train Epoch: [14]  [ 450/4855]  eta: 3:14:48  lr: 0.000010  ml_loss: 4.7227  mi_loss: 4.0349  wpa_loss: 0.0026  train_loss: 8.7602  time: 2.6305  data: 0.0001  max mem: 20935
+Train Epoch: [14]  [ 500/4855]  eta: 3:12:26  lr: 0.000010  ml_loss: 4.5649  mi_loss: 4.0224  wpa_loss: 0.0001  train_loss: 8.5874  time: 2.6427  data: 0.0001  max mem: 20935
+Train Epoch: [14]  [ 550/4855]  eta: 3:10:09  lr: 0.000010  ml_loss: 4.7587  mi_loss: 3.6232  wpa_loss: 0.0025  train_loss: 8.3845  time: 2.6347  data: 0.0001  max mem: 20935
+Train Epoch: [14]  [ 600/4855]  eta: 3:07:48  lr: 0.000010  ml_loss: 5.0406  mi_loss: 4.2391  wpa_loss: 0.0003  train_loss: 9.2801  time: 2.6250  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [ 650/4855]  eta: 3:05:28  lr: 0.000010  ml_loss: 5.0418  mi_loss: 3.7305  wpa_loss: 0.0018  train_loss: 8.7741  time: 2.6154  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [ 700/4855]  eta: 3:03:10  lr: 0.000010  ml_loss: 4.9022  mi_loss: 3.6234  wpa_loss: 0.0002  train_loss: 8.5258  time: 2.6212  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [ 750/4855]  eta: 3:00:58  lr: 0.000010  ml_loss: 3.7613  mi_loss: 3.3960  wpa_loss: 0.0014  train_loss: 7.1588  time: 2.6450  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [ 800/4855]  eta: 2:58:47  lr: 0.000010  ml_loss: 4.6702  mi_loss: 4.0449  wpa_loss: 0.0065  train_loss: 8.7216  time: 2.6548  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [ 850/4855]  eta: 2:56:33  lr: 0.000010  ml_loss: 4.9716  mi_loss: 4.1483  wpa_loss: 0.0425  train_loss: 9.1624  time: 2.6306  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [ 900/4855]  eta: 2:54:20  lr: 0.000010  ml_loss: 4.6610  mi_loss: 3.8869  wpa_loss: 0.0007  train_loss: 8.5486  time: 2.6483  data: 0.0002  max mem: 20947
+Train Epoch: [14]  [ 950/4855]  eta: 2:52:08  lr: 0.000010  ml_loss: 4.4710  mi_loss: 4.0900  wpa_loss: 0.0067  train_loss: 8.5677  time: 2.6494  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1000/4855]  eta: 2:49:56  lr: 0.000010  ml_loss: 4.6364  mi_loss: 3.9160  wpa_loss: 0.0026  train_loss: 8.5550  time: 2.6480  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1050/4855]  eta: 2:47:45  lr: 0.000010  ml_loss: 4.1656  mi_loss: 4.1475  wpa_loss: 0.0547  train_loss: 8.3678  time: 2.6485  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1100/4855]  eta: 2:45:31  lr: 0.000010  ml_loss: 4.9463  mi_loss: 3.6468  wpa_loss: 0.0004  train_loss: 8.5936  time: 2.6426  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1150/4855]  eta: 2:43:17  lr: 0.000010  ml_loss: 4.6687  mi_loss: 4.0785  wpa_loss: 0.0003  train_loss: 8.7475  time: 2.6249  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1200/4855]  eta: 2:41:01  lr: 0.000010  ml_loss: 5.1780  mi_loss: 3.4739  wpa_loss: 0.0001  train_loss: 8.6520  time: 2.6220  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1250/4855]  eta: 2:38:49  lr: 0.000010  ml_loss: 4.6770  mi_loss: 3.9141  wpa_loss: 0.0006  train_loss: 8.5917  time: 2.6383  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1300/4855]  eta: 2:36:36  lr: 0.000010  ml_loss: 4.1474  mi_loss: 4.6377  wpa_loss: 0.0029  train_loss: 8.7880  time: 2.6251  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1350/4855]  eta: 2:34:21  lr: 0.000010  ml_loss: 4.9228  mi_loss: 3.9070  wpa_loss: 0.0000  train_loss: 8.8298  time: 2.6173  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1400/4855]  eta: 2:32:08  lr: 0.000010  ml_loss: 4.7680  mi_loss: 4.0686  wpa_loss: 0.0010  train_loss: 8.8375  time: 2.6431  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1450/4855]  eta: 2:29:55  lr: 0.000010  ml_loss: 4.4381  mi_loss: 3.9952  wpa_loss: 0.0014  train_loss: 8.4347  time: 2.6271  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1500/4855]  eta: 2:27:42  lr: 0.000010  ml_loss: 4.8121  mi_loss: 4.0458  wpa_loss: 0.0009  train_loss: 8.8587  time: 2.6316  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1550/4855]  eta: 2:25:28  lr: 0.000010  ml_loss: 4.8984  mi_loss: 3.6104  wpa_loss: 0.0015  train_loss: 8.5102  time: 2.6094  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1600/4855]  eta: 2:23:15  lr: 0.000010  ml_loss: 4.7889  mi_loss: 3.7399  wpa_loss: 0.0041  train_loss: 8.5328  time: 2.6240  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1650/4855]  eta: 2:21:02  lr: 0.000010  ml_loss: 4.8507  mi_loss: 4.1180  wpa_loss: 0.0004  train_loss: 8.9690  time: 2.6411  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1700/4855]  eta: 2:18:49  lr: 0.000010  ml_loss: 4.5910  mi_loss: 3.7684  wpa_loss: 0.0005  train_loss: 8.3599  time: 2.6349  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1750/4855]  eta: 2:16:36  lr: 0.000010  ml_loss: 4.6951  mi_loss: 3.9194  wpa_loss: 0.0009  train_loss: 8.6154  time: 2.6347  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1800/4855]  eta: 2:14:24  lr: 0.000010  ml_loss: 5.1025  mi_loss: 4.0952  wpa_loss: 0.0001  train_loss: 9.1978  time: 2.6374  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1850/4855]  eta: 2:12:12  lr: 0.000010  ml_loss: 4.6608  mi_loss: 3.9587  wpa_loss: 0.0004  train_loss: 8.6198  time: 2.6362  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1900/4855]  eta: 2:10:00  lr: 0.000010  ml_loss: 3.8003  mi_loss: 3.6373  wpa_loss: 0.0016  train_loss: 7.4392  time: 2.6399  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [1950/4855]  eta: 2:07:47  lr: 0.000010  ml_loss: 4.2912  mi_loss: 4.0327  wpa_loss: 0.0071  train_loss: 8.3311  time: 2.6226  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2000/4855]  eta: 2:05:35  lr: 0.000010  ml_loss: 4.8665  mi_loss: 4.1291  wpa_loss: 0.0008  train_loss: 8.9963  time: 2.6365  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2050/4855]  eta: 2:03:22  lr: 0.000010  ml_loss: 4.6994  mi_loss: 4.0277  wpa_loss: 0.0110  train_loss: 8.7381  time: 2.6193  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2100/4855]  eta: 2:01:08  lr: 0.000010  ml_loss: 4.1871  mi_loss: 3.7002  wpa_loss: 0.0009  train_loss: 7.8882  time: 2.6179  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2150/4855]  eta: 1:58:56  lr: 0.000010  ml_loss: 4.2879  mi_loss: 3.6376  wpa_loss: 0.0004  train_loss: 7.9259  time: 2.6375  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2200/4855]  eta: 1:56:45  lr: 0.000010  ml_loss: 4.5430  mi_loss: 3.8672  wpa_loss: 0.0043  train_loss: 8.4145  time: 2.6469  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2250/4855]  eta: 1:54:33  lr: 0.000010  ml_loss: 5.0579  mi_loss: 3.9059  wpa_loss: 0.0015  train_loss: 8.9652  time: 2.6374  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2300/4855]  eta: 1:52:20  lr: 0.000010  ml_loss: 4.3638  mi_loss: 4.1323  wpa_loss: 0.0003  train_loss: 8.4964  time: 2.6262  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2350/4855]  eta: 1:50:08  lr: 0.000010  ml_loss: 5.1065  mi_loss: 3.7004  wpa_loss: 0.0093  train_loss: 8.8163  time: 2.6383  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2400/4855]  eta: 1:47:55  lr: 0.000010  ml_loss: 4.6214  mi_loss: 3.8161  wpa_loss: 0.0012  train_loss: 8.4387  time: 2.6222  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2450/4855]  eta: 1:45:43  lr: 0.000010  ml_loss: 5.0986  mi_loss: 3.7674  wpa_loss: 0.0005  train_loss: 8.8664  time: 2.6329  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2500/4855]  eta: 1:43:31  lr: 0.000010  ml_loss: 4.8062  mi_loss: 4.0415  wpa_loss: 0.0008  train_loss: 8.8485  time: 2.6303  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2550/4855]  eta: 1:41:19  lr: 0.000010  ml_loss: 4.5652  mi_loss: 3.6114  wpa_loss: 0.0066  train_loss: 8.1832  time: 2.6321  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2600/4855]  eta: 1:39:06  lr: 0.000010  ml_loss: 4.8446  mi_loss: 3.9929  wpa_loss: 0.0006  train_loss: 8.8381  time: 2.6300  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2650/4855]  eta: 1:36:54  lr: 0.000010  ml_loss: 4.9831  mi_loss: 3.9852  wpa_loss: 0.0058  train_loss: 8.9741  time: 2.6340  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2700/4855]  eta: 1:34:42  lr: 0.000010  ml_loss: 5.1744  mi_loss: 3.8644  wpa_loss: 0.0006  train_loss: 9.0394  time: 2.6324  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2750/4855]  eta: 1:32:30  lr: 0.000010  ml_loss: 4.9628  mi_loss: 4.0148  wpa_loss: 0.0014  train_loss: 8.9789  time: 2.6414  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2800/4855]  eta: 1:30:18  lr: 0.000010  ml_loss: 4.4176  mi_loss: 4.0838  wpa_loss: 0.0031  train_loss: 8.5045  time: 2.6372  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2850/4855]  eta: 1:28:06  lr: 0.000010  ml_loss: 5.0926  mi_loss: 3.6311  wpa_loss: 0.0005  train_loss: 8.7242  time: 2.6268  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2900/4855]  eta: 1:25:54  lr: 0.000010  ml_loss: 4.4625  mi_loss: 3.8503  wpa_loss: 0.0009  train_loss: 8.3137  time: 2.6430  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [2950/4855]  eta: 1:23:43  lr: 0.000010  ml_loss: 5.0949  mi_loss: 4.1293  wpa_loss: 0.0010  train_loss: 9.2251  time: 2.6404  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3000/4855]  eta: 1:21:31  lr: 0.000010  ml_loss: 4.1598  mi_loss: 4.1633  wpa_loss: 0.0011  train_loss: 8.3242  time: 2.6324  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3050/4855]  eta: 1:19:19  lr: 0.000010  ml_loss: 4.7458  mi_loss: 2.9010  wpa_loss: 0.0016  train_loss: 7.6483  time: 2.6398  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3100/4855]  eta: 1:17:07  lr: 0.000010  ml_loss: 5.1163  mi_loss: 3.7574  wpa_loss: 0.0003  train_loss: 8.8739  time: 2.6171  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3150/4855]  eta: 1:14:54  lr: 0.000010  ml_loss: 4.9322  mi_loss: 3.9876  wpa_loss: 0.0061  train_loss: 8.9259  time: 2.6118  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3200/4855]  eta: 1:12:42  lr: 0.000010  ml_loss: 4.0204  mi_loss: 3.4823  wpa_loss: 0.0463  train_loss: 7.5490  time: 2.6171  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3250/4855]  eta: 1:10:30  lr: 0.000010  ml_loss: 4.3862  mi_loss: 3.6948  wpa_loss: 0.0017  train_loss: 8.0827  time: 2.6164  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3300/4855]  eta: 1:08:18  lr: 0.000010  ml_loss: 3.5252  mi_loss: 3.7627  wpa_loss: 0.0016  train_loss: 7.2895  time: 2.6319  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3350/4855]  eta: 1:06:06  lr: 0.000010  ml_loss: 4.8631  mi_loss: 3.8137  wpa_loss: 0.0013  train_loss: 8.6780  time: 2.6279  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3400/4855]  eta: 1:03:54  lr: 0.000010  ml_loss: 3.9445  mi_loss: 3.5193  wpa_loss: 0.0005  train_loss: 7.4643  time: 2.6141  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3450/4855]  eta: 1:01:42  lr: 0.000010  ml_loss: 4.6831  mi_loss: 3.8181  wpa_loss: 0.0059  train_loss: 8.5071  time: 2.6244  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3500/4855]  eta: 0:59:30  lr: 0.000010  ml_loss: 4.7101  mi_loss: 3.3058  wpa_loss: 0.0002  train_loss: 8.0162  time: 2.6352  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3550/4855]  eta: 0:57:18  lr: 0.000010  ml_loss: 5.1135  mi_loss: 4.0505  wpa_loss: 0.0015  train_loss: 9.1655  time: 2.6411  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3600/4855]  eta: 0:55:07  lr: 0.000010  ml_loss: 5.1360  mi_loss: 3.7176  wpa_loss: 0.0016  train_loss: 8.8552  time: 2.6267  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3650/4855]  eta: 0:52:55  lr: 0.000010  ml_loss: 4.4742  mi_loss: 3.6152  wpa_loss: 0.0045  train_loss: 8.0939  time: 2.6299  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3700/4855]  eta: 0:50:43  lr: 0.000010  ml_loss: 4.2783  mi_loss: 4.0000  wpa_loss: 0.0011  train_loss: 8.2794  time: 2.6314  data: 0.0002  max mem: 20947
+Train Epoch: [14]  [3750/4855]  eta: 0:48:31  lr: 0.000010  ml_loss: 4.4251  mi_loss: 4.5663  wpa_loss: 0.0070  train_loss: 8.9984  time: 2.6248  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3800/4855]  eta: 0:46:19  lr: 0.000010  ml_loss: 4.8415  mi_loss: 3.4535  wpa_loss: 0.0084  train_loss: 8.3034  time: 2.6376  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3850/4855]  eta: 0:44:08  lr: 0.000010  ml_loss: 4.4352  mi_loss: 3.8242  wpa_loss: 0.0060  train_loss: 8.2654  time: 2.6399  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3900/4855]  eta: 0:41:56  lr: 0.000010  ml_loss: 4.8090  mi_loss: 3.7661  wpa_loss: 0.0013  train_loss: 8.5764  time: 2.6428  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [3950/4855]  eta: 0:39:44  lr: 0.000010  ml_loss: 4.8802  mi_loss: 3.8624  wpa_loss: 0.0020  train_loss: 8.7447  time: 2.6450  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4000/4855]  eta: 0:37:33  lr: 0.000010  ml_loss: 4.3379  mi_loss: 4.1542  wpa_loss: 0.0096  train_loss: 8.5017  time: 2.6444  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4050/4855]  eta: 0:35:21  lr: 0.000010  ml_loss: 3.1040  mi_loss: 3.4400  wpa_loss: 0.0030  train_loss: 6.5470  time: 2.6384  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4100/4855]  eta: 0:33:09  lr: 0.000010  ml_loss: 5.0531  mi_loss: 3.7092  wpa_loss: 0.0009  train_loss: 8.7632  time: 2.6299  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4150/4855]  eta: 0:30:57  lr: 0.000010  ml_loss: 5.2935  mi_loss: 3.7683  wpa_loss: 0.0003  train_loss: 9.0622  time: 2.6433  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4200/4855]  eta: 0:28:46  lr: 0.000010  ml_loss: 4.9098  mi_loss: 3.3298  wpa_loss: 0.0006  train_loss: 8.2402  time: 2.6380  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4250/4855]  eta: 0:26:34  lr: 0.000010  ml_loss: 4.4455  mi_loss: 3.7703  wpa_loss: 0.0027  train_loss: 8.2185  time: 2.6264  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4300/4855]  eta: 0:24:22  lr: 0.000010  ml_loss: 4.7592  mi_loss: 3.6322  wpa_loss: 0.0006  train_loss: 8.3921  time: 2.6467  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4350/4855]  eta: 0:22:10  lr: 0.000010  ml_loss: 4.5544  mi_loss: 3.5287  wpa_loss: 0.0077  train_loss: 8.0908  time: 2.6193  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4400/4855]  eta: 0:19:58  lr: 0.000010  ml_loss: 4.3144  mi_loss: 3.3883  wpa_loss: 0.0002  train_loss: 7.7029  time: 2.6109  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4450/4855]  eta: 0:17:47  lr: 0.000010  ml_loss: 4.9075  mi_loss: 3.8892  wpa_loss: 0.0010  train_loss: 8.7976  time: 2.6371  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4500/4855]  eta: 0:15:35  lr: 0.000010  ml_loss: 4.2636  mi_loss: 3.8945  wpa_loss: 0.0005  train_loss: 8.1586  time: 2.6295  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4550/4855]  eta: 0:13:23  lr: 0.000010  ml_loss: 4.9376  mi_loss: 3.9367  wpa_loss: 0.0003  train_loss: 8.8747  time: 2.6455  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4600/4855]  eta: 0:11:11  lr: 0.000010  ml_loss: 4.8703  mi_loss: 3.8867  wpa_loss: 0.0052  train_loss: 8.7622  time: 2.6315  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4650/4855]  eta: 0:09:00  lr: 0.000010  ml_loss: 4.4706  mi_loss: 4.0074  wpa_loss: 0.0059  train_loss: 8.4839  time: 2.6371  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4700/4855]  eta: 0:06:48  lr: 0.000010  ml_loss: 4.4653  mi_loss: 4.2852  wpa_loss: 0.0007  train_loss: 8.7512  time: 2.6519  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4750/4855]  eta: 0:04:36  lr: 0.000010  ml_loss: 4.7489  mi_loss: 3.8321  wpa_loss: 0.0028  train_loss: 8.5838  time: 2.6551  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4800/4855]  eta: 0:02:24  lr: 0.000010  ml_loss: 5.0143  mi_loss: 3.9069  wpa_loss: 0.0163  train_loss: 8.9375  time: 2.6307  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4850/4855]  eta: 0:00:13  lr: 0.000010  ml_loss: 3.8337  mi_loss: 3.7267  wpa_loss: 0.0029  train_loss: 7.5633  time: 2.6530  data: 0.0001  max mem: 20947
+Train Epoch: [14]  [4854/4855]  eta: 0:00:02  lr: 0.000010  ml_loss: 5.1781  mi_loss: 4.3287  wpa_loss: 0.0006  train_loss: 9.5074  time: 2.6548  data: 0.0008  max mem: 20947
+Train Epoch: [14] Total time: 3:33:17 (2.6360 s / it)
+Val Epoch: [14]  [  0/540]  eta: 0:23:55  ml_loss: 4.8287  mi_loss: 4.0776  wpa_loss: 0.0019  val_loss: 8.9082  accML: 0.2794  accMI: 0.1230  time: 2.6577  data: 2.3520  max mem: 20947
+Val Epoch: [14]  [ 50/540]  eta: 0:06:29  ml_loss: 4.6030  mi_loss: 3.8345  wpa_loss: 0.0009  val_loss: 8.4383  accML: 0.2698  accMI: 0.1808  time: 0.7649  data: 0.6028  max mem: 20947
+Val Epoch: [14]  [100/540]  eta: 0:05:52  ml_loss: 4.3338  mi_loss: 4.0099  wpa_loss: 0.0022  val_loss: 8.3459  accML: 0.3168  accMI: 0.1150  time: 0.7779  data: 0.6155  max mem: 20947
+Val Epoch: [14]  [150/540]  eta: 0:05:23  ml_loss: 4.9616  mi_loss: 4.2587  wpa_loss: 0.0000  val_loss: 9.2203  accML: 0.2298  accMI: 0.1387  time: 0.9230  data: 0.7589  max mem: 20947
+Val Epoch: [14]  [200/540]  eta: 0:04:42  ml_loss: 4.6013  mi_loss: 4.1213  wpa_loss: 0.0002  val_loss: 8.7229  accML: 0.2953  accMI: 0.1421  time: 0.8397  data: 0.6763  max mem: 20947
+Val Epoch: [14]  [250/540]  eta: 0:03:59  ml_loss: 4.6153  mi_loss: 3.8935  wpa_loss: 0.0003  val_loss: 8.5091  accML: 0.2755  accMI: 0.1684  time: 0.8446  data: 0.6815  max mem: 20947
+Val Epoch: [14]  [300/540]  eta: 0:03:19  ml_loss: 4.2497  mi_loss: 4.1943  wpa_loss: 0.0002  val_loss: 8.4442  accML: 0.3230  accMI: 0.1147  time: 0.8927  data: 0.7289  max mem: 20947
+Val Epoch: [14]  [350/540]  eta: 0:02:37  ml_loss: 4.4047  mi_loss: 3.3355  wpa_loss: 0.0005  val_loss: 7.7407  accML: 0.2902  accMI: 0.3200  time: 0.7905  data: 0.6278  max mem: 20947
+Val Epoch: [14]  [400/540]  eta: 0:01:56  ml_loss: 5.3131  mi_loss: 4.0494  wpa_loss: 0.0001  val_loss: 9.3625  accML: 0.2168  accMI: 0.1402  time: 0.8543  data: 0.6899  max mem: 20947
+Val Epoch: [14]  [450/540]  eta: 0:01:15  ml_loss: 5.0629  mi_loss: 3.9468  wpa_loss: 0.0009  val_loss: 9.0105  accML: 0.1990  accMI: 0.1720  time: 0.8566  data: 0.6929  max mem: 20947
+Val Epoch: [14]  [500/540]  eta: 0:00:33  ml_loss: 5.2610  mi_loss: 3.7507  wpa_loss: 0.0001  val_loss: 9.0117  accML: 0.2065  accMI: 0.1733  time: 0.7746  data: 0.6119  max mem: 20947
+Val Epoch: [14]  [539/540]  eta: 0:00:00  ml_loss: 5.0696  mi_loss: 3.7792  wpa_loss: 0.0024  val_loss: 8.8512  accML: 0.1920  accMI: 0.1644  time: 0.7896  data: 0.6264  max mem: 20947
+Val Epoch: [14] Total time: 0:07:33 (0.8399 s / it)
+epoch:14, iter:72824, 4854,  train_loss: 9.507369995117188, valid_loss: 8.637857041535554, idiv_loss:(4.637957181753936, 3.996217574013604, 0.0036822608352731884), acc:(0.26849260749640286, 0.1643760664043603)
+Averaged stats: lr: 0.0000  ml_loss: 4.7104  mi_loss: 3.8887  wpa_loss: 0.0030  train_loss: 8.6021
+epoch 14 9.507369995117188
+Train Epoch: [15]  [   0/4855]  eta: 7:42:46  lr: 0.000010  ml_loss: 4.6339  mi_loss: 4.1696  wpa_loss: 0.0003  train_loss: 8.8038  time: 5.7192  data: 3.1121  max mem: 20947
+Train Epoch: [15]  [  50/4855]  eta: 3:35:39  lr: 0.000010  ml_loss: 4.7586  mi_loss: 4.1026  wpa_loss: 0.0022  train_loss: 8.8634  time: 2.6393  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 100/4855]  eta: 3:30:54  lr: 0.000010  ml_loss: 5.2486  mi_loss: 3.5369  wpa_loss: 0.0002  train_loss: 8.7857  time: 2.6274  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 150/4855]  eta: 3:28:01  lr: 0.000010  ml_loss: 4.2727  mi_loss: 3.8305  wpa_loss: 0.0046  train_loss: 8.1078  time: 2.6328  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 200/4855]  eta: 3:25:25  lr: 0.000010  ml_loss: 4.4972  mi_loss: 3.9636  wpa_loss: 0.0126  train_loss: 8.4734  time: 2.6294  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 250/4855]  eta: 3:22:54  lr: 0.000010  ml_loss: 4.7163  mi_loss: 4.2882  wpa_loss: 0.0002  train_loss: 9.0048  time: 2.6308  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 300/4855]  eta: 3:20:30  lr: 0.000010  ml_loss: 4.1979  mi_loss: 3.9395  wpa_loss: 0.0003  train_loss: 8.1377  time: 2.6255  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 350/4855]  eta: 3:18:15  lr: 0.000010  ml_loss: 5.2180  mi_loss: 4.1249  wpa_loss: 0.0009  train_loss: 9.3439  time: 2.6347  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 400/4855]  eta: 3:16:01  lr: 0.000010  ml_loss: 4.7404  mi_loss: 4.0061  wpa_loss: 0.0001  train_loss: 8.7466  time: 2.6373  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 450/4855]  eta: 3:13:49  lr: 0.000010  ml_loss: 4.6219  mi_loss: 3.9875  wpa_loss: 0.0008  train_loss: 8.6103  time: 2.6332  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 500/4855]  eta: 3:11:30  lr: 0.000010  ml_loss: 4.5308  mi_loss: 4.5835  wpa_loss: 0.0023  train_loss: 9.1165  time: 2.6349  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 550/4855]  eta: 3:09:18  lr: 0.000010  ml_loss: 4.4767  mi_loss: 4.0686  wpa_loss: 0.0016  train_loss: 8.5468  time: 2.6381  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 600/4855]  eta: 3:06:58  lr: 0.000010  ml_loss: 4.5418  mi_loss: 4.7364  wpa_loss: 0.0010  train_loss: 9.2792  time: 2.6088  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 650/4855]  eta: 3:04:44  lr: 0.000010  ml_loss: 4.9189  mi_loss: 3.5368  wpa_loss: 0.0003  train_loss: 8.4560  time: 2.6450  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 700/4855]  eta: 3:02:26  lr: 0.000010  ml_loss: 3.9185  mi_loss: 4.1316  wpa_loss: 0.0036  train_loss: 8.0537  time: 2.6058  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 750/4855]  eta: 3:00:15  lr: 0.000010  ml_loss: 4.5589  mi_loss: 4.1054  wpa_loss: 0.0007  train_loss: 8.6649  time: 2.6367  data: 0.0002  max mem: 20947
+Train Epoch: [15]  [ 800/4855]  eta: 2:58:01  lr: 0.000010  ml_loss: 4.7711  mi_loss: 3.9231  wpa_loss: 0.0002  train_loss: 8.6944  time: 2.6277  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 850/4855]  eta: 2:55:49  lr: 0.000010  ml_loss: 4.7015  mi_loss: 3.9225  wpa_loss: 0.0002  train_loss: 8.6242  time: 2.6174  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 900/4855]  eta: 2:53:35  lr: 0.000010  ml_loss: 4.6620  mi_loss: 4.0308  wpa_loss: 0.0001  train_loss: 8.6929  time: 2.6358  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [ 950/4855]  eta: 2:51:23  lr: 0.000010  ml_loss: 5.2194  mi_loss: 3.6769  wpa_loss: 0.0003  train_loss: 8.8967  time: 2.6194  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1000/4855]  eta: 2:49:11  lr: 0.000010  ml_loss: 4.5414  mi_loss: 3.7734  wpa_loss: 0.0002  train_loss: 8.3149  time: 2.6323  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1050/4855]  eta: 2:46:56  lr: 0.000010  ml_loss: 4.3383  mi_loss: 4.0126  wpa_loss: 0.0024  train_loss: 8.3533  time: 2.6159  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1100/4855]  eta: 2:44:44  lr: 0.000010  ml_loss: 4.8526  mi_loss: 4.1563  wpa_loss: 0.0010  train_loss: 9.0099  time: 2.6398  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1150/4855]  eta: 2:42:31  lr: 0.000010  ml_loss: 4.7799  mi_loss: 3.9179  wpa_loss: 0.0014  train_loss: 8.6992  time: 2.6212  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1200/4855]  eta: 2:40:18  lr: 0.000010  ml_loss: 5.2064  mi_loss: 3.9370  wpa_loss: 0.0028  train_loss: 9.1463  time: 2.6209  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1250/4855]  eta: 2:38:05  lr: 0.000010  ml_loss: 4.3188  mi_loss: 3.8076  wpa_loss: 0.0002  train_loss: 8.1265  time: 2.6183  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1300/4855]  eta: 2:35:51  lr: 0.000010  ml_loss: 4.0260  mi_loss: 3.8694  wpa_loss: 0.0001  train_loss: 7.8955  time: 2.6248  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1350/4855]  eta: 2:33:40  lr: 0.000010  ml_loss: 4.3165  mi_loss: 4.0869  wpa_loss: 0.0024  train_loss: 8.4057  time: 2.6222  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1400/4855]  eta: 2:31:28  lr: 0.000010  ml_loss: 4.6807  mi_loss: 4.2317  wpa_loss: 0.0104  train_loss: 8.9227  time: 2.6358  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1450/4855]  eta: 2:29:17  lr: 0.000010  ml_loss: 4.5692  mi_loss: 4.1230  wpa_loss: 0.0019  train_loss: 8.6942  time: 2.6319  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1500/4855]  eta: 2:27:05  lr: 0.000010  ml_loss: 5.0717  mi_loss: 3.7236  wpa_loss: 0.0005  train_loss: 8.7958  time: 2.6237  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1550/4855]  eta: 2:24:53  lr: 0.000010  ml_loss: 4.8348  mi_loss: 3.7555  wpa_loss: 0.0005  train_loss: 8.5908  time: 2.6204  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1600/4855]  eta: 2:22:40  lr: 0.000010  ml_loss: 5.1504  mi_loss: 4.2208  wpa_loss: 0.0001  train_loss: 9.3714  time: 2.6182  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1650/4855]  eta: 2:20:28  lr: 0.000010  ml_loss: 4.5419  mi_loss: 3.7724  wpa_loss: 0.0816  train_loss: 8.3959  time: 2.6193  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1700/4855]  eta: 2:18:17  lr: 0.000010  ml_loss: 4.9811  mi_loss: 4.0527  wpa_loss: 0.0004  train_loss: 9.0343  time: 2.6419  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1750/4855]  eta: 2:16:07  lr: 0.000010  ml_loss: 4.6637  mi_loss: 3.4688  wpa_loss: 0.0026  train_loss: 8.1350  time: 2.6489  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1800/4855]  eta: 2:13:55  lr: 0.000010  ml_loss: 4.4163  mi_loss: 4.0006  wpa_loss: 0.0005  train_loss: 8.4174  time: 2.6304  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1850/4855]  eta: 2:11:43  lr: 0.000010  ml_loss: 4.2659  mi_loss: 4.1128  wpa_loss: 0.0002  train_loss: 8.3789  time: 2.6419  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1900/4855]  eta: 2:09:34  lr: 0.000010  ml_loss: 4.8101  mi_loss: 4.0317  wpa_loss: 0.0003  train_loss: 8.8421  time: 2.6479  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [1950/4855]  eta: 2:07:23  lr: 0.000010  ml_loss: 4.1688  mi_loss: 3.7412  wpa_loss: 0.0123  train_loss: 7.9223  time: 2.6435  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2000/4855]  eta: 2:05:12  lr: 0.000010  ml_loss: 4.7846  mi_loss: 3.8472  wpa_loss: 0.0007  train_loss: 8.6324  time: 2.6469  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2050/4855]  eta: 2:03:00  lr: 0.000010  ml_loss: 4.5478  mi_loss: 4.0677  wpa_loss: 0.0038  train_loss: 8.6194  time: 2.6180  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2100/4855]  eta: 2:00:48  lr: 0.000010  ml_loss: 4.8210  mi_loss: 3.9106  wpa_loss: 0.0001  train_loss: 8.7317  time: 2.6194  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2150/4855]  eta: 1:58:36  lr: 0.000010  ml_loss: 4.9266  mi_loss: 3.6934  wpa_loss: 0.0068  train_loss: 8.6268  time: 2.6210  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2200/4855]  eta: 1:56:25  lr: 0.000010  ml_loss: 4.9835  mi_loss: 4.1024  wpa_loss: 0.0008  train_loss: 9.0867  time: 2.6539  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2250/4855]  eta: 1:54:13  lr: 0.000010  ml_loss: 5.0424  mi_loss: 3.6691  wpa_loss: 0.0009  train_loss: 8.7124  time: 2.6332  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2300/4855]  eta: 1:52:02  lr: 0.000010  ml_loss: 5.0245  mi_loss: 4.1231  wpa_loss: 0.0025  train_loss: 9.1501  time: 2.6362  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2350/4855]  eta: 1:49:51  lr: 0.000010  ml_loss: 4.2001  mi_loss: 4.3195  wpa_loss: 0.0043  train_loss: 8.5239  time: 2.6281  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2400/4855]  eta: 1:47:39  lr: 0.000010  ml_loss: 4.5092  mi_loss: 3.8519  wpa_loss: 0.0002  train_loss: 8.3613  time: 2.6141  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2450/4855]  eta: 1:45:27  lr: 0.000010  ml_loss: 4.8962  mi_loss: 4.0634  wpa_loss: 0.0062  train_loss: 8.9658  time: 2.6181  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2500/4855]  eta: 1:43:15  lr: 0.000010  ml_loss: 3.9659  mi_loss: 3.7879  wpa_loss: 0.0091  train_loss: 7.7629  time: 2.6364  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2550/4855]  eta: 1:41:03  lr: 0.000010  ml_loss: 5.3398  mi_loss: 3.9528  wpa_loss: 0.0003  train_loss: 9.2930  time: 2.6211  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2600/4855]  eta: 1:38:52  lr: 0.000010  ml_loss: 4.1473  mi_loss: 4.0358  wpa_loss: 0.0002  train_loss: 8.1833  time: 2.6258  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2650/4855]  eta: 1:36:40  lr: 0.000010  ml_loss: 5.1480  mi_loss: 3.9929  wpa_loss: 0.0169  train_loss: 9.1578  time: 2.6295  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2700/4855]  eta: 1:34:28  lr: 0.000010  ml_loss: 4.9177  mi_loss: 4.3536  wpa_loss: 0.0001  train_loss: 9.2714  time: 2.6317  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2750/4855]  eta: 1:32:16  lr: 0.000010  ml_loss: 4.7914  mi_loss: 4.2535  wpa_loss: 0.0006  train_loss: 9.0455  time: 2.6158  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2800/4855]  eta: 1:30:04  lr: 0.000010  ml_loss: 5.6405  mi_loss: 3.7479  wpa_loss: 0.0014  train_loss: 9.3898  time: 2.6234  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2850/4855]  eta: 1:27:53  lr: 0.000010  ml_loss: 4.4548  mi_loss: 3.8246  wpa_loss: 0.0013  train_loss: 8.2808  time: 2.6183  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2900/4855]  eta: 1:25:41  lr: 0.000010  ml_loss: 4.0671  mi_loss: 3.6809  wpa_loss: 0.0141  train_loss: 7.7621  time: 2.6326  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [2950/4855]  eta: 1:23:30  lr: 0.000010  ml_loss: 4.4693  mi_loss: 3.9071  wpa_loss: 0.0039  train_loss: 8.3803  time: 2.6478  data: 0.0002  max mem: 20947
+Train Epoch: [15]  [3000/4855]  eta: 1:21:18  lr: 0.000010  ml_loss: 4.7193  mi_loss: 3.6528  wpa_loss: 0.0021  train_loss: 8.3741  time: 2.6168  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3050/4855]  eta: 1:19:07  lr: 0.000010  ml_loss: 5.2854  mi_loss: 4.2079  wpa_loss: 0.0002  train_loss: 9.4935  time: 2.6320  data: 0.0002  max mem: 20947
+Train Epoch: [15]  [3100/4855]  eta: 1:16:56  lr: 0.000010  ml_loss: 4.5714  mi_loss: 3.9554  wpa_loss: 0.0120  train_loss: 8.5388  time: 2.6297  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3150/4855]  eta: 1:14:44  lr: 0.000010  ml_loss: 3.9678  mi_loss: 3.6218  wpa_loss: 0.0026  train_loss: 7.5922  time: 2.6398  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3200/4855]  eta: 1:12:33  lr: 0.000010  ml_loss: 4.6941  mi_loss: 4.1746  wpa_loss: 0.0013  train_loss: 8.8700  time: 2.6356  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3250/4855]  eta: 1:10:22  lr: 0.000010  ml_loss: 4.5519  mi_loss: 3.8125  wpa_loss: 0.0004  train_loss: 8.3649  time: 2.6398  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3300/4855]  eta: 1:08:10  lr: 0.000010  ml_loss: 3.9996  mi_loss: 4.6746  wpa_loss: 0.0112  train_loss: 8.6854  time: 2.6555  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3350/4855]  eta: 1:05:59  lr: 0.000010  ml_loss: 4.7932  mi_loss: 3.8153  wpa_loss: 0.0005  train_loss: 8.6090  time: 2.6532  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3400/4855]  eta: 1:03:48  lr: 0.000010  ml_loss: 4.9713  mi_loss: 3.9775  wpa_loss: 0.0004  train_loss: 8.9493  time: 2.6157  data: 0.0002  max mem: 20947
+Train Epoch: [15]  [3450/4855]  eta: 1:01:36  lr: 0.000010  ml_loss: 4.7868  mi_loss: 3.5873  wpa_loss: 0.0003  train_loss: 8.3743  time: 2.6092  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3500/4855]  eta: 0:59:25  lr: 0.000010  ml_loss: 4.3270  mi_loss: 4.1631  wpa_loss: 0.0018  train_loss: 8.4919  time: 2.6334  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3550/4855]  eta: 0:57:13  lr: 0.000010  ml_loss: 4.6218  mi_loss: 3.8506  wpa_loss: 0.0001  train_loss: 8.4725  time: 2.6143  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3600/4855]  eta: 0:55:01  lr: 0.000010  ml_loss: 5.1010  mi_loss: 4.1338  wpa_loss: 0.0003  train_loss: 9.2350  time: 2.6338  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3650/4855]  eta: 0:52:49  lr: 0.000010  ml_loss: 4.6965  mi_loss: 4.8538  wpa_loss: 0.0025  train_loss: 9.5528  time: 2.6346  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3700/4855]  eta: 0:50:38  lr: 0.000010  ml_loss: 3.4959  mi_loss: 3.0688  wpa_loss: 0.0004  train_loss: 6.5651  time: 2.6186  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3750/4855]  eta: 0:48:26  lr: 0.000010  ml_loss: 4.6987  mi_loss: 3.8068  wpa_loss: 0.0001  train_loss: 8.5056  time: 2.6185  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3800/4855]  eta: 0:46:15  lr: 0.000010  ml_loss: 3.6040  mi_loss: 4.1321  wpa_loss: 0.0077  train_loss: 7.7438  time: 2.6384  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3850/4855]  eta: 0:44:03  lr: 0.000010  ml_loss: 5.1536  mi_loss: 4.3916  wpa_loss: 0.0015  train_loss: 9.5466  time: 2.6104  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3900/4855]  eta: 0:41:52  lr: 0.000010  ml_loss: 4.4266  mi_loss: 3.5220  wpa_loss: 0.0016  train_loss: 7.9502  time: 2.6210  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [3950/4855]  eta: 0:39:40  lr: 0.000010  ml_loss: 4.8070  mi_loss: 4.3806  wpa_loss: 0.0009  train_loss: 9.1885  time: 2.6228  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [4000/4855]  eta: 0:37:28  lr: 0.000010  ml_loss: 5.2450  mi_loss: 3.9412  wpa_loss: 0.0024  train_loss: 9.1887  time: 2.6283  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [4050/4855]  eta: 0:35:17  lr: 0.000010  ml_loss: 4.6709  mi_loss: 3.6686  wpa_loss: 0.0011  train_loss: 8.3407  time: 2.6248  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [4100/4855]  eta: 0:33:05  lr: 0.000010  ml_loss: 4.9588  mi_loss: 3.9224  wpa_loss: 0.0018  train_loss: 8.8830  time: 2.6122  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [4150/4855]  eta: 0:30:54  lr: 0.000010  ml_loss: 4.4338  mi_loss: 3.7616  wpa_loss: 0.0009  train_loss: 8.1963  time: 2.6220  data: 0.0001  max mem: 20947
+Train Epoch: [15]  [4200/4855]  eta: 0:28:42  lr: 0.000010  ml_loss: 4.9111  mi_loss: 4.4011  wpa_loss: 0.0005  train_loss: 9.3126  time: 2.6128  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4250/4855]  eta: 0:26:31  lr: 0.000010  ml_loss: 4.5540  mi_loss: 3.7963  wpa_loss: 0.0010  train_loss: 8.3513  time: 2.6107  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4300/4855]  eta: 0:24:19  lr: 0.000010  ml_loss: 4.9674  mi_loss: 2.5923  wpa_loss: 0.0002  train_loss: 7.5599  time: 2.6212  data: 0.0002  max mem: 20950
+Train Epoch: [15]  [4350/4855]  eta: 0:22:07  lr: 0.000010  ml_loss: 4.7112  mi_loss: 3.9936  wpa_loss: 0.0036  train_loss: 8.7084  time: 2.6165  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4400/4855]  eta: 0:19:56  lr: 0.000010  ml_loss: 4.4219  mi_loss: 4.0756  wpa_loss: 0.0057  train_loss: 8.5033  time: 2.6219  data: 0.0002  max mem: 20950
+Train Epoch: [15]  [4450/4855]  eta: 0:17:44  lr: 0.000010  ml_loss: 3.9511  mi_loss: 4.3716  wpa_loss: 0.0006  train_loss: 8.3233  time: 2.6327  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4500/4855]  eta: 0:15:33  lr: 0.000010  ml_loss: 4.9663  mi_loss: 4.0108  wpa_loss: 0.0001  train_loss: 8.9772  time: 2.6125  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4550/4855]  eta: 0:13:21  lr: 0.000010  ml_loss: 4.2499  mi_loss: 4.3535  wpa_loss: 0.0031  train_loss: 8.6065  time: 2.6319  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4600/4855]  eta: 0:11:10  lr: 0.000010  ml_loss: 4.6392  mi_loss: 3.5288  wpa_loss: 0.0014  train_loss: 8.1694  time: 2.6337  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4650/4855]  eta: 0:08:59  lr: 0.000010  ml_loss: 4.4118  mi_loss: 3.6601  wpa_loss: 0.0001  train_loss: 8.0720  time: 2.6285  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4700/4855]  eta: 0:06:47  lr: 0.000010  ml_loss: 4.4878  mi_loss: 3.9942  wpa_loss: 0.0003  train_loss: 8.4823  time: 2.6310  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4750/4855]  eta: 0:04:36  lr: 0.000010  ml_loss: 4.8662  mi_loss: 4.1278  wpa_loss: 0.0002  train_loss: 8.9942  time: 2.6358  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4800/4855]  eta: 0:02:24  lr: 0.000010  ml_loss: 4.3455  mi_loss: 3.7827  wpa_loss: 0.0053  train_loss: 8.1335  time: 2.6281  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4850/4855]  eta: 0:00:13  lr: 0.000010  ml_loss: 4.8552  mi_loss: 4.5850  wpa_loss: 0.0002  train_loss: 9.4404  time: 2.6316  data: 0.0001  max mem: 20950
+Train Epoch: [15]  [4854/4855]  eta: 0:00:02  lr: 0.000010  ml_loss: 4.2164  mi_loss: 4.2161  wpa_loss: 0.0116  train_loss: 8.4441  time: 2.6397  data: 0.0008  max mem: 20950
+Train Epoch: [15] Total time: 3:32:48 (2.6299 s / it)
+Val Epoch: [15]  [  0/540]  eta: 0:24:23  ml_loss: 4.8208  mi_loss: 4.0309  wpa_loss: 0.0014  val_loss: 8.8531  accML: 0.2330  accMI: 0.1176  time: 2.7109  data: 2.3593  max mem: 20950
+Val Epoch: [15]  [ 50/540]  eta: 0:06:39  ml_loss: 4.4238  mi_loss: 3.8338  wpa_loss: 0.0003  val_loss: 8.2579  accML: 0.3200  accMI: 0.1781  time: 0.7910  data: 0.6287  max mem: 20950
+Val Epoch: [15]  [100/540]  eta: 0:05:57  ml_loss: 4.3520  mi_loss: 4.0957  wpa_loss: 0.0003  val_loss: 8.4480  accML: 0.3009  accMI: 0.1257  time: 0.7696  data: 0.6072  max mem: 20950
+Val Epoch: [15]  [150/540]  eta: 0:05:26  ml_loss: 4.8210  mi_loss: 4.2615  wpa_loss: 0.0001  val_loss: 9.0827  accML: 0.2171  accMI: 0.1360  time: 0.9216  data: 0.7574  max mem: 20950
+Val Epoch: [15]  [200/540]  eta: 0:04:44  ml_loss: 4.4877  mi_loss: 4.1421  wpa_loss: 0.0034  val_loss: 8.6332  accML: 0.2945  accMI: 0.1555  time: 0.8361  data: 0.6725  max mem: 20950
+Val Epoch: [15]  [250/540]  eta: 0:04:01  ml_loss: 3.9939  mi_loss: 3.8523  wpa_loss: 0.0001  val_loss: 7.8463  accML: 0.3456  accMI: 0.1684  time: 0.8650  data: 0.7016  max mem: 20950
+Val Epoch: [15]  [300/540]  eta: 0:03:20  ml_loss: 4.1633  mi_loss: 4.1747  wpa_loss: 0.0042  val_loss: 8.3421  accML: 0.3206  accMI: 0.1253  time: 0.8732  data: 0.7093  max mem: 20950
+Val Epoch: [15]  [350/540]  eta: 0:02:37  ml_loss: 4.2929  mi_loss: 3.2987  wpa_loss: 0.0019  val_loss: 7.5934  accML: 0.2814  accMI: 0.3253  time: 0.8031  data: 0.6406  max mem: 20950
+Val Epoch: [15]  [400/540]  eta: 0:01:56  ml_loss: 5.1633  mi_loss: 4.0477  wpa_loss: 0.0014  val_loss: 9.2124  accML: 0.2170  accMI: 0.1321  time: 0.8542  data: 0.6908  max mem: 20950
+Val Epoch: [15]  [450/540]  eta: 0:01:15  ml_loss: 4.6750  mi_loss: 3.9385  wpa_loss: 0.0003  val_loss: 8.6138  accML: 0.2593  accMI: 0.1694  time: 0.8395  data: 0.6758  max mem: 20950
+Val Epoch: [15]  [500/540]  eta: 0:00:33  ml_loss: 4.8172  mi_loss: 3.7943  wpa_loss: 0.0006  val_loss: 8.6121  accML: 0.2401  accMI: 0.1627  time: 0.7726  data: 0.6100  max mem: 20950
+Val Epoch: [15]  [539/540]  eta: 0:00:00  ml_loss: 4.8354  mi_loss: 3.8940  wpa_loss: 0.0015  val_loss: 8.7308  accML: 0.2271  accMI: 0.1778  time: 0.7678  data: 0.6074  max mem: 20950
+Val Epoch: [15] Total time: 0:07:32 (0.8373 s / it)
+epoch:15, iter:77679, 4854,  train_loss: 8.444133758544922, valid_loss: 8.590187402124759, idiv_loss:(4.600048530543292, 3.9844315475887724, 0.005707308082414615), acc:(0.27019119251657414, 0.1666527007189062)
+Averaged stats: lr: 0.0000  ml_loss: 4.6761  mi_loss: 3.8684  wpa_loss: 0.0029  train_loss: 8.5475
+epoch 15 8.444133758544922
+Train Epoch: [16]  [   0/4855]  eta: 7:31:50  lr: 0.000010  ml_loss: 4.8846  mi_loss: 3.8924  wpa_loss: 0.0006  train_loss: 8.7776  time: 5.5840  data: 2.2785  max mem: 20950
+Train Epoch: [16]  [  50/4855]  eta: 3:35:33  lr: 0.000010  ml_loss: 4.7959  mi_loss: 4.2728  wpa_loss: 0.0001  train_loss: 9.0688  time: 2.6303  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 100/4855]  eta: 3:30:47  lr: 0.000010  ml_loss: 4.6135  mi_loss: 3.2723  wpa_loss: 0.0012  train_loss: 7.8870  time: 2.6188  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 150/4855]  eta: 3:27:32  lr: 0.000010  ml_loss: 4.7374  mi_loss: 4.0445  wpa_loss: 0.0005  train_loss: 8.7823  time: 2.6169  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 200/4855]  eta: 3:25:06  lr: 0.000010  ml_loss: 4.9181  mi_loss: 4.0537  wpa_loss: 0.0011  train_loss: 8.9729  time: 2.6363  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 250/4855]  eta: 3:22:48  lr: 0.000010  ml_loss: 4.6700  mi_loss: 3.9373  wpa_loss: 0.0003  train_loss: 8.6077  time: 2.6391  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 300/4855]  eta: 3:20:31  lr: 0.000010  ml_loss: 4.7099  mi_loss: 3.6407  wpa_loss: 0.0019  train_loss: 8.3526  time: 2.6356  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 350/4855]  eta: 3:18:13  lr: 0.000010  ml_loss: 4.6918  mi_loss: 4.1397  wpa_loss: 0.0009  train_loss: 8.8324  time: 2.6269  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 400/4855]  eta: 3:15:53  lr: 0.000010  ml_loss: 3.0648  mi_loss: 4.0081  wpa_loss: 0.0020  train_loss: 7.0748  time: 2.6399  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 450/4855]  eta: 3:13:39  lr: 0.000010  ml_loss: 4.4448  mi_loss: 3.8867  wpa_loss: 0.0003  train_loss: 8.3318  time: 2.6344  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 500/4855]  eta: 3:11:22  lr: 0.000010  ml_loss: 4.6151  mi_loss: 3.5666  wpa_loss: 0.0002  train_loss: 8.1819  time: 2.6165  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 550/4855]  eta: 3:08:56  lr: 0.000010  ml_loss: 5.3082  mi_loss: 3.8015  wpa_loss: 0.0001  train_loss: 9.1098  time: 2.6126  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 600/4855]  eta: 3:06:39  lr: 0.000010  ml_loss: 4.4127  mi_loss: 4.1575  wpa_loss: 0.0028  train_loss: 8.5729  time: 2.6214  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 650/4855]  eta: 3:04:30  lr: 0.000010  ml_loss: 4.5102  mi_loss: 4.0891  wpa_loss: 0.0010  train_loss: 8.6004  time: 2.6444  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 700/4855]  eta: 3:02:18  lr: 0.000010  ml_loss: 4.5402  mi_loss: 3.4134  wpa_loss: 0.0006  train_loss: 7.9541  time: 2.6307  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 750/4855]  eta: 3:00:08  lr: 0.000010  ml_loss: 4.8400  mi_loss: 4.1437  wpa_loss: 0.0028  train_loss: 8.9865  time: 2.6309  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 800/4855]  eta: 2:57:58  lr: 0.000010  ml_loss: 5.1598  mi_loss: 4.1045  wpa_loss: 0.0006  train_loss: 9.2649  time: 2.6404  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 850/4855]  eta: 2:55:45  lr: 0.000010  ml_loss: 3.7685  mi_loss: 3.8312  wpa_loss: 0.0007  train_loss: 7.6004  time: 2.6199  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 900/4855]  eta: 2:53:35  lr: 0.000010  ml_loss: 4.4163  mi_loss: 3.8680  wpa_loss: 0.0002  train_loss: 8.2845  time: 2.6387  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [ 950/4855]  eta: 2:51:21  lr: 0.000010  ml_loss: 4.7917  mi_loss: 3.9266  wpa_loss: 0.0007  train_loss: 8.7190  time: 2.6201  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1000/4855]  eta: 2:49:08  lr: 0.000010  ml_loss: 4.0314  mi_loss: 3.6005  wpa_loss: 0.0148  train_loss: 7.6468  time: 2.6400  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1050/4855]  eta: 2:46:57  lr: 0.000010  ml_loss: 4.7386  mi_loss: 4.0165  wpa_loss: 0.0012  train_loss: 8.7563  time: 2.6393  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1100/4855]  eta: 2:44:47  lr: 0.000010  ml_loss: 4.9005  mi_loss: 3.8303  wpa_loss: 0.0047  train_loss: 8.7355  time: 2.6374  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1150/4855]  eta: 2:42:33  lr: 0.000010  ml_loss: 4.8190  mi_loss: 4.2252  wpa_loss: 0.0028  train_loss: 9.0470  time: 2.6222  data: 0.0002  max mem: 20950
+Train Epoch: [16]  [1200/4855]  eta: 2:40:22  lr: 0.000010  ml_loss: 4.7398  mi_loss: 3.7561  wpa_loss: 0.0011  train_loss: 8.4970  time: 2.6353  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1250/4855]  eta: 2:38:08  lr: 0.000010  ml_loss: 5.6881  mi_loss: 3.8833  wpa_loss: 0.0000  train_loss: 9.5714  time: 2.6128  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1300/4855]  eta: 2:35:54  lr: 0.000010  ml_loss: 4.6742  mi_loss: 3.5987  wpa_loss: 0.0009  train_loss: 8.2737  time: 2.6263  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1350/4855]  eta: 2:33:41  lr: 0.000010  ml_loss: 4.8287  mi_loss: 3.5187  wpa_loss: 0.0001  train_loss: 8.3475  time: 2.6228  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1400/4855]  eta: 2:31:30  lr: 0.000010  ml_loss: 3.5315  mi_loss: 3.5196  wpa_loss: 0.0029  train_loss: 7.0541  time: 2.6477  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1450/4855]  eta: 2:29:18  lr: 0.000010  ml_loss: 5.2590  mi_loss: 3.6835  wpa_loss: 0.0012  train_loss: 8.9438  time: 2.6306  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1500/4855]  eta: 2:27:06  lr: 0.000010  ml_loss: 5.1649  mi_loss: 3.6551  wpa_loss: 0.0014  train_loss: 8.8214  time: 2.6200  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1550/4855]  eta: 2:24:56  lr: 0.000010  ml_loss: 4.4360  mi_loss: 3.8502  wpa_loss: 0.0021  train_loss: 8.2882  time: 2.6309  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1600/4855]  eta: 2:22:44  lr: 0.000010  ml_loss: 5.3061  mi_loss: 3.4949  wpa_loss: 0.0001  train_loss: 8.8010  time: 2.6213  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1650/4855]  eta: 2:20:31  lr: 0.000010  ml_loss: 4.5044  mi_loss: 3.7490  wpa_loss: 0.0113  train_loss: 8.2646  time: 2.6124  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1700/4855]  eta: 2:18:19  lr: 0.000010  ml_loss: 4.4924  mi_loss: 3.9349  wpa_loss: 0.0005  train_loss: 8.4277  time: 2.6409  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1750/4855]  eta: 2:16:08  lr: 0.000010  ml_loss: 4.9678  mi_loss: 3.8328  wpa_loss: 0.0027  train_loss: 8.8034  time: 2.6475  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1800/4855]  eta: 2:13:56  lr: 0.000010  ml_loss: 5.0716  mi_loss: 4.2122  wpa_loss: 0.0003  train_loss: 9.2842  time: 2.6420  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1850/4855]  eta: 2:11:45  lr: 0.000010  ml_loss: 4.5552  mi_loss: 3.8526  wpa_loss: 0.0089  train_loss: 8.4166  time: 2.6400  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1900/4855]  eta: 2:09:34  lr: 0.000010  ml_loss: 4.1011  mi_loss: 3.8624  wpa_loss: 0.0016  train_loss: 7.9651  time: 2.6360  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [1950/4855]  eta: 2:07:22  lr: 0.000010  ml_loss: 4.4406  mi_loss: 3.7199  wpa_loss: 0.0002  train_loss: 8.1607  time: 2.6276  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2000/4855]  eta: 2:05:10  lr: 0.000010  ml_loss: 4.6744  mi_loss: 4.0216  wpa_loss: 0.0346  train_loss: 8.7306  time: 2.6242  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2050/4855]  eta: 2:02:58  lr: 0.000010  ml_loss: 5.0140  mi_loss: 3.7255  wpa_loss: 0.0001  train_loss: 8.7396  time: 2.6386  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2100/4855]  eta: 2:00:47  lr: 0.000010  ml_loss: 4.7764  mi_loss: 4.0422  wpa_loss: 0.0002  train_loss: 8.8189  time: 2.6390  data: 0.0002  max mem: 20950
+Train Epoch: [16]  [2150/4855]  eta: 1:58:35  lr: 0.000010  ml_loss: 4.7975  mi_loss: 3.1697  wpa_loss: 0.0003  train_loss: 7.9675  time: 2.6276  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2200/4855]  eta: 1:56:23  lr: 0.000010  ml_loss: 4.5576  mi_loss: 3.5896  wpa_loss: 0.0010  train_loss: 8.1483  time: 2.6311  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2250/4855]  eta: 1:54:12  lr: 0.000010  ml_loss: 3.5750  mi_loss: 3.8041  wpa_loss: 0.0017  train_loss: 7.3808  time: 2.6345  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2300/4855]  eta: 1:52:00  lr: 0.000010  ml_loss: 5.2301  mi_loss: 4.1980  wpa_loss: 0.0002  train_loss: 9.4282  time: 2.6185  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2350/4855]  eta: 1:49:48  lr: 0.000010  ml_loss: 5.0348  mi_loss: 3.7398  wpa_loss: 0.0005  train_loss: 8.7751  time: 2.6202  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2400/4855]  eta: 1:47:37  lr: 0.000010  ml_loss: 4.1542  mi_loss: 3.9881  wpa_loss: 0.0008  train_loss: 8.1431  time: 2.6317  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2450/4855]  eta: 1:45:25  lr: 0.000010  ml_loss: 4.0828  mi_loss: 3.1879  wpa_loss: 0.0047  train_loss: 7.2753  time: 2.6364  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2500/4855]  eta: 1:43:14  lr: 0.000010  ml_loss: 4.4736  mi_loss: 3.6753  wpa_loss: 0.0060  train_loss: 8.1549  time: 2.6214  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2550/4855]  eta: 1:41:02  lr: 0.000010  ml_loss: 4.7836  mi_loss: 3.9035  wpa_loss: 0.0003  train_loss: 8.6874  time: 2.6173  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2600/4855]  eta: 1:38:50  lr: 0.000010  ml_loss: 4.5839  mi_loss: 3.9130  wpa_loss: 0.0001  train_loss: 8.4970  time: 2.6439  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2650/4855]  eta: 1:36:39  lr: 0.000010  ml_loss: 4.8104  mi_loss: 4.1708  wpa_loss: 0.0006  train_loss: 8.9818  time: 2.6427  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2700/4855]  eta: 1:34:28  lr: 0.000010  ml_loss: 4.8097  mi_loss: 3.6459  wpa_loss: 0.0001  train_loss: 8.4558  time: 2.6375  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2750/4855]  eta: 1:32:17  lr: 0.000010  ml_loss: 4.8048  mi_loss: 3.7816  wpa_loss: 0.0001  train_loss: 8.5865  time: 2.6395  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2800/4855]  eta: 1:30:05  lr: 0.000010  ml_loss: 4.3329  mi_loss: 3.1400  wpa_loss: 0.0022  train_loss: 7.4751  time: 2.6421  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2850/4855]  eta: 1:27:54  lr: 0.000010  ml_loss: 4.8103  mi_loss: 4.0552  wpa_loss: 0.0013  train_loss: 8.8668  time: 2.6364  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2900/4855]  eta: 1:25:43  lr: 0.000010  ml_loss: 4.7182  mi_loss: 3.8915  wpa_loss: 0.0005  train_loss: 8.6103  time: 2.6349  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [2950/4855]  eta: 1:23:31  lr: 0.000010  ml_loss: 4.6750  mi_loss: 3.6740  wpa_loss: 0.0014  train_loss: 8.3504  time: 2.6418  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3000/4855]  eta: 1:21:20  lr: 0.000010  ml_loss: 4.6885  mi_loss: 3.9657  wpa_loss: 0.0002  train_loss: 8.6544  time: 2.6413  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3050/4855]  eta: 1:19:09  lr: 0.000010  ml_loss: 4.6502  mi_loss: 3.8848  wpa_loss: 0.0033  train_loss: 8.5383  time: 2.6380  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3100/4855]  eta: 1:16:57  lr: 0.000010  ml_loss: 4.5777  mi_loss: 3.8494  wpa_loss: 0.0002  train_loss: 8.4273  time: 2.6400  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3150/4855]  eta: 1:14:46  lr: 0.000010  ml_loss: 4.3606  mi_loss: 4.4751  wpa_loss: 0.0020  train_loss: 8.8376  time: 2.6325  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3200/4855]  eta: 1:12:34  lr: 0.000010  ml_loss: 4.7604  mi_loss: 4.2144  wpa_loss: 0.0005  train_loss: 8.9752  time: 2.6431  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3250/4855]  eta: 1:10:23  lr: 0.000010  ml_loss: 4.6728  mi_loss: 4.0386  wpa_loss: 0.0015  train_loss: 8.7128  time: 2.6271  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3300/4855]  eta: 1:08:11  lr: 0.000010  ml_loss: 4.0603  mi_loss: 4.0317  wpa_loss: 0.0013  train_loss: 8.0933  time: 2.6451  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3350/4855]  eta: 1:06:00  lr: 0.000010  ml_loss: 4.6778  mi_loss: 4.1140  wpa_loss: 0.0001  train_loss: 8.7919  time: 2.6453  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3400/4855]  eta: 1:03:48  lr: 0.000010  ml_loss: 5.0063  mi_loss: 3.7535  wpa_loss: 0.0023  train_loss: 8.7622  time: 2.6332  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3450/4855]  eta: 1:01:37  lr: 0.000010  ml_loss: 4.3497  mi_loss: 3.8942  wpa_loss: 0.0032  train_loss: 8.2472  time: 2.6400  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3500/4855]  eta: 0:59:26  lr: 0.000010  ml_loss: 4.1691  mi_loss: 3.8629  wpa_loss: 0.0017  train_loss: 8.0337  time: 2.6395  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3550/4855]  eta: 0:57:14  lr: 0.000010  ml_loss: 4.5360  mi_loss: 3.7389  wpa_loss: 0.0010  train_loss: 8.2759  time: 2.6348  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3600/4855]  eta: 0:55:03  lr: 0.000010  ml_loss: 4.5552  mi_loss: 4.0238  wpa_loss: 0.0019  train_loss: 8.5809  time: 2.6371  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3650/4855]  eta: 0:52:51  lr: 0.000010  ml_loss: 4.7667  mi_loss: 3.7124  wpa_loss: 0.0004  train_loss: 8.4794  time: 2.6456  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3700/4855]  eta: 0:50:40  lr: 0.000010  ml_loss: 4.6262  mi_loss: 3.9382  wpa_loss: 0.0001  train_loss: 8.5645  time: 2.6420  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3750/4855]  eta: 0:48:28  lr: 0.000010  ml_loss: 5.5324  mi_loss: 3.6527  wpa_loss: 0.0014  train_loss: 9.1865  time: 2.6568  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3800/4855]  eta: 0:46:17  lr: 0.000010  ml_loss: 4.1975  mi_loss: 3.9058  wpa_loss: 0.0015  train_loss: 8.1048  time: 2.6504  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3850/4855]  eta: 0:44:05  lr: 0.000010  ml_loss: 5.1584  mi_loss: 3.9571  wpa_loss: 0.0002  train_loss: 9.1158  time: 2.6431  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3900/4855]  eta: 0:41:54  lr: 0.000010  ml_loss: 4.1676  mi_loss: 3.3538  wpa_loss: 0.0018  train_loss: 7.5232  time: 2.6526  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [3950/4855]  eta: 0:39:43  lr: 0.000010  ml_loss: 5.1899  mi_loss: 3.6186  wpa_loss: 0.0003  train_loss: 8.8088  time: 2.6406  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4000/4855]  eta: 0:37:31  lr: 0.000010  ml_loss: 4.6763  mi_loss: 3.8705  wpa_loss: 0.0002  train_loss: 8.5471  time: 2.6371  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4050/4855]  eta: 0:35:19  lr: 0.000010  ml_loss: 4.6479  mi_loss: 4.0257  wpa_loss: 0.0003  train_loss: 8.6739  time: 2.6442  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4100/4855]  eta: 0:33:08  lr: 0.000010  ml_loss: 4.9802  mi_loss: 3.9156  wpa_loss: 0.0001  train_loss: 8.8959  time: 2.6239  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4150/4855]  eta: 0:30:56  lr: 0.000010  ml_loss: 4.6845  mi_loss: 4.1743  wpa_loss: 0.0004  train_loss: 8.8592  time: 2.6487  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4200/4855]  eta: 0:28:44  lr: 0.000010  ml_loss: 4.8281  mi_loss: 3.8642  wpa_loss: 0.0001  train_loss: 8.6924  time: 2.6415  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4250/4855]  eta: 0:26:33  lr: 0.000010  ml_loss: 4.6866  mi_loss: 4.2339  wpa_loss: 0.0012  train_loss: 8.9217  time: 2.6492  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4300/4855]  eta: 0:24:21  lr: 0.000010  ml_loss: 4.1793  mi_loss: 4.0659  wpa_loss: 0.0180  train_loss: 8.2633  time: 2.6351  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4350/4855]  eta: 0:22:10  lr: 0.000010  ml_loss: 5.1481  mi_loss: 3.7783  wpa_loss: 0.0001  train_loss: 8.9266  time: 2.6431  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4400/4855]  eta: 0:19:58  lr: 0.000010  ml_loss: 5.0870  mi_loss: 4.0238  wpa_loss: 0.0007  train_loss: 9.1115  time: 2.6485  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4450/4855]  eta: 0:17:46  lr: 0.000010  ml_loss: 4.4609  mi_loss: 3.6352  wpa_loss: 0.0020  train_loss: 8.0981  time: 2.6254  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4500/4855]  eta: 0:15:34  lr: 0.000010  ml_loss: 4.0858  mi_loss: 3.9645  wpa_loss: 0.0028  train_loss: 8.0531  time: 2.6378  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4550/4855]  eta: 0:13:23  lr: 0.000010  ml_loss: 4.0032  mi_loss: 2.9680  wpa_loss: 0.0044  train_loss: 6.9755  time: 2.6438  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4600/4855]  eta: 0:11:11  lr: 0.000010  ml_loss: 5.0940  mi_loss: 3.1109  wpa_loss: 0.0015  train_loss: 8.2064  time: 2.6423  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4650/4855]  eta: 0:08:59  lr: 0.000010  ml_loss: 4.2192  mi_loss: 4.2804  wpa_loss: 0.0004  train_loss: 8.5001  time: 2.6621  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4700/4855]  eta: 0:06:48  lr: 0.000010  ml_loss: 4.7692  mi_loss: 3.9584  wpa_loss: 0.0020  train_loss: 8.7296  time: 2.6585  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4750/4855]  eta: 0:04:36  lr: 0.000010  ml_loss: 4.4966  mi_loss: 4.1091  wpa_loss: 0.0012  train_loss: 8.6069  time: 2.6551  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4800/4855]  eta: 0:02:24  lr: 0.000010  ml_loss: 4.5836  mi_loss: 3.7328  wpa_loss: 0.0011  train_loss: 8.3175  time: 2.6402  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4850/4855]  eta: 0:00:13  lr: 0.000010  ml_loss: 4.6977  mi_loss: 3.7299  wpa_loss: 0.0031  train_loss: 8.4308  time: 2.6279  data: 0.0001  max mem: 20950
+Train Epoch: [16]  [4854/4855]  eta: 0:00:02  lr: 0.000010  ml_loss: 4.3942  mi_loss: 3.4698  wpa_loss: 0.0059  train_loss: 7.8699  time: 2.6334  data: 0.0008  max mem: 20950
+Train Epoch: [16] Total time: 3:33:12 (2.6349 s / it)
+Val Epoch: [16]  [  0/540]  eta: 0:23:47  ml_loss: 4.9684  mi_loss: 4.1133  wpa_loss: 0.0001  val_loss: 9.0819  accML: 0.1931  accMI: 0.0989  time: 2.6426  data: 2.3290  max mem: 20950
+Val Epoch: [16]  [ 50/540]  eta: 0:06:34  ml_loss: 4.7205  mi_loss: 3.8944  wpa_loss: 0.0001  val_loss: 8.6150  accML: 0.2586  accMI: 0.1781  time: 0.7947  data: 0.6321  max mem: 20950
+Val Epoch: [16]  [100/540]  eta: 0:05:53  ml_loss: 4.4794  mi_loss: 4.1588  wpa_loss: 0.0031  val_loss: 8.6413  accML: 0.2514  accMI: 0.1230  time: 0.7657  data: 0.6031  max mem: 20950
+Val Epoch: [16]  [150/540]  eta: 0:05:23  ml_loss: 4.8305  mi_loss: 4.2574  wpa_loss: 0.0002  val_loss: 9.0882  accML: 0.2331  accMI: 0.1440  time: 0.9076  data: 0.7438  max mem: 20950
+Val Epoch: [16]  [200/540]  eta: 0:04:43  ml_loss: 4.6442  mi_loss: 4.1067  wpa_loss: 0.0002  val_loss: 8.7511  accML: 0.2745  accMI: 0.1635  time: 0.8442  data: 0.6810  max mem: 20950
+Val Epoch: [16]  [250/540]  eta: 0:03:59  ml_loss: 4.3679  mi_loss: 3.8161  wpa_loss: 0.0001  val_loss: 8.1841  accML: 0.3027  accMI: 0.1925  time: 0.8284  data: 0.6653  max mem: 20950
+Val Epoch: [16]  [300/540]  eta: 0:03:18  ml_loss: 4.1634  mi_loss: 4.1522  wpa_loss: 0.0021  val_loss: 8.3177  accML: 0.3088  accMI: 0.1333  time: 0.8569  data: 0.6927  max mem: 20950
+Val Epoch: [16]  [350/540]  eta: 0:02:36  ml_loss: 4.4910  mi_loss: 3.3575  wpa_loss: 0.0009  val_loss: 7.8494  accML: 0.2754  accMI: 0.3173  time: 0.7988  data: 0.6367  max mem: 20950
+Val Epoch: [16]  [400/540]  eta: 0:01:56  ml_loss: 5.1910  mi_loss: 4.0644  wpa_loss: 0.0023  val_loss: 9.2577  accML: 0.2188  accMI: 0.1375  time: 0.8484  data: 0.6849  max mem: 20950
+Val Epoch: [16]  [450/540]  eta: 0:01:14  ml_loss: 4.8463  mi_loss: 3.9051  wpa_loss: 0.0002  val_loss: 8.7516  accML: 0.2413  accMI: 0.1747  time: 0.8280  data: 0.6649  max mem: 20950
+Val Epoch: [16]  [500/540]  eta: 0:00:33  ml_loss: 5.0034  mi_loss: 3.7099  wpa_loss: 0.0001  val_loss: 8.7134  accML: 0.2422  accMI: 0.1760  time: 0.7588  data: 0.5963  max mem: 20950
+Val Epoch: [16]  [539/540]  eta: 0:00:00  ml_loss: 5.0144  mi_loss: 3.8786  wpa_loss: 0.0012  val_loss: 8.8942  accML: 0.2034  accMI: 0.1644  time: 0.7629  data: 0.6022  max mem: 20950
+Val Epoch: [16] Total time: 0:07:29 (0.8323 s / it)
+epoch:16, iter:82534, 4854,  train_loss: 7.869938373565674, valid_loss: 8.55838567769086, idiv_loss:(4.580823836944721, 3.9739056635785985, 0.003656166291926234), acc:(0.27242847910081897, 0.1672790932710524)
+Averaged stats: lr: 0.0000  ml_loss: 4.6439  mi_loss: 3.8489  wpa_loss: 0.0028  train_loss: 8.4956
+epoch 16 7.869938373565674
+Train Epoch: [17]  [   0/4855]  eta: 7:34:54  lr: 0.000010  ml_loss: 4.7170  mi_loss: 3.6751  wpa_loss: 0.0101  train_loss: 8.4022  time: 5.6219  data: 2.5826  max mem: 20950
+Train Epoch: [17]  [  50/4855]  eta: 3:36:24  lr: 0.000010  ml_loss: 4.5913  mi_loss: 3.1815  wpa_loss: 0.0044  train_loss: 7.7772  time: 2.6477  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 100/4855]  eta: 3:31:45  lr: 0.000010  ml_loss: 5.3833  mi_loss: 4.0192  wpa_loss: 0.0005  train_loss: 9.4030  time: 2.6420  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 150/4855]  eta: 3:28:47  lr: 0.000010  ml_loss: 4.1860  mi_loss: 4.0259  wpa_loss: 0.0023  train_loss: 8.2142  time: 2.6451  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 200/4855]  eta: 3:26:10  lr: 0.000010  ml_loss: 5.2244  mi_loss: 3.8453  wpa_loss: 0.0003  train_loss: 9.0700  time: 2.6349  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 250/4855]  eta: 3:23:44  lr: 0.000010  ml_loss: 4.0821  mi_loss: 2.8549  wpa_loss: 0.0005  train_loss: 6.9375  time: 2.6388  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 300/4855]  eta: 3:21:27  lr: 0.000010  ml_loss: 5.1159  mi_loss: 3.9485  wpa_loss: 0.0002  train_loss: 9.0646  time: 2.6486  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 350/4855]  eta: 3:19:11  lr: 0.000010  ml_loss: 4.4818  mi_loss: 3.9459  wpa_loss: 0.0068  train_loss: 8.4345  time: 2.6475  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 400/4855]  eta: 3:16:56  lr: 0.000010  ml_loss: 4.6820  mi_loss: 3.7277  wpa_loss: 0.0008  train_loss: 8.4104  time: 2.6484  data: 0.0002  max mem: 20950
+Train Epoch: [17]  [ 450/4855]  eta: 3:14:38  lr: 0.000010  ml_loss: 4.8656  mi_loss: 4.2438  wpa_loss: 0.0055  train_loss: 9.1149  time: 2.6455  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 500/4855]  eta: 3:12:25  lr: 0.000010  ml_loss: 4.4032  mi_loss: 3.6786  wpa_loss: 0.0006  train_loss: 8.0824  time: 2.6462  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 550/4855]  eta: 3:10:08  lr: 0.000010  ml_loss: 4.2213  mi_loss: 4.1180  wpa_loss: 0.0006  train_loss: 8.3398  time: 2.6367  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 600/4855]  eta: 3:07:50  lr: 0.000010  ml_loss: 5.0486  mi_loss: 3.7304  wpa_loss: 0.0012  train_loss: 8.7802  time: 2.6356  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 650/4855]  eta: 3:05:38  lr: 0.000010  ml_loss: 4.5915  mi_loss: 3.9211  wpa_loss: 0.0006  train_loss: 8.5132  time: 2.6517  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 700/4855]  eta: 3:03:26  lr: 0.000010  ml_loss: 4.2616  mi_loss: 3.5597  wpa_loss: 0.0028  train_loss: 7.8240  time: 2.6496  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 750/4855]  eta: 3:01:14  lr: 0.000010  ml_loss: 4.3812  mi_loss: 4.0573  wpa_loss: 0.0005  train_loss: 8.4389  time: 2.6491  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 800/4855]  eta: 2:59:02  lr: 0.000010  ml_loss: 4.7073  mi_loss: 3.6757  wpa_loss: 0.0002  train_loss: 8.3832  time: 2.6496  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 850/4855]  eta: 2:56:50  lr: 0.000010  ml_loss: 4.8492  mi_loss: 3.5380  wpa_loss: 0.0009  train_loss: 8.3880  time: 2.6544  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 900/4855]  eta: 2:54:36  lr: 0.000010  ml_loss: 4.7815  mi_loss: 3.6987  wpa_loss: 0.0003  train_loss: 8.4805  time: 2.6410  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [ 950/4855]  eta: 2:52:20  lr: 0.000010  ml_loss: 4.2894  mi_loss: 3.5988  wpa_loss: 0.0004  train_loss: 7.8886  time: 2.6259  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1000/4855]  eta: 2:50:06  lr: 0.000010  ml_loss: 4.8294  mi_loss: 4.1036  wpa_loss: 0.0001  train_loss: 8.9331  time: 2.6419  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1050/4855]  eta: 2:47:54  lr: 0.000010  ml_loss: 4.8804  mi_loss: 4.0945  wpa_loss: 0.0005  train_loss: 8.9754  time: 2.6550  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1100/4855]  eta: 2:45:43  lr: 0.000010  ml_loss: 4.5966  mi_loss: 3.4597  wpa_loss: 0.0011  train_loss: 8.0573  time: 2.6521  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1150/4855]  eta: 2:43:31  lr: 0.000010  ml_loss: 4.8129  mi_loss: 3.8269  wpa_loss: 0.0001  train_loss: 8.6399  time: 2.6578  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1200/4855]  eta: 2:41:19  lr: 0.000010  ml_loss: 5.0534  mi_loss: 3.8254  wpa_loss: 0.0030  train_loss: 8.8818  time: 2.6517  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1250/4855]  eta: 2:39:06  lr: 0.000010  ml_loss: 4.4927  mi_loss: 3.8277  wpa_loss: 0.0001  train_loss: 8.3206  time: 2.6471  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1300/4855]  eta: 2:36:53  lr: 0.000010  ml_loss: 4.5209  mi_loss: 3.2650  wpa_loss: 0.0009  train_loss: 7.7868  time: 2.6413  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1350/4855]  eta: 2:34:40  lr: 0.000010  ml_loss: 5.0619  mi_loss: 3.4858  wpa_loss: 0.0010  train_loss: 8.5486  time: 2.6469  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1400/4855]  eta: 2:32:27  lr: 0.000010  ml_loss: 4.5834  mi_loss: 4.2056  wpa_loss: 0.0006  train_loss: 8.7897  time: 2.6421  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1450/4855]  eta: 2:30:14  lr: 0.000010  ml_loss: 4.7006  mi_loss: 3.6415  wpa_loss: 0.0003  train_loss: 8.3423  time: 2.6435  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1500/4855]  eta: 2:28:01  lr: 0.000010  ml_loss: 4.6639  mi_loss: 3.9639  wpa_loss: 0.0001  train_loss: 8.6279  time: 2.6483  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1550/4855]  eta: 2:25:48  lr: 0.000010  ml_loss: 4.1842  mi_loss: 3.6355  wpa_loss: 0.0177  train_loss: 7.8374  time: 2.6348  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1600/4855]  eta: 2:23:35  lr: 0.000010  ml_loss: 4.6728  mi_loss: 3.9269  wpa_loss: 0.0007  train_loss: 8.6004  time: 2.6350  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1650/4855]  eta: 2:21:21  lr: 0.000010  ml_loss: 3.2007  mi_loss: 3.5904  wpa_loss: 0.0125  train_loss: 6.8035  time: 2.6404  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1700/4855]  eta: 2:19:08  lr: 0.000010  ml_loss: 4.8021  mi_loss: 3.7881  wpa_loss: 0.0022  train_loss: 8.5924  time: 2.6499  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1750/4855]  eta: 2:16:56  lr: 0.000010  ml_loss: 4.4450  mi_loss: 3.9531  wpa_loss: 0.0001  train_loss: 8.3981  time: 2.6438  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1800/4855]  eta: 2:14:44  lr: 0.000010  ml_loss: 4.3282  mi_loss: 4.0036  wpa_loss: 0.0020  train_loss: 8.3338  time: 2.6420  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1850/4855]  eta: 2:12:31  lr: 0.000010  ml_loss: 4.5596  mi_loss: 4.0001  wpa_loss: 0.0010  train_loss: 8.5607  time: 2.6421  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1900/4855]  eta: 2:10:19  lr: 0.000010  ml_loss: 3.5019  mi_loss: 3.7783  wpa_loss: 0.0001  train_loss: 7.2804  time: 2.6416  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [1950/4855]  eta: 2:08:06  lr: 0.000010  ml_loss: 4.4624  mi_loss: 3.9422  wpa_loss: 0.0047  train_loss: 8.4093  time: 2.6391  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2000/4855]  eta: 2:05:54  lr: 0.000010  ml_loss: 5.0298  mi_loss: 3.7819  wpa_loss: 0.0024  train_loss: 8.8141  time: 2.6440  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2050/4855]  eta: 2:03:41  lr: 0.000010  ml_loss: 4.6342  mi_loss: 3.8686  wpa_loss: 0.0141  train_loss: 8.5170  time: 2.6466  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2100/4855]  eta: 2:01:29  lr: 0.000010  ml_loss: 4.7454  mi_loss: 3.8707  wpa_loss: 0.0004  train_loss: 8.6164  time: 2.6396  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2150/4855]  eta: 1:59:16  lr: 0.000010  ml_loss: 4.4750  mi_loss: 3.8751  wpa_loss: 0.0008  train_loss: 8.3508  time: 2.6475  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2200/4855]  eta: 1:57:03  lr: 0.000010  ml_loss: 4.6089  mi_loss: 3.8484  wpa_loss: 0.0001  train_loss: 8.4574  time: 2.6322  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2250/4855]  eta: 1:54:50  lr: 0.000010  ml_loss: 4.5952  mi_loss: 4.2393  wpa_loss: 0.0001  train_loss: 8.8346  time: 2.6356  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2300/4855]  eta: 1:52:37  lr: 0.000010  ml_loss: 4.4171  mi_loss: 3.5884  wpa_loss: 0.0023  train_loss: 8.0078  time: 2.6374  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2350/4855]  eta: 1:50:25  lr: 0.000010  ml_loss: 4.5697  mi_loss: 3.8501  wpa_loss: 0.0001  train_loss: 8.4199  time: 2.6387  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2400/4855]  eta: 1:48:12  lr: 0.000010  ml_loss: 4.5916  mi_loss: 3.5794  wpa_loss: 0.0001  train_loss: 8.1711  time: 2.6386  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2450/4855]  eta: 1:46:00  lr: 0.000010  ml_loss: 4.3200  mi_loss: 4.4749  wpa_loss: 0.0001  train_loss: 8.7949  time: 2.6347  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2500/4855]  eta: 1:43:47  lr: 0.000010  ml_loss: 4.8071  mi_loss: 3.9381  wpa_loss: 0.0001  train_loss: 8.7453  time: 2.6477  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2550/4855]  eta: 1:41:35  lr: 0.000010  ml_loss: 4.8471  mi_loss: 3.3775  wpa_loss: 0.0004  train_loss: 8.2250  time: 2.6393  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2600/4855]  eta: 1:39:23  lr: 0.000010  ml_loss: 4.4823  mi_loss: 4.2348  wpa_loss: 0.0004  train_loss: 8.7175  time: 2.6382  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2650/4855]  eta: 1:37:10  lr: 0.000010  ml_loss: 4.8430  mi_loss: 3.7703  wpa_loss: 0.0015  train_loss: 8.6147  time: 2.6343  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2700/4855]  eta: 1:34:58  lr: 0.000010  ml_loss: 5.1728  mi_loss: 3.7763  wpa_loss: 0.0002  train_loss: 8.9493  time: 2.6288  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2750/4855]  eta: 1:32:45  lr: 0.000010  ml_loss: 4.3264  mi_loss: 3.7521  wpa_loss: 0.0003  train_loss: 8.0788  time: 2.6433  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2800/4855]  eta: 1:30:33  lr: 0.000010  ml_loss: 4.6443  mi_loss: 3.6343  wpa_loss: 0.0018  train_loss: 8.2804  time: 2.6426  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2850/4855]  eta: 1:28:21  lr: 0.000010  ml_loss: 4.5943  mi_loss: 3.8777  wpa_loss: 0.0066  train_loss: 8.4785  time: 2.6463  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2900/4855]  eta: 1:26:09  lr: 0.000010  ml_loss: 5.0648  mi_loss: 4.0178  wpa_loss: 0.0003  train_loss: 9.0829  time: 2.6371  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [2950/4855]  eta: 1:23:56  lr: 0.000010  ml_loss: 3.6326  mi_loss: 3.7842  wpa_loss: 0.0007  train_loss: 7.4176  time: 2.6364  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3000/4855]  eta: 1:21:44  lr: 0.000010  ml_loss: 4.4822  mi_loss: 3.2962  wpa_loss: 0.0016  train_loss: 7.7800  time: 2.6353  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3050/4855]  eta: 1:19:32  lr: 0.000010  ml_loss: 4.8621  mi_loss: 4.1167  wpa_loss: 0.0000  train_loss: 8.9788  time: 2.6338  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3100/4855]  eta: 1:17:19  lr: 0.000010  ml_loss: 4.7067  mi_loss: 3.9577  wpa_loss: 0.0005  train_loss: 8.6649  time: 2.6365  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3150/4855]  eta: 1:15:07  lr: 0.000010  ml_loss: 4.9886  mi_loss: 3.7489  wpa_loss: 0.0011  train_loss: 8.7386  time: 2.6403  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3200/4855]  eta: 1:12:55  lr: 0.000010  ml_loss: 5.0527  mi_loss: 3.6170  wpa_loss: 0.0790  train_loss: 8.7487  time: 2.6404  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3250/4855]  eta: 1:10:42  lr: 0.000010  ml_loss: 4.5880  mi_loss: 3.8184  wpa_loss: 0.0015  train_loss: 8.4079  time: 2.6327  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3300/4855]  eta: 1:08:30  lr: 0.000010  ml_loss: 4.7404  mi_loss: 4.3631  wpa_loss: 0.0006  train_loss: 9.1041  time: 2.6482  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3350/4855]  eta: 1:06:18  lr: 0.000010  ml_loss: 4.4328  mi_loss: 3.1174  wpa_loss: 0.0426  train_loss: 7.5928  time: 2.6463  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3400/4855]  eta: 1:04:05  lr: 0.000010  ml_loss: 4.6471  mi_loss: 3.7127  wpa_loss: 0.0004  train_loss: 8.3602  time: 2.6368  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3450/4855]  eta: 1:01:53  lr: 0.000010  ml_loss: 4.7127  mi_loss: 3.4502  wpa_loss: 0.0032  train_loss: 8.1662  time: 2.6450  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3500/4855]  eta: 0:59:41  lr: 0.000010  ml_loss: 4.7754  mi_loss: 4.2965  wpa_loss: 0.0019  train_loss: 9.0737  time: 2.6264  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3550/4855]  eta: 0:57:29  lr: 0.000010  ml_loss: 4.7643  mi_loss: 3.4194  wpa_loss: 0.0006  train_loss: 8.1843  time: 2.6389  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3600/4855]  eta: 0:55:17  lr: 0.000010  ml_loss: 4.6251  mi_loss: 3.6869  wpa_loss: 0.0002  train_loss: 8.3121  time: 2.6386  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3650/4855]  eta: 0:53:04  lr: 0.000010  ml_loss: 5.1899  mi_loss: 3.7258  wpa_loss: 0.0029  train_loss: 8.9187  time: 2.6304  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3700/4855]  eta: 0:50:52  lr: 0.000010  ml_loss: 4.6712  mi_loss: 3.8615  wpa_loss: 0.0001  train_loss: 8.5328  time: 2.6346  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3750/4855]  eta: 0:48:40  lr: 0.000010  ml_loss: 4.3368  mi_loss: 3.3719  wpa_loss: 0.0087  train_loss: 7.7174  time: 2.6382  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3800/4855]  eta: 0:46:27  lr: 0.000010  ml_loss: 4.7760  mi_loss: 3.6169  wpa_loss: 0.0011  train_loss: 8.3940  time: 2.6380  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3850/4855]  eta: 0:44:15  lr: 0.000010  ml_loss: 5.0507  mi_loss: 4.0576  wpa_loss: 0.0002  train_loss: 9.1086  time: 2.6464  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3900/4855]  eta: 0:42:03  lr: 0.000010  ml_loss: 4.6275  mi_loss: 3.8957  wpa_loss: 0.0018  train_loss: 8.5251  time: 2.6482  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [3950/4855]  eta: 0:39:51  lr: 0.000010  ml_loss: 4.1296  mi_loss: 3.9067  wpa_loss: 0.0003  train_loss: 8.0366  time: 2.6451  data: 0.0002  max mem: 20950
+Train Epoch: [17]  [4000/4855]  eta: 0:37:39  lr: 0.000010  ml_loss: 4.8466  mi_loss: 3.5671  wpa_loss: 0.0001  train_loss: 8.4138  time: 2.6488  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4050/4855]  eta: 0:35:27  lr: 0.000010  ml_loss: 4.3539  mi_loss: 3.8284  wpa_loss: 0.0024  train_loss: 8.1847  time: 2.6445  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4100/4855]  eta: 0:33:15  lr: 0.000010  ml_loss: 5.0335  mi_loss: 3.8057  wpa_loss: 0.0000  train_loss: 8.8393  time: 2.6461  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4150/4855]  eta: 0:31:03  lr: 0.000010  ml_loss: 4.5051  mi_loss: 4.4000  wpa_loss: 0.0002  train_loss: 8.9054  time: 2.6404  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4200/4855]  eta: 0:28:50  lr: 0.000010  ml_loss: 4.7956  mi_loss: 3.5062  wpa_loss: 0.0028  train_loss: 8.3047  time: 2.6282  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4250/4855]  eta: 0:26:38  lr: 0.000010  ml_loss: 4.5395  mi_loss: 3.5718  wpa_loss: 0.0577  train_loss: 8.1690  time: 2.6431  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4300/4855]  eta: 0:24:26  lr: 0.000010  ml_loss: 4.7006  mi_loss: 4.1638  wpa_loss: 0.0005  train_loss: 8.8649  time: 2.6410  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4350/4855]  eta: 0:22:14  lr: 0.000010  ml_loss: 4.3598  mi_loss: 3.9996  wpa_loss: 0.0011  train_loss: 8.3604  time: 2.6356  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4400/4855]  eta: 0:20:02  lr: 0.000010  ml_loss: 4.6870  mi_loss: 3.7926  wpa_loss: 0.0027  train_loss: 8.4824  time: 2.6457  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4450/4855]  eta: 0:17:50  lr: 0.000010  ml_loss: 4.0008  mi_loss: 4.1393  wpa_loss: 0.0091  train_loss: 8.1491  time: 2.6486  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4500/4855]  eta: 0:15:38  lr: 0.000010  ml_loss: 4.9025  mi_loss: 3.8166  wpa_loss: 0.0018  train_loss: 8.7208  time: 2.6427  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4550/4855]  eta: 0:13:25  lr: 0.000010  ml_loss: 4.5446  mi_loss: 3.6289  wpa_loss: 0.0013  train_loss: 8.1748  time: 2.6442  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4600/4855]  eta: 0:11:13  lr: 0.000010  ml_loss: 4.3291  mi_loss: 3.6788  wpa_loss: 0.0057  train_loss: 8.0135  time: 2.6432  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4650/4855]  eta: 0:09:01  lr: 0.000010  ml_loss: 4.6956  mi_loss: 3.5834  wpa_loss: 0.0006  train_loss: 8.2796  time: 2.6462  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4700/4855]  eta: 0:06:49  lr: 0.000010  ml_loss: 5.2453  mi_loss: 3.6135  wpa_loss: 0.0005  train_loss: 8.8593  time: 2.6427  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4750/4855]  eta: 0:04:37  lr: 0.000010  ml_loss: 5.0554  mi_loss: 3.5396  wpa_loss: 0.0029  train_loss: 8.5979  time: 2.6289  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4800/4855]  eta: 0:02:25  lr: 0.000010  ml_loss: 4.8971  mi_loss: 3.8274  wpa_loss: 0.0002  train_loss: 8.7247  time: 2.6467  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4850/4855]  eta: 0:00:13  lr: 0.000010  ml_loss: 4.0008  mi_loss: 3.9511  wpa_loss: 0.0048  train_loss: 7.9566  time: 2.6402  data: 0.0001  max mem: 20950
+Train Epoch: [17]  [4854/4855]  eta: 0:00:02  lr: 0.000010  ml_loss: 4.9956  mi_loss: 3.2930  wpa_loss: 0.0002  train_loss: 8.2887  time: 2.6512  data: 0.0007  max mem: 20950
+Train Epoch: [17] Total time: 3:33:50 (2.6428 s / it)
+Val Epoch: [17]  [  0/540]  eta: 0:23:23  ml_loss: 4.4914  mi_loss: 4.0110  wpa_loss: 0.0000  val_loss: 8.5023  accML: 0.2619  accMI: 0.1230  time: 2.5990  data: 2.2791  max mem: 20950
+Val Epoch: [17]  [ 50/540]  eta: 0:06:30  ml_loss: 4.7596  mi_loss: 3.8458  wpa_loss: 0.0001  val_loss: 8.6055  accML: 0.2863  accMI: 0.1753  time: 0.7819  data: 0.6194  max mem: 20950
+Val Epoch: [17]  [100/540]  eta: 0:05:49  ml_loss: 4.4474  mi_loss: 4.0422  wpa_loss: 0.0001  val_loss: 8.4896  accML: 0.2919  accMI: 0.1203  time: 0.7664  data: 0.6043  max mem: 20950
+Val Epoch: [17]  [150/540]  eta: 0:05:22  ml_loss: 4.7146  mi_loss: 4.2210  wpa_loss: 0.0001  val_loss: 8.9356  accML: 0.2500  accMI: 0.1493  time: 0.9328  data: 0.7687  max mem: 20950
+Val Epoch: [17]  [200/540]  eta: 0:04:43  ml_loss: 4.6545  mi_loss: 4.0811  wpa_loss: 0.0104  val_loss: 8.7460  accML: 0.2944  accMI: 0.1475  time: 0.8639  data: 0.7000  max mem: 20950
+Val Epoch: [17]  [250/540]  eta: 0:04:01  ml_loss: 4.2815  mi_loss: 3.7857  wpa_loss: 0.0008  val_loss: 8.0680  accML: 0.3064  accMI: 0.1738  time: 0.8456  data: 0.6821  max mem: 20950
+Val Epoch: [17]  [300/540]  eta: 0:03:20  ml_loss: 4.1822  mi_loss: 4.1372  wpa_loss: 0.0090  val_loss: 8.3284  accML: 0.3310  accMI: 0.1387  time: 0.8809  data: 0.7171  max mem: 20950
+Val Epoch: [17]  [350/540]  eta: 0:02:38  ml_loss: 4.5979  mi_loss: 3.3132  wpa_loss: 0.0010  val_loss: 7.9122  accML: 0.2538  accMI: 0.3307  time: 0.8004  data: 0.6381  max mem: 20950
+Val Epoch: [17]  [400/540]  eta: 0:01:56  ml_loss: 5.1912  mi_loss: 4.0297  wpa_loss: 0.0002  val_loss: 9.2211  accML: 0.1976  accMI: 0.1267  time: 0.8610  data: 0.6973  max mem: 20950
+Val Epoch: [17]  [450/540]  eta: 0:01:15  ml_loss: 5.0449  mi_loss: 3.9521  wpa_loss: 0.0002  val_loss: 8.9971  accML: 0.2285  accMI: 0.1667  time: 0.8465  data: 0.6829  max mem: 20950
+Val Epoch: [17]  [500/540]  eta: 0:00:33  ml_loss: 4.8870  mi_loss: 3.7235  wpa_loss: 0.0001  val_loss: 8.6107  accML: 0.2470  accMI: 0.1680  time: 0.7517  data: 0.5891  max mem: 20950
+Val Epoch: [17]  [539/540]  eta: 0:00:00  ml_loss: 4.6379  mi_loss: 3.8043  wpa_loss: 0.0038  val_loss: 8.4460  accML: 0.2489  accMI: 0.1867  time: 0.7841  data: 0.6236  max mem: 20950
+Val Epoch: [17] Total time: 0:07:33 (0.8391 s / it)
+epoch:17, iter:87389, 4854,  train_loss: 8.288727760314941, valid_loss: 8.515840200141625, idiv_loss:(4.546970053955361, 3.9655999355845983, 0.0032702212915932316), acc:(0.2768838775930581, 0.1683073549910828)
+Averaged stats: lr: 0.0000  ml_loss: 4.6096  mi_loss: 3.8306  wpa_loss: 0.0028  train_loss: 8.4430
+epoch 17 8.288727760314941
+Train Epoch: [18]  [   0/4855]  eta: 8:00:33  lr: 0.000010  ml_loss: 4.2290  mi_loss: 3.7989  wpa_loss: 0.0023  train_loss: 8.0302  time: 5.9389  data: 3.1433  max mem: 20950
+Train Epoch: [18]  [  50/4855]  eta: 3:36:55  lr: 0.000010  ml_loss: 4.9869  mi_loss: 3.9166  wpa_loss: 0.0007  train_loss: 8.9043  time: 2.6561  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 100/4855]  eta: 3:32:41  lr: 0.000010  ml_loss: 4.8406  mi_loss: 3.8416  wpa_loss: 0.0008  train_loss: 8.6830  time: 2.6532  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 150/4855]  eta: 3:29:54  lr: 0.000010  ml_loss: 4.6380  mi_loss: 4.1465  wpa_loss: 0.0002  train_loss: 8.7847  time: 2.6628  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 200/4855]  eta: 3:27:26  lr: 0.000010  ml_loss: 4.8673  mi_loss: 4.0138  wpa_loss: 0.0004  train_loss: 8.8814  time: 2.6669  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 250/4855]  eta: 3:25:03  lr: 0.000010  ml_loss: 4.8366  mi_loss: 3.9246  wpa_loss: 0.0012  train_loss: 8.7623  time: 2.6595  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 300/4855]  eta: 3:22:36  lr: 0.000010  ml_loss: 4.2248  mi_loss: 3.7212  wpa_loss: 0.0046  train_loss: 7.9507  time: 2.6466  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 350/4855]  eta: 3:20:04  lr: 0.000010  ml_loss: 4.5945  mi_loss: 3.9873  wpa_loss: 0.0021  train_loss: 8.5840  time: 2.6403  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 400/4855]  eta: 3:17:36  lr: 0.000010  ml_loss: 4.5650  mi_loss: 4.1145  wpa_loss: 0.0001  train_loss: 8.6796  time: 2.6426  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 450/4855]  eta: 3:15:13  lr: 0.000010  ml_loss: 4.3901  mi_loss: 3.6278  wpa_loss: 0.0006  train_loss: 8.0184  time: 2.6382  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 500/4855]  eta: 3:12:50  lr: 0.000010  ml_loss: 4.7603  mi_loss: 4.0777  wpa_loss: 0.0002  train_loss: 8.8382  time: 2.6390  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [ 550/4855]  eta: 3:10:30  lr: 0.000010  ml_loss: 5.3654  mi_loss: 3.1186  wpa_loss: 0.0001  train_loss: 8.4842  time: 2.6385  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [ 600/4855]  eta: 3:08:09  lr: 0.000010  ml_loss: 4.7911  mi_loss: 3.8398  wpa_loss: 0.0011  train_loss: 8.6319  time: 2.6327  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 650/4855]  eta: 3:05:52  lr: 0.000010  ml_loss: 4.4491  mi_loss: 3.8587  wpa_loss: 0.0002  train_loss: 8.3080  time: 2.6401  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 700/4855]  eta: 3:03:34  lr: 0.000010  ml_loss: 4.7501  mi_loss: 4.0164  wpa_loss: 0.0010  train_loss: 8.7676  time: 2.6325  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 750/4855]  eta: 3:01:18  lr: 0.000010  ml_loss: 4.7590  mi_loss: 4.1656  wpa_loss: 0.0005  train_loss: 8.9251  time: 2.6346  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 800/4855]  eta: 2:59:02  lr: 0.000010  ml_loss: 4.0950  mi_loss: 3.7499  wpa_loss: 0.0165  train_loss: 7.8614  time: 2.6319  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 850/4855]  eta: 2:56:47  lr: 0.000010  ml_loss: 4.9218  mi_loss: 3.7649  wpa_loss: 0.0005  train_loss: 8.6873  time: 2.6401  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 900/4855]  eta: 2:54:32  lr: 0.000010  ml_loss: 4.8300  mi_loss: 3.9961  wpa_loss: 0.0027  train_loss: 8.8288  time: 2.6393  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [ 950/4855]  eta: 2:52:16  lr: 0.000010  ml_loss: 4.5286  mi_loss: 3.4993  wpa_loss: 0.0024  train_loss: 8.0302  time: 2.6340  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1000/4855]  eta: 2:50:02  lr: 0.000010  ml_loss: 4.2838  mi_loss: 4.0232  wpa_loss: 0.0035  train_loss: 8.3105  time: 2.6374  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [1050/4855]  eta: 2:47:46  lr: 0.000010  ml_loss: 4.1439  mi_loss: 4.2116  wpa_loss: 0.0038  train_loss: 8.3593  time: 2.6364  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [1100/4855]  eta: 2:45:32  lr: 0.000010  ml_loss: 4.6436  mi_loss: 3.6983  wpa_loss: 0.0004  train_loss: 8.3423  time: 2.6400  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1150/4855]  eta: 2:43:19  lr: 0.000010  ml_loss: 4.6295  mi_loss: 3.3132  wpa_loss: 0.0026  train_loss: 7.9453  time: 2.6339  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [1200/4855]  eta: 2:41:04  lr: 0.000010  ml_loss: 4.0973  mi_loss: 4.1432  wpa_loss: 0.0001  train_loss: 8.2405  time: 2.6292  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1250/4855]  eta: 2:38:51  lr: 0.000010  ml_loss: 4.4599  mi_loss: 3.6355  wpa_loss: 0.0001  train_loss: 8.0955  time: 2.6396  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1300/4855]  eta: 2:36:37  lr: 0.000010  ml_loss: 4.4159  mi_loss: 3.8792  wpa_loss: 0.0003  train_loss: 8.2954  time: 2.6348  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1350/4855]  eta: 2:34:24  lr: 0.000010  ml_loss: 4.5879  mi_loss: 4.0949  wpa_loss: 0.0002  train_loss: 8.6830  time: 2.6313  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1400/4855]  eta: 2:32:12  lr: 0.000010  ml_loss: 4.6366  mi_loss: 3.8844  wpa_loss: 0.0086  train_loss: 8.5295  time: 2.6348  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1450/4855]  eta: 2:29:58  lr: 0.000010  ml_loss: 4.9293  mi_loss: 3.9025  wpa_loss: 0.0011  train_loss: 8.8329  time: 2.6335  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1500/4855]  eta: 2:27:46  lr: 0.000010  ml_loss: 4.2091  mi_loss: 3.9354  wpa_loss: 0.0069  train_loss: 8.1515  time: 2.6321  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1550/4855]  eta: 2:25:33  lr: 0.000010  ml_loss: 4.8036  mi_loss: 3.3962  wpa_loss: 0.0003  train_loss: 8.2001  time: 2.6353  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1600/4855]  eta: 2:23:21  lr: 0.000010  ml_loss: 4.4409  mi_loss: 3.7568  wpa_loss: 0.0007  train_loss: 8.1985  time: 2.6400  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1650/4855]  eta: 2:21:08  lr: 0.000010  ml_loss: 4.3477  mi_loss: 3.5995  wpa_loss: 0.0058  train_loss: 7.9530  time: 2.6368  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [1700/4855]  eta: 2:18:55  lr: 0.000010  ml_loss: 3.9892  mi_loss: 2.9027  wpa_loss: 0.0360  train_loss: 6.9279  time: 2.6335  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [1750/4855]  eta: 2:16:41  lr: 0.000010  ml_loss: 4.0358  mi_loss: 4.1862  wpa_loss: 0.0029  train_loss: 8.2249  time: 2.6335  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1800/4855]  eta: 2:14:29  lr: 0.000010  ml_loss: 4.9856  mi_loss: 3.2256  wpa_loss: 0.0004  train_loss: 8.2116  time: 2.6367  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [1850/4855]  eta: 2:12:17  lr: 0.000010  ml_loss: 5.1408  mi_loss: 4.4847  wpa_loss: 0.0024  train_loss: 9.6279  time: 2.6404  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1900/4855]  eta: 2:10:05  lr: 0.000010  ml_loss: 4.5356  mi_loss: 4.2216  wpa_loss: 0.0119  train_loss: 8.7691  time: 2.6447  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [1950/4855]  eta: 2:07:53  lr: 0.000010  ml_loss: 4.5043  mi_loss: 3.7152  wpa_loss: 0.0002  train_loss: 8.2197  time: 2.6483  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2000/4855]  eta: 2:05:41  lr: 0.000010  ml_loss: 4.6430  mi_loss: 3.4537  wpa_loss: 0.0005  train_loss: 8.0973  time: 2.6395  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2050/4855]  eta: 2:03:29  lr: 0.000010  ml_loss: 4.6910  mi_loss: 3.7249  wpa_loss: 0.0003  train_loss: 8.4162  time: 2.6423  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2100/4855]  eta: 2:01:17  lr: 0.000010  ml_loss: 5.0196  mi_loss: 4.1178  wpa_loss: 0.0009  train_loss: 9.1384  time: 2.6416  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2150/4855]  eta: 1:59:04  lr: 0.000010  ml_loss: 4.6072  mi_loss: 4.0845  wpa_loss: 0.0002  train_loss: 8.6919  time: 2.6180  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2200/4855]  eta: 1:56:52  lr: 0.000010  ml_loss: 5.2069  mi_loss: 4.1941  wpa_loss: 0.0001  train_loss: 9.4011  time: 2.6453  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2250/4855]  eta: 1:54:40  lr: 0.000010  ml_loss: 4.3980  mi_loss: 3.8882  wpa_loss: 0.0001  train_loss: 8.2863  time: 2.6585  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2300/4855]  eta: 1:52:28  lr: 0.000010  ml_loss: 5.2892  mi_loss: 3.8190  wpa_loss: 0.0004  train_loss: 9.1086  time: 2.6486  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2350/4855]  eta: 1:50:16  lr: 0.000010  ml_loss: 4.5471  mi_loss: 4.0650  wpa_loss: 0.0004  train_loss: 8.6125  time: 2.6259  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2400/4855]  eta: 1:48:04  lr: 0.000010  ml_loss: 3.5497  mi_loss: 3.6969  wpa_loss: 0.0016  train_loss: 7.2482  time: 2.6424  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2450/4855]  eta: 1:45:52  lr: 0.000010  ml_loss: 4.8783  mi_loss: 4.1126  wpa_loss: 0.0306  train_loss: 9.0215  time: 2.6405  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2500/4855]  eta: 1:43:40  lr: 0.000010  ml_loss: 4.8899  mi_loss: 4.1073  wpa_loss: 0.0004  train_loss: 8.9976  time: 2.6456  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2550/4855]  eta: 1:41:28  lr: 0.000010  ml_loss: 4.3210  mi_loss: 3.9854  wpa_loss: 0.0012  train_loss: 8.3076  time: 2.6424  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2600/4855]  eta: 1:39:16  lr: 0.000010  ml_loss: 4.6987  mi_loss: 4.1661  wpa_loss: 0.0002  train_loss: 8.8650  time: 2.6445  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2650/4855]  eta: 1:37:04  lr: 0.000010  ml_loss: 4.1808  mi_loss: 3.3922  wpa_loss: 0.0013  train_loss: 7.5742  time: 2.6431  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2700/4855]  eta: 1:34:51  lr: 0.000010  ml_loss: 4.9584  mi_loss: 3.9502  wpa_loss: 0.0010  train_loss: 8.9097  time: 2.6203  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2750/4855]  eta: 1:32:39  lr: 0.000010  ml_loss: 4.7178  mi_loss: 3.7657  wpa_loss: 0.0013  train_loss: 8.4848  time: 2.6319  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2800/4855]  eta: 1:30:26  lr: 0.000010  ml_loss: 4.7013  mi_loss: 3.1595  wpa_loss: 0.0001  train_loss: 7.8609  time: 2.6455  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [2850/4855]  eta: 1:28:14  lr: 0.000010  ml_loss: 4.2351  mi_loss: 2.9846  wpa_loss: 0.0019  train_loss: 7.2215  time: 2.6412  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2900/4855]  eta: 1:26:02  lr: 0.000010  ml_loss: 4.9235  mi_loss: 3.9906  wpa_loss: 0.0023  train_loss: 8.9165  time: 2.6374  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [2950/4855]  eta: 1:23:50  lr: 0.000010  ml_loss: 4.6639  mi_loss: 4.2592  wpa_loss: 0.0001  train_loss: 8.9232  time: 2.6403  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3000/4855]  eta: 1:21:38  lr: 0.000010  ml_loss: 4.6081  mi_loss: 4.3720  wpa_loss: 0.0032  train_loss: 8.9833  time: 2.6332  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3050/4855]  eta: 1:19:26  lr: 0.000010  ml_loss: 4.1047  mi_loss: 3.7028  wpa_loss: 0.0004  train_loss: 7.8079  time: 2.6357  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [3100/4855]  eta: 1:17:14  lr: 0.000010  ml_loss: 4.4338  mi_loss: 3.6630  wpa_loss: 0.0006  train_loss: 8.0974  time: 2.6398  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [3150/4855]  eta: 1:15:02  lr: 0.000010  ml_loss: 4.2699  mi_loss: 3.8031  wpa_loss: 0.0018  train_loss: 8.0748  time: 2.6417  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3200/4855]  eta: 1:12:50  lr: 0.000010  ml_loss: 5.4169  mi_loss: 3.8175  wpa_loss: 0.0000  train_loss: 9.2344  time: 2.6186  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3250/4855]  eta: 1:10:37  lr: 0.000010  ml_loss: 4.4175  mi_loss: 4.3673  wpa_loss: 0.0065  train_loss: 8.7914  time: 2.6429  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3300/4855]  eta: 1:08:25  lr: 0.000010  ml_loss: 4.3133  mi_loss: 4.0946  wpa_loss: 0.0047  train_loss: 8.4126  time: 2.6348  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3350/4855]  eta: 1:06:13  lr: 0.000010  ml_loss: 4.2069  mi_loss: 3.9174  wpa_loss: 0.0001  train_loss: 8.1245  time: 2.6398  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3400/4855]  eta: 1:04:01  lr: 0.000010  ml_loss: 4.4436  mi_loss: 4.2261  wpa_loss: 0.0169  train_loss: 8.6866  time: 2.6415  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3450/4855]  eta: 1:01:49  lr: 0.000010  ml_loss: 3.6151  mi_loss: 3.6733  wpa_loss: 0.0305  train_loss: 7.3189  time: 2.6194  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3500/4855]  eta: 0:59:37  lr: 0.000010  ml_loss: 4.1045  mi_loss: 3.3303  wpa_loss: 0.0027  train_loss: 7.4374  time: 2.6364  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3550/4855]  eta: 0:57:25  lr: 0.000010  ml_loss: 4.5482  mi_loss: 4.0501  wpa_loss: 0.0000  train_loss: 8.5984  time: 2.6371  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3600/4855]  eta: 0:55:13  lr: 0.000010  ml_loss: 4.9256  mi_loss: 4.1195  wpa_loss: 0.0003  train_loss: 9.0455  time: 2.6366  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3650/4855]  eta: 0:53:01  lr: 0.000010  ml_loss: 4.1724  mi_loss: 4.2274  wpa_loss: 0.0001  train_loss: 8.3999  time: 2.6324  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [3700/4855]  eta: 0:50:49  lr: 0.000010  ml_loss: 4.9395  mi_loss: 4.2980  wpa_loss: 0.0002  train_loss: 9.2377  time: 2.6383  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [3750/4855]  eta: 0:48:37  lr: 0.000010  ml_loss: 4.8966  mi_loss: 3.4171  wpa_loss: 0.0008  train_loss: 8.3145  time: 2.6384  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3800/4855]  eta: 0:46:25  lr: 0.000010  ml_loss: 4.4441  mi_loss: 3.7555  wpa_loss: 0.0268  train_loss: 8.2265  time: 2.6296  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [3850/4855]  eta: 0:44:12  lr: 0.000010  ml_loss: 4.4262  mi_loss: 3.6600  wpa_loss: 0.0006  train_loss: 8.0868  time: 2.6314  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [3900/4855]  eta: 0:42:00  lr: 0.000010  ml_loss: 4.7824  mi_loss: 3.6734  wpa_loss: 0.0002  train_loss: 8.4560  time: 2.6385  data: 0.0003  max mem: 20950
+Train Epoch: [18]  [3950/4855]  eta: 0:39:48  lr: 0.000010  ml_loss: 4.3735  mi_loss: 4.0634  wpa_loss: 0.0002  train_loss: 8.4371  time: 2.6432  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [4000/4855]  eta: 0:37:36  lr: 0.000010  ml_loss: 5.2578  mi_loss: 3.9457  wpa_loss: 0.0001  train_loss: 9.2036  time: 2.6358  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [4050/4855]  eta: 0:35:24  lr: 0.000010  ml_loss: 4.7748  mi_loss: 4.0060  wpa_loss: 0.0094  train_loss: 8.7902  time: 2.6396  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [4100/4855]  eta: 0:33:12  lr: 0.000010  ml_loss: 4.6107  mi_loss: 4.1476  wpa_loss: 0.0008  train_loss: 8.7591  time: 2.6328  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [4150/4855]  eta: 0:31:00  lr: 0.000010  ml_loss: 4.6656  mi_loss: 3.1041  wpa_loss: 0.0010  train_loss: 7.7708  time: 2.6436  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [4200/4855]  eta: 0:28:49  lr: 0.000010  ml_loss: 4.6349  mi_loss: 3.7290  wpa_loss: 0.0001  train_loss: 8.3640  time: 2.6426  data: 0.0002  max mem: 20950
+Train Epoch: [18]  [4250/4855]  eta: 0:26:36  lr: 0.000010  ml_loss: 3.9528  mi_loss: 3.3234  wpa_loss: 0.0001  train_loss: 7.2764  time: 2.6092  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [4300/4855]  eta: 0:24:24  lr: 0.000010  ml_loss: 5.1894  mi_loss: 3.9600  wpa_loss: 0.0201  train_loss: 9.1695  time: 2.6330  data: 0.0001  max mem: 20950
+Train Epoch: [18]  [4350/4855]  eta: 0:22:12  lr: 0.000010  ml_loss: 4.3376  mi_loss: 4.3589  wpa_loss: 0.0122  train_loss: 8.7087  time: 2.6379  data: 0.0002  max mem: 20955
+Train Epoch: [18]  [4400/4855]  eta: 0:20:00  lr: 0.000010  ml_loss: 4.5077  mi_loss: 3.8194  wpa_loss: 0.0067  train_loss: 8.3338  time: 2.6337  data: 0.0001  max mem: 20955
+Train Epoch: [18]  [4450/4855]  eta: 0:17:48  lr: 0.000010  ml_loss: 4.5068  mi_loss: 3.9274  wpa_loss: 0.0014  train_loss: 8.4356  time: 2.6349  data: 0.0001  max mem: 20955
+Train Epoch: [18]  [4500/4855]  eta: 0:15:36  lr: 0.000010  ml_loss: 4.8581  mi_loss: 3.1024  wpa_loss: 0.0048  train_loss: 7.9654  time: 2.6349  data: 0.0001  max mem: 20955
+Train Epoch: [18]  [4550/4855]  eta: 0:13:24  lr: 0.000010  ml_loss: 4.4514  mi_loss: 3.9678  wpa_loss: 0.0013  train_loss: 8.4205  time: 2.6264  data: 0.0003  max mem: 20955
+Train Epoch: [18]  [4600/4855]  eta: 0:11:12  lr: 0.000010  ml_loss: 4.4062  mi_loss: 3.4991  wpa_loss: 0.0019  train_loss: 7.9072  time: 2.6297  data: 0.0001  max mem: 20955
+Train Epoch: [18]  [4650/4855]  eta: 0:09:00  lr: 0.000010  ml_loss: 4.8772  mi_loss: 3.5134  wpa_loss: 0.0064  train_loss: 8.3970  time: 2.6345  data: 0.0001  max mem: 20955
+Train Epoch: [18]  [4700/4855]  eta: 0:06:49  lr: 0.000010  ml_loss: 4.6441  mi_loss: 3.6232  wpa_loss: 0.0004  train_loss: 8.2676  time: 2.6362  data: 0.0002  max mem: 20955
+Train Epoch: [18]  [4750/4855]  eta: 0:04:37  lr: 0.000010  ml_loss: 5.0584  mi_loss: 3.8894  wpa_loss: 0.0001  train_loss: 8.9479  time: 2.6337  data: 0.0002  max mem: 20955
+Train Epoch: [18]  [4800/4855]  eta: 0:02:25  lr: 0.000010  ml_loss: 5.1029  mi_loss: 3.8807  wpa_loss: 0.0001  train_loss: 8.9838  time: 2.6303  data: 0.0001  max mem: 20955
+Train Epoch: [18]  [4850/4855]  eta: 0:00:13  lr: 0.000010  ml_loss: 4.8468  mi_loss: 3.8191  wpa_loss: 0.0009  train_loss: 8.6667  time: 2.6357  data: 0.0002  max mem: 20955
+Train Epoch: [18]  [4854/4855]  eta: 0:00:02  lr: 0.000010  ml_loss: 4.9905  mi_loss: 3.3906  wpa_loss: 0.0011  train_loss: 8.3823  time: 2.6432  data: 0.0008  max mem: 20955
+Train Epoch: [18] Total time: 3:33:33 (2.6392 s / it)
+Val Epoch: [18]  [  0/540]  eta: 0:23:57  ml_loss: 4.3932  mi_loss: 4.0810  wpa_loss: 0.0000  val_loss: 8.4742  accML: 0.2772  accMI: 0.1310  time: 2.6618  data: 2.3429  max mem: 20955
+Val Epoch: [18]  [ 50/540]  eta: 0:06:35  ml_loss: 4.2846  mi_loss: 3.8959  wpa_loss: 0.0021  val_loss: 8.1826  accML: 0.2941  accMI: 0.1699  time: 0.7966  data: 0.6340  max mem: 20955
+Val Epoch: [18]  [100/540]  eta: 0:05:57  ml_loss: 4.3405  mi_loss: 4.0368  wpa_loss: 0.0009  val_loss: 8.3782  accML: 0.2791  accMI: 0.1337  time: 0.7880  data: 0.6251  max mem: 20955
+Val Epoch: [18]  [150/540]  eta: 0:05:27  ml_loss: 4.6181  mi_loss: 4.2227  wpa_loss: 0.0051  val_loss: 8.8458  accML: 0.2428  accMI: 0.1413  time: 0.9273  data: 0.7624  max mem: 20955
+Val Epoch: [18]  [200/540]  eta: 0:04:46  ml_loss: 4.6949  mi_loss: 4.0760  wpa_loss: 0.0001  val_loss: 8.7710  accML: 0.2647  accMI: 0.1555  time: 0.8588  data: 0.6955  max mem: 20955
+Val Epoch: [18]  [250/540]  eta: 0:04:02  ml_loss: 4.0489  mi_loss: 3.8396  wpa_loss: 0.0002  val_loss: 7.8887  accML: 0.3237  accMI: 0.1845  time: 0.8514  data: 0.6882  max mem: 20955
+Val Epoch: [18]  [300/540]  eta: 0:03:21  ml_loss: 3.7596  mi_loss: 4.1482  wpa_loss: 0.0001  val_loss: 7.9079  accML: 0.3632  accMI: 0.1333  time: 0.8773  data: 0.7136  max mem: 20955
+Val Epoch: [18]  [350/540]  eta: 0:02:38  ml_loss: 4.3169  mi_loss: 3.3344  wpa_loss: 0.0005  val_loss: 7.6519  accML: 0.2826  accMI: 0.3173  time: 0.8319  data: 0.6686  max mem: 20955
+Val Epoch: [18]  [400/540]  eta: 0:01:57  ml_loss: 5.2225  mi_loss: 4.0753  wpa_loss: 0.0006  val_loss: 9.2984  accML: 0.2192  accMI: 0.1348  time: 0.8651  data: 0.7016  max mem: 20955
+Val Epoch: [18]  [450/540]  eta: 0:01:15  ml_loss: 4.7334  mi_loss: 3.8756  wpa_loss: 0.0002  val_loss: 8.6091  accML: 0.2598  accMI: 0.1640  time: 0.8481  data: 0.6847  max mem: 20955
+Val Epoch: [18]  [500/540]  eta: 0:00:33  ml_loss: 4.5221  mi_loss: 3.7678  wpa_loss: 0.0004  val_loss: 8.2903  accML: 0.2801  accMI: 0.1787  time: 0.7520  data: 0.5897  max mem: 20955
+Val Epoch: [18]  [539/540]  eta: 0:00:00  ml_loss: 4.5840  mi_loss: 3.8124  wpa_loss: 0.0067  val_loss: 8.4031  accML: 0.2479  accMI: 0.1822  time: 0.7907  data: 0.6299  max mem: 20955
+Val Epoch: [18] Total time: 0:07:35 (0.8432 s / it)
+epoch:18, iter:92244, 4854,  train_loss: 8.382269859313965, valid_loss: 8.48033842422344, idiv_loss:(4.518590892244268, 3.958508665031857, 0.0032388556126113177), acc:(0.2782652947085875, 0.1690979753655416)
+Averaged stats: lr: 0.0000  ml_loss: 4.5837  mi_loss: 3.8133  wpa_loss: 0.0027  train_loss: 8.3997
+epoch 18 8.382269859313965
+Train Epoch: [19]  [   0/4855]  eta: 8:13:00  lr: 0.000010  ml_loss: 4.5217  mi_loss: 4.1305  wpa_loss: 0.0040  train_loss: 8.6562  time: 6.0927  data: 3.4766  max mem: 20955
+Train Epoch: [19]  [  50/4855]  eta: 3:35:50  lr: 0.000010  ml_loss: 4.7643  mi_loss: 4.0047  wpa_loss: 0.0055  train_loss: 8.7745  time: 2.6370  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 100/4855]  eta: 3:31:23  lr: 0.000010  ml_loss: 4.6935  mi_loss: 3.8549  wpa_loss: 0.0008  train_loss: 8.5493  time: 2.6402  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 150/4855]  eta: 3:28:33  lr: 0.000010  ml_loss: 4.8138  mi_loss: 3.8680  wpa_loss: 0.0007  train_loss: 8.6826  time: 2.6592  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 200/4855]  eta: 3:26:21  lr: 0.000010  ml_loss: 4.9435  mi_loss: 3.6295  wpa_loss: 0.0003  train_loss: 8.5733  time: 2.6553  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 250/4855]  eta: 3:24:04  lr: 0.000010  ml_loss: 4.6053  mi_loss: 3.5234  wpa_loss: 0.0002  train_loss: 8.1290  time: 2.6455  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 300/4855]  eta: 3:21:50  lr: 0.000010  ml_loss: 4.2826  mi_loss: 3.7504  wpa_loss: 0.0232  train_loss: 8.0562  time: 2.6544  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 350/4855]  eta: 3:19:34  lr: 0.000010  ml_loss: 4.8497  mi_loss: 3.6469  wpa_loss: 0.0009  train_loss: 8.4975  time: 2.6556  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 400/4855]  eta: 3:17:21  lr: 0.000010  ml_loss: 4.4021  mi_loss: 3.4408  wpa_loss: 0.0037  train_loss: 7.8466  time: 2.6557  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 450/4855]  eta: 3:15:09  lr: 0.000010  ml_loss: 4.7042  mi_loss: 3.4910  wpa_loss: 0.0006  train_loss: 8.1959  time: 2.6614  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 500/4855]  eta: 3:12:52  lr: 0.000010  ml_loss: 5.3589  mi_loss: 3.7081  wpa_loss: 0.0012  train_loss: 9.0683  time: 2.6311  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 550/4855]  eta: 3:10:19  lr: 0.000010  ml_loss: 5.0935  mi_loss: 3.8184  wpa_loss: 0.0014  train_loss: 8.9133  time: 2.6291  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 600/4855]  eta: 3:08:00  lr: 0.000010  ml_loss: 3.8664  mi_loss: 3.4751  wpa_loss: 0.0005  train_loss: 7.3420  time: 2.6332  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 650/4855]  eta: 3:05:42  lr: 0.000010  ml_loss: 4.8755  mi_loss: 3.9322  wpa_loss: 0.0068  train_loss: 8.8145  time: 2.6347  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 700/4855]  eta: 3:03:25  lr: 0.000010  ml_loss: 4.7160  mi_loss: 3.5058  wpa_loss: 0.0003  train_loss: 8.2221  time: 2.6343  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 750/4855]  eta: 3:01:10  lr: 0.000010  ml_loss: 4.3755  mi_loss: 3.8294  wpa_loss: 0.0003  train_loss: 8.2051  time: 2.6453  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 800/4855]  eta: 2:58:55  lr: 0.000010  ml_loss: 4.6471  mi_loss: 4.3803  wpa_loss: 0.0005  train_loss: 9.0278  time: 2.6335  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 850/4855]  eta: 2:56:40  lr: 0.000010  ml_loss: 4.9113  mi_loss: 3.4711  wpa_loss: 0.0003  train_loss: 8.3827  time: 2.6354  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 900/4855]  eta: 2:54:24  lr: 0.000010  ml_loss: 4.8451  mi_loss: 4.1939  wpa_loss: 0.0040  train_loss: 9.0430  time: 2.6351  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [ 950/4855]  eta: 2:52:09  lr: 0.000010  ml_loss: 3.9052  mi_loss: 3.9923  wpa_loss: 0.0049  train_loss: 7.9024  time: 2.6283  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1000/4855]  eta: 2:49:56  lr: 0.000010  ml_loss: 4.4685  mi_loss: 3.8879  wpa_loss: 0.0026  train_loss: 8.3590  time: 2.6401  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1050/4855]  eta: 2:47:43  lr: 0.000010  ml_loss: 4.5386  mi_loss: 3.9424  wpa_loss: 0.0003  train_loss: 8.4812  time: 2.6423  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1100/4855]  eta: 2:45:28  lr: 0.000010  ml_loss: 4.4405  mi_loss: 3.6867  wpa_loss: 0.0002  train_loss: 8.1274  time: 2.6327  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1150/4855]  eta: 2:43:12  lr: 0.000010  ml_loss: 4.4272  mi_loss: 3.9285  wpa_loss: 0.0007  train_loss: 8.3563  time: 2.6143  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1200/4855]  eta: 2:40:58  lr: 0.000010  ml_loss: 5.1341  mi_loss: 3.6128  wpa_loss: 0.0006  train_loss: 8.7475  time: 2.6245  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1250/4855]  eta: 2:38:44  lr: 0.000010  ml_loss: 4.9156  mi_loss: 3.8495  wpa_loss: 0.0003  train_loss: 8.7654  time: 2.6340  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1300/4855]  eta: 2:36:29  lr: 0.000010  ml_loss: 5.1543  mi_loss: 3.6484  wpa_loss: 0.0001  train_loss: 8.8028  time: 2.6278  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1350/4855]  eta: 2:34:15  lr: 0.000010  ml_loss: 4.7512  mi_loss: 3.9896  wpa_loss: 0.0059  train_loss: 8.7467  time: 2.6290  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1400/4855]  eta: 2:32:01  lr: 0.000010  ml_loss: 4.6973  mi_loss: 2.9167  wpa_loss: 0.0036  train_loss: 7.6176  time: 2.6337  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1450/4855]  eta: 2:29:47  lr: 0.000010  ml_loss: 4.2621  mi_loss: 3.7284  wpa_loss: 0.0006  train_loss: 7.9911  time: 2.6109  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1500/4855]  eta: 2:27:34  lr: 0.000010  ml_loss: 4.7466  mi_loss: 4.2070  wpa_loss: 0.0001  train_loss: 8.9537  time: 2.6388  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1550/4855]  eta: 2:25:22  lr: 0.000010  ml_loss: 4.0277  mi_loss: 3.7208  wpa_loss: 0.0020  train_loss: 7.7506  time: 2.6292  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1600/4855]  eta: 2:23:10  lr: 0.000010  ml_loss: 4.5247  mi_loss: 3.6185  wpa_loss: 0.0004  train_loss: 8.1436  time: 2.6352  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1650/4855]  eta: 2:20:57  lr: 0.000010  ml_loss: 4.4726  mi_loss: 3.6732  wpa_loss: 0.0007  train_loss: 8.1465  time: 2.6234  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1700/4855]  eta: 2:18:45  lr: 0.000010  ml_loss: 4.9229  mi_loss: 4.0806  wpa_loss: 0.0014  train_loss: 9.0050  time: 2.6449  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1750/4855]  eta: 2:16:32  lr: 0.000010  ml_loss: 4.6805  mi_loss: 3.9556  wpa_loss: 0.0047  train_loss: 8.6408  time: 2.6352  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1800/4855]  eta: 2:14:19  lr: 0.000010  ml_loss: 4.2432  mi_loss: 3.9596  wpa_loss: 0.0002  train_loss: 8.2030  time: 2.6094  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1850/4855]  eta: 2:12:06  lr: 0.000010  ml_loss: 4.8251  mi_loss: 2.7572  wpa_loss: 0.0055  train_loss: 7.5879  time: 2.6278  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1900/4855]  eta: 2:09:53  lr: 0.000010  ml_loss: 5.1088  mi_loss: 4.2493  wpa_loss: 0.0002  train_loss: 9.3583  time: 2.6350  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [1950/4855]  eta: 2:07:41  lr: 0.000010  ml_loss: 4.7894  mi_loss: 3.9252  wpa_loss: 0.0001  train_loss: 8.7147  time: 2.6348  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2000/4855]  eta: 2:05:29  lr: 0.000010  ml_loss: 4.3928  mi_loss: 3.8697  wpa_loss: 0.0070  train_loss: 8.2696  time: 2.6342  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2050/4855]  eta: 2:03:17  lr: 0.000010  ml_loss: 4.5816  mi_loss: 3.8904  wpa_loss: 0.0002  train_loss: 8.4722  time: 2.6358  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2100/4855]  eta: 2:01:05  lr: 0.000010  ml_loss: 4.9442  mi_loss: 3.9959  wpa_loss: 0.0005  train_loss: 8.9406  time: 2.6175  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2150/4855]  eta: 1:58:52  lr: 0.000010  ml_loss: 4.1641  mi_loss: 3.8105  wpa_loss: 0.0013  train_loss: 7.9760  time: 2.6287  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2200/4855]  eta: 1:56:40  lr: 0.000010  ml_loss: 5.0969  mi_loss: 3.7678  wpa_loss: 0.0030  train_loss: 8.8677  time: 2.6327  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2250/4855]  eta: 1:54:28  lr: 0.000010  ml_loss: 4.2832  mi_loss: 3.7643  wpa_loss: 0.0006  train_loss: 8.0481  time: 2.6348  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2300/4855]  eta: 1:52:16  lr: 0.000010  ml_loss: 4.4207  mi_loss: 3.6400  wpa_loss: 0.0008  train_loss: 8.0615  time: 2.6397  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2350/4855]  eta: 1:50:04  lr: 0.000010  ml_loss: 4.6721  mi_loss: 4.0265  wpa_loss: 0.0004  train_loss: 8.6990  time: 2.6374  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2400/4855]  eta: 1:47:52  lr: 0.000010  ml_loss: 4.7365  mi_loss: 3.7539  wpa_loss: 0.0010  train_loss: 8.4914  time: 2.6399  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2450/4855]  eta: 1:45:41  lr: 0.000010  ml_loss: 4.3497  mi_loss: 3.9624  wpa_loss: 0.0038  train_loss: 8.3160  time: 2.6456  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2500/4855]  eta: 1:43:29  lr: 0.000010  ml_loss: 4.6547  mi_loss: 4.0856  wpa_loss: 0.0023  train_loss: 8.7427  time: 2.6363  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2550/4855]  eta: 1:41:17  lr: 0.000010  ml_loss: 4.6995  mi_loss: 3.8396  wpa_loss: 0.0028  train_loss: 8.5418  time: 2.6433  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2600/4855]  eta: 1:39:05  lr: 0.000010  ml_loss: 4.0960  mi_loss: 3.8963  wpa_loss: 0.0001  train_loss: 7.9923  time: 2.6322  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2650/4855]  eta: 1:36:53  lr: 0.000010  ml_loss: 4.2486  mi_loss: 3.6327  wpa_loss: 0.0022  train_loss: 7.8835  time: 2.6362  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2700/4855]  eta: 1:34:41  lr: 0.000010  ml_loss: 4.1734  mi_loss: 3.8845  wpa_loss: 0.0004  train_loss: 8.0583  time: 2.6247  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2750/4855]  eta: 1:32:29  lr: 0.000010  ml_loss: 3.7062  mi_loss: 3.2657  wpa_loss: 0.0057  train_loss: 6.9776  time: 2.6352  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2800/4855]  eta: 1:30:18  lr: 0.000010  ml_loss: 4.5977  mi_loss: 3.3008  wpa_loss: 0.0014  train_loss: 7.8998  time: 2.6292  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2850/4855]  eta: 1:28:05  lr: 0.000010  ml_loss: 4.1988  mi_loss: 3.7178  wpa_loss: 0.0069  train_loss: 7.9235  time: 2.6309  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2900/4855]  eta: 1:25:54  lr: 0.000010  ml_loss: 4.6410  mi_loss: 3.7432  wpa_loss: 0.0055  train_loss: 8.3897  time: 2.6343  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [2950/4855]  eta: 1:23:41  lr: 0.000010  ml_loss: 4.6625  mi_loss: 3.5729  wpa_loss: 0.0005  train_loss: 8.2358  time: 2.6334  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3000/4855]  eta: 1:21:30  lr: 0.000010  ml_loss: 4.3571  mi_loss: 3.4403  wpa_loss: 0.0001  train_loss: 7.7975  time: 2.6326  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3050/4855]  eta: 1:19:18  lr: 0.000010  ml_loss: 4.4095  mi_loss: 3.9240  wpa_loss: 0.0002  train_loss: 8.3336  time: 2.6389  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3100/4855]  eta: 1:17:06  lr: 0.000010  ml_loss: 4.6772  mi_loss: 3.6339  wpa_loss: 0.0001  train_loss: 8.3111  time: 2.6448  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3150/4855]  eta: 1:14:54  lr: 0.000010  ml_loss: 4.5805  mi_loss: 3.9106  wpa_loss: 0.0001  train_loss: 8.4912  time: 2.6326  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3200/4855]  eta: 1:12:43  lr: 0.000010  ml_loss: 4.2432  mi_loss: 3.9311  wpa_loss: 0.0004  train_loss: 8.1747  time: 2.6360  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3250/4855]  eta: 1:10:31  lr: 0.000010  ml_loss: 4.6146  mi_loss: 3.6316  wpa_loss: 0.0017  train_loss: 8.2479  time: 2.6435  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3300/4855]  eta: 1:08:19  lr: 0.000010  ml_loss: 4.5106  mi_loss: 4.1697  wpa_loss: 0.0001  train_loss: 8.6804  time: 2.6350  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3350/4855]  eta: 1:06:07  lr: 0.000010  ml_loss: 4.5598  mi_loss: 4.1643  wpa_loss: 0.0001  train_loss: 8.7242  time: 2.6371  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3400/4855]  eta: 1:03:55  lr: 0.000010  ml_loss: 4.5678  mi_loss: 3.8938  wpa_loss: 0.0013  train_loss: 8.4629  time: 2.6385  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3450/4855]  eta: 1:01:44  lr: 0.000010  ml_loss: 4.2207  mi_loss: 4.0344  wpa_loss: 0.0001  train_loss: 8.2552  time: 2.6352  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3500/4855]  eta: 0:59:32  lr: 0.000010  ml_loss: 3.8369  mi_loss: 3.9182  wpa_loss: 0.0035  train_loss: 7.7586  time: 2.6384  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3550/4855]  eta: 0:57:20  lr: 0.000010  ml_loss: 5.7267  mi_loss: 3.7849  wpa_loss: 0.0000  train_loss: 9.5117  time: 2.6395  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3600/4855]  eta: 0:55:08  lr: 0.000010  ml_loss: 4.4354  mi_loss: 3.4928  wpa_loss: 0.0031  train_loss: 7.9313  time: 2.6419  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3650/4855]  eta: 0:52:57  lr: 0.000010  ml_loss: 4.0428  mi_loss: 3.6455  wpa_loss: 0.0093  train_loss: 7.6976  time: 2.6360  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3700/4855]  eta: 0:50:45  lr: 0.000010  ml_loss: 4.6064  mi_loss: 3.1122  wpa_loss: 0.0005  train_loss: 7.7190  time: 2.6337  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3750/4855]  eta: 0:48:33  lr: 0.000010  ml_loss: 3.7766  mi_loss: 3.5649  wpa_loss: 0.0028  train_loss: 7.3444  time: 2.6299  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3800/4855]  eta: 0:46:21  lr: 0.000010  ml_loss: 4.5918  mi_loss: 3.5242  wpa_loss: 0.0003  train_loss: 8.1162  time: 2.6444  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3850/4855]  eta: 0:44:09  lr: 0.000010  ml_loss: 4.4376  mi_loss: 4.4301  wpa_loss: 0.0012  train_loss: 8.8689  time: 2.6416  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3900/4855]  eta: 0:41:57  lr: 0.000010  ml_loss: 3.7823  mi_loss: 4.2719  wpa_loss: 0.0005  train_loss: 8.0548  time: 2.6267  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [3950/4855]  eta: 0:39:45  lr: 0.000010  ml_loss: 4.2708  mi_loss: 4.1626  wpa_loss: 0.0008  train_loss: 8.4342  time: 2.6380  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4000/4855]  eta: 0:37:34  lr: 0.000010  ml_loss: 5.0294  mi_loss: 3.7802  wpa_loss: 0.0014  train_loss: 8.8110  time: 2.6254  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4050/4855]  eta: 0:35:22  lr: 0.000010  ml_loss: 4.8913  mi_loss: 3.8817  wpa_loss: 0.0003  train_loss: 8.7734  time: 2.6400  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4100/4855]  eta: 0:33:10  lr: 0.000010  ml_loss: 4.4306  mi_loss: 3.9568  wpa_loss: 0.0001  train_loss: 8.3875  time: 2.6324  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4150/4855]  eta: 0:30:58  lr: 0.000010  ml_loss: 4.8063  mi_loss: 4.1470  wpa_loss: 0.0005  train_loss: 8.9538  time: 2.6367  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4200/4855]  eta: 0:28:46  lr: 0.000010  ml_loss: 4.1705  mi_loss: 4.1042  wpa_loss: 0.0002  train_loss: 8.2748  time: 2.6417  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4250/4855]  eta: 0:26:35  lr: 0.000010  ml_loss: 4.8487  mi_loss: 3.5427  wpa_loss: 0.0069  train_loss: 8.3982  time: 2.6372  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4300/4855]  eta: 0:24:23  lr: 0.000010  ml_loss: 4.8472  mi_loss: 3.9676  wpa_loss: 0.0015  train_loss: 8.8164  time: 2.6312  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4350/4855]  eta: 0:22:11  lr: 0.000010  ml_loss: 4.4391  mi_loss: 3.9192  wpa_loss: 0.0002  train_loss: 8.3585  time: 2.6362  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4400/4855]  eta: 0:19:59  lr: 0.000010  ml_loss: 3.1585  mi_loss: 3.5100  wpa_loss: 0.0007  train_loss: 6.6692  time: 2.6361  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4450/4855]  eta: 0:17:47  lr: 0.000010  ml_loss: 4.5992  mi_loss: 3.9692  wpa_loss: 0.0007  train_loss: 8.5692  time: 2.6218  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4500/4855]  eta: 0:15:35  lr: 0.000010  ml_loss: 4.9323  mi_loss: 3.9973  wpa_loss: 0.0006  train_loss: 8.9302  time: 2.6349  data: 0.0002  max mem: 20955
+Train Epoch: [19]  [4550/4855]  eta: 0:13:24  lr: 0.000010  ml_loss: 4.7340  mi_loss: 3.8837  wpa_loss: 0.0002  train_loss: 8.6179  time: 2.6408  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4600/4855]  eta: 0:11:12  lr: 0.000010  ml_loss: 3.5470  mi_loss: 3.5235  wpa_loss: 0.0030  train_loss: 7.0734  time: 2.6371  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4650/4855]  eta: 0:09:00  lr: 0.000010  ml_loss: 4.3567  mi_loss: 4.3175  wpa_loss: 0.0007  train_loss: 8.6749  time: 2.6351  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4700/4855]  eta: 0:06:48  lr: 0.000010  ml_loss: 4.4186  mi_loss: 2.5128  wpa_loss: 0.0004  train_loss: 6.9318  time: 2.6268  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4750/4855]  eta: 0:04:36  lr: 0.000010  ml_loss: 3.9886  mi_loss: 3.9972  wpa_loss: 0.0001  train_loss: 7.9859  time: 2.6151  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4800/4855]  eta: 0:02:24  lr: 0.000010  ml_loss: 4.8082  mi_loss: 3.9663  wpa_loss: 0.0002  train_loss: 8.7747  time: 2.6196  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4850/4855]  eta: 0:00:13  lr: 0.000010  ml_loss: 4.4973  mi_loss: 3.4480  wpa_loss: 0.0027  train_loss: 7.9480  time: 2.6343  data: 0.0001  max mem: 20955
+Train Epoch: [19]  [4854/4855]  eta: 0:00:02  lr: 0.000010  ml_loss: 4.6194  mi_loss: 3.8091  wpa_loss: 0.0003  train_loss: 8.4289  time: 2.6361  data: 0.0007  max mem: 20955
+Train Epoch: [19] Total time: 3:33:19 (2.6364 s / it)
+Val Epoch: [19]  [  0/540]  eta: 0:23:24  ml_loss: 4.2139  mi_loss: 4.0355  wpa_loss: 0.0001  val_loss: 8.2495  accML: 0.3051  accMI: 0.1257  time: 2.6002  data: 2.2877  max mem: 20955
+Val Epoch: [19]  [ 50/540]  eta: 0:06:37  ml_loss: 4.2414  mi_loss: 4.0030  wpa_loss: 0.0002  val_loss: 8.2446  accML: 0.3189  accMI: 0.1753  time: 0.7949  data: 0.6325  max mem: 20955
+Val Epoch: [19]  [100/540]  eta: 0:05:56  ml_loss: 4.2375  mi_loss: 4.1223  wpa_loss: 0.0030  val_loss: 8.3628  accML: 0.3220  accMI: 0.1337  time: 0.7780  data: 0.6148  max mem: 20955
+Val Epoch: [19]  [150/540]  eta: 0:05:26  ml_loss: 4.7971  mi_loss: 4.1754  wpa_loss: 0.0000  val_loss: 8.9725  accML: 0.2309  accMI: 0.1520  time: 0.9326  data: 0.7679  max mem: 20955
+Val Epoch: [19]  [200/540]  eta: 0:04:46  ml_loss: 4.4034  mi_loss: 4.0625  wpa_loss: 0.0001  val_loss: 8.4660  accML: 0.2836  accMI: 0.1555  time: 0.8593  data: 0.6958  max mem: 20955
+Val Epoch: [19]  [250/540]  eta: 0:04:02  ml_loss: 4.3477  mi_loss: 3.7704  wpa_loss: 0.0001  val_loss: 8.1182  accML: 0.2956  accMI: 0.1898  time: 0.8319  data: 0.6687  max mem: 20955
+Val Epoch: [19]  [300/540]  eta: 0:03:21  ml_loss: 4.0439  mi_loss: 4.1282  wpa_loss: 0.0001  val_loss: 8.1721  accML: 0.3577  accMI: 0.1360  time: 0.8639  data: 0.7005  max mem: 20955
+Val Epoch: [19]  [350/540]  eta: 0:02:39  ml_loss: 4.3990  mi_loss: 3.2835  wpa_loss: 0.0001  val_loss: 7.6826  accML: 0.2767  accMI: 0.3280  time: 0.7980  data: 0.6353  max mem: 20955
+Val Epoch: [19]  [400/540]  eta: 0:01:57  ml_loss: 5.0169  mi_loss: 4.0228  wpa_loss: 0.0003  val_loss: 9.0400  accML: 0.2401  accMI: 0.1375  time: 0.8577  data: 0.6933  max mem: 20955
+Val Epoch: [19]  [450/540]  eta: 0:01:15  ml_loss: 4.6238  mi_loss: 3.8760  wpa_loss: 0.0010  val_loss: 8.5008  accML: 0.2664  accMI: 0.1667  time: 0.8413  data: 0.6779  max mem: 20955
+Val Epoch: [19]  [500/540]  eta: 0:00:33  ml_loss: 4.7651  mi_loss: 3.7436  wpa_loss: 0.0001  val_loss: 8.5088  accML: 0.2738  accMI: 0.1707  time: 0.7813  data: 0.6184  max mem: 20955
+Val Epoch: [19]  [539/540]  eta: 0:00:00  ml_loss: 4.4402  mi_loss: 3.8141  wpa_loss: 0.0002  val_loss: 8.2545  accML: 0.2510  accMI: 0.1867  time: 0.7975  data: 0.6369  max mem: 20955
+Val Epoch: [19] Total time: 0:07:36 (0.8460 s / it)
+epoch:19, iter:97099, 4854,  train_loss: 8.428887367248535, valid_loss: 8.431199652177316, idiv_loss:(4.480059837853467, 3.9481515928551003, 0.002988208309642249), acc:(0.28163753869356933, 0.16974973994548673)
+Averaged stats: lr: 0.0000  ml_loss: 4.5538  mi_loss: 3.7962  wpa_loss: 0.0027  train_loss: 8.3526
+epoch 19 8.428887367248535
+Training time 22:07:50
+ai-platform-wlf1-ge10-1:13080:13122 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+ai-platform-wlf1-ge10-1:13080:13080 [2] NCCL INFO comm 0x45e948b0 rank 2 nranks 4 cudaDev 2 busId 81000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:13079:13119 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+ai-platform-wlf1-ge10-1:13082:13121 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+ai-platform-wlf1-ge10-1:13079:13079 [1] NCCL INFO comm 0x44fdf400 rank 1 nranks 4 cudaDev 1 busId 24000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:13082:13082 [3] NCCL INFO comm 0x430d4040 rank 3 nranks 4 cudaDev 3 busId e1000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:13078:13120 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ai-platform-wlf1-ge10-1:13078:13078 [0] NCCL INFO comm 0x43b92850 rank 0 nranks 4 cudaDev 0 busId 1000 - Abort COMPLETE

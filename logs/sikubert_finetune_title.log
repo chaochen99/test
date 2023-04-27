@@ -1,0 +1,105 @@
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+| distributed init (rank 0, word 4): env://
+| distributed init (rank 1, word 4): env://
+| distributed init (rank 2, word 4): env://
+| distributed init (rank 3, word 4): env://
+Creating retrieval dataset
+Downloading (…)lve/main/config.json:   0%|          | 0.00/659 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 659/659 [00:00<00:00, 440kB/s]
+Downloading (…)solve/main/vocab.txt:   0%|          | 0.00/144k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|██████████| 144k/144k [00:00<00:00, 386kB/s]Downloading (…)solve/main/vocab.txt: 100%|██████████| 144k/144k [00:00<00:00, 385kB/s]
+Creating model
+Downloading pytorch_model.bin:   0%|          | 0.00/438M [00:00<?, ?B/s]Downloading pytorch_model.bin:   2%|▏         | 10.5M/438M [00:03<02:34, 2.77MB/s]Downloading pytorch_model.bin:   5%|▍         | 21.0M/438M [00:06<02:04, 3.35MB/s]Downloading pytorch_model.bin:   7%|▋         | 31.5M/438M [00:08<01:48, 3.74MB/s]Downloading pytorch_model.bin:  10%|▉         | 41.9M/438M [00:10<01:32, 4.29MB/s]Downloading pytorch_model.bin:  12%|█▏        | 52.4M/438M [00:12<01:17, 4.97MB/s]Downloading pytorch_model.bin:  14%|█▍        | 62.9M/438M [00:13<01:05, 5.70MB/s]Downloading pytorch_model.bin:  17%|█▋        | 73.4M/438M [00:14<00:58, 6.28MB/s]Downloading pytorch_model.bin:  19%|█▉        | 83.9M/438M [00:16<00:52, 6.74MB/s]Downloading pytorch_model.bin:  22%|██▏       | 94.4M/438M [00:17<00:50, 6.79MB/s]Downloading pytorch_model.bin:  24%|██▍       | 105M/438M [00:19<00:48, 6.85MB/s] Downloading pytorch_model.bin:  26%|██▋       | 115M/438M [00:20<00:45, 7.14MB/s]Downloading pytorch_model.bin:  29%|██▊       | 126M/438M [00:21<00:41, 7.45MB/s]Downloading pytorch_model.bin:  31%|███       | 136M/438M [00:23<00:38, 7.79MB/s]Downloading pytorch_model.bin:  33%|███▎      | 147M/438M [00:24<00:37, 7.85MB/s]Downloading pytorch_model.bin:  36%|███▌      | 157M/438M [00:25<00:35, 7.90MB/s]Downloading pytorch_model.bin:  38%|███▊      | 168M/438M [00:27<00:35, 7.55MB/s]Downloading pytorch_model.bin:  41%|████      | 178M/438M [00:29<00:40, 6.34MB/s]Downloading pytorch_model.bin:  43%|████▎     | 189M/438M [00:31<00:42, 5.87MB/s]Downloading pytorch_model.bin:  45%|████▌     | 199M/438M [00:33<00:42, 5.57MB/s]Downloading pytorch_model.bin:  48%|████▊     | 210M/438M [00:35<00:42, 5.36MB/s]Downloading pytorch_model.bin:  50%|█████     | 220M/438M [00:37<00:40, 5.34MB/s]Downloading pytorch_model.bin:  53%|█████▎    | 231M/438M [00:39<00:38, 5.34MB/s]Downloading pytorch_model.bin:  55%|█████▌    | 241M/438M [00:41<00:35, 5.49MB/s]Downloading pytorch_model.bin:  57%|█████▋    | 252M/438M [00:43<00:31, 5.87MB/s]Downloading pytorch_model.bin:  60%|█████▉    | 262M/438M [00:44<00:27, 6.46MB/s]Downloading pytorch_model.bin:  62%|██████▏   | 273M/438M [00:45<00:23, 6.94MB/s]Downloading pytorch_model.bin:  65%|██████▍   | 283M/438M [00:46<00:21, 7.22MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 294M/438M [00:48<00:19, 7.48MB/s]Downloading pytorch_model.bin:  69%|██████▉   | 304M/438M [00:49<00:17, 7.85MB/s]Downloading pytorch_model.bin:  72%|███████▏  | 315M/438M [00:50<00:15, 7.89MB/s]Downloading pytorch_model.bin:  74%|███████▍  | 325M/438M [00:51<00:14, 7.93MB/s]Downloading pytorch_model.bin:  77%|███████▋  | 336M/438M [00:53<00:12, 8.23MB/s]Downloading pytorch_model.bin:  79%|███████▉  | 346M/438M [00:54<00:11, 8.16MB/s]Downloading pytorch_model.bin:  81%|████████▏ | 357M/438M [00:55<00:10, 8.11MB/s]Downloading pytorch_model.bin:  84%|████████▎ | 367M/438M [00:56<00:08, 8.34MB/s]Downloading pytorch_model.bin:  86%|████████▌ | 377M/438M [00:58<00:07, 8.26MB/s]Downloading pytorch_model.bin:  89%|████████▊ | 388M/438M [00:59<00:06, 7.75MB/s]Downloading pytorch_model.bin:  91%|█████████ | 398M/438M [01:01<00:05, 7.55MB/s]Downloading pytorch_model.bin:  93%|█████████▎| 409M/438M [01:02<00:03, 7.65MB/s]Downloading pytorch_model.bin:  96%|█████████▌| 419M/438M [01:03<00:02, 7.74MB/s]Downloading pytorch_model.bin:  98%|█████████▊| 430M/438M [01:05<00:01, 7.83MB/s]Downloading pytorch_model.bin: 100%|██████████| 438M/438M [01:06<00:00, 8.02MB/s]Downloading pytorch_model.bin: 100%|██████████| 438M/438M [01:06<00:00, 6.63MB/s]
+Some weights of the model checkpoint at SIKU-BERT/sikubert were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at SIKU-BERT/sikubert and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at SIKU-BERT/sikubert were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at SIKU-BERT/sikubert and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at SIKU-BERT/sikubert were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at SIKU-BERT/sikubert and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at SIKU-BERT/sikubert were not used when initializing BertForSequenceClassification: ['cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at SIKU-BERT/sikubert and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Start training
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:163: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:163: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:163: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Train Epoch: [0]  [ 0/73]  eta: 0:02:37  lr: 0.000000  loss_title: 3.2840  time: 2.1630  data: 0.0011  max mem: 16040
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:163: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Train Epoch: [0]  [50/73]  eta: 0:00:22  lr: 0.000000  loss_title: 3.2961  time: 0.9534  data: 0.0002  max mem: 17285
+Train Epoch: [0]  [72/73]  eta: 0:00:00  lr: 0.000000  loss_title: 3.1648  time: 0.9582  data: 0.0003  max mem: 17285
+Train Epoch: [0] Total time: 0:01:10 (0.9708 s / it)
+Averaged stats: lr: 0.0000  loss_title: 3.3155
+./src/bert_finetune_title.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  title_labels = torch.tensor(book_type, dtype=torch.long).to(device)
+./src/bert_finetune_title.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  title_labels = torch.tensor(book_type, dtype=torch.long).to(device)
+./src/bert_finetune_title.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  title_labels = torch.tensor(book_type, dtype=torch.long).to(device)
+./src/bert_finetune_title.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  title_labels = torch.tensor(book_type, dtype=torch.long).to(device)
+Val :   [ 0/17]  eta: 0:00:06    time: 0.3916  data: 0.0004  max mem: 17285
+Val :   [16/17]  eta: 0:00:00    time: 0.3712  data: 0.0002  max mem: 17285
+Val :  Total time: 0:00:06 (0.3712 s / it)
+F1-score: 0.01394744124263525
+Accuracy: 0.023017901927232742
+Specificity: 0.9587817192077637
+recall: 0.06776344776153564
+Precision: 0.017622819170355797
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torchmetrics/utilities/prints.py:36: UserWarning: The ``compute`` method of metric MulticlassConfusionMatrix was called before the ``update`` method which may lead to errors, as metric states have not yet been updated.
+  warnings.warn(*args, **kwargs)
+Confusion Matric: tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       device='cuda:0')
+Evaluation time 0:00:06
+Train Epoch: [1]  [ 0/73]  eta: 0:01:12  lr: 0.000001  loss_title: 3.3241  time: 0.9898  data: 0.0009  max mem: 17285

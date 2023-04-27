@@ -1,0 +1,1182 @@
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Namespace(batch_size=4, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_ori/', learning_rate=1e-06, max_epochs=40, model_name='microsoft/layoutlmv3-base-chinese', model_params=None, output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/finetune_itm_mlm_lr1e-6_bs_4/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_mlm_lr1e-5_bs_5/epoch_19/checkpoint.pth', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)Namespace(batch_size=4, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_ori/', learning_rate=1e-06, max_epochs=40, model_name='microsoft/layoutlmv3-base-chinese', model_params=None, output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/finetune_itm_mlm_lr1e-6_bs_4/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_mlm_lr1e-5_bs_5/epoch_19/checkpoint.pth', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)
+Namespace(batch_size=4, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_ori/', learning_rate=1e-06, max_epochs=40, model_name='microsoft/layoutlmv3-base-chinese', model_params=None, output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/finetune_itm_mlm_lr1e-6_bs_4/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_mlm_lr1e-5_bs_5/epoch_19/checkpoint.pth', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)
+Namespace(batch_size=4, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_ori/', learning_rate=1e-06, max_epochs=40, model_name='microsoft/layoutlmv3-base-chinese', model_params=None, output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/finetune_itm_mlm_lr1e-6_bs_4/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_mlm_lr1e-5_bs_5/epoch_19/checkpoint.pth', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)
+
+| distributed init (rank 3, word 4): env://
+| distributed init (rank 2, word 4): env://
+| distributed init (rank 0, word 4): env://
+| distributed init (rank 1, word 4): env://
+ai-platform-wlf1-ge10-1:116192:116192 [0] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:116192:116192 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:116192:116192 [0] NCCL INFO cudaDriverVersion 11040
+NCCL version 2.14.3+cuda11.7
+ai-platform-wlf1-ge10-1:116194:116194 [2] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:116195:116195 [3] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:116193:116193 [1] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:116195:116195 [3] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:116194:116194 [2] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:116193:116193 [1] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:116195:116195 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:116194:116194 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:116193:116193 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Channel 00/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] -1/-1/-1->3->2
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Channel 01/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Channel 02/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Channel 03/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Channel 00 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Channel 01 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Channel 00 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Channel 02 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Channel 01 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Channel 03 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Channel 00 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Channel 00 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Channel 02 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Channel 01 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Channel 01 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Channel 03 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Channel 02 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Channel 02 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Channel 03 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Channel 03 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Channel 00 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Channel 01 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Channel 02 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Channel 03 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Channel 00 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Channel 01 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Channel 02 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Channel 03 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Channel 00 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Channel 01 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Channel 02 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Channel 03 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:116194:116231 [2] NCCL INFO comm 0x4507b700 rank 2 nranks 4 cudaDev 2 busId 81000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:116192:116229 [0] NCCL INFO comm 0x4346f730 rank 0 nranks 4 cudaDev 0 busId 1000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:116193:116232 [1] NCCL INFO comm 0x44202530 rank 1 nranks 4 cudaDev 1 busId 24000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:116195:116230 [3] NCCL INFO comm 0x43ce7440 rank 3 nranks 4 cudaDev 3 busId e1000 - Init COMPLETE
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+Missing keys:  ['HeadForITM.bias', 'HeadForITM.dense.weight', 'HeadForITM.dense.bias', 'HeadForITM.LayerNorm.weight', 'HeadForITM.LayerNorm.bias', 'HeadForITM.decoder.weight', 'HeadForITM.decoder.bias']
+Unexpected keys:  ['HeadForMLM.bias', 'HeadForMLM.dense.weight', 'HeadForMLM.dense.bias', 'HeadForMLM.LayerNorm.weight', 'HeadForMLM.LayerNorm.bias', 'HeadForMLM.decoder.weight', 'HeadForMLM.decoder.bias']
+iter:  0
+Start training
+/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/src/model/LayoutLMv3forITM.py:258: UserWarning: masked_fill_ received a mask with dtype torch.uint8, this behavior is now deprecated,please use a mask with dtype torch.bool instead. (Triggered internally at ../aten/src/ATen/native/TensorAdvancedIndexing.cpp:1646.)
+  weights = weights.masked_fill_(torch.diag_embed(torch.ones(bs)).byte(), 0)
+/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/src/model/LayoutLMv3forITM.py:258: UserWarning: masked_fill_ received a mask with dtype torch.uint8, this behavior is now deprecated,please use a mask with dtype torch.bool instead. (Triggered internally at ../aten/src/ATen/native/TensorAdvancedIndexing.cpp:1646.)
+  weights = weights.masked_fill_(torch.diag_embed(torch.ones(bs)).byte(), 0)
+/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/src/model/LayoutLMv3forITM.py:258: UserWarning: masked_fill_ received a mask with dtype torch.uint8, this behavior is now deprecated,please use a mask with dtype torch.bool instead. (Triggered internally at ../aten/src/ATen/native/TensorAdvancedIndexing.cpp:1646.)
+  weights = weights.masked_fill_(torch.diag_embed(torch.ones(bs)).byte(), 0)
+/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/src/model/LayoutLMv3forITM.py:258: UserWarning: masked_fill_ received a mask with dtype torch.uint8, this behavior is now deprecated,please use a mask with dtype torch.bool instead. (Triggered internally at ../aten/src/ATen/native/TensorAdvancedIndexing.cpp:1646.)
+  weights = weights.masked_fill_(torch.diag_embed(torch.ones(bs)).byte(), 0)
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+Train Epoch: [0]  [  0/439]  eta: 0:36:32  lr: 0.000000  itm_loss: 0.6919  train_loss: 0.6919  time: 4.9948  data: 0.6623  max mem: 17265
+Train Epoch: [0]  [ 50/439]  eta: 0:11:24  lr: 0.000000  itm_loss: 0.6526  train_loss: 0.6526  time: 1.6964  data: 0.0001  max mem: 20471
+Train Epoch: [0]  [100/439]  eta: 0:09:46  lr: 0.000000  itm_loss: 0.6309  train_loss: 0.6309  time: 1.6981  data: 0.0001  max mem: 20471
+Train Epoch: [0]  [150/439]  eta: 0:08:16  lr: 0.000000  itm_loss: 0.6332  train_loss: 0.6332  time: 1.6962  data: 0.0001  max mem: 20471
+Train Epoch: [0]  [200/439]  eta: 0:06:49  lr: 0.000000  itm_loss: 0.6379  train_loss: 0.6379  time: 1.6995  data: 0.0001  max mem: 20471
+Train Epoch: [0]  [250/439]  eta: 0:05:23  lr: 0.000000  itm_loss: 0.6804  train_loss: 0.6804  time: 1.6985  data: 0.0001  max mem: 20471
+Train Epoch: [0]  [300/439]  eta: 0:03:57  lr: 0.000000  itm_loss: 0.6447  train_loss: 0.6447  time: 1.6930  data: 0.0002  max mem: 20471
+Train Epoch: [0]  [350/439]  eta: 0:02:31  lr: 0.000000  itm_loss: 0.6325  train_loss: 0.6325  time: 1.6979  data: 0.0001  max mem: 20471
+Train Epoch: [0]  [400/439]  eta: 0:01:06  lr: 0.000000  itm_loss: 0.6470  train_loss: 0.6470  time: 1.6972  data: 0.0001  max mem: 20471
+Train Epoch: [0]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.6065  train_loss: 0.6065  time: 1.6954  data: 0.0002  max mem: 20471
+Train Epoch: [0] Total time: 0:12:28 (1.7050 s / it)
+Val Epoch: [0]  [ 0/98]  eta: 0:01:22  itm_loss: 0.6368  val_loss: 0.6368  acc: 0.5000  time: 0.8386  data: 0.6861  max mem: 20471
+Val Epoch: [0]  [50/98]  eta: 0:00:04  itm_loss: 0.6058  val_loss: 0.6058  acc: 0.7500  time: 0.0855  data: 0.0001  max mem: 20471
+Val Epoch: [0]  [97/98]  eta: 0:00:00  itm_loss: 0.5988  val_loss: 0.5988  acc: 0.6667  time: 0.0848  data: 0.0001  max mem: 20471
+Val Epoch: [0] Total time: 0:00:09 (0.0954 s / it)
+{'MulticlassF1Score': tensor(0.3333, device='cuda:0'), 'MulticlassAccuracy': tensor(0.5000, device='cuda:0'), 'MulticlassRecall': tensor(0.5000, device='cuda:0'), 'MulticlassPrecision': tensor(0.2500, device='cuda:0'), 'MulticlassSpecificity': tensor(0.5000, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[782,   0],
+        [782,   0]], device='cuda:0')}
+epoch:0, iter:438, 438,  train_loss: 0.6065267324447632, valid_loss: 0.7012407524245126, acc:0.5374149661891314
+Averaged stats: lr: 0.0000  itm_loss: 0.6377  train_loss: 0.6377
+epoch 0 0.6065267324447632
+Train Epoch: [1]  [  0/439]  eta: 0:17:50  lr: 0.000001  itm_loss: 0.6119  train_loss: 0.6119  time: 2.4395  data: 0.6573  max mem: 20471
+Train Epoch: [1]  [ 50/439]  eta: 0:11:04  lr: 0.000001  itm_loss: 0.5513  train_loss: 0.5513  time: 1.6953  data: 0.0001  max mem: 20471
+Train Epoch: [1]  [100/439]  eta: 0:09:36  lr: 0.000001  itm_loss: 0.6053  train_loss: 0.6053  time: 1.6914  data: 0.0001  max mem: 20471
+Train Epoch: [1]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.5503  train_loss: 0.5503  time: 1.6937  data: 0.0001  max mem: 20471
+Train Epoch: [1]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.5891  train_loss: 0.5891  time: 1.6906  data: 0.0002  max mem: 20471
+Train Epoch: [1]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.6323  train_loss: 0.6323  time: 1.6923  data: 0.0002  max mem: 20471
+Train Epoch: [1]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.4554  train_loss: 0.4554  time: 1.6900  data: 0.0002  max mem: 20471
+Train Epoch: [1]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.5967  train_loss: 0.5967  time: 1.6907  data: 0.0002  max mem: 20471
+Train Epoch: [1]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.7553  train_loss: 0.7553  time: 1.6961  data: 0.0002  max mem: 20471
+Train Epoch: [1]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.5762  train_loss: 0.5762  time: 1.6909  data: 0.0002  max mem: 20471
+Train Epoch: [1] Total time: 0:12:23 (1.6947 s / it)
+Val Epoch: [1]  [ 0/98]  eta: 0:01:32  itm_loss: 0.2362  val_loss: 0.2362  acc: 1.0000  time: 0.9422  data: 0.8491  max mem: 20471
+Val Epoch: [1]  [50/98]  eta: 0:00:04  itm_loss: 0.3695  val_loss: 0.3695  acc: 0.7500  time: 0.0856  data: 0.0001  max mem: 20471
+Val Epoch: [1]  [97/98]  eta: 0:00:00  itm_loss: 0.2114  val_loss: 0.2114  acc: 1.0000  time: 0.0845  data: 0.0001  max mem: 20471
+Val Epoch: [1] Total time: 0:00:09 (0.0974 s / it)
+{'MulticlassF1Score': tensor(0.6936, device='cuda:0'), 'MulticlassAccuracy': tensor(0.6963, device='cuda:0'), 'MulticlassRecall': tensor(0.6963, device='cuda:0'), 'MulticlassPrecision': tensor(0.7035, device='cuda:0'), 'MulticlassSpecificity': tensor(0.6963, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[618, 164],
+        [311, 471]], device='cuda:0')}
+epoch:1, iter:877, 438,  train_loss: 0.5761922597885132, valid_loss: 0.5392390203719236, acc:0.7448979591836735
+Averaged stats: lr: 0.0000  itm_loss: 0.5819  train_loss: 0.5819
+epoch 1 0.5761922597885132
+Train Epoch: [2]  [  0/439]  eta: 0:18:52  lr: 0.000001  itm_loss: 0.5670  train_loss: 0.5670  time: 2.5790  data: 0.8712  max mem: 20472
+Train Epoch: [2]  [ 50/439]  eta: 0:11:05  lr: 0.000001  itm_loss: 0.5101  train_loss: 0.5101  time: 1.6946  data: 0.0001  max mem: 20472
+Train Epoch: [2]  [100/439]  eta: 0:09:37  lr: 0.000001  itm_loss: 0.6717  train_loss: 0.6717  time: 1.6925  data: 0.0001  max mem: 20472
+Train Epoch: [2]  [150/439]  eta: 0:08:11  lr: 0.000001  itm_loss: 0.4475  train_loss: 0.4475  time: 1.6930  data: 0.0001  max mem: 20472
+Train Epoch: [2]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.3974  train_loss: 0.3974  time: 1.6938  data: 0.0002  max mem: 20472
+Train Epoch: [2]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.5827  train_loss: 0.5827  time: 1.6913  data: 0.0002  max mem: 20472
+Train Epoch: [2]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.5065  train_loss: 0.5065  time: 1.6883  data: 0.0002  max mem: 20472
+Train Epoch: [2]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.5378  train_loss: 0.5378  time: 1.6915  data: 0.0002  max mem: 20472
+Train Epoch: [2]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.4830  train_loss: 0.4830  time: 1.6926  data: 0.0002  max mem: 20472
+Train Epoch: [2]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.5625  train_loss: 0.5625  time: 1.6902  data: 0.0001  max mem: 20472
+Train Epoch: [2] Total time: 0:12:24 (1.6952 s / it)
+Val Epoch: [2]  [ 0/98]  eta: 0:01:32  itm_loss: 0.1800  val_loss: 0.1800  acc: 1.0000  time: 0.9429  data: 0.8521  max mem: 20472
+Val Epoch: [2]  [50/98]  eta: 0:00:04  itm_loss: 0.3146  val_loss: 0.3146  acc: 0.7500  time: 0.0858  data: 0.0001  max mem: 20472
+Val Epoch: [2]  [97/98]  eta: 0:00:00  itm_loss: 0.1566  val_loss: 0.1566  acc: 1.0000  time: 0.0847  data: 0.0001  max mem: 20472
+Val Epoch: [2] Total time: 0:00:09 (0.0976 s / it)
+{'MulticlassF1Score': tensor(0.7293, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7308, device='cuda:0'), 'MulticlassRecall': tensor(0.7308, device='cuda:0'), 'MulticlassPrecision': tensor(0.7363, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7308, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[631, 151],
+        [270, 512]], device='cuda:0')}
+epoch:2, iter:1316, 438,  train_loss: 0.5624593496322632, valid_loss: 0.4912907531370922, acc:0.7780612244897959
+Averaged stats: lr: 0.0000  itm_loss: 0.5212  train_loss: 0.5212
+epoch 2 0.5624593496322632
+Train Epoch: [3]  [  0/439]  eta: 0:18:18  lr: 0.000001  itm_loss: 0.5927  train_loss: 0.5927  time: 2.5030  data: 0.6511  max mem: 20472
+Train Epoch: [3]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.5912  train_loss: 0.5912  time: 1.6902  data: 0.0001  max mem: 20472
+Train Epoch: [3]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.3241  train_loss: 0.3241  time: 1.6906  data: 0.0001  max mem: 20472
+Train Epoch: [3]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.4987  train_loss: 0.4987  time: 1.6890  data: 0.0002  max mem: 20472
+Train Epoch: [3]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.6207  train_loss: 0.6207  time: 1.6916  data: 0.0002  max mem: 20472
+Train Epoch: [3]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.4396  train_loss: 0.4396  time: 1.6890  data: 0.0002  max mem: 20472
+Train Epoch: [3]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3542  train_loss: 0.3542  time: 1.6906  data: 0.0001  max mem: 20472
+Train Epoch: [3]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.5816  train_loss: 0.5816  time: 1.6917  data: 0.0002  max mem: 20472
+Train Epoch: [3]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.4115  train_loss: 0.4115  time: 1.6909  data: 0.0002  max mem: 20472
+Train Epoch: [3]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.6806  train_loss: 0.6806  time: 1.6926  data: 0.0002  max mem: 20472
+Train Epoch: [3] Total time: 0:12:23 (1.6928 s / it)
+Val Epoch: [3]  [ 0/98]  eta: 0:01:34  itm_loss: 0.1557  val_loss: 0.1557  acc: 1.0000  time: 0.9643  data: 0.8741  max mem: 20472
+Val Epoch: [3]  [50/98]  eta: 0:00:04  itm_loss: 0.2178  val_loss: 0.2178  acc: 1.0000  time: 0.0854  data: 0.0001  max mem: 20472
+Val Epoch: [3]  [97/98]  eta: 0:00:00  itm_loss: 0.1401  val_loss: 0.1401  acc: 1.0000  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [3] Total time: 0:00:09 (0.0967 s / it)
+{'MulticlassF1Score': tensor(0.7487, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7487, device='cuda:0'), 'MulticlassRecall': tensor(0.7487, device='cuda:0'), 'MulticlassPrecision': tensor(0.7489, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7487, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[595, 187],
+        [206, 576]], device='cuda:0')}
+epoch:3, iter:1755, 438,  train_loss: 0.6805623769760132, valid_loss: 0.47130733964090443, acc:0.7857142857142857
+Averaged stats: lr: 0.0000  itm_loss: 0.4999  train_loss: 0.4999
+epoch 3 0.6805623769760132
+Train Epoch: [4]  [  0/439]  eta: 0:18:14  lr: 0.000001  itm_loss: 0.6957  train_loss: 0.6957  time: 2.4937  data: 0.7479  max mem: 20472
+Train Epoch: [4]  [ 50/439]  eta: 0:11:04  lr: 0.000001  itm_loss: 0.5309  train_loss: 0.5309  time: 1.6895  data: 0.0001  max mem: 20472
+Train Epoch: [4]  [100/439]  eta: 0:09:36  lr: 0.000001  itm_loss: 0.5700  train_loss: 0.5700  time: 1.6950  data: 0.0001  max mem: 20472
+Train Epoch: [4]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.4603  train_loss: 0.4603  time: 1.6938  data: 0.0002  max mem: 20472
+Train Epoch: [4]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.6457  train_loss: 0.6457  time: 1.6945  data: 0.0002  max mem: 20472
+Train Epoch: [4]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.3814  train_loss: 0.3814  time: 1.6903  data: 0.0002  max mem: 20472
+Train Epoch: [4]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.8963  train_loss: 0.8963  time: 1.6919  data: 0.0002  max mem: 20472
+Train Epoch: [4]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3556  train_loss: 0.3556  time: 1.6920  data: 0.0002  max mem: 20472
+Train Epoch: [4]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.3885  train_loss: 0.3885  time: 1.6912  data: 0.0002  max mem: 20472
+Train Epoch: [4]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.5846  train_loss: 0.5846  time: 1.6889  data: 0.0002  max mem: 20472
+Train Epoch: [4] Total time: 0:12:23 (1.6943 s / it)
+Val Epoch: [4]  [ 0/98]  eta: 0:01:34  itm_loss: 0.1491  val_loss: 0.1491  acc: 1.0000  time: 0.9624  data: 0.8703  max mem: 20472
+Val Epoch: [4]  [50/98]  eta: 0:00:04  itm_loss: 0.2223  val_loss: 0.2223  acc: 1.0000  time: 0.0864  data: 0.0001  max mem: 20472
+Val Epoch: [4]  [97/98]  eta: 0:00:00  itm_loss: 0.1519  val_loss: 0.1519  acc: 1.0000  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [4] Total time: 0:00:09 (0.0979 s / it)
+{'MulticlassF1Score': tensor(0.7526, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7526, device='cuda:0'), 'MulticlassRecall': tensor(0.7526, device='cuda:0'), 'MulticlassPrecision': tensor(0.7526, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7526, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[592, 190],
+        [197, 585]], device='cuda:0')}
+epoch:4, iter:2194, 438,  train_loss: 0.584564208984375, valid_loss: 0.46019262934521754, acc:0.7806122448979592
+Averaged stats: lr: 0.0000  itm_loss: 0.4805  train_loss: 0.4805
+epoch 4 0.584564208984375
+Train Epoch: [5]  [  0/439]  eta: 0:18:28  lr: 0.000001  itm_loss: 0.3570  train_loss: 0.3570  time: 2.5257  data: 0.7138  max mem: 20472
+Train Epoch: [5]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.3040  train_loss: 0.3040  time: 1.6917  data: 0.0001  max mem: 20472
+Train Epoch: [5]  [100/439]  eta: 0:09:36  lr: 0.000001  itm_loss: 0.6873  train_loss: 0.6873  time: 1.6912  data: 0.0001  max mem: 20472
+Train Epoch: [5]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.5384  train_loss: 0.5384  time: 1.6904  data: 0.0001  max mem: 20472
+Train Epoch: [5]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.4582  train_loss: 0.4582  time: 1.6949  data: 0.0001  max mem: 20472
+Train Epoch: [5]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.4863  train_loss: 0.4863  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [5]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.5524  train_loss: 0.5524  time: 1.6911  data: 0.0001  max mem: 20472
+Train Epoch: [5]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4200  train_loss: 0.4200  time: 1.6876  data: 0.0002  max mem: 20472
+Train Epoch: [5]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.4725  train_loss: 0.4725  time: 1.6878  data: 0.0002  max mem: 20472
+Train Epoch: [5]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3831  train_loss: 0.3831  time: 1.6882  data: 0.0001  max mem: 20472
+Train Epoch: [5] Total time: 0:12:23 (1.6933 s / it)
+Val Epoch: [5]  [ 0/98]  eta: 0:01:24  itm_loss: 0.1544  val_loss: 0.1544  acc: 1.0000  time: 0.8634  data: 0.7721  max mem: 20472
+Val Epoch: [5]  [50/98]  eta: 0:00:04  itm_loss: 0.1718  val_loss: 0.1718  acc: 1.0000  time: 0.0859  data: 0.0001  max mem: 20472
+Val Epoch: [5]  [97/98]  eta: 0:00:00  itm_loss: 0.1468  val_loss: 0.1468  acc: 1.0000  time: 0.0847  data: 0.0001  max mem: 20472
+Val Epoch: [5] Total time: 0:00:09 (0.0961 s / it)
+{'MulticlassF1Score': tensor(0.7788, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7788, device='cuda:0'), 'MulticlassRecall': tensor(0.7788, device='cuda:0'), 'MulticlassPrecision': tensor(0.7788, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7788, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[608, 174],
+        [172, 610]], device='cuda:0')}
+epoch:5, iter:2633, 438,  train_loss: 0.3830706477165222, valid_loss: 0.4398660747980585, acc:0.798469387755102
+Averaged stats: lr: 0.0000  itm_loss: 0.4678  train_loss: 0.4678
+epoch 5 0.3830706477165222
+Train Epoch: [6]  [  0/439]  eta: 0:18:13  lr: 0.000001  itm_loss: 0.4536  train_loss: 0.4536  time: 2.4920  data: 0.7601  max mem: 20472
+Train Epoch: [6]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.4160  train_loss: 0.4160  time: 1.6890  data: 0.0001  max mem: 20472
+Train Epoch: [6]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.4365  train_loss: 0.4365  time: 1.6896  data: 0.0001  max mem: 20472
+Train Epoch: [6]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3333  train_loss: 0.3333  time: 1.6863  data: 0.0001  max mem: 20472
+Train Epoch: [6]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.4213  train_loss: 0.4213  time: 1.6872  data: 0.0001  max mem: 20472
+Train Epoch: [6]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3309  train_loss: 0.3309  time: 1.6888  data: 0.0001  max mem: 20472
+Train Epoch: [6]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.4786  train_loss: 0.4786  time: 1.6832  data: 0.0001  max mem: 20472
+Train Epoch: [6]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3845  train_loss: 0.3845  time: 1.6895  data: 0.0001  max mem: 20472
+Train Epoch: [6]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3657  train_loss: 0.3657  time: 1.6857  data: 0.0001  max mem: 20472
+Train Epoch: [6]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.4331  train_loss: 0.4331  time: 1.6869  data: 0.0001  max mem: 20472
+Train Epoch: [6] Total time: 0:12:22 (1.6904 s / it)
+Val Epoch: [6]  [ 0/98]  eta: 0:01:32  itm_loss: 0.1726  val_loss: 0.1726  acc: 1.0000  time: 0.9463  data: 0.8554  max mem: 20472
+Val Epoch: [6]  [50/98]  eta: 0:00:04  itm_loss: 0.1806  val_loss: 0.1806  acc: 1.0000  time: 0.0858  data: 0.0001  max mem: 20472
+Val Epoch: [6]  [97/98]  eta: 0:00:00  itm_loss: 0.1396  val_loss: 0.1396  acc: 1.0000  time: 0.0844  data: 0.0001  max mem: 20472
+Val Epoch: [6] Total time: 0:00:09 (0.0968 s / it)
+{'MulticlassF1Score': tensor(0.7576, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7577, device='cuda:0'), 'MulticlassRecall': tensor(0.7577, device='cuda:0'), 'MulticlassPrecision': tensor(0.7578, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7577, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[602, 180],
+        [199, 583]], device='cuda:0')}
+epoch:6, iter:3072, 438,  train_loss: 0.43311309814453125, valid_loss: 0.46310211744691643, acc:0.7959183673469388
+Averaged stats: lr: 0.0000  itm_loss: 0.4560  train_loss: 0.4560
+Train Epoch: [7]  [  0/439]  eta: 0:18:17  lr: 0.000001  itm_loss: 0.6597  train_loss: 0.6597  time: 2.5004  data: 0.7726  max mem: 20472
+Train Epoch: [7]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.4037  train_loss: 0.4037  time: 1.6899  data: 0.0001  max mem: 20472
+Train Epoch: [7]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.3169  train_loss: 0.3169  time: 1.6858  data: 0.0001  max mem: 20472
+Train Epoch: [7]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.5536  train_loss: 0.5536  time: 1.6894  data: 0.0001  max mem: 20472
+Train Epoch: [7]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.4158  train_loss: 0.4158  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [7]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.4305  train_loss: 0.4305  time: 1.6838  data: 0.0001  max mem: 20472
+Train Epoch: [7]  [300/439]  eta: 0:03:54  lr: 0.000001  itm_loss: 0.3625  train_loss: 0.3625  time: 1.6849  data: 0.0001  max mem: 20472
+Train Epoch: [7]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3179  train_loss: 0.3179  time: 1.6871  data: 0.0001  max mem: 20472
+Train Epoch: [7]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3982  train_loss: 0.3982  time: 1.6878  data: 0.0001  max mem: 20472
+Train Epoch: [7]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.6097  train_loss: 0.6097  time: 1.6870  data: 0.0001  max mem: 20472
+Train Epoch: [7] Total time: 0:12:21 (1.6899 s / it)
+Val Epoch: [7]  [ 0/98]  eta: 0:01:30  itm_loss: 0.1870  val_loss: 0.1870  acc: 1.0000  time: 0.9184  data: 0.8276  max mem: 20472
+Val Epoch: [7]  [50/98]  eta: 0:00:04  itm_loss: 0.1362  val_loss: 0.1362  acc: 1.0000  time: 0.0858  data: 0.0001  max mem: 20472
+Val Epoch: [7]  [97/98]  eta: 0:00:00  itm_loss: 0.1228  val_loss: 0.1228  acc: 1.0000  time: 0.0850  data: 0.0001  max mem: 20472
+Val Epoch: [7] Total time: 0:00:09 (0.0967 s / it)
+{'MulticlassF1Score': tensor(0.7979, device='cuda:0'), 'MulticlassAccuracy': tensor(0.7980, device='cuda:0'), 'MulticlassRecall': tensor(0.7980, device='cuda:0'), 'MulticlassPrecision': tensor(0.7980, device='cuda:0'), 'MulticlassSpecificity': tensor(0.7980, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[617, 165],
+        [151, 631]], device='cuda:0')}
+epoch:7, iter:3511, 438,  train_loss: 0.6097310781478882, valid_loss: 0.41862825199733583, acc:0.8137755102040817
+Averaged stats: lr: 0.0000  itm_loss: 0.4489  train_loss: 0.4489
+epoch 7 0.6097310781478882
+Train Epoch: [8]  [  0/439]  eta: 0:18:17  lr: 0.000001  itm_loss: 0.6143  train_loss: 0.6143  time: 2.5002  data: 0.7690  max mem: 20472
+Train Epoch: [8]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.4484  train_loss: 0.4484  time: 1.6891  data: 0.0001  max mem: 20472
+Train Epoch: [8]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.5490  train_loss: 0.5490  time: 1.6931  data: 0.0001  max mem: 20472
+Train Epoch: [8]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.6832  train_loss: 0.6832  time: 1.6909  data: 0.0001  max mem: 20472
+Train Epoch: [8]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.5149  train_loss: 0.5149  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [8]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.4901  train_loss: 0.4901  time: 1.6933  data: 0.0001  max mem: 20472
+Train Epoch: [8]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.4075  train_loss: 0.4075  time: 1.6882  data: 0.0001  max mem: 20472
+Train Epoch: [8]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.5590  train_loss: 0.5590  time: 1.6920  data: 0.0001  max mem: 20472
+Train Epoch: [8]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.6739  train_loss: 0.6739  time: 1.6921  data: 0.0001  max mem: 20472
+Train Epoch: [8]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.4087  train_loss: 0.4087  time: 1.6891  data: 0.0001  max mem: 20472
+Train Epoch: [8] Total time: 0:12:23 (1.6925 s / it)
+Val Epoch: [8]  [ 0/98]  eta: 0:01:26  itm_loss: 0.2223  val_loss: 0.2223  acc: 1.0000  time: 0.8815  data: 0.7916  max mem: 20472
+Val Epoch: [8]  [50/98]  eta: 0:00:04  itm_loss: 0.1263  val_loss: 0.1263  acc: 1.0000  time: 0.0856  data: 0.0001  max mem: 20472
+Val Epoch: [8]  [97/98]  eta: 0:00:00  itm_loss: 0.1464  val_loss: 0.1464  acc: 1.0000  time: 0.0845  data: 0.0001  max mem: 20472
+Val Epoch: [8] Total time: 0:00:09 (0.0960 s / it)
+{'MulticlassF1Score': tensor(0.8043, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8043, device='cuda:0'), 'MulticlassRecall': tensor(0.8043, device='cuda:0'), 'MulticlassPrecision': tensor(0.8046, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8043, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[618, 164],
+        [142, 640]], device='cuda:0')}
+epoch:8, iter:3950, 438,  train_loss: 0.4086942672729492, valid_loss: 0.40490486319842084, acc:0.8239795918367347
+Averaged stats: lr: 0.0000  itm_loss: 0.4414  train_loss: 0.4414
+epoch 8 0.4086942672729492
+Train Epoch: [9]  [  0/439]  eta: 0:17:54  lr: 0.000001  itm_loss: 0.4584  train_loss: 0.4584  time: 2.4470  data: 0.6471  max mem: 20472
+Train Epoch: [9]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.3793  train_loss: 0.3793  time: 1.6908  data: 0.0001  max mem: 20472
+Train Epoch: [9]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.3936  train_loss: 0.3936  time: 1.6865  data: 0.0001  max mem: 20472
+Train Epoch: [9]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.4056  train_loss: 0.4056  time: 1.6917  data: 0.0001  max mem: 20472
+Train Epoch: [9]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.5457  train_loss: 0.5457  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [9]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.5132  train_loss: 0.5132  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [9]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.6197  train_loss: 0.6197  time: 1.6884  data: 0.0001  max mem: 20472
+Train Epoch: [9]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4912  train_loss: 0.4912  time: 1.6865  data: 0.0001  max mem: 20472
+Train Epoch: [9]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3123  train_loss: 0.3123  time: 1.6870  data: 0.0001  max mem: 20472
+Train Epoch: [9]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.5320  train_loss: 0.5320  time: 1.6909  data: 0.0001  max mem: 20472
+Train Epoch: [9] Total time: 0:12:22 (1.6907 s / it)
+Val Epoch: [9]  [ 0/98]  eta: 0:01:28  itm_loss: 0.2273  val_loss: 0.2273  acc: 1.0000  time: 0.9066  data: 0.8163  max mem: 20472
+Val Epoch: [9]  [50/98]  eta: 0:00:04  itm_loss: 0.1501  val_loss: 0.1501  acc: 1.0000  time: 0.0857  data: 0.0001  max mem: 20472
+Val Epoch: [9]  [97/98]  eta: 0:00:00  itm_loss: 0.2317  val_loss: 0.2317  acc: 1.0000  time: 0.0850  data: 0.0001  max mem: 20472
+Val Epoch: [9] Total time: 0:00:09 (0.0965 s / it)
+{'MulticlassF1Score': tensor(0.8031, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8031, device='cuda:0'), 'MulticlassRecall': tensor(0.8031, device='cuda:0'), 'MulticlassPrecision': tensor(0.8031, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8031, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[627, 155],
+        [153, 629]], device='cuda:0')}
+epoch:9, iter:4389, 438,  train_loss: 0.5319722890853882, valid_loss: 0.41360260209790906, acc:0.8061224489795918
+Averaged stats: lr: 0.0000  itm_loss: 0.4280  train_loss: 0.4280
+Train Epoch: [10]  [  0/439]  eta: 0:18:10  lr: 0.000001  itm_loss: 0.5008  train_loss: 0.5008  time: 2.4842  data: 0.7429  max mem: 20472
+Train Epoch: [10]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.4630  train_loss: 0.4630  time: 1.6879  data: 0.0001  max mem: 20472
+Train Epoch: [10]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.6027  train_loss: 0.6027  time: 1.6916  data: 0.0001  max mem: 20472
+Train Epoch: [10]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.3236  train_loss: 0.3236  time: 1.6902  data: 0.0001  max mem: 20472
+Train Epoch: [10]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.6168  train_loss: 0.6168  time: 1.6896  data: 0.0001  max mem: 20472
+Train Epoch: [10]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.5027  train_loss: 0.5027  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [10]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.4595  train_loss: 0.4595  time: 1.6883  data: 0.0001  max mem: 20472
+Train Epoch: [10]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2873  train_loss: 0.2873  time: 1.6890  data: 0.0001  max mem: 20472
+Train Epoch: [10]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.4137  train_loss: 0.4137  time: 1.6870  data: 0.0001  max mem: 20472
+Train Epoch: [10]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.9236  train_loss: 0.9236  time: 1.6875  data: 0.0001  max mem: 20472
+Train Epoch: [10] Total time: 0:12:22 (1.6919 s / it)
+Val Epoch: [10]  [ 0/98]  eta: 0:01:27  itm_loss: 0.2007  val_loss: 0.2007  acc: 1.0000  time: 0.8959  data: 0.8051  max mem: 20472
+Val Epoch: [10]  [50/98]  eta: 0:00:04  itm_loss: 0.1317  val_loss: 0.1317  acc: 1.0000  time: 0.0858  data: 0.0001  max mem: 20472
+Val Epoch: [10]  [97/98]  eta: 0:00:00  itm_loss: 0.1616  val_loss: 0.1616  acc: 1.0000  time: 0.0845  data: 0.0001  max mem: 20472
+Val Epoch: [10] Total time: 0:00:09 (0.0962 s / it)
+{'MulticlassF1Score': tensor(0.8114, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8114, device='cuda:0'), 'MulticlassRecall': tensor(0.8114, device='cuda:0'), 'MulticlassPrecision': tensor(0.8114, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8114, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[639, 143],
+        [152, 630]], device='cuda:0')}
+epoch:10, iter:4828, 438,  train_loss: 0.9236043691635132, valid_loss: 0.39502788973230946, acc:0.8367346938775511
+Averaged stats: lr: 0.0000  itm_loss: 0.4254  train_loss: 0.4254
+epoch 10 0.9236043691635132
+Train Epoch: [11]  [  0/439]  eta: 0:18:20  lr: 0.000001  itm_loss: 0.6101  train_loss: 0.6101  time: 2.5079  data: 0.6398  max mem: 20472
+Train Epoch: [11]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.6421  train_loss: 0.6421  time: 1.6875  data: 0.0001  max mem: 20472
+Train Epoch: [11]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2703  train_loss: 0.2703  time: 1.6904  data: 0.0001  max mem: 20472
+Train Epoch: [11]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3168  train_loss: 0.3168  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [11]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.4330  train_loss: 0.4330  time: 1.6882  data: 0.0001  max mem: 20472
+Train Epoch: [11]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3616  train_loss: 0.3616  time: 1.6899  data: 0.0001  max mem: 20472
+Train Epoch: [11]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.5389  train_loss: 0.5389  time: 1.6878  data: 0.0001  max mem: 20472
+Train Epoch: [11]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4167  train_loss: 0.4167  time: 1.6854  data: 0.0001  max mem: 20472
+Train Epoch: [11]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3275  train_loss: 0.3275  time: 1.6901  data: 0.0001  max mem: 20472
+Train Epoch: [11]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.7273  train_loss: 0.7273  time: 1.6876  data: 0.0001  max mem: 20472
+Train Epoch: [11] Total time: 0:12:22 (1.6911 s / it)
+Val Epoch: [11]  [ 0/98]  eta: 0:01:25  itm_loss: 0.1563  val_loss: 0.1563  acc: 1.0000  time: 0.8762  data: 0.7855  max mem: 20472
+Val Epoch: [11]  [50/98]  eta: 0:00:04  itm_loss: 0.1311  val_loss: 0.1311  acc: 1.0000  time: 0.0855  data: 0.0001  max mem: 20472
+Val Epoch: [11]  [97/98]  eta: 0:00:00  itm_loss: 0.1300  val_loss: 0.1300  acc: 1.0000  time: 0.0844  data: 0.0001  max mem: 20472
+Val Epoch: [11] Total time: 0:00:09 (0.0959 s / it)
+{'MulticlassF1Score': tensor(0.8065, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8069, device='cuda:0'), 'MulticlassRecall': tensor(0.8069, device='cuda:0'), 'MulticlassPrecision': tensor(0.8095, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8069, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[667, 115],
+        [187, 595]], device='cuda:0')}
+epoch:11, iter:5267, 438,  train_loss: 0.7272766828536987, valid_loss: 0.39681498983836905, acc:0.8341836734693877
+Averaged stats: lr: 0.0000  itm_loss: 0.4201  train_loss: 0.4201
+Train Epoch: [12]  [  0/439]  eta: 0:17:57  lr: 0.000001  itm_loss: 0.2673  train_loss: 0.2673  time: 2.4545  data: 0.7355  max mem: 20472
+Train Epoch: [12]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.4017  train_loss: 0.4017  time: 1.6872  data: 0.0001  max mem: 20472
+Train Epoch: [12]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2867  train_loss: 0.2867  time: 1.6907  data: 0.0001  max mem: 20472
+Train Epoch: [12]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.2785  train_loss: 0.2785  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [12]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.3553  train_loss: 0.3553  time: 1.6929  data: 0.0001  max mem: 20472
+Train Epoch: [12]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.4710  train_loss: 0.4710  time: 1.6927  data: 0.0001  max mem: 20472
+Train Epoch: [12]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.5719  train_loss: 0.5719  time: 1.6904  data: 0.0001  max mem: 20472
+Train Epoch: [12]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.6186  train_loss: 0.6186  time: 1.6916  data: 0.0001  max mem: 20472
+Train Epoch: [12]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.2513  train_loss: 0.2513  time: 1.6909  data: 0.0001  max mem: 20472
+Train Epoch: [12]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.4900  train_loss: 0.4900  time: 1.6905  data: 0.0001  max mem: 20472
+Train Epoch: [12] Total time: 0:12:23 (1.6928 s / it)
+Val Epoch: [12]  [ 0/98]  eta: 0:01:24  itm_loss: 0.2365  val_loss: 0.2365  acc: 1.0000  time: 0.8639  data: 0.7737  max mem: 20472
+Val Epoch: [12]  [50/98]  eta: 0:00:04  itm_loss: 0.1109  val_loss: 0.1109  acc: 1.0000  time: 0.0857  data: 0.0001  max mem: 20472
+Val Epoch: [12]  [97/98]  eta: 0:00:00  itm_loss: 0.1527  val_loss: 0.1527  acc: 1.0000  time: 0.0845  data: 0.0001  max mem: 20472
+Val Epoch: [12] Total time: 0:00:09 (0.0956 s / it)
+{'MulticlassF1Score': tensor(0.8171, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8171, device='cuda:0'), 'MulticlassRecall': tensor(0.8171, device='cuda:0'), 'MulticlassPrecision': tensor(0.8172, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8171, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[632, 150],
+        [136, 646]], device='cuda:0')}
+epoch:12, iter:5706, 438,  train_loss: 0.49004554748535156, valid_loss: 0.38090269772065044, acc:0.8367346938775511
+Averaged stats: lr: 0.0000  itm_loss: 0.4103  train_loss: 0.4103
+epoch 12 0.49004554748535156
+Train Epoch: [13]  [  0/439]  eta: 0:18:06  lr: 0.000001  itm_loss: 0.5324  train_loss: 0.5324  time: 2.4746  data: 0.6721  max mem: 20472
+Train Epoch: [13]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.2459  train_loss: 0.2459  time: 1.6922  data: 0.0001  max mem: 20472
+Train Epoch: [13]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.4039  train_loss: 0.4039  time: 1.6932  data: 0.0001  max mem: 20472
+Train Epoch: [13]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.4393  train_loss: 0.4393  time: 1.6922  data: 0.0001  max mem: 20472
+Train Epoch: [13]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.3831  train_loss: 0.3831  time: 1.6905  data: 0.0001  max mem: 20472
+Train Epoch: [13]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.4455  train_loss: 0.4455  time: 1.6916  data: 0.0002  max mem: 20472
+Train Epoch: [13]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3243  train_loss: 0.3243  time: 1.6889  data: 0.0002  max mem: 20472
+Train Epoch: [13]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3312  train_loss: 0.3312  time: 1.6954  data: 0.0002  max mem: 20472
+Train Epoch: [13]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.3277  train_loss: 0.3277  time: 1.6877  data: 0.0002  max mem: 20472
+Train Epoch: [13]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3247  train_loss: 0.3247  time: 1.6887  data: 0.0001  max mem: 20472
+Train Epoch: [13] Total time: 0:12:23 (1.6936 s / it)
+Val Epoch: [13]  [ 0/98]  eta: 0:01:27  itm_loss: 0.2178  val_loss: 0.2178  acc: 1.0000  time: 0.8885  data: 0.7987  max mem: 20472
+Val Epoch: [13]  [50/98]  eta: 0:00:04  itm_loss: 0.0859  val_loss: 0.0859  acc: 1.0000  time: 0.0862  data: 0.0001  max mem: 20472
+Val Epoch: [13]  [97/98]  eta: 0:00:00  itm_loss: 0.1673  val_loss: 0.1673  acc: 1.0000  time: 0.0848  data: 0.0001  max mem: 20472
+Val Epoch: [13] Total time: 0:00:09 (0.0964 s / it)
+{'MulticlassF1Score': tensor(0.8101, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8101, device='cuda:0'), 'MulticlassRecall': tensor(0.8101, device='cuda:0'), 'MulticlassPrecision': tensor(0.8102, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8101, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[641, 141],
+        [156, 626]], device='cuda:0')}
+epoch:13, iter:6145, 438,  train_loss: 0.32470449805259705, valid_loss: 0.38003814974514655, acc:0.8392857142857143
+Averaged stats: lr: 0.0000  itm_loss: 0.4059  train_loss: 0.4059
+Train Epoch: [14]  [  0/439]  eta: 0:18:11  lr: 0.000001  itm_loss: 0.5775  train_loss: 0.5775  time: 2.4867  data: 0.7543  max mem: 20472
+Train Epoch: [14]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.3092  train_loss: 0.3092  time: 1.6877  data: 0.0001  max mem: 20472
+Train Epoch: [14]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2620  train_loss: 0.2620  time: 1.6875  data: 0.0001  max mem: 20472
+Train Epoch: [14]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.4147  train_loss: 0.4147  time: 1.6909  data: 0.0001  max mem: 20472
+Train Epoch: [14]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.4127  train_loss: 0.4127  time: 1.6911  data: 0.0001  max mem: 20472
+Train Epoch: [14]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3975  train_loss: 0.3975  time: 1.6928  data: 0.0001  max mem: 20472
+Train Epoch: [14]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.2359  train_loss: 0.2359  time: 1.6911  data: 0.0001  max mem: 20472
+Train Epoch: [14]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4664  train_loss: 0.4664  time: 1.6916  data: 0.0002  max mem: 20472
+Train Epoch: [14]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.2873  train_loss: 0.2873  time: 1.6895  data: 0.0001  max mem: 20472
+Train Epoch: [14]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.7074  train_loss: 0.7074  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [14] Total time: 0:12:22 (1.6922 s / it)
+Val Epoch: [14]  [ 0/98]  eta: 0:01:22  itm_loss: 0.1776  val_loss: 0.1776  acc: 1.0000  time: 0.8455  data: 0.7545  max mem: 20472
+Val Epoch: [14]  [50/98]  eta: 0:00:04  itm_loss: 0.0864  val_loss: 0.0864  acc: 1.0000  time: 0.0854  data: 0.0001  max mem: 20472
+Val Epoch: [14]  [97/98]  eta: 0:00:00  itm_loss: 0.1920  val_loss: 0.1920  acc: 1.0000  time: 0.0844  data: 0.0001  max mem: 20472
+Val Epoch: [14] Total time: 0:00:09 (0.0954 s / it)
+{'MulticlassF1Score': tensor(0.8228, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8229, device='cuda:0'), 'MulticlassRecall': tensor(0.8229, device='cuda:0'), 'MulticlassPrecision': tensor(0.8234, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8229, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[659, 123],
+        [154, 628]], device='cuda:0')}
+epoch:14, iter:6584, 438,  train_loss: 0.7074229121208191, valid_loss: 0.3818516312119532, acc:0.8469387755102041
+Averaged stats: lr: 0.0000  itm_loss: 0.4006  train_loss: 0.4006
+epoch 14 0.7074229121208191
+Train Epoch: [15]  [  0/439]  eta: 0:18:09  lr: 0.000001  itm_loss: 0.3479  train_loss: 0.3479  time: 2.4816  data: 0.6873  max mem: 20472
+Train Epoch: [15]  [ 50/439]  eta: 0:11:01  lr: 0.000001  itm_loss: 0.4036  train_loss: 0.4036  time: 1.6838  data: 0.0001  max mem: 20472
+Train Epoch: [15]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.5963  train_loss: 0.5963  time: 1.6903  data: 0.0001  max mem: 20472
+Train Epoch: [15]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3298  train_loss: 0.3298  time: 1.6891  data: 0.0001  max mem: 20472
+Train Epoch: [15]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.3524  train_loss: 0.3524  time: 1.6874  data: 0.0001  max mem: 20472
+Train Epoch: [15]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3765  train_loss: 0.3765  time: 1.6839  data: 0.0001  max mem: 20472
+Train Epoch: [15]  [300/439]  eta: 0:03:54  lr: 0.000001  itm_loss: 0.4437  train_loss: 0.4437  time: 1.6853  data: 0.0001  max mem: 20472
+Train Epoch: [15]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4586  train_loss: 0.4586  time: 1.6867  data: 0.0001  max mem: 20472
+Train Epoch: [15]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.1995  train_loss: 0.1995  time: 1.6922  data: 0.0001  max mem: 20472
+Train Epoch: [15]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3895  train_loss: 0.3895  time: 1.6855  data: 0.0001  max mem: 20472
+Train Epoch: [15] Total time: 0:12:21 (1.6896 s / it)
+Val Epoch: [15]  [ 0/98]  eta: 0:01:24  itm_loss: 0.1487  val_loss: 0.1487  acc: 1.0000  time: 0.8611  data: 0.7710  max mem: 20472
+Val Epoch: [15]  [50/98]  eta: 0:00:04  itm_loss: 0.1591  val_loss: 0.1591  acc: 1.0000  time: 0.0859  data: 0.0001  max mem: 20472
+Val Epoch: [15]  [97/98]  eta: 0:00:00  itm_loss: 0.1576  val_loss: 0.1576  acc: 1.0000  time: 0.0844  data: 0.0001  max mem: 20472
+Val Epoch: [15] Total time: 0:00:09 (0.0956 s / it)
+{'MulticlassF1Score': tensor(0.8229, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8229, device='cuda:0'), 'MulticlassRecall': tensor(0.8229, device='cuda:0'), 'MulticlassPrecision': tensor(0.8229, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8229, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[646, 136],
+        [141, 641]], device='cuda:0')}
+epoch:15, iter:7023, 438,  train_loss: 0.3895101547241211, valid_loss: 0.3775037076652088, acc:0.8494897959183674
+Averaged stats: lr: 0.0000  itm_loss: 0.3905  train_loss: 0.3905
+epoch 15 0.3895101547241211
+Train Epoch: [16]  [  0/439]  eta: 0:18:11  lr: 0.000001  itm_loss: 0.4234  train_loss: 0.4234  time: 2.4865  data: 0.6722  max mem: 20472
+Train Epoch: [16]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.2013  train_loss: 0.2013  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [16]  [100/439]  eta: 0:09:33  lr: 0.000001  itm_loss: 0.2710  train_loss: 0.2710  time: 1.6628  data: 0.0002  max mem: 20472
+Train Epoch: [16]  [150/439]  eta: 0:08:07  lr: 0.000001  itm_loss: 0.2915  train_loss: 0.2915  time: 1.6881  data: 0.0001  max mem: 20472
+Train Epoch: [16]  [200/439]  eta: 0:06:43  lr: 0.000001  itm_loss: 0.3426  train_loss: 0.3426  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [16]  [250/439]  eta: 0:05:18  lr: 0.000001  itm_loss: 0.3302  train_loss: 0.3302  time: 1.6868  data: 0.0001  max mem: 20472
+Train Epoch: [16]  [300/439]  eta: 0:03:54  lr: 0.000001  itm_loss: 0.3473  train_loss: 0.3473  time: 1.6878  data: 0.0001  max mem: 20472
+Train Epoch: [16]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4958  train_loss: 0.4958  time: 1.6946  data: 0.0001  max mem: 20472
+Train Epoch: [16]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.2737  train_loss: 0.2737  time: 1.6829  data: 0.0001  max mem: 20472
+Train Epoch: [16]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.5018  train_loss: 0.5018  time: 1.6801  data: 0.0001  max mem: 20472
+Train Epoch: [16] Total time: 0:12:21 (1.6886 s / it)
+Val Epoch: [16]  [ 0/98]  eta: 0:01:28  itm_loss: 0.2129  val_loss: 0.2129  acc: 1.0000  time: 0.8982  data: 0.8036  max mem: 20472
+Val Epoch: [16]  [50/98]  eta: 0:00:04  itm_loss: 0.0793  val_loss: 0.0793  acc: 1.0000  time: 0.0859  data: 0.0001  max mem: 20472
+Val Epoch: [16]  [97/98]  eta: 0:00:00  itm_loss: 0.1306  val_loss: 0.1306  acc: 1.0000  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [16] Total time: 0:00:09 (0.0973 s / it)
+{'MulticlassF1Score': tensor(0.8278, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8280, device='cuda:0'), 'MulticlassRecall': tensor(0.8280, device='cuda:0'), 'MulticlassPrecision': tensor(0.8299, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8280, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[618, 164],
+        [105, 677]], device='cuda:0')}
+epoch:16, iter:7462, 438,  train_loss: 0.5018193125724792, valid_loss: 0.36409450359927603, acc:0.8418367346938775
+Averaged stats: lr: 0.0000  itm_loss: 0.3888  train_loss: 0.3888
+epoch 16 0.5018193125724792
+Train Epoch: [17]  [  0/439]  eta: 0:17:58  lr: 0.000001  itm_loss: 0.2746  train_loss: 0.2746  time: 2.4559  data: 0.6950  max mem: 20472
+Train Epoch: [17]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.4504  train_loss: 0.4504  time: 1.6904  data: 0.0001  max mem: 20472
+Train Epoch: [17]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2997  train_loss: 0.2997  time: 1.6895  data: 0.0001  max mem: 20472
+Train Epoch: [17]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.4843  train_loss: 0.4843  time: 1.6885  data: 0.0001  max mem: 20472
+Train Epoch: [17]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.2194  train_loss: 0.2194  time: 1.6899  data: 0.0001  max mem: 20472
+Train Epoch: [17]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.2014  train_loss: 0.2014  time: 1.6833  data: 0.0001  max mem: 20472
+Train Epoch: [17]  [300/439]  eta: 0:03:54  lr: 0.000001  itm_loss: 0.4381  train_loss: 0.4381  time: 1.6848  data: 0.0002  max mem: 20472
+Train Epoch: [17]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4150  train_loss: 0.4150  time: 1.6934  data: 0.0001  max mem: 20472
+Train Epoch: [17]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.4421  train_loss: 0.4421  time: 1.6875  data: 0.0001  max mem: 20472
+Train Epoch: [17]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.4543  train_loss: 0.4543  time: 1.6912  data: 0.0001  max mem: 20472
+Train Epoch: [17] Total time: 0:12:21 (1.6902 s / it)
+Val Epoch: [17]  [ 0/98]  eta: 0:01:22  itm_loss: 0.1222  val_loss: 0.1222  acc: 1.0000  time: 0.8435  data: 0.7533  max mem: 20472
+Val Epoch: [17]  [50/98]  eta: 0:00:04  itm_loss: 0.0986  val_loss: 0.0986  acc: 1.0000  time: 0.0856  data: 0.0001  max mem: 20472
+Val Epoch: [17]  [97/98]  eta: 0:00:00  itm_loss: 0.1779  val_loss: 0.1779  acc: 1.0000  time: 0.0845  data: 0.0001  max mem: 20472
+Val Epoch: [17] Total time: 0:00:09 (0.0955 s / it)
+{'MulticlassF1Score': tensor(0.8330, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8331, device='cuda:0'), 'MulticlassRecall': tensor(0.8331, device='cuda:0'), 'MulticlassPrecision': tensor(0.8343, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8331, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[628, 154],
+        [107, 675]], device='cuda:0')}
+epoch:17, iter:7901, 438,  train_loss: 0.4542672038078308, valid_loss: 0.3694294275987979, acc:0.8418367346938775
+Averaged stats: lr: 0.0000  itm_loss: 0.3800  train_loss: 0.3800
+epoch 17 0.4542672038078308
+Train Epoch: [18]  [  0/439]  eta: 0:17:53  lr: 0.000001  itm_loss: 0.1979  train_loss: 0.1979  time: 2.4445  data: 0.6301  max mem: 20472
+Train Epoch: [18]  [ 50/439]  eta: 0:11:01  lr: 0.000001  itm_loss: 0.1846  train_loss: 0.1846  time: 1.6853  data: 0.0001  max mem: 20472
+Train Epoch: [18]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.4058  train_loss: 0.4058  time: 1.6884  data: 0.0001  max mem: 20472
+Train Epoch: [18]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.4574  train_loss: 0.4574  time: 1.6918  data: 0.0001  max mem: 20472
+Train Epoch: [18]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.4119  train_loss: 0.4119  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [18]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3695  train_loss: 0.3695  time: 1.6916  data: 0.0001  max mem: 20472
+Train Epoch: [18]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.2507  train_loss: 0.2507  time: 1.6890  data: 0.0001  max mem: 20472
+Train Epoch: [18]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4914  train_loss: 0.4914  time: 1.6896  data: 0.0001  max mem: 20472
+Train Epoch: [18]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3021  train_loss: 0.3021  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [18]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3297  train_loss: 0.3297  time: 1.6931  data: 0.0001  max mem: 20472
+Train Epoch: [18] Total time: 0:12:22 (1.6916 s / it)
+Val Epoch: [18]  [ 0/98]  eta: 0:01:27  itm_loss: 0.3076  val_loss: 0.3076  acc: 0.7500  time: 0.8946  data: 0.8042  max mem: 20472
+Val Epoch: [18]  [50/98]  eta: 0:00:04  itm_loss: 0.1348  val_loss: 0.1348  acc: 1.0000  time: 0.0857  data: 0.0001  max mem: 20472
+Val Epoch: [18]  [97/98]  eta: 0:00:00  itm_loss: 0.1448  val_loss: 0.1448  acc: 1.0000  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [18] Total time: 0:00:09 (0.0962 s / it)
+{'MulticlassF1Score': tensor(0.8323, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8325, device='cuda:0'), 'MulticlassRecall': tensor(0.8325, device='cuda:0'), 'MulticlassPrecision': tensor(0.8340, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8325, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[625, 157],
+        [105, 677]], device='cuda:0')}
+epoch:18, iter:8340, 438,  train_loss: 0.32967609167099, valid_loss: 0.35836270627831773, acc:0.8443877551020408
+Averaged stats: lr: 0.0000  itm_loss: 0.3772  train_loss: 0.3772
+Train Epoch: [19]  [  0/439]  eta: 0:18:01  lr: 0.000001  itm_loss: 0.3345  train_loss: 0.3345  time: 2.4638  data: 0.7327  max mem: 20472
+Train Epoch: [19]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.4863  train_loss: 0.4863  time: 1.6864  data: 0.0001  max mem: 20472
+Train Epoch: [19]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.3676  train_loss: 0.3676  time: 1.6856  data: 0.0001  max mem: 20472
+Train Epoch: [19]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3959  train_loss: 0.3959  time: 1.6878  data: 0.0001  max mem: 20472
+Train Epoch: [19]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.6545  train_loss: 0.6545  time: 1.6905  data: 0.0001  max mem: 20472
+Train Epoch: [19]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.2960  train_loss: 0.2960  time: 1.6888  data: 0.0001  max mem: 20472
+Train Epoch: [19]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3021  train_loss: 0.3021  time: 1.6893  data: 0.0001  max mem: 20472
+Train Epoch: [19]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4368  train_loss: 0.4368  time: 1.6880  data: 0.0001  max mem: 20472
+Train Epoch: [19]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3244  train_loss: 0.3244  time: 1.6907  data: 0.0001  max mem: 20472
+Train Epoch: [19]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.5811  train_loss: 0.5811  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [19] Total time: 0:12:22 (1.6909 s / it)
+Val Epoch: [19]  [ 0/98]  eta: 0:01:19  itm_loss: 0.2119  val_loss: 0.2119  acc: 1.0000  time: 0.8093  data: 0.7189  max mem: 20472
+Val Epoch: [19]  [50/98]  eta: 0:00:04  itm_loss: 0.0785  val_loss: 0.0785  acc: 1.0000  time: 0.0857  data: 0.0001  max mem: 20472
+Val Epoch: [19]  [97/98]  eta: 0:00:00  itm_loss: 0.1609  val_loss: 0.1609  acc: 1.0000  time: 0.0845  data: 0.0001  max mem: 20472
+Val Epoch: [19] Total time: 0:00:09 (0.0951 s / it)
+{'MulticlassF1Score': tensor(0.8421, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8421, device='cuda:0'), 'MulticlassRecall': tensor(0.8421, device='cuda:0'), 'MulticlassPrecision': tensor(0.8422, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8421, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[666, 116],
+        [131, 651]], device='cuda:0')}
+epoch:19, iter:8779, 438,  train_loss: 0.5811488032341003, valid_loss: 0.36131493420439903, acc:0.8622448979591837
+Averaged stats: lr: 0.0000  itm_loss: 0.3759  train_loss: 0.3759
+epoch 19 0.5811488032341003
+Train Epoch: [20]  [  0/439]  eta: 0:17:57  lr: 0.000001  itm_loss: 0.3860  train_loss: 0.3860  time: 2.4550  data: 0.6457  max mem: 20472
+Train Epoch: [20]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.4196  train_loss: 0.4196  time: 1.6899  data: 0.0001  max mem: 20472
+Train Epoch: [20]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.4804  train_loss: 0.4804  time: 1.6922  data: 0.0001  max mem: 20472
+Train Epoch: [20]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.3563  train_loss: 0.3563  time: 1.6878  data: 0.0001  max mem: 20472
+Train Epoch: [20]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.2328  train_loss: 0.2328  time: 1.6917  data: 0.0001  max mem: 20472
+Train Epoch: [20]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.2512  train_loss: 0.2512  time: 1.6940  data: 0.0001  max mem: 20472
+Train Epoch: [20]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3802  train_loss: 0.3802  time: 1.6923  data: 0.0001  max mem: 20472
+Train Epoch: [20]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2367  train_loss: 0.2367  time: 1.6881  data: 0.0001  max mem: 20472
+Train Epoch: [20]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.2259  train_loss: 0.2259  time: 1.6933  data: 0.0001  max mem: 20472
+Train Epoch: [20]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3883  train_loss: 0.3883  time: 1.6896  data: 0.0001  max mem: 20472
+Train Epoch: [20] Total time: 0:12:23 (1.6938 s / it)
+Val Epoch: [20]  [ 0/98]  eta: 0:01:28  itm_loss: 0.1519  val_loss: 0.1519  acc: 1.0000  time: 0.9076  data: 0.8173  max mem: 20472
+Val Epoch: [20]  [50/98]  eta: 0:00:04  itm_loss: 0.0850  val_loss: 0.0850  acc: 1.0000  time: 0.0858  data: 0.0001  max mem: 20472
+Val Epoch: [20]  [97/98]  eta: 0:00:00  itm_loss: 0.1487  val_loss: 0.1487  acc: 1.0000  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [20] Total time: 0:00:09 (0.0963 s / it)
+{'MulticlassF1Score': tensor(0.8386, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8389, device='cuda:0'), 'MulticlassRecall': tensor(0.8389, device='cuda:0'), 'MulticlassPrecision': tensor(0.8413, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8389, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[623, 159],
+        [ 93, 689]], device='cuda:0')}
+epoch:20, iter:9218, 438,  train_loss: 0.3882769048213959, valid_loss: 0.3481302262255352, acc:0.8520408163265306
+Averaged stats: lr: 0.0000  itm_loss: 0.3685  train_loss: 0.3685
+Train Epoch: [21]  [  0/439]  eta: 0:17:49  lr: 0.000001  itm_loss: 0.1978  train_loss: 0.1978  time: 2.4356  data: 0.7258  max mem: 20472
+Train Epoch: [21]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.3741  train_loss: 0.3741  time: 1.6878  data: 0.0001  max mem: 20472
+Train Epoch: [21]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.2697  train_loss: 0.2697  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [21]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3679  train_loss: 0.3679  time: 1.6934  data: 0.0001  max mem: 20472
+Train Epoch: [21]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.2649  train_loss: 0.2649  time: 1.6877  data: 0.0001  max mem: 20472
+Train Epoch: [21]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.5154  train_loss: 0.5154  time: 1.6868  data: 0.0001  max mem: 20472
+Train Epoch: [21]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.5601  train_loss: 0.5601  time: 1.6901  data: 0.0001  max mem: 20472
+Train Epoch: [21]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3640  train_loss: 0.3640  time: 1.6876  data: 0.0001  max mem: 20472
+Train Epoch: [21]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.5166  train_loss: 0.5166  time: 1.6922  data: 0.0001  max mem: 20472
+Train Epoch: [21]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.2379  train_loss: 0.2379  time: 1.6907  data: 0.0001  max mem: 20472
+Train Epoch: [21] Total time: 0:12:22 (1.6915 s / it)
+Val Epoch: [21]  [ 0/98]  eta: 0:01:27  itm_loss: 0.0929  val_loss: 0.0929  acc: 1.0000  time: 0.8974  data: 0.8064  max mem: 20472
+Val Epoch: [21]  [50/98]  eta: 0:00:04  itm_loss: 0.0873  val_loss: 0.0873  acc: 1.0000  time: 0.0856  data: 0.0001  max mem: 20472
+Val Epoch: [21]  [97/98]  eta: 0:00:00  itm_loss: 0.2502  val_loss: 0.2502  acc: 0.6667  time: 0.0844  data: 0.0001  max mem: 20472
+Val Epoch: [21] Total time: 0:00:09 (0.0960 s / it)
+{'MulticlassF1Score': tensor(0.8478, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8478, device='cuda:0'), 'MulticlassRecall': tensor(0.8478, device='cuda:0'), 'MulticlassPrecision': tensor(0.8479, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8478, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[656, 126],
+        [112, 670]], device='cuda:0')}
+epoch:21, iter:9657, 438,  train_loss: 0.23788580298423767, valid_loss: 0.3566715736120312, acc:0.8690476192503559
+Averaged stats: lr: 0.0000  itm_loss: 0.3665  train_loss: 0.3665
+epoch 21 0.23788580298423767
+Train Epoch: [22]  [  0/439]  eta: 0:18:13  lr: 0.000001  itm_loss: 0.1878  train_loss: 0.1878  time: 2.4911  data: 0.7472  max mem: 20472
+Train Epoch: [22]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.2613  train_loss: 0.2613  time: 1.6929  data: 0.0001  max mem: 20472
+Train Epoch: [22]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2003  train_loss: 0.2003  time: 1.6907  data: 0.0001  max mem: 20472
+Train Epoch: [22]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.4021  train_loss: 0.4021  time: 1.6882  data: 0.0001  max mem: 20472
+Train Epoch: [22]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.4709  train_loss: 0.4709  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [22]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.4293  train_loss: 0.4293  time: 1.6891  data: 0.0001  max mem: 20472
+Train Epoch: [22]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.2537  train_loss: 0.2537  time: 1.6870  data: 0.0001  max mem: 20472
+Train Epoch: [22]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4798  train_loss: 0.4798  time: 1.6906  data: 0.0001  max mem: 20472
+Train Epoch: [22]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.4085  train_loss: 0.4085  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [22]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.4259  train_loss: 0.4259  time: 1.6878  data: 0.0001  max mem: 20472
+Train Epoch: [22] Total time: 0:12:22 (1.6916 s / it)
+Val Epoch: [22]  [ 0/98]  eta: 0:01:24  itm_loss: 0.0802  val_loss: 0.0802  acc: 1.0000  time: 0.8604  data: 0.7698  max mem: 20472
+Val Epoch: [22]  [50/98]  eta: 0:00:04  itm_loss: 0.0905  val_loss: 0.0905  acc: 1.0000  time: 0.0858  data: 0.0001  max mem: 20472
+Val Epoch: [22]  [97/98]  eta: 0:00:00  itm_loss: 0.2193  val_loss: 0.2193  acc: 1.0000  time: 0.0847  data: 0.0001  max mem: 20472
+Val Epoch: [22] Total time: 0:00:09 (0.0958 s / it)
+{'MulticlassF1Score': tensor(0.8401, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8402, device='cuda:0'), 'MulticlassRecall': tensor(0.8402, device='cuda:0'), 'MulticlassPrecision': tensor(0.8407, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8402, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[673, 109],
+        [141, 641]], device='cuda:0')}
+epoch:22, iter:10096, 438,  train_loss: 0.4258918762207031, valid_loss: 0.3685630776305274, acc:0.875
+Averaged stats: lr: 0.0000  itm_loss: 0.3631  train_loss: 0.3631
+Train Epoch: [23]  [  0/439]  eta: 0:17:56  lr: 0.000001  itm_loss: 0.3019  train_loss: 0.3019  time: 2.4510  data: 0.7377  max mem: 20472
+Train Epoch: [23]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.2292  train_loss: 0.2292  time: 1.6874  data: 0.0001  max mem: 20472
+Train Epoch: [23]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.4550  train_loss: 0.4550  time: 1.6862  data: 0.0001  max mem: 20472
+Train Epoch: [23]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3132  train_loss: 0.3132  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [23]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.2277  train_loss: 0.2277  time: 1.6840  data: 0.0001  max mem: 20472
+Train Epoch: [23]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.5101  train_loss: 0.5101  time: 1.6852  data: 0.0001  max mem: 20472
+Train Epoch: [23]  [300/439]  eta: 0:03:54  lr: 0.000001  itm_loss: 0.2533  train_loss: 0.2533  time: 1.6854  data: 0.0001  max mem: 20472
+Train Epoch: [23]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.6370  train_loss: 0.6370  time: 1.6887  data: 0.0001  max mem: 20472
+Train Epoch: [23]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.2569  train_loss: 0.2569  time: 1.6866  data: 0.0001  max mem: 20472
+Train Epoch: [23]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3616  train_loss: 0.3616  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [23] Total time: 0:12:21 (1.6900 s / it)
+Val Epoch: [23]  [ 0/98]  eta: 0:01:26  itm_loss: 0.0960  val_loss: 0.0960  acc: 1.0000  time: 0.8875  data: 0.7962  max mem: 20472
+Val Epoch: [23]  [50/98]  eta: 0:00:04  itm_loss: 0.1247  val_loss: 0.1247  acc: 1.0000  time: 0.0857  data: 0.0001  max mem: 20472
+Val Epoch: [23]  [97/98]  eta: 0:00:00  itm_loss: 0.1961  val_loss: 0.1961  acc: 1.0000  time: 0.0848  data: 0.0001  max mem: 20472
+Val Epoch: [23] Total time: 0:00:09 (0.0966 s / it)
+{'MulticlassF1Score': tensor(0.8529, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8529, device='cuda:0'), 'MulticlassRecall': tensor(0.8529, device='cuda:0'), 'MulticlassPrecision': tensor(0.8530, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8529, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[670, 112],
+        [118, 664]], device='cuda:0')}
+epoch:23, iter:10535, 438,  train_loss: 0.36163443326950073, valid_loss: 0.3485416047683708, acc:0.8826530612244898
+Averaged stats: lr: 0.0000  itm_loss: 0.3606  train_loss: 0.3606
+epoch 23 0.36163443326950073
+Train Epoch: [24]  [  0/439]  eta: 0:18:01  lr: 0.000001  itm_loss: 0.5661  train_loss: 0.5661  time: 2.4633  data: 0.6835  max mem: 20472
+Train Epoch: [24]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.2601  train_loss: 0.2601  time: 1.6919  data: 0.0001  max mem: 20472
+Train Epoch: [24]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.5018  train_loss: 0.5018  time: 1.6910  data: 0.0001  max mem: 20472
+Train Epoch: [24]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.3321  train_loss: 0.3321  time: 1.6910  data: 0.0001  max mem: 20472
+Train Epoch: [24]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.2520  train_loss: 0.2520  time: 1.6928  data: 0.0001  max mem: 20472
+Train Epoch: [24]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.3864  train_loss: 0.3864  time: 1.6870  data: 0.0001  max mem: 20472
+Train Epoch: [24]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3185  train_loss: 0.3185  time: 1.6917  data: 0.0001  max mem: 20472
+Train Epoch: [24]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2547  train_loss: 0.2547  time: 1.6894  data: 0.0001  max mem: 20472
+Train Epoch: [24]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.5235  train_loss: 0.5235  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [24]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.6645  train_loss: 0.6645  time: 1.6874  data: 0.0001  max mem: 20472
+Train Epoch: [24] Total time: 0:12:23 (1.6935 s / it)
+Val Epoch: [24]  [ 0/98]  eta: 0:01:22  itm_loss: 0.1660  val_loss: 0.1660  acc: 1.0000  time: 0.8440  data: 0.7533  max mem: 20472
+Val Epoch: [24]  [50/98]  eta: 0:00:04  itm_loss: 0.1001  val_loss: 0.1001  acc: 1.0000  time: 0.0865  data: 0.0001  max mem: 20472
+Val Epoch: [24]  [97/98]  eta: 0:00:00  itm_loss: 0.1981  val_loss: 0.1981  acc: 1.0000  time: 0.0850  data: 0.0001  max mem: 20472
+Val Epoch: [24] Total time: 0:00:09 (0.0962 s / it)
+{'MulticlassF1Score': tensor(0.8452, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8453, device='cuda:0'), 'MulticlassRecall': tensor(0.8453, device='cuda:0'), 'MulticlassPrecision': tensor(0.8462, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8453, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[641, 141],
+        [101, 681]], device='cuda:0')}
+epoch:24, iter:10974, 438,  train_loss: 0.664505660533905, valid_loss: 0.34065237645729807, acc:0.8596938775510204
+Averaged stats: lr: 0.0000  itm_loss: 0.3599  train_loss: 0.3599
+Train Epoch: [25]  [  0/439]  eta: 0:17:49  lr: 0.000001  itm_loss: 0.3992  train_loss: 0.3992  time: 2.4362  data: 0.7435  max mem: 20472
+Train Epoch: [25]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.1979  train_loss: 0.1979  time: 1.6859  data: 0.0001  max mem: 20472
+Train Epoch: [25]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.4010  train_loss: 0.4010  time: 1.6889  data: 0.0001  max mem: 20472
+Train Epoch: [25]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.2526  train_loss: 0.2526  time: 1.6893  data: 0.0001  max mem: 20472
+Train Epoch: [25]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.2461  train_loss: 0.2461  time: 1.6890  data: 0.0001  max mem: 20472
+Train Epoch: [25]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3390  train_loss: 0.3390  time: 1.6843  data: 0.0002  max mem: 20472
+Train Epoch: [25]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.2096  train_loss: 0.2096  time: 1.6906  data: 0.0001  max mem: 20472
+Train Epoch: [25]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3716  train_loss: 0.3716  time: 1.6878  data: 0.0001  max mem: 20472
+Train Epoch: [25]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3288  train_loss: 0.3288  time: 1.6896  data: 0.0002  max mem: 20472
+Train Epoch: [25]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.5976  train_loss: 0.5976  time: 1.6887  data: 0.0001  max mem: 20472
+Train Epoch: [25] Total time: 0:12:22 (1.6911 s / it)
+Val Epoch: [25]  [ 0/98]  eta: 0:01:26  itm_loss: 0.0965  val_loss: 0.0965  acc: 1.0000  time: 0.8809  data: 0.7912  max mem: 20472
+Val Epoch: [25]  [50/98]  eta: 0:00:04  itm_loss: 0.1585  val_loss: 0.1585  acc: 1.0000  time: 0.0865  data: 0.0002  max mem: 20472
+Val Epoch: [25]  [97/98]  eta: 0:00:00  itm_loss: 0.1808  val_loss: 0.1808  acc: 1.0000  time: 0.0852  data: 0.0001  max mem: 20472
+Val Epoch: [25] Total time: 0:00:09 (0.0967 s / it)
+{'MulticlassF1Score': tensor(0.8485, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8485, device='cuda:0'), 'MulticlassRecall': tensor(0.8485, device='cuda:0'), 'MulticlassPrecision': tensor(0.8485, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8485, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[662, 120],
+        [117, 665]], device='cuda:0')}
+epoch:25, iter:11413, 438,  train_loss: 0.5976294279098511, valid_loss: 0.35178766167504066, acc:0.8724489795918368
+Averaged stats: lr: 0.0000  itm_loss: 0.3510  train_loss: 0.3510
+Train Epoch: [26]  [  0/439]  eta: 0:17:54  lr: 0.000001  itm_loss: 0.3442  train_loss: 0.3442  time: 2.4466  data: 0.7324  max mem: 20472
+Train Epoch: [26]  [ 50/439]  eta: 0:11:01  lr: 0.000001  itm_loss: 0.3488  train_loss: 0.3488  time: 1.6852  data: 0.0001  max mem: 20472
+Train Epoch: [26]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.3040  train_loss: 0.3040  time: 1.6928  data: 0.0001  max mem: 20472
+Train Epoch: [26]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3222  train_loss: 0.3222  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [26]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.4495  train_loss: 0.4495  time: 1.6919  data: 0.0001  max mem: 20472
+Train Epoch: [26]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.2378  train_loss: 0.2378  time: 1.6873  data: 0.0001  max mem: 20472
+Train Epoch: [26]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.6301  train_loss: 0.6301  time: 1.6882  data: 0.0001  max mem: 20472
+Train Epoch: [26]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3541  train_loss: 0.3541  time: 1.6918  data: 0.0001  max mem: 20472
+Train Epoch: [26]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3770  train_loss: 0.3770  time: 1.6876  data: 0.0001  max mem: 20472
+Train Epoch: [26]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3247  train_loss: 0.3247  time: 1.6897  data: 0.0001  max mem: 20472
+Train Epoch: [26] Total time: 0:12:22 (1.6914 s / it)
+Val Epoch: [26]  [ 0/98]  eta: 0:01:23  itm_loss: 0.0929  val_loss: 0.0929  acc: 1.0000  time: 0.8490  data: 0.7575  max mem: 20472
+Val Epoch: [26]  [50/98]  eta: 0:00:04  itm_loss: 0.0830  val_loss: 0.0830  acc: 1.0000  time: 0.0860  data: 0.0001  max mem: 20472
+Val Epoch: [26]  [97/98]  eta: 0:00:00  itm_loss: 0.2073  val_loss: 0.2073  acc: 1.0000  time: 0.0849  data: 0.0001  max mem: 20472
+Val Epoch: [26] Total time: 0:00:09 (0.0959 s / it)
+{'MulticlassF1Score': tensor(0.8555, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8555, device='cuda:0'), 'MulticlassRecall': tensor(0.8555, device='cuda:0'), 'MulticlassPrecision': tensor(0.8560, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8555, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[655, 127],
+        [ 99, 683]], device='cuda:0')}
+epoch:26, iter:11852, 438,  train_loss: 0.324716180562973, valid_loss: 0.34461734532521165, acc:0.8622448979591837
+Averaged stats: lr: 0.0000  itm_loss: 0.3504  train_loss: 0.3504
+epoch 26 0.324716180562973
+Train Epoch: [27]  [  0/439]  eta: 0:18:00  lr: 0.000001  itm_loss: 0.3827  train_loss: 0.3827  time: 2.4604  data: 0.6724  max mem: 20472
+Train Epoch: [27]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.2607  train_loss: 0.2607  time: 1.6896  data: 0.0001  max mem: 20472
+Train Epoch: [27]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.4297  train_loss: 0.4297  time: 1.6890  data: 0.0001  max mem: 20472
+Train Epoch: [27]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.5021  train_loss: 0.5021  time: 1.6876  data: 0.0001  max mem: 20472
+Train Epoch: [27]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.5752  train_loss: 0.5752  time: 1.6867  data: 0.0001  max mem: 20472
+Train Epoch: [27]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3226  train_loss: 0.3226  time: 1.6910  data: 0.0001  max mem: 20472
+Train Epoch: [27]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.7078  train_loss: 0.7078  time: 1.6908  data: 0.0001  max mem: 20472
+Train Epoch: [27]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3164  train_loss: 0.3164  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [27]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3385  train_loss: 0.3385  time: 1.6904  data: 0.0001  max mem: 20472
+Train Epoch: [27]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3436  train_loss: 0.3436  time: 1.6890  data: 0.0001  max mem: 20472
+Train Epoch: [27] Total time: 0:12:22 (1.6915 s / it)
+Val Epoch: [27]  [ 0/98]  eta: 0:01:26  itm_loss: 0.0874  val_loss: 0.0874  acc: 1.0000  time: 0.8845  data: 0.7940  max mem: 20472
+Val Epoch: [27]  [50/98]  eta: 0:00:04  itm_loss: 0.0691  val_loss: 0.0691  acc: 1.0000  time: 0.0859  data: 0.0001  max mem: 20472
+Val Epoch: [27]  [97/98]  eta: 0:00:00  itm_loss: 0.2268  val_loss: 0.2268  acc: 1.0000  time: 0.0847  data: 0.0001  max mem: 20472
+Val Epoch: [27] Total time: 0:00:09 (0.0962 s / it)
+{'MulticlassF1Score': tensor(0.8599, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8600, device='cuda:0'), 'MulticlassRecall': tensor(0.8600, device='cuda:0'), 'MulticlassPrecision': tensor(0.8607, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8600, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[655, 127],
+        [ 92, 690]], device='cuda:0')}
+epoch:27, iter:12291, 438,  train_loss: 0.3436095118522644, valid_loss: 0.3234183885239074, acc:0.8698979591836735
+Averaged stats: lr: 0.0000  itm_loss: 0.3452  train_loss: 0.3452
+epoch 27 0.3436095118522644
+Train Epoch: [28]  [  0/439]  eta: 0:18:01  lr: 0.000001  itm_loss: 0.3833  train_loss: 0.3833  time: 2.4625  data: 0.6801  max mem: 20472
+Train Epoch: [28]  [ 50/439]  eta: 0:11:04  lr: 0.000001  itm_loss: 0.4172  train_loss: 0.4172  time: 1.6923  data: 0.0001  max mem: 20472
+Train Epoch: [28]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.5418  train_loss: 0.5418  time: 1.6924  data: 0.0001  max mem: 20472
+Train Epoch: [28]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.3638  train_loss: 0.3638  time: 1.6950  data: 0.0001  max mem: 20472
+Train Epoch: [28]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.4684  train_loss: 0.4684  time: 1.6924  data: 0.0001  max mem: 20472
+Train Epoch: [28]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.2165  train_loss: 0.2165  time: 1.6905  data: 0.0001  max mem: 20472
+Train Epoch: [28]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3210  train_loss: 0.3210  time: 1.6912  data: 0.0001  max mem: 20472
+Train Epoch: [28]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2721  train_loss: 0.2721  time: 1.6916  data: 0.0001  max mem: 20472
+Train Epoch: [28]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.5876  train_loss: 0.5876  time: 1.6942  data: 0.0001  max mem: 20472
+Train Epoch: [28]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3281  train_loss: 0.3281  time: 1.6896  data: 0.0001  max mem: 20472
+Train Epoch: [28] Total time: 0:12:23 (1.6944 s / it)
+Val Epoch: [28]  [ 0/98]  eta: 0:01:29  itm_loss: 0.0895  val_loss: 0.0895  acc: 1.0000  time: 0.9128  data: 0.8221  max mem: 20472
+Val Epoch: [28]  [50/98]  eta: 0:00:04  itm_loss: 0.1090  val_loss: 0.1090  acc: 1.0000  time: 0.0860  data: 0.0001  max mem: 20472
+Val Epoch: [28]  [97/98]  eta: 0:00:00  itm_loss: 0.1738  val_loss: 0.1738  acc: 1.0000  time: 0.0849  data: 0.0001  max mem: 20472
+Val Epoch: [28] Total time: 0:00:09 (0.0968 s / it)
+{'MulticlassF1Score': tensor(0.8580, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8581, device='cuda:0'), 'MulticlassRecall': tensor(0.8581, device='cuda:0'), 'MulticlassPrecision': tensor(0.8582, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8581, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[663, 119],
+        [103, 679]], device='cuda:0')}
+epoch:28, iter:12730, 438,  train_loss: 0.32813072204589844, valid_loss: 0.33191112177482124, acc:0.8852040816326531
+Averaged stats: lr: 0.0000  itm_loss: 0.3430  train_loss: 0.3430
+Train Epoch: [29]  [  0/439]  eta: 0:18:01  lr: 0.000001  itm_loss: 0.4482  train_loss: 0.4482  time: 2.4625  data: 0.7501  max mem: 20472
+Train Epoch: [29]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.4314  train_loss: 0.4314  time: 1.6885  data: 0.0001  max mem: 20472
+Train Epoch: [29]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2847  train_loss: 0.2847  time: 1.6902  data: 0.0001  max mem: 20472
+Train Epoch: [29]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.2087  train_loss: 0.2087  time: 1.6902  data: 0.0001  max mem: 20472
+Train Epoch: [29]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.3494  train_loss: 0.3494  time: 1.6866  data: 0.0001  max mem: 20472
+Train Epoch: [29]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.2524  train_loss: 0.2524  time: 1.6909  data: 0.0001  max mem: 20472
+Train Epoch: [29]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3028  train_loss: 0.3028  time: 1.6921  data: 0.0001  max mem: 20472
+Train Epoch: [29]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4930  train_loss: 0.4930  time: 1.6903  data: 0.0001  max mem: 20472
+Train Epoch: [29]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.5775  train_loss: 0.5775  time: 1.6918  data: 0.0001  max mem: 20472
+Train Epoch: [29]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.6901  train_loss: 0.6901  time: 1.6897  data: 0.0001  max mem: 20472
+Train Epoch: [29] Total time: 0:12:22 (1.6925 s / it)
+Val Epoch: [29]  [ 0/98]  eta: 0:01:24  itm_loss: 0.0909  val_loss: 0.0909  acc: 1.0000  time: 0.8629  data: 0.7730  max mem: 20472
+Val Epoch: [29]  [50/98]  eta: 0:00:04  itm_loss: 0.0796  val_loss: 0.0796  acc: 1.0000  time: 0.0858  data: 0.0001  max mem: 20472
+Val Epoch: [29]  [97/98]  eta: 0:00:00  itm_loss: 0.2589  val_loss: 0.2589  acc: 0.6667  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [29] Total time: 0:00:09 (0.0958 s / it)
+{'MulticlassF1Score': tensor(0.8566, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8568, device='cuda:0'), 'MulticlassRecall': tensor(0.8568, device='cuda:0'), 'MulticlassPrecision': tensor(0.8590, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8568, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[639, 143],
+        [ 81, 701]], device='cuda:0')}
+epoch:29, iter:13169, 438,  train_loss: 0.690081775188446, valid_loss: 0.3332259408507154, acc:0.8639455784340294
+Averaged stats: lr: 0.0000  itm_loss: 0.3404  train_loss: 0.3404
+Train Epoch: [30]  [  0/439]  eta: 0:17:54  lr: 0.000001  itm_loss: 0.2220  train_loss: 0.2220  time: 2.4474  data: 0.7495  max mem: 20472
+Train Epoch: [30]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.2717  train_loss: 0.2717  time: 1.6916  data: 0.0001  max mem: 20472
+Train Epoch: [30]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.5366  train_loss: 0.5366  time: 1.6862  data: 0.0001  max mem: 20472
+Train Epoch: [30]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3940  train_loss: 0.3940  time: 1.6884  data: 0.0001  max mem: 20472
+Train Epoch: [30]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.5918  train_loss: 0.5918  time: 1.6923  data: 0.0001  max mem: 20472
+Train Epoch: [30]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3634  train_loss: 0.3634  time: 1.6933  data: 0.0001  max mem: 20472
+Train Epoch: [30]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3763  train_loss: 0.3763  time: 1.6885  data: 0.0001  max mem: 20472
+Train Epoch: [30]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4061  train_loss: 0.4061  time: 1.6838  data: 0.0001  max mem: 20472
+Train Epoch: [30]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.5176  train_loss: 0.5176  time: 1.6863  data: 0.0001  max mem: 20472
+Train Epoch: [30]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.2747  train_loss: 0.2747  time: 1.6912  data: 0.0001  max mem: 20472
+Train Epoch: [30] Total time: 0:12:22 (1.6908 s / it)
+Val Epoch: [30]  [ 0/98]  eta: 0:01:24  itm_loss: 0.1031  val_loss: 0.1031  acc: 1.0000  time: 0.8639  data: 0.7735  max mem: 20472
+Val Epoch: [30]  [50/98]  eta: 0:00:04  itm_loss: 0.1787  val_loss: 0.1787  acc: 1.0000  time: 0.0856  data: 0.0001  max mem: 20472
+Val Epoch: [30]  [97/98]  eta: 0:00:00  itm_loss: 0.1854  val_loss: 0.1854  acc: 1.0000  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [30] Total time: 0:00:09 (0.0958 s / it)
+{'MulticlassF1Score': tensor(0.8574, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8574, device='cuda:0'), 'MulticlassRecall': tensor(0.8574, device='cuda:0'), 'MulticlassPrecision': tensor(0.8574, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8574, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[671, 111],
+        [112, 670]], device='cuda:0')}
+epoch:30, iter:13608, 438,  train_loss: 0.274747371673584, valid_loss: 0.3303815963635297, acc:0.8852040816326531
+Averaged stats: lr: 0.0000  itm_loss: 0.3399  train_loss: 0.3399
+Train Epoch: [31]  [  0/439]  eta: 0:17:44  lr: 0.000001  itm_loss: 0.2268  train_loss: 0.2268  time: 2.4240  data: 0.7236  max mem: 20472
+Train Epoch: [31]  [ 50/439]  eta: 0:11:01  lr: 0.000001  itm_loss: 0.3268  train_loss: 0.3268  time: 1.6861  data: 0.0001  max mem: 20472
+Train Epoch: [31]  [100/439]  eta: 0:09:33  lr: 0.000001  itm_loss: 0.2165  train_loss: 0.2165  time: 1.6857  data: 0.0001  max mem: 20472
+Train Epoch: [31]  [150/439]  eta: 0:08:08  lr: 0.000001  itm_loss: 0.4625  train_loss: 0.4625  time: 1.6905  data: 0.0001  max mem: 20472
+Train Epoch: [31]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.3734  train_loss: 0.3734  time: 1.6863  data: 0.0001  max mem: 20472
+Train Epoch: [31]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.2480  train_loss: 0.2480  time: 1.6895  data: 0.0001  max mem: 20472
+Train Epoch: [31]  [300/439]  eta: 0:03:54  lr: 0.000001  itm_loss: 0.3160  train_loss: 0.3160  time: 1.6875  data: 0.0001  max mem: 20472
+Train Epoch: [31]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.4449  train_loss: 0.4449  time: 1.6855  data: 0.0002  max mem: 20472
+Train Epoch: [31]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3825  train_loss: 0.3825  time: 1.6930  data: 0.0001  max mem: 20472
+Train Epoch: [31]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.2833  train_loss: 0.2833  time: 1.6887  data: 0.0001  max mem: 20472
+Train Epoch: [31] Total time: 0:12:21 (1.6902 s / it)
+Val Epoch: [31]  [ 0/98]  eta: 0:01:23  itm_loss: 0.1106  val_loss: 0.1106  acc: 1.0000  time: 0.8536  data: 0.7630  max mem: 20472
+Val Epoch: [31]  [50/98]  eta: 0:00:04  itm_loss: 0.1094  val_loss: 0.1094  acc: 1.0000  time: 0.0855  data: 0.0001  max mem: 20472
+Val Epoch: [31]  [97/98]  eta: 0:00:00  itm_loss: 0.1117  val_loss: 0.1117  acc: 1.0000  time: 0.0849  data: 0.0001  max mem: 20472
+Val Epoch: [31] Total time: 0:00:09 (0.0957 s / it)
+{'MulticlassF1Score': tensor(0.8556, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8561, device='cuda:0'), 'MulticlassRecall': tensor(0.8561, device='cuda:0'), 'MulticlassPrecision': tensor(0.8619, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8561, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[620, 162],
+        [ 63, 719]], device='cuda:0')}
+epoch:31, iter:14047, 438,  train_loss: 0.28334951400756836, valid_loss: 0.3472249913712422, acc:0.8724489795918368
+Averaged stats: lr: 0.0000  itm_loss: 0.3370  train_loss: 0.3370
+Train Epoch: [32]  [  0/439]  eta: 0:17:53  lr: 0.000001  itm_loss: 0.1985  train_loss: 0.1985  time: 2.4461  data: 0.7540  max mem: 20472
+Train Epoch: [32]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.3680  train_loss: 0.3680  time: 1.6901  data: 0.0001  max mem: 20472
+Train Epoch: [32]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2925  train_loss: 0.2925  time: 1.6897  data: 0.0001  max mem: 20472
+Train Epoch: [32]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.2437  train_loss: 0.2437  time: 1.6906  data: 0.0001  max mem: 20472
+Train Epoch: [32]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.3118  train_loss: 0.3118  time: 1.6907  data: 0.0001  max mem: 20472
+Train Epoch: [32]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.3225  train_loss: 0.3225  time: 1.6885  data: 0.0001  max mem: 20472
+Train Epoch: [32]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.4016  train_loss: 0.4016  time: 1.6929  data: 0.0001  max mem: 20472
+Train Epoch: [32]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2535  train_loss: 0.2535  time: 1.6913  data: 0.0001  max mem: 20472
+Train Epoch: [32]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.3634  train_loss: 0.3634  time: 1.6928  data: 0.0001  max mem: 20472
+Train Epoch: [32]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.2573  train_loss: 0.2573  time: 1.6925  data: 0.0001  max mem: 20472
+Train Epoch: [32] Total time: 0:12:23 (1.6937 s / it)
+Val Epoch: [32]  [ 0/98]  eta: 0:01:25  itm_loss: 0.0906  val_loss: 0.0906  acc: 1.0000  time: 0.8762  data: 0.7852  max mem: 20472
+Val Epoch: [32]  [50/98]  eta: 0:00:04  itm_loss: 0.0905  val_loss: 0.0905  acc: 1.0000  time: 0.0856  data: 0.0001  max mem: 20472
+Val Epoch: [32]  [97/98]  eta: 0:00:00  itm_loss: 0.1674  val_loss: 0.1674  acc: 1.0000  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [32] Total time: 0:00:09 (0.0960 s / it)
+{'MulticlassF1Score': tensor(0.8625, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8625, device='cuda:0'), 'MulticlassRecall': tensor(0.8625, device='cuda:0'), 'MulticlassPrecision': tensor(0.8628, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8625, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[664, 118],
+        [ 97, 685]], device='cuda:0')}
+epoch:32, iter:14486, 438,  train_loss: 0.2573433816432953, valid_loss: 0.3395611124198732, acc:0.8775510204081632
+Averaged stats: lr: 0.0000  itm_loss: 0.3346  train_loss: 0.3346
+epoch 32 0.2573433816432953
+Train Epoch: [33]  [  0/439]  eta: 0:18:06  lr: 0.000001  itm_loss: 0.3712  train_loss: 0.3712  time: 2.4749  data: 0.6792  max mem: 20472
+Train Epoch: [33]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.2638  train_loss: 0.2638  time: 1.6893  data: 0.0001  max mem: 20472
+Train Epoch: [33]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.3342  train_loss: 0.3342  time: 1.6904  data: 0.0001  max mem: 20472
+Train Epoch: [33]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.2712  train_loss: 0.2712  time: 1.6903  data: 0.0001  max mem: 20472
+Train Epoch: [33]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.1799  train_loss: 0.1799  time: 1.6957  data: 0.0001  max mem: 20472
+Train Epoch: [33]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.4459  train_loss: 0.4459  time: 1.6919  data: 0.0001  max mem: 20472
+Train Epoch: [33]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3039  train_loss: 0.3039  time: 1.6895  data: 0.0001  max mem: 20472
+Train Epoch: [33]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2715  train_loss: 0.2715  time: 1.6940  data: 0.0001  max mem: 20472
+Train Epoch: [33]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.4211  train_loss: 0.4211  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [33]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.1494  train_loss: 0.1494  time: 1.6877  data: 0.0001  max mem: 20472
+Train Epoch: [33] Total time: 0:12:23 (1.6937 s / it)
+Val Epoch: [33]  [ 0/98]  eta: 0:01:25  itm_loss: 0.0897  val_loss: 0.0897  acc: 1.0000  time: 0.8729  data: 0.7834  max mem: 20472
+Val Epoch: [33]  [50/98]  eta: 0:00:04  itm_loss: 0.0899  val_loss: 0.0899  acc: 1.0000  time: 0.0859  data: 0.0001  max mem: 20472
+Val Epoch: [33]  [97/98]  eta: 0:00:00  itm_loss: 0.1533  val_loss: 0.1533  acc: 1.0000  time: 0.0844  data: 0.0001  max mem: 20472
+Val Epoch: [33] Total time: 0:00:09 (0.0956 s / it)
+{'MulticlassF1Score': tensor(0.8696, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8696, device='cuda:0'), 'MulticlassRecall': tensor(0.8696, device='cuda:0'), 'MulticlassPrecision': tensor(0.8696, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8696, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[676, 106],
+        [ 98, 684]], device='cuda:0')}
+epoch:33, iter:14925, 438,  train_loss: 0.14940273761749268, valid_loss: 0.31488640455301015, acc:0.8903061224489796
+Averaged stats: lr: 0.0000  itm_loss: 0.3337  train_loss: 0.3337
+epoch 33 0.14940273761749268
+Train Epoch: [34]  [  0/439]  eta: 0:18:04  lr: 0.000001  itm_loss: 0.3084  train_loss: 0.3084  time: 2.4712  data: 0.6737  max mem: 20472
+Train Epoch: [34]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.3329  train_loss: 0.3329  time: 1.6904  data: 0.0001  max mem: 20472
+Train Epoch: [34]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.2473  train_loss: 0.2473  time: 1.6915  data: 0.0001  max mem: 20472
+Train Epoch: [34]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.2738  train_loss: 0.2738  time: 1.6901  data: 0.0001  max mem: 20472
+Train Epoch: [34]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.2124  train_loss: 0.2124  time: 1.6899  data: 0.0001  max mem: 20472
+Train Epoch: [34]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.2399  train_loss: 0.2399  time: 1.6921  data: 0.0001  max mem: 20472
+Train Epoch: [34]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.2887  train_loss: 0.2887  time: 1.6914  data: 0.0001  max mem: 20472
+Train Epoch: [34]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2996  train_loss: 0.2996  time: 1.6886  data: 0.0001  max mem: 20472
+Train Epoch: [34]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.2818  train_loss: 0.2818  time: 1.6922  data: 0.0001  max mem: 20472
+Train Epoch: [34]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.4199  train_loss: 0.4199  time: 1.6856  data: 0.0001  max mem: 20472
+Train Epoch: [34] Total time: 0:12:23 (1.6927 s / it)
+Val Epoch: [34]  [ 0/98]  eta: 0:01:22  itm_loss: 0.0939  val_loss: 0.0939  acc: 1.0000  time: 0.8443  data: 0.7534  max mem: 20472
+Val Epoch: [34]  [50/98]  eta: 0:00:04  itm_loss: 0.0893  val_loss: 0.0893  acc: 1.0000  time: 0.0856  data: 0.0001  max mem: 20472
+Val Epoch: [34]  [97/98]  eta: 0:00:00  itm_loss: 0.1298  val_loss: 0.1298  acc: 1.0000  time: 0.0848  data: 0.0001  max mem: 20472
+Val Epoch: [34] Total time: 0:00:09 (0.0956 s / it)
+{'MulticlassF1Score': tensor(0.8612, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8613, device='cuda:0'), 'MulticlassRecall': tensor(0.8613, device='cuda:0'), 'MulticlassPrecision': tensor(0.8617, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8613, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[660, 122],
+        [ 95, 687]], device='cuda:0')}
+epoch:34, iter:15364, 438,  train_loss: 0.4199370741844177, valid_loss: 0.3304924098370901, acc:0.8826530612244898
+Averaged stats: lr: 0.0000  itm_loss: 0.3243  train_loss: 0.3243
+Train Epoch: [35]  [  0/439]  eta: 0:17:57  lr: 0.000001  itm_loss: 0.2212  train_loss: 0.2212  time: 2.4548  data: 0.7353  max mem: 20472
+Train Epoch: [35]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.2568  train_loss: 0.2568  time: 1.6949  data: 0.0001  max mem: 20472
+Train Epoch: [35]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2428  train_loss: 0.2428  time: 1.6889  data: 0.0001  max mem: 20472
+Train Epoch: [35]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.3140  train_loss: 0.3140  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [35]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.1889  train_loss: 0.1889  time: 1.6867  data: 0.0001  max mem: 20472
+Train Epoch: [35]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.2762  train_loss: 0.2762  time: 1.6885  data: 0.0001  max mem: 20472
+Train Epoch: [35]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.5257  train_loss: 0.5257  time: 1.6857  data: 0.0002  max mem: 20472
+Train Epoch: [35]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3053  train_loss: 0.3053  time: 1.6905  data: 0.0002  max mem: 20472
+Train Epoch: [35]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.3272  train_loss: 0.3272  time: 1.6870  data: 0.0002  max mem: 20472
+Train Epoch: [35]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.2229  train_loss: 0.2229  time: 1.6850  data: 0.0001  max mem: 20472
+Train Epoch: [35] Total time: 0:12:22 (1.6908 s / it)
+Val Epoch: [35]  [ 0/98]  eta: 0:01:23  itm_loss: 0.0976  val_loss: 0.0976  acc: 1.0000  time: 0.8478  data: 0.7575  max mem: 20472
+Val Epoch: [35]  [50/98]  eta: 0:00:04  itm_loss: 0.1192  val_loss: 0.1192  acc: 1.0000  time: 0.0860  data: 0.0001  max mem: 20472
+Val Epoch: [35]  [97/98]  eta: 0:00:00  itm_loss: 0.2674  val_loss: 0.2674  acc: 0.6667  time: 0.0845  data: 0.0001  max mem: 20472
+Val Epoch: [35] Total time: 0:00:09 (0.0956 s / it)
+{'MulticlassF1Score': tensor(0.8618, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8619, device='cuda:0'), 'MulticlassRecall': tensor(0.8619, device='cuda:0'), 'MulticlassPrecision': tensor(0.8631, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8619, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[651, 131],
+        [ 85, 697]], device='cuda:0')}
+epoch:35, iter:15803, 438,  train_loss: 0.22288338840007782, valid_loss: 0.3215988036892519, acc:0.8767006804748457
+Averaged stats: lr: 0.0000  itm_loss: 0.3253  train_loss: 0.3253
+Train Epoch: [36]  [  0/439]  eta: 0:17:48  lr: 0.000001  itm_loss: 0.4129  train_loss: 0.4129  time: 2.4332  data: 0.7258  max mem: 20472
+Train Epoch: [36]  [ 50/439]  eta: 0:11:03  lr: 0.000001  itm_loss: 0.4292  train_loss: 0.4292  time: 1.6903  data: 0.0001  max mem: 20472
+Train Epoch: [36]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2310  train_loss: 0.2310  time: 1.6913  data: 0.0001  max mem: 20472
+Train Epoch: [36]  [150/439]  eta: 0:08:10  lr: 0.000001  itm_loss: 0.3370  train_loss: 0.3370  time: 1.6916  data: 0.0001  max mem: 20472
+Train Epoch: [36]  [200/439]  eta: 0:06:45  lr: 0.000001  itm_loss: 0.5363  train_loss: 0.5363  time: 1.6954  data: 0.0001  max mem: 20472
+Train Epoch: [36]  [250/439]  eta: 0:05:20  lr: 0.000001  itm_loss: 0.3257  train_loss: 0.3257  time: 1.6917  data: 0.0001  max mem: 20472
+Train Epoch: [36]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.3237  train_loss: 0.3237  time: 1.6945  data: 0.0001  max mem: 20472
+Train Epoch: [36]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2243  train_loss: 0.2243  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [36]  [400/439]  eta: 0:01:06  lr: 0.000001  itm_loss: 0.3483  train_loss: 0.3483  time: 1.6921  data: 0.0002  max mem: 20472
+Train Epoch: [36]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.3405  train_loss: 0.3405  time: 1.6949  data: 0.0001  max mem: 20472
+Train Epoch: [36] Total time: 0:12:23 (1.6942 s / it)
+Val Epoch: [36]  [ 0/98]  eta: 0:01:22  itm_loss: 0.0954  val_loss: 0.0954  acc: 1.0000  time: 0.8458  data: 0.7557  max mem: 20472
+Val Epoch: [36]  [50/98]  eta: 0:00:04  itm_loss: 0.0936  val_loss: 0.0936  acc: 1.0000  time: 0.0856  data: 0.0001  max mem: 20472
+Val Epoch: [36]  [97/98]  eta: 0:00:00  itm_loss: 0.2276  val_loss: 0.2276  acc: 1.0000  time: 0.0847  data: 0.0001  max mem: 20472
+Val Epoch: [36] Total time: 0:00:09 (0.0955 s / it)
+{'MulticlassF1Score': tensor(0.8696, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8696, device='cuda:0'), 'MulticlassRecall': tensor(0.8696, device='cuda:0'), 'MulticlassPrecision': tensor(0.8696, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8696, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[682, 100],
+        [104, 678]], device='cuda:0')}
+epoch:36, iter:16242, 438,  train_loss: 0.34051164984703064, valid_loss: 0.3232727114090991, acc:0.8979591836734694
+Averaged stats: lr: 0.0000  itm_loss: 0.3225  train_loss: 0.3225
+epoch 36 0.34051164984703064
+Train Epoch: [37]  [  0/439]  eta: 0:18:08  lr: 0.000001  itm_loss: 0.1826  train_loss: 0.1826  time: 2.4789  data: 0.6345  max mem: 20472
+Train Epoch: [37]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.2371  train_loss: 0.2371  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [37]  [100/439]  eta: 0:09:35  lr: 0.000001  itm_loss: 0.2623  train_loss: 0.2623  time: 1.6895  data: 0.0001  max mem: 20472
+Train Epoch: [37]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.6161  train_loss: 0.6161  time: 1.6898  data: 0.0001  max mem: 20472
+Train Epoch: [37]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.2342  train_loss: 0.2342  time: 1.6897  data: 0.0001  max mem: 20472
+Train Epoch: [37]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.6844  train_loss: 0.6844  time: 1.6892  data: 0.0001  max mem: 20472
+Train Epoch: [37]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.2340  train_loss: 0.2340  time: 1.6902  data: 0.0001  max mem: 20472
+Train Epoch: [37]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.3075  train_loss: 0.3075  time: 1.6893  data: 0.0001  max mem: 20472
+Train Epoch: [37]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.2099  train_loss: 0.2099  time: 1.6921  data: 0.0001  max mem: 20472
+Train Epoch: [37]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.2598  train_loss: 0.2598  time: 1.6913  data: 0.0001  max mem: 20472
+Train Epoch: [37] Total time: 0:12:23 (1.6925 s / it)
+Val Epoch: [37]  [ 0/98]  eta: 0:01:19  itm_loss: 0.1028  val_loss: 0.1028  acc: 1.0000  time: 0.8112  data: 0.7203  max mem: 20472
+Val Epoch: [37]  [50/98]  eta: 0:00:04  itm_loss: 0.1177  val_loss: 0.1177  acc: 1.0000  time: 0.0859  data: 0.0001  max mem: 20472
+Val Epoch: [37]  [97/98]  eta: 0:00:00  itm_loss: 0.1381  val_loss: 0.1381  acc: 1.0000  time: 0.0847  data: 0.0001  max mem: 20472
+Val Epoch: [37] Total time: 0:00:09 (0.0955 s / it)
+{'MulticlassF1Score': tensor(0.8632, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8632, device='cuda:0'), 'MulticlassRecall': tensor(0.8632, device='cuda:0'), 'MulticlassPrecision': tensor(0.8633, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8632, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[681, 101],
+        [113, 669]], device='cuda:0')}
+epoch:37, iter:16681, 438,  train_loss: 0.25975924730300903, valid_loss: 0.3519973126317289, acc:0.9056122448979592
+Averaged stats: lr: 0.0000  itm_loss: 0.3214  train_loss: 0.3214
+Train Epoch: [38]  [  0/439]  eta: 0:17:55  lr: 0.000001  itm_loss: 0.2953  train_loss: 0.2953  time: 2.4495  data: 0.7363  max mem: 20472
+Train Epoch: [38]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.2410  train_loss: 0.2410  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [38]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.3403  train_loss: 0.3403  time: 1.6872  data: 0.0001  max mem: 20472
+Train Epoch: [38]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.2505  train_loss: 0.2505  time: 1.6883  data: 0.0001  max mem: 20472
+Train Epoch: [38]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.2307  train_loss: 0.2307  time: 1.6922  data: 0.0001  max mem: 20472
+Train Epoch: [38]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.2879  train_loss: 0.2879  time: 1.6871  data: 0.0001  max mem: 20472
+Train Epoch: [38]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.1754  train_loss: 0.1754  time: 1.6895  data: 0.0002  max mem: 20472
+Train Epoch: [38]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2175  train_loss: 0.2175  time: 1.6858  data: 0.0002  max mem: 20472
+Train Epoch: [38]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.5493  train_loss: 0.5493  time: 1.6853  data: 0.0002  max mem: 20472
+Train Epoch: [38]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.2714  train_loss: 0.2714  time: 1.6902  data: 0.0001  max mem: 20472
+Train Epoch: [38] Total time: 0:12:22 (1.6908 s / it)
+Val Epoch: [38]  [ 0/98]  eta: 0:01:27  itm_loss: 0.0969  val_loss: 0.0969  acc: 1.0000  time: 0.8959  data: 0.8053  max mem: 20472
+Val Epoch: [38]  [50/98]  eta: 0:00:04  itm_loss: 0.0667  val_loss: 0.0667  acc: 1.0000  time: 0.0855  data: 0.0001  max mem: 20472
+Val Epoch: [38]  [97/98]  eta: 0:00:00  itm_loss: 0.3188  val_loss: 0.3188  acc: 0.6667  time: 0.0846  data: 0.0001  max mem: 20472
+Val Epoch: [38] Total time: 0:00:09 (0.0962 s / it)
+{'MulticlassF1Score': tensor(0.8728, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8728, device='cuda:0'), 'MulticlassRecall': tensor(0.8728, device='cuda:0'), 'MulticlassPrecision': tensor(0.8728, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8728, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[680, 102],
+        [ 97, 685]], device='cuda:0')}
+epoch:38, iter:17120, 438,  train_loss: 0.27144119143486023, valid_loss: 0.3139405179179597, acc:0.8971088437401519
+Averaged stats: lr: 0.0000  itm_loss: 0.3214  train_loss: 0.3214
+epoch 38 0.27144119143486023
+Train Epoch: [39]  [  0/439]  eta: 0:18:04  lr: 0.000001  itm_loss: 0.2812  train_loss: 0.2812  time: 2.4712  data: 0.7103  max mem: 20472
+Train Epoch: [39]  [ 50/439]  eta: 0:11:02  lr: 0.000001  itm_loss: 0.3746  train_loss: 0.3746  time: 1.6862  data: 0.0001  max mem: 20472
+Train Epoch: [39]  [100/439]  eta: 0:09:34  lr: 0.000001  itm_loss: 0.3673  train_loss: 0.3673  time: 1.6835  data: 0.0001  max mem: 20472
+Train Epoch: [39]  [150/439]  eta: 0:08:09  lr: 0.000001  itm_loss: 0.2014  train_loss: 0.2014  time: 1.6885  data: 0.0001  max mem: 20472
+Train Epoch: [39]  [200/439]  eta: 0:06:44  lr: 0.000001  itm_loss: 0.2464  train_loss: 0.2464  time: 1.6915  data: 0.0001  max mem: 20472
+Train Epoch: [39]  [250/439]  eta: 0:05:19  lr: 0.000001  itm_loss: 0.3379  train_loss: 0.3379  time: 1.6900  data: 0.0001  max mem: 20472
+Train Epoch: [39]  [300/439]  eta: 0:03:55  lr: 0.000001  itm_loss: 0.1814  train_loss: 0.1814  time: 1.6906  data: 0.0001  max mem: 20472
+Train Epoch: [39]  [350/439]  eta: 0:02:30  lr: 0.000001  itm_loss: 0.2338  train_loss: 0.2338  time: 1.6910  data: 0.0001  max mem: 20472
+Train Epoch: [39]  [400/439]  eta: 0:01:05  lr: 0.000001  itm_loss: 0.4194  train_loss: 0.4194  time: 1.6936  data: 0.0001  max mem: 20472
+Train Epoch: [39]  [438/439]  eta: 0:00:01  lr: 0.000001  itm_loss: 0.2285  train_loss: 0.2285  time: 1.6963  data: 0.0001  max mem: 20472
+Train Epoch: [39] Total time: 0:12:22 (1.6919 s / it)
+Val Epoch: [39]  [ 0/98]  eta: 0:01:23  itm_loss: 0.1067  val_loss: 0.1067  acc: 1.0000  time: 0.8500  data: 0.7592  max mem: 20472
+Val Epoch: [39]  [50/98]  eta: 0:00:04  itm_loss: 0.1015  val_loss: 0.1015  acc: 1.0000  time: 0.0857  data: 0.0001  max mem: 20472
+Val Epoch: [39]  [97/98]  eta: 0:00:00  itm_loss: 0.2817  val_loss: 0.2817  acc: 0.6667  time: 0.0848  data: 0.0001  max mem: 20472
+Val Epoch: [39] Total time: 0:00:09 (0.0956 s / it)
+{'MulticlassF1Score': tensor(0.8689, device='cuda:0'), 'MulticlassAccuracy': tensor(0.8689, device='cuda:0'), 'MulticlassRecall': tensor(0.8689, device='cuda:0'), 'MulticlassPrecision': tensor(0.8690, device='cuda:0'), 'MulticlassSpecificity': tensor(0.8689, device='cuda:0'), 'MulticlassConfusionMatrix': tensor([[674, 108],
+        [ 97, 685]], device='cuda:0')}
+epoch:39, iter:17559, 438,  train_loss: 0.22854435443878174, valid_loss: 0.31986966490215735, acc:0.8945578233319886
+Averaged stats: lr: 0.0000  itm_loss: 0.3190  train_loss: 0.3190
+Training time 8:23:13
+ai-platform-wlf1-ge10-1:116195:116233 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+ai-platform-wlf1-ge10-1:116194:116236 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+ai-platform-wlf1-ge10-1:116192:116234 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ai-platform-wlf1-ge10-1:116195:116195 [3] NCCL INFO comm 0x43ce7440 rank 3 nranks 4 cudaDev 3 busId e1000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:116192:116192 [0] NCCL INFO comm 0x4346f730 rank 0 nranks 4 cudaDev 0 busId 1000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:116194:116194 [2] NCCL INFO comm 0x4507b700 rank 2 nranks 4 cudaDev 2 busId 81000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:116193:116235 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+ai-platform-wlf1-ge10-1:116193:116193 [1] NCCL INFO comm 0x44202530 rank 1 nranks 4 cudaDev 1 busId 24000 - Abort COMPLETE

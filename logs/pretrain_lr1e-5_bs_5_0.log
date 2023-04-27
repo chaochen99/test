@@ -1,0 +1,513 @@
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Namespace(batch_size=5, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_ori/', learning_rate=1e-05, max_epochs=20, model_name='microsoft/layoutlmv3-base-chinese', model_params='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_lr1e-5_bs_5/epoch_18/checkpoint.pth', output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_lr1e-5_bs_5/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/pytorch_model.bin', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)Namespace(batch_size=5, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_ori/', learning_rate=1e-05, max_epochs=20, model_name='microsoft/layoutlmv3-base-chinese', model_params='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_lr1e-5_bs_5/epoch_18/checkpoint.pth', output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_lr1e-5_bs_5/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/pytorch_model.bin', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)Namespace(batch_size=5, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_ori/', learning_rate=1e-05, max_epochs=20, model_name='microsoft/layoutlmv3-base-chinese', model_params='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_lr1e-5_bs_5/epoch_18/checkpoint.pth', output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_lr1e-5_bs_5/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/pytorch_model.bin', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)
+
+
+Namespace(batch_size=5, datasize=None, device='cuda', dist_url='env://', input_file='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/data_processed_ori/', learning_rate=1e-05, max_epochs=20, model_name='microsoft/layoutlmv3-base-chinese', model_params='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_lr1e-5_bs_5/epoch_18/checkpoint.pth', output_model_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/output/pretrain_lr1e-5_bs_5/', pretrained='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/pytorch_model.bin', ratio_train=0.9, seed=42, tokenizer_vocab_dir='/nlp_group/wuxing/yuhuimu/AB-layoutlmv3/data/tokenizer/', world_size=1)
+| distributed init (rank 2, word 4): env://
+| distributed init (rank 1, word 4): env://
+| distributed init (rank 0, word 4): env://
+| distributed init (rank 3, word 4): env://
+ai-platform-wlf1-ge10-1:38785:38785 [0] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:38785:38785 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:38785:38785 [0] NCCL INFO cudaDriverVersion 11040
+NCCL version 2.14.3+cuda11.7
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:38787:38787 [2] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:38787:38787 [2] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:38787:38787 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:38786:38786 [1] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:38786:38786 [1] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:38786:38786 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:38789:38789 [3] NCCL INFO cudaDriverVersion 11040
+ai-platform-wlf1-ge10-1:38789:38789 [3] NCCL INFO Bootstrap : Using eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:38789:38789 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Failed to open libibverbs.so[.1]
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO NET/Socket : Using [0]eth01:10.80.205.179<0>
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Using network Socket
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,00000000,ffffffff,00000000
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,00000000,ffffffff
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Channel 00/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Channel 01/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] -1/-1/-1->3->2
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Channel 02/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Channel 03/04 :    0   1   2   3
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Channel 00 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Channel 00 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Channel 01 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Channel 01 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Channel 02 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Channel 00 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Channel 02 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Channel 00 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Channel 03 : 2[81000] -> 3[e1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Channel 01 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Channel 03 : 3[e1000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Channel 01 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Channel 02 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Channel 02 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Channel 03 : 0[1000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Channel 03 : 1[24000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Connected all rings
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Channel 00 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Channel 01 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Channel 02 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Could not enable P2P between dev 3(=e1000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Channel 03 : 3[e1000] -> 2[81000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 3(=e1000)
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Could not enable P2P between dev 0(=1000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 2(=81000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Channel 00 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Channel 01 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Channel 02 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Could not enable P2P between dev 2(=81000) and dev 1(=24000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Channel 00 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Channel 03 : 2[81000] -> 1[24000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Channel 01 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Channel 02 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Could not enable P2P between dev 1(=24000) and dev 0(=1000)
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Channel 03 : 1[24000] -> 0[1000] via SHM/direct/direct
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO Connected all trees
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO 4 coll channels, 4 p2p channels, 2 p2p channels per peer
+ai-platform-wlf1-ge10-1:38789:38825 [3] NCCL INFO comm 0x420c7fc0 rank 3 nranks 4 cudaDev 3 busId e1000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:38787:38823 [2] NCCL INFO comm 0x422d8770 rank 2 nranks 4 cudaDev 2 busId 81000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:38786:38824 [1] NCCL INFO comm 0x42317d70 rank 1 nranks 4 cudaDev 1 busId 24000 - Init COMPLETE
+ai-platform-wlf1-ge10-1:38785:38822 [0] NCCL INFO comm 0x43aea8c0 rank 0 nranks 4 cudaDev 0 busId 1000 - Init COMPLETE
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'XLMRobertaTokenizer'. 
+The class this function is called from is 'LayoutLMv3Tokenizer_cn'.
+not scheduler
+range(19, 20)
+[11.83961009979248, 9.8328275680542, 9.430537223815918, 9.881818771362305, 10.06935977935791, 9.364173889160156, 9.6690034866333, 8.883011817932129, 8.941374778747559, 8.528861999511719, 9.492785453796387, 7.8914103507995605, 6.34320592880249, 8.824615478515625, 9.497255325317383, 8.251075744628906, 7.83052921295166, 8.665684700012207, 8.283201217651367]
+19 [4854, 9709, 14564, 19419, 24274, 29129, 33984, 38839, 43694, 48549, 53404, 58259, 63114, 67969, 72824, 77679, 82534, 87389, 92244]
+iter:  92245
+Start training
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+/opt/conda/envs/layoutlmv3/lib/python3.7/site-packages/transformers/modeling_utils.py:831: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  "The `device` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+Train Epoch: [19]  [   0/4855]  eta: 14:51:02  lr: 0.000010  ml_loss: 4.6649  mi_loss: 3.6534  wpa_loss: 0.0008  train_loss: 8.3192  time: 11.0118  data: 3.5529  max mem: 19018
+Train Epoch: [19]  [  50/4855]  eta: 3:45:42  lr: 0.000010  ml_loss: 4.7263  mi_loss: 4.0334  wpa_loss: 0.0009  train_loss: 8.7607  time: 2.6630  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 100/4855]  eta: 3:37:30  lr: 0.000010  ml_loss: 4.6943  mi_loss: 3.6577  wpa_loss: 0.0001  train_loss: 8.3520  time: 2.6669  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 150/4855]  eta: 3:33:23  lr: 0.000010  ml_loss: 4.7899  mi_loss: 4.0440  wpa_loss: 0.0004  train_loss: 8.8343  time: 2.6804  data: 0.0002  max mem: 20939
+Train Epoch: [19]  [ 200/4855]  eta: 3:30:14  lr: 0.000010  ml_loss: 4.7148  mi_loss: 3.8731  wpa_loss: 0.0014  train_loss: 8.5892  time: 2.6769  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 250/4855]  eta: 3:27:31  lr: 0.000010  ml_loss: 4.7083  mi_loss: 3.3231  wpa_loss: 0.0011  train_loss: 8.0325  time: 2.6749  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 300/4855]  eta: 3:24:57  lr: 0.000010  ml_loss: 4.5493  mi_loss: 3.7983  wpa_loss: 0.0005  train_loss: 8.3481  time: 2.6815  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 350/4855]  eta: 3:22:27  lr: 0.000010  ml_loss: 4.9401  mi_loss: 3.7053  wpa_loss: 0.0029  train_loss: 8.6483  time: 2.6744  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 400/4855]  eta: 3:20:02  lr: 0.000010  ml_loss: 4.5978  mi_loss: 3.5666  wpa_loss: 0.0021  train_loss: 8.1665  time: 2.6766  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 450/4855]  eta: 3:17:40  lr: 0.000010  ml_loss: 4.7104  mi_loss: 3.7928  wpa_loss: 0.0001  train_loss: 8.5033  time: 2.6758  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 500/4855]  eta: 3:15:19  lr: 0.000010  ml_loss: 5.3380  mi_loss: 3.8398  wpa_loss: 0.0010  train_loss: 9.1788  time: 2.6812  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 550/4855]  eta: 3:12:59  lr: 0.000010  ml_loss: 5.0603  mi_loss: 4.0997  wpa_loss: 0.0002  train_loss: 9.1602  time: 2.6771  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 600/4855]  eta: 3:10:41  lr: 0.000010  ml_loss: 3.8300  mi_loss: 3.3727  wpa_loss: 0.0003  train_loss: 7.2030  time: 2.6791  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 650/4855]  eta: 3:08:21  lr: 0.000010  ml_loss: 4.9823  mi_loss: 3.8988  wpa_loss: 0.0051  train_loss: 8.8862  time: 2.6710  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 700/4855]  eta: 3:06:01  lr: 0.000010  ml_loss: 4.6567  mi_loss: 3.4853  wpa_loss: 0.0088  train_loss: 8.1508  time: 2.6655  data: 0.0002  max mem: 20939
+Train Epoch: [19]  [ 750/4855]  eta: 3:03:43  lr: 0.000010  ml_loss: 4.6870  mi_loss: 3.7741  wpa_loss: 0.0003  train_loss: 8.4613  time: 2.6716  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 800/4855]  eta: 3:01:25  lr: 0.000010  ml_loss: 4.7627  mi_loss: 4.4857  wpa_loss: 0.0020  train_loss: 9.2504  time: 2.6654  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 850/4855]  eta: 2:59:08  lr: 0.000010  ml_loss: 4.9565  mi_loss: 3.3885  wpa_loss: 0.0020  train_loss: 8.3469  time: 2.6730  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 900/4855]  eta: 2:56:51  lr: 0.000010  ml_loss: 4.7208  mi_loss: 4.1880  wpa_loss: 0.0010  train_loss: 8.9098  time: 2.6695  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [ 950/4855]  eta: 2:54:34  lr: 0.000010  ml_loss: 4.0382  mi_loss: 3.7504  wpa_loss: 0.0058  train_loss: 7.7944  time: 2.6635  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [1000/4855]  eta: 2:52:17  lr: 0.000010  ml_loss: 4.5422  mi_loss: 3.5785  wpa_loss: 0.0010  train_loss: 8.1217  time: 2.6704  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [1050/4855]  eta: 2:50:00  lr: 0.000010  ml_loss: 4.6151  mi_loss: 3.9433  wpa_loss: 0.0028  train_loss: 8.5611  time: 2.6715  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [1100/4855]  eta: 2:47:44  lr: 0.000010  ml_loss: 4.6083  mi_loss: 3.7059  wpa_loss: 0.0106  train_loss: 8.3247  time: 2.6666  data: 0.0001  max mem: 20939
+Train Epoch: [19]  [1150/4855]  eta: 2:45:27  lr: 0.000010  ml_loss: 4.8030  mi_loss: 3.8715  wpa_loss: 0.0005  train_loss: 8.6751  time: 2.6606  data: 0.0001  max mem: 20943
+Train Epoch: [19]  [1200/4855]  eta: 2:43:12  lr: 0.000010  ml_loss: 5.0715  mi_loss: 3.8500  wpa_loss: 0.0010  train_loss: 8.9225  time: 2.6648  data: 0.0001  max mem: 20943
+Train Epoch: [19]  [1250/4855]  eta: 2:40:56  lr: 0.000010  ml_loss: 4.9009  mi_loss: 4.1378  wpa_loss: 0.0024  train_loss: 9.0411  time: 2.6661  data: 0.0001  max mem: 20943
+Train Epoch: [19]  [1300/4855]  eta: 2:38:41  lr: 0.000010  ml_loss: 5.0578  mi_loss: 3.6411  wpa_loss: 0.0006  train_loss: 8.6995  time: 2.6717  data: 0.0001  max mem: 20943
+Train Epoch: [19]  [1350/4855]  eta: 2:36:26  lr: 0.000010  ml_loss: 4.5700  mi_loss: 3.8234  wpa_loss: 0.0005  train_loss: 8.3939  time: 2.6667  data: 0.0001  max mem: 20943
+Train Epoch: [19]  [1400/4855]  eta: 2:34:10  lr: 0.000010  ml_loss: 4.2579  mi_loss: 2.7582  wpa_loss: 0.0022  train_loss: 7.0183  time: 2.6602  data: 0.0001  max mem: 20943
+Train Epoch: [19]  [1450/4855]  eta: 2:31:55  lr: 0.000010  ml_loss: 4.2605  mi_loss: 3.6973  wpa_loss: 0.0025  train_loss: 7.9603  time: 2.6694  data: 0.0001  max mem: 20943
+Train Epoch: [19]  [1500/4855]  eta: 2:29:40  lr: 0.000010  ml_loss: 4.6225  mi_loss: 4.3305  wpa_loss: 0.0011  train_loss: 8.9542  time: 2.6680  data: 0.0001  max mem: 20943
+Train Epoch: [19]  [1550/4855]  eta: 2:27:25  lr: 0.000010  ml_loss: 4.5148  mi_loss: 3.8055  wpa_loss: 0.0013  train_loss: 8.3216  time: 2.6634  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [1600/4855]  eta: 2:25:10  lr: 0.000010  ml_loss: 4.3828  mi_loss: 3.3073  wpa_loss: 0.0021  train_loss: 7.6922  time: 2.6615  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [1650/4855]  eta: 2:22:55  lr: 0.000010  ml_loss: 4.4795  mi_loss: 3.6333  wpa_loss: 0.0076  train_loss: 8.1204  time: 2.6657  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [1700/4855]  eta: 2:20:41  lr: 0.000010  ml_loss: 5.0085  mi_loss: 4.3394  wpa_loss: 0.0020  train_loss: 9.3500  time: 2.6658  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [1750/4855]  eta: 2:18:26  lr: 0.000010  ml_loss: 4.7210  mi_loss: 3.8213  wpa_loss: 0.0010  train_loss: 8.5433  time: 2.6734  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [1800/4855]  eta: 2:16:12  lr: 0.000010  ml_loss: 4.1719  mi_loss: 3.7654  wpa_loss: 0.0002  train_loss: 7.9374  time: 2.6719  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [1850/4855]  eta: 2:13:58  lr: 0.000010  ml_loss: 4.8051  mi_loss: 2.9631  wpa_loss: 0.0004  train_loss: 7.7685  time: 2.6730  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [1900/4855]  eta: 2:11:44  lr: 0.000010  ml_loss: 5.1167  mi_loss: 4.1704  wpa_loss: 0.0047  train_loss: 9.2918  time: 2.6696  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [1950/4855]  eta: 2:09:30  lr: 0.000010  ml_loss: 4.7499  mi_loss: 3.8178  wpa_loss: 0.0001  train_loss: 8.5678  time: 2.6726  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2000/4855]  eta: 2:07:16  lr: 0.000010  ml_loss: 4.2092  mi_loss: 3.5622  wpa_loss: 0.0028  train_loss: 7.7742  time: 2.6777  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2050/4855]  eta: 2:05:02  lr: 0.000010  ml_loss: 4.5706  mi_loss: 3.8207  wpa_loss: 0.0005  train_loss: 8.3918  time: 2.6763  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2100/4855]  eta: 2:02:48  lr: 0.000010  ml_loss: 4.9422  mi_loss: 3.7380  wpa_loss: 0.0004  train_loss: 8.6806  time: 2.6641  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2150/4855]  eta: 2:00:34  lr: 0.000010  ml_loss: 4.2345  mi_loss: 3.6687  wpa_loss: 0.0008  train_loss: 7.9039  time: 2.6697  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2200/4855]  eta: 1:58:20  lr: 0.000010  ml_loss: 4.7158  mi_loss: 3.7336  wpa_loss: 0.0058  train_loss: 8.4553  time: 2.6739  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2250/4855]  eta: 1:56:06  lr: 0.000010  ml_loss: 4.1297  mi_loss: 3.7444  wpa_loss: 0.0013  train_loss: 7.8755  time: 2.6715  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2300/4855]  eta: 1:53:52  lr: 0.000010  ml_loss: 4.4440  mi_loss: 3.5340  wpa_loss: 0.0012  train_loss: 7.9792  time: 2.6741  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2350/4855]  eta: 1:51:39  lr: 0.000010  ml_loss: 4.5983  mi_loss: 3.9531  wpa_loss: 0.0001  train_loss: 8.5514  time: 2.6744  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2400/4855]  eta: 1:49:25  lr: 0.000010  ml_loss: 4.6540  mi_loss: 3.4066  wpa_loss: 0.0006  train_loss: 8.0612  time: 2.6704  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2450/4855]  eta: 1:47:11  lr: 0.000010  ml_loss: 4.4620  mi_loss: 4.0378  wpa_loss: 0.0029  train_loss: 8.5027  time: 2.6788  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2500/4855]  eta: 1:44:58  lr: 0.000010  ml_loss: 4.8551  mi_loss: 3.7265  wpa_loss: 0.0248  train_loss: 8.6064  time: 2.6750  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2550/4855]  eta: 1:42:44  lr: 0.000010  ml_loss: 4.6576  mi_loss: 3.5086  wpa_loss: 0.0044  train_loss: 8.1706  time: 2.6760  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2600/4855]  eta: 1:40:30  lr: 0.000010  ml_loss: 3.9966  mi_loss: 3.9603  wpa_loss: 0.0006  train_loss: 7.9576  time: 2.6730  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2650/4855]  eta: 1:38:16  lr: 0.000010  ml_loss: 4.3807  mi_loss: 3.7964  wpa_loss: 0.0018  train_loss: 8.1789  time: 2.6673  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2700/4855]  eta: 1:36:02  lr: 0.000010  ml_loss: 4.3009  mi_loss: 3.1657  wpa_loss: 0.0003  train_loss: 7.4669  time: 2.6678  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2750/4855]  eta: 1:33:49  lr: 0.000010  ml_loss: 3.7160  mi_loss: 3.6838  wpa_loss: 0.0016  train_loss: 7.4013  time: 2.6690  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2800/4855]  eta: 1:31:35  lr: 0.000010  ml_loss: 4.5896  mi_loss: 3.5732  wpa_loss: 0.0082  train_loss: 8.1711  time: 2.6678  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2850/4855]  eta: 1:29:21  lr: 0.000010  ml_loss: 4.0667  mi_loss: 3.9091  wpa_loss: 0.0008  train_loss: 7.9766  time: 2.6724  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2900/4855]  eta: 1:27:07  lr: 0.000010  ml_loss: 4.6370  mi_loss: 3.5894  wpa_loss: 0.0015  train_loss: 8.2278  time: 2.6647  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [2950/4855]  eta: 1:24:53  lr: 0.000010  ml_loss: 4.2596  mi_loss: 3.6943  wpa_loss: 0.0002  train_loss: 7.9541  time: 2.6759  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3000/4855]  eta: 1:22:40  lr: 0.000010  ml_loss: 4.3949  mi_loss: 3.7039  wpa_loss: 0.0018  train_loss: 8.1007  time: 2.6677  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3050/4855]  eta: 1:20:26  lr: 0.000010  ml_loss: 4.1313  mi_loss: 3.7335  wpa_loss: 0.0029  train_loss: 7.8676  time: 2.6716  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3100/4855]  eta: 1:18:12  lr: 0.000010  ml_loss: 4.6346  mi_loss: 3.8781  wpa_loss: 0.0011  train_loss: 8.5137  time: 2.6647  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3150/4855]  eta: 1:15:58  lr: 0.000010  ml_loss: 4.2577  mi_loss: 4.1677  wpa_loss: 0.0102  train_loss: 8.4357  time: 2.6637  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3200/4855]  eta: 1:13:44  lr: 0.000010  ml_loss: 4.4461  mi_loss: 3.5698  wpa_loss: 0.0010  train_loss: 8.0169  time: 2.6687  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3250/4855]  eta: 1:11:30  lr: 0.000010  ml_loss: 4.4720  mi_loss: 3.6283  wpa_loss: 0.0004  train_loss: 8.1007  time: 2.6748  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3300/4855]  eta: 1:09:16  lr: 0.000010  ml_loss: 4.6191  mi_loss: 4.2987  wpa_loss: 0.0156  train_loss: 8.9334  time: 2.6548  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3350/4855]  eta: 1:07:03  lr: 0.000010  ml_loss: 4.6756  mi_loss: 4.1195  wpa_loss: 0.0116  train_loss: 8.8067  time: 2.6695  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3400/4855]  eta: 1:04:49  lr: 0.000010  ml_loss: 4.8845  mi_loss: 3.7436  wpa_loss: 0.0006  train_loss: 8.6287  time: 2.6697  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3450/4855]  eta: 1:02:35  lr: 0.000010  ml_loss: 4.4336  mi_loss: 3.8320  wpa_loss: 0.0092  train_loss: 8.2748  time: 2.6706  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3500/4855]  eta: 1:00:21  lr: 0.000010  ml_loss: 3.9921  mi_loss: 3.9135  wpa_loss: 0.0078  train_loss: 7.9133  time: 2.6622  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3550/4855]  eta: 0:58:08  lr: 0.000010  ml_loss: 5.5609  mi_loss: 3.7982  wpa_loss: 0.0005  train_loss: 9.3596  time: 2.6681  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3600/4855]  eta: 0:55:54  lr: 0.000010  ml_loss: 4.3896  mi_loss: 3.6662  wpa_loss: 0.0030  train_loss: 8.0588  time: 2.6689  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3650/4855]  eta: 0:53:40  lr: 0.000010  ml_loss: 4.3363  mi_loss: 3.5151  wpa_loss: 0.0005  train_loss: 7.8519  time: 2.6655  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3700/4855]  eta: 0:51:26  lr: 0.000010  ml_loss: 4.6673  mi_loss: 3.3707  wpa_loss: 0.0012  train_loss: 8.0392  time: 2.6701  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3750/4855]  eta: 0:49:13  lr: 0.000010  ml_loss: 4.1702  mi_loss: 3.7625  wpa_loss: 0.0007  train_loss: 7.9334  time: 2.6724  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3800/4855]  eta: 0:46:59  lr: 0.000010  ml_loss: 4.9340  mi_loss: 3.8368  wpa_loss: 0.0004  train_loss: 8.7711  time: 2.6711  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3850/4855]  eta: 0:44:45  lr: 0.000010  ml_loss: 4.1832  mi_loss: 4.4467  wpa_loss: 0.0010  train_loss: 8.6309  time: 2.6679  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3900/4855]  eta: 0:42:32  lr: 0.000010  ml_loss: 3.2686  mi_loss: 3.6081  wpa_loss: 0.0015  train_loss: 6.8783  time: 2.6635  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [3950/4855]  eta: 0:40:18  lr: 0.000010  ml_loss: 4.1248  mi_loss: 4.0140  wpa_loss: 0.0013  train_loss: 8.1401  time: 2.6687  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4000/4855]  eta: 0:38:04  lr: 0.000010  ml_loss: 4.7250  mi_loss: 3.8525  wpa_loss: 0.0046  train_loss: 8.5821  time: 2.6578  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4050/4855]  eta: 0:35:51  lr: 0.000010  ml_loss: 4.7310  mi_loss: 4.0149  wpa_loss: 0.0002  train_loss: 8.7461  time: 2.6719  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4100/4855]  eta: 0:33:37  lr: 0.000010  ml_loss: 4.1033  mi_loss: 3.9970  wpa_loss: 0.0002  train_loss: 8.1006  time: 2.6730  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4150/4855]  eta: 0:31:23  lr: 0.000010  ml_loss: 4.7137  mi_loss: 4.2784  wpa_loss: 0.0003  train_loss: 8.9924  time: 2.6595  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4200/4855]  eta: 0:29:10  lr: 0.000010  ml_loss: 4.4305  mi_loss: 3.9536  wpa_loss: 0.0019  train_loss: 8.3860  time: 2.6643  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4250/4855]  eta: 0:26:56  lr: 0.000010  ml_loss: 4.8210  mi_loss: 3.3797  wpa_loss: 0.0002  train_loss: 8.2010  time: 2.6616  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4300/4855]  eta: 0:24:42  lr: 0.000010  ml_loss: 4.6526  mi_loss: 3.8684  wpa_loss: 0.0007  train_loss: 8.5217  time: 2.6656  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4350/4855]  eta: 0:22:29  lr: 0.000010  ml_loss: 4.4004  mi_loss: 3.8671  wpa_loss: 0.0224  train_loss: 8.2898  time: 2.6589  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4400/4855]  eta: 0:20:15  lr: 0.000010  ml_loss: 2.9846  mi_loss: 3.4094  wpa_loss: 0.0092  train_loss: 6.4032  time: 2.6651  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4450/4855]  eta: 0:18:01  lr: 0.000010  ml_loss: 4.3589  mi_loss: 3.9453  wpa_loss: 0.0003  train_loss: 8.3045  time: 2.6716  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4500/4855]  eta: 0:15:48  lr: 0.000010  ml_loss: 4.6627  mi_loss: 3.9216  wpa_loss: 0.0002  train_loss: 8.5846  time: 2.6686  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4550/4855]  eta: 0:13:34  lr: 0.000010  ml_loss: 4.5385  mi_loss: 4.0735  wpa_loss: 0.0039  train_loss: 8.6159  time: 2.6710  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4600/4855]  eta: 0:11:21  lr: 0.000010  ml_loss: 3.4488  mi_loss: 3.8751  wpa_loss: 0.0009  train_loss: 7.3248  time: 2.6714  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4650/4855]  eta: 0:09:07  lr: 0.000010  ml_loss: 4.1437  mi_loss: 4.3727  wpa_loss: 0.0029  train_loss: 8.5193  time: 2.6729  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4700/4855]  eta: 0:06:54  lr: 0.000010  ml_loss: 4.5550  mi_loss: 2.5700  wpa_loss: 0.0097  train_loss: 7.1347  time: 2.6713  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4750/4855]  eta: 0:04:40  lr: 0.000010  ml_loss: 3.9255  mi_loss: 3.9843  wpa_loss: 0.0057  train_loss: 7.9156  time: 2.6633  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4800/4855]  eta: 0:02:26  lr: 0.000010  ml_loss: 4.9185  mi_loss: 4.4331  wpa_loss: 0.0002  train_loss: 9.3518  time: 2.6644  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4850/4855]  eta: 0:00:13  lr: 0.000010  ml_loss: 4.6904  mi_loss: 3.2760  wpa_loss: 0.0021  train_loss: 7.9685  time: 2.6670  data: 0.0001  max mem: 20953
+Train Epoch: [19]  [4854/4855]  eta: 0:00:02  lr: 0.000010  ml_loss: 4.7788  mi_loss: 4.1276  wpa_loss: 0.0006  train_loss: 8.9070  time: 2.6780  data: 0.0007  max mem: 20953
+Train Epoch: [19] Total time: 3:36:11 (2.6718 s / it)
+Val Epoch: [19]  [  0/540]  eta: 0:24:00  ml_loss: 4.6747  mi_loss: 4.0112  wpa_loss: 0.0002  val_loss: 8.6861  accML: 0.2706  accMI: 0.1243  time: 2.6676  data: 2.3669  max mem: 20953
+Val Epoch: [19]  [ 50/540]  eta: 0:06:35  ml_loss: 4.4370  mi_loss: 3.8447  wpa_loss: 0.0001  val_loss: 8.2818  accML: 0.2937  accMI: 0.2118  time: 0.7771  data: 0.6144  max mem: 20953
+Val Epoch: [19]  [100/540]  eta: 0:05:55  ml_loss: 4.1575  mi_loss: 4.2941  wpa_loss: 0.0001  val_loss: 8.4516  accML: 0.3278  accMI: 0.1733  time: 0.7852  data: 0.6230  max mem: 20953
+Val Epoch: [19]  [150/540]  eta: 0:05:26  ml_loss: 4.8049  mi_loss: 4.3991  wpa_loss: 0.0001  val_loss: 9.2041  accML: 0.2408  accMI: 0.1375  time: 0.9527  data: 0.7883  max mem: 20953
+Val Epoch: [19]  [200/540]  eta: 0:04:45  ml_loss: 4.4462  mi_loss: 4.0695  wpa_loss: 0.0009  val_loss: 8.5166  accML: 0.3055  accMI: 0.1310  time: 0.8563  data: 0.6926  max mem: 20953
+Val Epoch: [19]  [250/540]  eta: 0:04:02  ml_loss: 4.4916  mi_loss: 3.8422  wpa_loss: 0.0206  val_loss: 8.3544  accML: 0.2711  accMI: 0.1603  time: 0.8482  data: 0.6846  max mem: 20953
+Val Epoch: [19]  [300/540]  eta: 0:03:20  ml_loss: 4.0535  mi_loss: 3.7806  wpa_loss: 0.0001  val_loss: 7.8342  accML: 0.3349  accMI: 0.2043  time: 0.8897  data: 0.7255  max mem: 20953
+Val Epoch: [19]  [350/540]  eta: 0:02:38  ml_loss: 4.2445  mi_loss: 3.0542  wpa_loss: 0.0232  val_loss: 7.3219  accML: 0.3036  accMI: 0.2907  time: 0.7944  data: 0.6319  max mem: 20953
+Val Epoch: [19]  [400/540]  eta: 0:01:57  ml_loss: 5.1734  mi_loss: 4.2343  wpa_loss: 0.0035  val_loss: 9.4112  accML: 0.2337  accMI: 0.1183  time: 0.8606  data: 0.6969  max mem: 20953
+Val Epoch: [19]  [450/540]  eta: 0:01:15  ml_loss: 4.9029  mi_loss: 3.9494  wpa_loss: 0.0004  val_loss: 8.8526  accML: 0.2209  accMI: 0.1360  time: 0.8703  data: 0.7070  max mem: 20953
+Val Epoch: [19]  [500/540]  eta: 0:00:33  ml_loss: 5.1097  mi_loss: 3.8255  wpa_loss: 0.0007  val_loss: 8.9359  accML: 0.2141  accMI: 0.1649  time: 0.7909  data: 0.6272  max mem: 20953
+Val Epoch: [19]  [539/540]  eta: 0:00:00  ml_loss: 4.8281  mi_loss: 3.7631  wpa_loss: 0.0001  val_loss: 8.5914  accML: 0.2080  accMI: 0.1892  time: 0.8037  data: 0.6401  max mem: 20953
+Val Epoch: [19] Total time: 0:07:36 (0.8461 s / it)
+epoch:19, iter:97099, 4854,  train_loss: 8.907044410705566, valid_loss: 8.433616371507998, idiv_loss:(4.485905929406484, 3.943513819464931, 0.0041966293427928274), acc:(0.28178034471692864, 0.16994287844885278)
+Averaged stats: lr: 0.0000  ml_loss: 4.5613  mi_loss: 3.7976  wpa_loss: 0.0032  train_loss: 8.3621
+epoch 19 8.907044410705566
+Training time 3:44:07
+ai-platform-wlf1-ge10-1:38787:38828 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+ai-platform-wlf1-ge10-1:38787:38787 [2] NCCL INFO comm 0x422d8770 rank 2 nranks 4 cudaDev 2 busId 81000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:38789:38826 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+ai-platform-wlf1-ge10-1:38785:38829 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ai-platform-wlf1-ge10-1:38785:38785 [0] NCCL INFO comm 0x43aea8c0 rank 0 nranks 4 cudaDev 0 busId 1000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:38789:38789 [3] NCCL INFO comm 0x420c7fc0 rank 3 nranks 4 cudaDev 3 busId e1000 - Abort COMPLETE
+ai-platform-wlf1-ge10-1:38786:38827 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+ai-platform-wlf1-ge10-1:38786:38786 [1] NCCL INFO comm 0x42317d70 rank 1 nranks 4 cudaDev 1 busId 24000 - Abort COMPLETE
